@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
+		8AA5B1D11DEC988200D159C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D01DEC988200D159C3 /* ViewController.swift */; };
+		8AA5B1D41DEC988200D159C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D21DEC988200D159C3 /* Main.storyboard */; };
+		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
+		8AA5B1D91DEC988200D159C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8AA5B1CB1DEC988200D159C3 /* Eggypop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggypop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8AA5B1D01DEC988200D159C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8AA5B1D31DEC988200D159C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AA5B1D81DEC988200D159C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8AA5B1DA1DEC988200D159C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AA5B1C81DEC988200D159C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AA5B1C21DEC988200D159C3 = {
+			isa = PBXGroup;
+			children = (
+				8AA5B1CD1DEC988200D159C3 /* Eggypop */,
+				8AA5B1CC1DEC988200D159C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AA5B1CC1DEC988200D159C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AA5B1CB1DEC988200D159C3 /* Eggypop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AA5B1CD1DEC988200D159C3 /* Eggypop */ = {
+			isa = PBXGroup;
+			children = (
+				8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */,
+				8AA5B1D01DEC988200D159C3 /* ViewController.swift */,
+				8AA5B1D21DEC988200D159C3 /* Main.storyboard */,
+				8AA5B1D51DEC988200D159C3 /* Assets.xcassets */,
+				8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */,
+				8AA5B1DA1DEC988200D159C3 /* Info.plist */,
+			);
+			path = Eggypop;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AA5B1CA1DEC988200D159C3 /* Eggypop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AA5B1DD1DEC988200D159C3 /* Build configuration list for PBXNativeTarget "Eggypop" */;
+			buildPhases = (
+				8AA5B1C71DEC988200D159C3 /* Sources */,
+				8AA5B1C81DEC988200D159C3 /* Frameworks */,
+				8AA5B1C91DEC988200D159C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Eggypop;
+			productName = Eggypop;
+			productReference = 8AA5B1CB1DEC988200D159C3 /* Eggypop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AA5B1C31DEC988200D159C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Sergey Nevzorov";
+				TargetAttributes = {
+					8AA5B1CA1DEC988200D159C3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FMJWPCW6KK;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8AA5B1C61DEC988200D159C3 /* Build configuration list for PBXProject "Eggypop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AA5B1C21DEC988200D159C3;
+			productRefGroup = 8AA5B1CC1DEC988200D159C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AA5B1CA1DEC988200D159C3 /* Eggypop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AA5B1C91DEC988200D159C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA5B1D91DEC988200D159C3 /* LaunchScreen.storyboard in Resources */,
+				8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */,
+				8AA5B1D41DEC988200D159C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AA5B1C71DEC988200D159C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA5B1D11DEC988200D159C3 /* ViewController.swift in Sources */,
+				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8AA5B1D21DEC988200D159C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA5B1D31DEC988200D159C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA5B1D81DEC988200D159C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AA5B1DB1DEC988200D159C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8AA5B1DC1DEC988200D159C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AA5B1DE1DEC988200D159C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FMJWPCW6KK;
+				INFOPLIST_FILE = Eggypop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SN.Eggypop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8AA5B1DF1DEC988200D159C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FMJWPCW6KK;
+				INFOPLIST_FILE = Eggypop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SN.Eggypop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AA5B1C61DEC988200D159C3 /* Build configuration list for PBXProject "Eggypop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA5B1DB1DEC988200D159C3 /* Debug */,
+				8AA5B1DC1DEC988200D159C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AA5B1DD1DEC988200D159C3 /* Build configuration list for PBXNativeTarget "Eggypop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA5B1DE1DEC988200D159C3 /* Debug */,
+				8AA5B1DF1DEC988200D159C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AA5B1C31DEC988200D159C3 /* Project object */;
+}
