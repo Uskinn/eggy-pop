@@ -12,6 +12,7 @@
 		8AA5B1D41DEC988200D159C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D21DEC988200D159C3 /* Main.storyboard */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
 		8AA5B1D91DEC988200D159C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */; };
+		8ADF0B381DECDA6F00443EE8 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF0B371DECDA6F00443EE8 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA5B1D81DEC988200D159C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AA5B1DA1DEC988200D159C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ADF0B371DECDA6F00443EE8 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */,
 				8AA5B1D01DEC988200D159C3 /* ViewController.swift */,
+				8ADF0B371DECDA6F00443EE8 /* TimerViewController.swift */,
 				8AA5B1D21DEC988200D159C3 /* Main.storyboard */,
 				8AA5B1D51DEC988200D159C3 /* Assets.xcassets */,
 				8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA5B1D11DEC988200D159C3 /* ViewController.swift in Sources */,
+				8ADF0B381DECDA6F00443EE8 /* TimerViewController.swift in Sources */,
 				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 				8AA5B1DF1DEC988200D159C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
