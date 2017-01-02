@@ -12,9 +12,11 @@ import QuartzCore
 class ViewController: UIViewController {
     @IBOutlet weak var headLabel: UILabel!
     
-    @IBOutlet weak var largeEgg: UIImageView!
-    @IBOutlet weak var extraLargeEgg: UIImageView!
-    @IBOutlet weak var jumboEgg: UIImageView!
+    @IBOutlet weak var largeEggButton: UIButton!
+    @IBOutlet weak var extraLargeEggButton: UIButton!
+    @IBOutlet weak var jumboEggButton: UIButton!
+    
+    
     
     @IBOutlet weak var largeEggLabel: UILabel!
     @IBOutlet weak var extraLargeEggLable: UILabel!
@@ -27,20 +29,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var setTimerButton: UIButton!
     
     @IBOutlet weak var logoImage: UIImageView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(red:0.03, green:0.48, blue:0.43, alpha:1.0)
         self.headLabel.textColor = UIColor(red:0.93, green:0.49, blue:0.45, alpha:1.0)
-       
-        largeEgg.image = largeEgg.image!.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
-        largeEgg.tintColor = UIColor(red:0.93, green:0.49, blue:0.45, alpha:1.0)
         
         // setting colors for eggs type
         self.largeEggLabel.textColor = UIColor(red:0.75, green:0.93, blue:0.88, alpha:1.0)
         self.extraLargeEggLable.textColor = UIColor(red:0.75, green:0.93, blue:0.88, alpha:1.0)
         self.jumboEggLabel.textColor = UIColor(red:0.75, green:0.93, blue:0.88, alpha:1.0)
+        
+        
+//////////////////////// set image to the button //////////////////////////////
+        
+        let eggImage = UIImage(named: "eggShape")
+        let tintedImage = eggImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        self.largeEggButton.setImage(tintedImage, for: .normal)
+        self.largeEggButton.tintColor = UIColor(red:0.33, green:0.199, blue:0.181, alpha:1.0)
+        
+        
         
         // making corner radius
         
@@ -61,28 +70,36 @@ class ViewController: UIViewController {
         self.softTypeLabel.textColor = UIColor(red:0.75, green:0.93, blue:0.88, alpha:1.0)
         self.mediumTypeLabel.textColor = UIColor(red:0.75, green:0.93, blue:0.88, alpha:1.0)
         self.hardTypeLabel.textColor = UIColor(red:0.75, green:0.93, blue:0.88, alpha:1.0)
-
-    // working with button style
+        
+        // working with set timer button style
         
         self.setTimerButton.setTitleColor(UIColor(red:0.93, green:0.49, blue:0.45, alpha:1.0), for: .normal)
         self.setTimerButton.backgroundColor = UIColor(red:0.75, green:0.93, blue:0.88, alpha:1.0)
         
         self.setTimerButton.layer.masksToBounds = true
         self.setTimerButton.layer.cornerRadius = 20
-    
-    
-    
-    
-    
+        
     }
+    
+    @IBAction func largeButtonClicked(_ sender: Any) {
+        
+       
+        
 
+    }
+    
+    @IBAction func extraLargeButtonClicked(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var jumboButtonClicked: UIButton!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @IBAction func setTimerPressed(_ sender: Any) {
     }
-
-
+    
+    
 }
 
