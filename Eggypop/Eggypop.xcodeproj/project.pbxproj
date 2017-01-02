@@ -12,7 +12,6 @@
 		8AA5B1D41DEC988200D159C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D21DEC988200D159C3 /* Main.storyboard */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
 		8AA5B1D91DEC988200D159C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */; };
-		8ADF0B381DECDA6F00443EE8 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF0B371DECDA6F00443EE8 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA5B1D81DEC988200D159C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AA5B1DA1DEC988200D159C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ADF0B371DECDA6F00443EE8 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A13E9D31E1ABDBA00A30ABA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8AA5B1D01DEC988200D159C3 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8A13E9D41E1ABDD400A30ABA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */,
+				8AA5B1D21DEC988200D159C3 /* Main.storyboard */,
+				8AA5B1D51DEC988200D159C3 /* Assets.xcassets */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		8A13E9D61E1ABE4B00A30ABA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		8AA5B1C21DEC988200D159C3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +79,11 @@
 		8AA5B1CD1DEC988200D159C3 /* Eggypop */ = {
 			isa = PBXGroup;
 			children = (
-				8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */,
-				8AA5B1D01DEC988200D159C3 /* ViewController.swift */,
-				8ADF0B371DECDA6F00443EE8 /* TimerViewController.swift */,
-				8AA5B1D21DEC988200D159C3 /* Main.storyboard */,
-				8AA5B1D51DEC988200D159C3 /* Assets.xcassets */,
-				8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */,
+				8A13E9D31E1ABDBA00A30ABA /* Controller */,
+				8A13E9D61E1ABE4B00A30ABA /* Model */,
+				8A13E9D41E1ABDD400A30ABA /* Storyboard */,
 				8AA5B1DA1DEC988200D159C3 /* Info.plist */,
+				8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */,
 			);
 			path = Eggypop;
 			sourceTree = "<group>";
@@ -141,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA5B1D11DEC988200D159C3 /* ViewController.swift in Sources */,
-				8ADF0B381DECDA6F00443EE8 /* TimerViewController.swift in Sources */,
 				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
