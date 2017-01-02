@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "eggShape.png",
+      "filename" : "largeEggButton.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "eggShape@2x.png",
+      "filename" : "largeEggButton@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "eggShape@3x.png",
+      "filename" : "largeEggButton@3x.png",
       "scale" : "3x"
     }
   ],

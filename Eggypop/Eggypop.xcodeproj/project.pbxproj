@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A13E9DD1E1AD46C00A30ABA /* EggShapeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9DC1E1AD46C00A30ABA /* EggShapeColor.swift */; };
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
-		8AA5B1D11DEC988200D159C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D01DEC988200D159C3 /* ViewController.swift */; };
-		8AA5B1D41DEC988200D159C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D21DEC988200D159C3 /* Main.storyboard */; };
+		8AA5B1D11DEC988200D159C3 /* EggTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
 		8AA5B1D91DEC988200D159C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A13E9DC1E1AD46C00A30ABA /* EggShapeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EggShapeColor.swift; sourceTree = "<group>"; };
 		8AA5B1CB1DEC988200D159C3 /* Eggypop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggypop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8AA5B1D01DEC988200D159C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8AA5B1D31DEC988200D159C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTypeController.swift; sourceTree = "<group>"; };
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA5B1D81DEC988200D159C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AA5B1DA1DEC988200D159C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		8A13E9D31E1ABDBA00A30ABA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8AA5B1D01DEC988200D159C3 /* ViewController.swift */,
+				8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -47,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */,
-				8AA5B1D21DEC988200D159C3 /* Main.storyboard */,
 				8AA5B1D51DEC988200D159C3 /* Assets.xcassets */,
 			);
 			name = Storyboard;
@@ -58,6 +57,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8A13E9DB1E1AD44C00A30ABA /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				8A13E9DC1E1AD46C00A30ABA /* EggShapeColor.swift */,
+			);
+			name = Constant;
 			sourceTree = "<group>";
 		};
 		8AA5B1C21DEC988200D159C3 = {
@@ -79,6 +86,7 @@
 		8AA5B1CD1DEC988200D159C3 /* Eggypop */ = {
 			isa = PBXGroup;
 			children = (
+				8A13E9DB1E1AD44C00A30ABA /* Constant */,
 				8A13E9D31E1ABDBA00A30ABA /* Controller */,
 				8A13E9D61E1ABE4B00A30ABA /* Model */,
 				8A13E9D41E1ABDD400A30ABA /* Storyboard */,
@@ -150,7 +158,6 @@
 			files = (
 				8AA5B1D91DEC988200D159C3 /* LaunchScreen.storyboard in Resources */,
 				8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */,
-				8AA5B1D41DEC988200D159C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,22 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA5B1D11DEC988200D159C3 /* ViewController.swift in Sources */,
+				8AA5B1D11DEC988200D159C3 /* EggTypeController.swift in Sources */,
 				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
+				8A13E9DD1E1AD46C00A30ABA /* EggShapeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8AA5B1D21DEC988200D159C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA5B1D31DEC988200D159C3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8AA5B1D71DEC988200D159C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
