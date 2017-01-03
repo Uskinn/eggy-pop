@@ -29,17 +29,17 @@ class EggTypeController: UIViewController {
         header()
         logo()
         
-
+        // largeButton.addTarget(self, action: #selector(largeButtonCLicked(_:)), for: .touchUpInside)
+        
         
     }
     
     func largeButtonFunc() {
-        
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
-        
         largeButton.setTitle("large", for: .normal)
+        
         largeButton.setBackgroundImage(eggShapeButton, for: .normal)
-
+        
         largeButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         largeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 17)
         largeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
@@ -56,7 +56,6 @@ class EggTypeController: UIViewController {
     
     func extraLargeButtonFunc() {
         extraLargeButton.frame = CGRect(x: 138.00, y: 265.00, width: 100.00, height: 138.00)
-        
         extraLargeButton.setBackgroundImage(eggShapeButton, for: .normal)
         
         // adding two lines of text
@@ -78,7 +77,6 @@ class EggTypeController: UIViewController {
     
     func jumboButtonFunc() {
         jumboButton.frame = CGRect(x: 258.00, y: 265.00, width: 100.00, height: 138.00)
-        
         jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
         jumboButton.setTitle("jumbo", for: .normal)
         jumboButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
@@ -113,7 +111,6 @@ class EggTypeController: UIViewController {
     }
     
     func logo() {
-        
         let logoImage = UIImage(named: "logoIggy")
         let appLogo = UIImageView()
         
@@ -121,20 +118,13 @@ class EggTypeController: UIViewController {
         appLogo.frame = CGRect(x: 168.00, y: 596.00, width: 38.00, height: 51.00)
         
         self.view.addSubview(appLogo)
-        
-        
     }
     
     func largeButtonCLicked(_ button: UIButton) {
-        
         largeButton.titleLabel?.textColor = .white
-
-        largeButton.setBackgroundImage(filledEggButton, for: .normal)
-        //largeButton.setTitleColor(.white, for: .normal)
-
         
+        largeButton.setBackgroundImage(filledEggButton, for: .normal)
     }
-    
 }
 
 
