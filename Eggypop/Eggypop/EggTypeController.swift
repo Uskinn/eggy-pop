@@ -9,13 +9,15 @@
 import UIKit
 import QuartzCore
 
-var largeButton = UIButton(type: .system)
+let largeButton = UIButton(type: .system)
 let extraLargeButton = UIButton(type: .system)
 let jumboButton = UIButton(type: .system)
 
 let appColor = Colors()
 let eggShapeButton = UIImage(named: "emptyEggShape")
 let filledEggButton = UIImage(named: "filledEggShape")
+
+var isFilled: Bool = false
 
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
@@ -72,6 +74,8 @@ class EggTypeController: UIViewController {
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
         extraLargeButton.setAttributedTitle(attributedTitle, for: .normal)
         
+        extraLargeButton.addTarget(self, action: #selector(extraLargeButtonClicked(_:)), for: .touchUpInside)
+        
         view.addSubview(extraLargeButton)
     }
     
@@ -88,6 +92,8 @@ class EggTypeController: UIViewController {
         let title = jumboButton.title(for: .normal)
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
         jumboButton.setAttributedTitle(attributedTitle, for: .normal)
+        
+        jumboButton.addTarget(self, action: #selector(jumboButtonClicked(_:)), for: .touchUpInside)
         
         view.addSubview(jumboButton)
     }
@@ -121,9 +127,43 @@ class EggTypeController: UIViewController {
     }
     
     func largeButtonCLicked(_ button: UIButton) {
-        largeButton.titleLabel?.textColor = .white
+        if isFilled == false {
+            largeButton.titleLabel?.textColor = .white
+            largeButton.setBackgroundImage(filledEggButton, for: .normal)
+            
+            extraLargeButton.setBackgroundImage(eggShapeButton, for: .normal)
+            extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
+            
+            jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
+            jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
+        }
+    }
+    
+    func extraLargeButtonClicked(_ button: UIButton) {
         
-        largeButton.setBackgroundImage(filledEggButton, for: .normal)
+        if isFilled == false {
+            extraLargeButton.titleLabel?.textColor = .white
+            extraLargeButton.setBackgroundImage(filledEggButton, for: .normal)
+            
+            largeButton.setBackgroundImage(eggShapeButton, for: .normal)
+            largeButton.titleLabel?.textColor = appColor.mainOrangeColor
+            
+            jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
+            jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
+        }
+    }
+    
+    func jumboButtonClicked(_ button: UIButton) {
+        if isFilled == false {
+            jumboButton.titleLabel?.textColor = .white
+            jumboButton.setBackgroundImage(filledEggButton, for: .normal)
+            
+            largeButton.setBackgroundImage(eggShapeButton, for: .normal)
+            largeButton.titleLabel?.textColor = appColor.mainOrangeColor
+            
+            extraLargeButton.setBackgroundImage(eggShapeButton, for: .normal)
+            extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
+        }
     }
 }
 
