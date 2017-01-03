@@ -9,28 +9,34 @@
 import UIKit
 import QuartzCore
 
+let appColor = Colors()
+let eggShapeButton = UIImage(named: "emptyEggShape")
+
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        
         largeButton()
         extraLargeButton()
-        jumbo()
+        jumboButton()
         
         header()
+        logo()
         
-        view.backgroundColor = .white
     }
     
     func largeButton() {
+        
+        
         let largeButton = UIButton(type: .custom)
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
-        let eggShapeColor = Colors()
-        let eggShapeButton = UIImage(named: "emptyEggShape")
         
         largeButton.setBackgroundImage(eggShapeButton, for: .normal)
         largeButton.setTitle("large", for: .normal)
-        largeButton.setTitleColor(eggShapeColor.emptyEggShapeColor, for: .normal)
-        largeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 18)
+        largeButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        largeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 17)
+        largeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         largeButton.titleLabel?.textAlignment = .center
         
         // adding spacing between characters
@@ -42,53 +48,51 @@ class EggTypeController: UIViewController {
     }
     
     func extraLargeButton() {
-        let largeButton = UIButton(type: .custom)
-        largeButton.frame = CGRect(x: 138.00, y: 265.00, width: 100.00, height: 138.00)
-        let eggShapeColor = Colors()
-        let eggShapeButton = UIImage(named: "emptyEggShape")
+        let extraLargeButton = UIButton(type: .custom)
+        extraLargeButton.frame = CGRect(x: 138.00, y: 265.00, width: 100.00, height: 138.00)
         
-        largeButton.setBackgroundImage(eggShapeButton, for: .normal)
+        extraLargeButton.setBackgroundImage(eggShapeButton, for: .normal)
         
         // adding two lines of text
-        largeButton.titleLabel!.lineBreakMode = .byWordWrapping
-        largeButton.titleLabel!.textAlignment = .center
-        largeButton.setTitle("extra\nlarge", for: .normal)
+        extraLargeButton.titleLabel!.lineBreakMode = .byWordWrapping
+        extraLargeButton.titleLabel!.textAlignment = .center
+        extraLargeButton.setTitle("extra\nlarge", for: .normal)
         
-        largeButton.setTitleColor(eggShapeColor.emptyEggShapeColor, for: .normal)
-        largeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 18)
+        extraLargeButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        extraLargeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 17)
+        extraLargeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         
         // adding spacing between characters
-        let title = largeButton.title(for: .normal)
+        let title = extraLargeButton.title(for: .normal)
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        largeButton.setAttributedTitle(attributedTitle, for: .normal)
+        extraLargeButton.setAttributedTitle(attributedTitle, for: .normal)
         
-        view.addSubview(largeButton)
+        view.addSubview(extraLargeButton)
     }
     
-    func jumbo() {
-        let largeButton = UIButton(type: .custom)
-        largeButton.frame = CGRect(x: 258.00, y: 265.00, width: 100.00, height: 138.00)
-        let eggShapeColor = Colors()
-        let eggShapeButton = UIImage(named: "emptyEggShape")
+    func jumboButton() {
+        let jumboButton = UIButton(type: .custom)
+        jumboButton.frame = CGRect(x: 258.00, y: 265.00, width: 100.00, height: 138.00)
         
-        largeButton.setBackgroundImage(eggShapeButton, for: .normal)
-        largeButton.setTitle("jumbo", for: .normal)
-        largeButton.setTitleColor(eggShapeColor.emptyEggShapeColor, for: .normal)
-        largeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 18)
-        largeButton.titleLabel?.textAlignment = .center
+        jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
+        jumboButton.setTitle("jumbo", for: .normal)
+        jumboButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        jumboButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 17)
+        jumboButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        jumboButton.titleLabel?.textAlignment = .center
         
         // adding spacing between characters
-        let title = largeButton.title(for: .normal)
+        let title = jumboButton.title(for: .normal)
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        largeButton.setAttributedTitle(attributedTitle, for: .normal)
+        jumboButton.setAttributedTitle(attributedTitle, for: .normal)
         
-        view.addSubview(largeButton)
+        view.addSubview(jumboButton)
     }
     
     func header() {
         // label programmatically
         let headerLabel = UILabel()
-        headerLabel.frame = CGRect(x: 118.00, y: 70.00, width: 140.00, height: 23.00)
+        headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
         headerLabel.text = "eggypop"
         headerLabel.textColor = UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)
         headerLabel.font = UIFont(name: "Lucida Grande", size: 20)
@@ -101,6 +105,19 @@ class EggTypeController: UIViewController {
         headerLabel.attributedText = attributedString
         
         self.view.addSubview(headerLabel)
+    }
+    
+    func logo() {
+        
+        let logoImage = UIImage(named: "logoIggy")
+        let appLogo = UIImageView()
+        
+        appLogo.image = logoImage
+        appLogo.frame = CGRect(x: 163.00, y: 596.00, width: 50.00, height: 40.00)
+        
+        self.view.addSubview(appLogo)
+        
+        
     }
     
 }

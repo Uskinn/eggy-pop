@@ -10,7 +10,7 @@ import UIKit
 
 struct Colors {
     
-    let emptyEggShapeColor = UIColor(red:1.00, green:0.66, blue:0.07, alpha:1.0)
+    let mainOrangeColor = UIColor(red:1.00, green:0.66, blue:0.07, alpha:1.0)
     
     
     
