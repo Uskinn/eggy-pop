@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EggTypeController.swift
 //  Eggypop
 //
 //  Created by Sergey Nevzorov on 11/28/16.
@@ -9,46 +9,52 @@
 import UIKit
 import QuartzCore
 
+var largeButton = UIButton(type: .system)
+let extraLargeButton = UIButton(type: .system)
+let jumboButton = UIButton(type: .system)
+
 let appColor = Colors()
 let eggShapeButton = UIImage(named: "emptyEggShape")
+let filledEggButton = UIImage(named: "filledEggShape")
 
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        largeButton()
-        extraLargeButton()
-        jumboButton()
+        largeButtonFunc()
+        extraLargeButtonFunc()
+        jumboButtonFunc()
         
         header()
         logo()
         
+
+        
     }
     
-    func largeButton() {
+    func largeButtonFunc() {
         
-        
-        let largeButton = UIButton(type: .custom)
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
         
-        largeButton.setBackgroundImage(eggShapeButton, for: .normal)
         largeButton.setTitle("large", for: .normal)
+        largeButton.setBackgroundImage(eggShapeButton, for: .normal)
+
         largeButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         largeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 17)
         largeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        largeButton.titleLabel?.textAlignment = .center
         
         // adding spacing between characters
         let title = largeButton.title(for: .normal)
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
         largeButton.setAttributedTitle(attributedTitle, for: .normal)
         
+        largeButton.addTarget(self, action: #selector(largeButtonCLicked(_:)), for: .touchUpInside)
+        
         view.addSubview(largeButton)
     }
     
-    func extraLargeButton() {
-        let extraLargeButton = UIButton(type: .custom)
+    func extraLargeButtonFunc() {
         extraLargeButton.frame = CGRect(x: 138.00, y: 265.00, width: 100.00, height: 138.00)
         
         extraLargeButton.setBackgroundImage(eggShapeButton, for: .normal)
@@ -70,8 +76,7 @@ class EggTypeController: UIViewController {
         view.addSubview(extraLargeButton)
     }
     
-    func jumboButton() {
-        let jumboButton = UIButton(type: .custom)
+    func jumboButtonFunc() {
         jumboButton.frame = CGRect(x: 258.00, y: 265.00, width: 100.00, height: 138.00)
         
         jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
@@ -113,10 +118,20 @@ class EggTypeController: UIViewController {
         let appLogo = UIImageView()
         
         appLogo.image = logoImage
-        appLogo.frame = CGRect(x: 163.00, y: 596.00, width: 50.00, height: 40.00)
+        appLogo.frame = CGRect(x: 168.00, y: 596.00, width: 38.00, height: 51.00)
         
         self.view.addSubview(appLogo)
         
+        
+    }
+    
+    func largeButtonCLicked(_ button: UIButton) {
+        
+        largeButton.titleLabel?.textColor = .white
+
+        largeButton.setBackgroundImage(filledEggButton, for: .normal)
+        //largeButton.setTitleColor(.white, for: .normal)
+
         
     }
     
