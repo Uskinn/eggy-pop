@@ -93,13 +93,13 @@ class TimerViewController: UIViewController {
         timerLabel.text = "00:00"
         timerLabel.textColor = .white
         timerLabel.font = UIFont(name: "LucidaGrande", size: 0)
-        timerLabel.font = UIFont.boldSystemFont(ofSize: 112)
+        timerLabel.font = UIFont.systemFont(ofSize: 112)
         timerLabel.textAlignment = NSTextAlignment.center
         
         // adding spacing between characters
         let attributedString = NSMutableAttributedString(string: timerLabel.text!)
-         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
-         timerLabel.attributedText = attributedString
+        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
+        timerLabel.attributedText = attributedString
         
         self.view.addSubview(timerLabel)
     }
