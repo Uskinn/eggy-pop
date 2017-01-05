@@ -20,7 +20,8 @@ let hardButton = UIButton(type: .system)
 let startButton = UIButton(type: .system)
 let stopButton = UIButton(type: .system)
 
-let appColor = Colors()
+let appColor = Color()
+
 let eggShapeButton = UIImage(named: "emptyEggShape")
 let filledEggButton = UIImage(named: "filledEggShape")
 let emptyEggTypeButtonImage = UIImage(named: "emptyTypeButton")
@@ -127,7 +128,7 @@ class EggTypeController: UIViewController {
         let headerLabel = UILabel()
         headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
         headerLabel.text = "eggypop"
-        headerLabel.textColor = UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)
+        headerLabel.textColor = appColor.headerColor
         headerLabel.font = UIFont(name: "LucidaGrande", size: 0)
         headerLabel.font = UIFont.boldSystemFont(ofSize: 20)
         headerLabel.textAlignment = NSTextAlignment.center
@@ -342,13 +343,13 @@ class EggTypeController: UIViewController {
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
         startButton.setAttributedTitle(attributedTitle, for: .normal)
         
-        // startButton.addTarget(self, action: #selector(largeButtonCLicked(_:)), for: .touchUpInside)
+        startButton.addTarget(self, action: #selector(startButtonCLicked(_:)), for: .touchUpInside)
         
         view.addSubview(startButton)
     }
     
     func startButtonFade() {
-        UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+        UIView.animate(withDuration: 0.5, delay: 0.8, options: [],
                        animations: {
                         startButton.alpha = 1.0
                         
@@ -357,6 +358,13 @@ class EggTypeController: UIViewController {
         )
     }
     
+    func startButtonCLicked(_ button: UIButton) {
+        
+        // segue programmaticaly
+        let controller = TimerViewController()
+        present(controller, animated: true, completion: nil)
+        
+    }
     
     
     
