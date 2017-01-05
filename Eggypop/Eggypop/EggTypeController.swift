@@ -18,7 +18,6 @@ let mediumButton = UIButton(type: .system)
 let hardButton = UIButton(type: .system)
 
 let startButton = UIButton(type: .system)
-let stopButton = UIButton(type: .system)
 
 let appColor = Color()
 
@@ -359,15 +358,11 @@ class EggTypeController: UIViewController {
     }
     
     func startButtonCLicked(_ button: UIButton) {
-        
         // segue programmaticaly
         let controller = TimerViewController()
         present(controller, animated: true, completion: nil)
         
     }
-    
-    
-    
 }
 
 
