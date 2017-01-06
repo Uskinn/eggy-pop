@@ -235,9 +235,9 @@ class EggTypeController: UIViewController {
         mediumButton.frame = CGRect(x: 17.00, y: 329.00, width: 341.00, height: 55.00)
         mediumButton.setTitle("medium", for: .normal)
         
-        mediumButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+        mediumButton.setBackgroundImage(filledEggTypeButtonImage, for: .normal)
         
-        mediumButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        mediumButton.setTitleColor(.white, for: .normal)
         mediumButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
         mediumButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
         
