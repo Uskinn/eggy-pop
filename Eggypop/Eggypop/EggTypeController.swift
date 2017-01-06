@@ -362,6 +362,9 @@ class EggTypeController: UIViewController {
         let controller = TimerViewController()
         present(controller, animated: true, completion: nil)
         
+    
+        
+        seconds = 120
     }
 }
 

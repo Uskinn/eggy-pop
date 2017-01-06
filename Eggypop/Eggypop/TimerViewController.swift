@@ -11,8 +11,16 @@ import QuartzCore
 
 let stopButton = UIButton(type: .system)
 
+let headerLabel = UILabel()
+var timerLabel = UILabel()
+
 let stopButtonImage = UIImage(named: "stopButton")
 let timerLabelImage = UIImage(named: "timerLabel")
+
+var timer = Timer()
+var seconds: Int = 0
+
+var timerOn: Bool = true
 
 class TimerViewController: UIViewController {
     
@@ -21,7 +29,7 @@ class TimerViewController: UIViewController {
         view.backgroundColor = .white
         
         header()
-        timerLabel()
+        timerLabelFunc()
         logo()
         
         stopButtonFunc()
@@ -31,7 +39,7 @@ class TimerViewController: UIViewController {
     
     func header() {
         // label programmatically
-        let headerLabel = UILabel()
+        
         headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
         headerLabel.text = "eggypop"
         headerLabel.textColor = appColor.headerColor
@@ -79,11 +87,11 @@ class TimerViewController: UIViewController {
     
     func stopButtonCkicked(_ button: UIButton) {
         self.dismiss(animated: true, completion: nil)
+        timerLabel.text = "00:00"
     }
     
-    func timerLabel() {
+    func timerLabelFunc() {
         // label programmatically
-        let timerLabel = UILabel()
         timerLabel.frame = CGRect(x: 13.00, y: 99.00, width: 348.00, height: 168.00)
         timerLabel.backgroundColor = appColor.mainOrangeColor
         
@@ -101,7 +109,46 @@ class TimerViewController: UIViewController {
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
         timerLabel.attributedText = attributedString
         
+        
+        
         self.view.addSubview(timerLabel)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        timerLabel.center.y += self.view.bounds.height
+        stopButton.center.y += self.view.bounds.height
+        
+        updateTimer()
+        
+        timerLabel.text = String(EggTimer.timeFormatted(totalSeconds: seconds))
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.01, options: [], animations: {
+            timerLabel.center.y -= 650
+        },
+                       completion: nil
+        )
+        
+        UIView.animate(withDuration: 0.3, delay: 0.01, options: [], animations: {
+            stopButton.center.y -= 700
+        },
+                       completion: nil
+        )
+        
+    }
+    
+    func updateTimer() {
+        if seconds > 0 {
+            seconds -= 1
+            timerLabel.text = String(EggTimer.timeFormatted(totalSeconds: seconds))
+        }
     }
     
     
