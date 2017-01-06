@@ -9,10 +9,11 @@
 import UIKit
 import QuartzCore
 
+// egg category button
 let largeButton = UIButton(type: .system)
 let extraLargeButton = UIButton(type: .system)
 let jumboButton = UIButton(type: .system)
-
+// egg type button
 let softButton = UIButton(type: .system)
 let mediumButton = UIButton(type: .system)
 let hardButton = UIButton(type: .system)
@@ -26,7 +27,7 @@ let filledEggButton = UIImage(named: "filledEggShape")
 let emptyEggTypeButtonImage = UIImage(named: "emptyTypeButton")
 let filledEggTypeButtonImage = UIImage(named: "filledTypeButton")
 let startButtonImage = UIImage(named: "startButton")
-
+// booleans
 var isFilled: Bool = false
 var cotegoryButtonOn: Bool = true
 var typeButtonOn: Bool = true
@@ -54,10 +55,6 @@ class EggTypeController: UIViewController {
         mediumButton.center.x += self.view.bounds.width
         hardButton.center.x -= self.view.bounds.width
         startButton.alpha = 0.0
-        
-        // largeButton.addTarget(self, action: #selector(largeButtonCLicked(_:)), for: .touchUpInside)
-        
-        
     }
     
     func largeButtonFunc() {
@@ -177,7 +174,6 @@ class EggTypeController: UIViewController {
             jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
             jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
-        
         moveEggCotegoryButtons()
         moveEggTypeButtons()
         startButtonFade()
@@ -216,7 +212,6 @@ class EggTypeController: UIViewController {
     }
     
     // MARK: creating the eggType buttons
-    
     func softEggType () {
         softButton.frame = CGRect(x: 17.00, y: 267.00, width: 341.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
@@ -351,7 +346,6 @@ class EggTypeController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0.8, options: [],
                        animations: {
                         startButton.alpha = 1.0
-                        
         },
                        completion: nil
         )
@@ -362,9 +356,41 @@ class EggTypeController: UIViewController {
         let controller = TimerViewController()
         present(controller, animated: true, completion: nil)
         
-    
+        if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+            seconds = 180
+        }
         
-        seconds = 120
+        if largeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+            seconds = 240
+        }
+
+        if largeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+            seconds = 300
+        }
+
+        if extraLargeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+            seconds = 240
+        }
+        
+        if extraLargeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+            seconds = 300
+        }
+        
+        if extraLargeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+            seconds = 360
+        }
+        
+        if jumboButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+            seconds = 300
+        }
+        
+        if jumboButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+            seconds = 360
+        }
+        
+        if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+            seconds = 460
+        }
     }
 }
 
