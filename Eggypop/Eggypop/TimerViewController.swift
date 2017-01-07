@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import JSSAlertView
 
 // button
 let stopButton = UIButton(type: .system)

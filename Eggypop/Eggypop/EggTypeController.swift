@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import JSSAlertView
 
 // egg category button
 let largeButton = UIButton(type: .system)
@@ -55,7 +56,8 @@ class EggTypeController: UIViewController {
         mediumButton.center.x += self.view.bounds.width
         hardButton.center.x -= self.view.bounds.width
         startButton.alpha = 0.0
-    }
+        
+            }
     
     func largeButtonFunc() {
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
@@ -75,6 +77,10 @@ class EggTypeController: UIViewController {
         largeButton.addTarget(self, action: #selector(largeButtonCLicked(_:)), for: .touchUpInside)
         
         view.addSubview(largeButton)
+        
+        
+        
+        
     }
     
     func extraLargeButtonFunc() {
@@ -161,6 +167,9 @@ class EggTypeController: UIViewController {
         moveEggCotegoryButtons()
         moveEggTypeButtons()
         startButtonFade()
+        
+        myAlert()
+
     }
     
     func extraLargeButtonClicked(_ button: UIButton) {
@@ -392,10 +401,27 @@ class EggTypeController: UIViewController {
             seconds = 460
         }
     }
+    
+    func myAlert() {
+        let alertview = JSSAlertView().show(self,
+                                            title: "Custom color",
+                                            text: "All of the cool kids have purple alerts these days",
+                                            buttonText: "Whoa",
+                                            color: UIColorFromHex(0x9b59b6, alpha: 1))
+        alertview.setTextTheme(.light)
+
+    }
 }
 
-
-
+//open func show(_ viewController: UIViewController,
+//title: String,
+//text: String?=nil,
+//noButtons: Bool?=false,
+//buttonText: String?=nil,
+//cancelButtonText: String?=nil,
+//color: UIColor?=nil,
+//iconImage: UIImage?=nil,
+//delay: Double?=nil) -> JSSAlertViewResponder
 
 
 
