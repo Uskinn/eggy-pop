@@ -10,6 +10,8 @@ import UIKit
 import QuartzCore
 
 // buttons
+let buttonModel = Button()
+
 let largeButton = UIButton(type: .system)
 let extraLargeButton = UIButton(type: .system)
 let jumboButton = UIButton(type: .system)
@@ -34,9 +36,9 @@ class EggTypeController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        largeButtonFunc()
-        extraLargeButtonFunc()
-        jumboButtonFunc()
+        largeEggButton()
+        extraLargeEggButton()
+        jumboEggButton()
         
         softEggType()
         mediumEggType()
@@ -49,71 +51,34 @@ class EggTypeController: UIViewController {
         
         buttonsFirstLoad()
         
-            }
-    
-    func largeButtonFunc() {
-        largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
-        largeButton.setTitle("large", for: .normal)
-        
-        largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-        
-        largeButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
-        largeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
-        largeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        
-        // adding spacing between characters
-        let title = largeButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        largeButton.setAttributedTitle(attributedTitle, for: .normal)
-        
-        largeButton.addTarget(self, action: #selector(largeButtonCLicked(_:)), for: .touchUpInside)
-        
-        view.addSubview(largeButton)
-        
-        
-        
-        
     }
     
-    func extraLargeButtonFunc() {
+    func largeEggButton() {
+        largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
+        largeButton.setTitle("large", for: .normal)
+        buttonModel.eggCategoryButton(largeButton)
+        largeButton.addTarget(self, action: #selector(largeEggButtonCLicked(_:)), for: .touchUpInside)
+        view.addSubview(largeButton)
+    }
+    
+    func extraLargeEggButton() {
         extraLargeButton.frame = CGRect(x: 138.00, y: 265.00, width: 100.00, height: 138.00)
         extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-        
         // adding two lines of text
         extraLargeButton.titleLabel!.lineBreakMode = .byWordWrapping
         extraLargeButton.titleLabel!.textAlignment = .center
         extraLargeButton.setTitle("extra\nlarge", for: .normal)
         
-        extraLargeButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
-        extraLargeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
-        extraLargeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        
-        // adding spacing between characters
-        let title = extraLargeButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        extraLargeButton.setAttributedTitle(attributedTitle, for: .normal)
-        
-        extraLargeButton.addTarget(self, action: #selector(extraLargeButtonClicked(_:)), for: .touchUpInside)
-        
+        buttonModel.eggCategoryButton(extraLargeButton)
+        extraLargeButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
         view.addSubview(extraLargeButton)
     }
     
-    func jumboButtonFunc() {
+    func jumboEggButton() {
         jumboButton.frame = CGRect(x: 258.00, y: 265.00, width: 100.00, height: 138.00)
-        jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
         jumboButton.setTitle("jumbo", for: .normal)
-        jumboButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
-        jumboButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
-        jumboButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        jumboButton.titleLabel?.textAlignment = .center
-        
-        // adding spacing between characters
-        let title = jumboButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        jumboButton.setAttributedTitle(attributedTitle, for: .normal)
-        
-        jumboButton.addTarget(self, action: #selector(jumboButtonClicked(_:)), for: .touchUpInside)
-        
+        buttonModel.eggCategoryButton(jumboButton)
+        jumboButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         view.addSubview(jumboButton)
     }
     
@@ -142,7 +107,7 @@ class EggTypeController: UIViewController {
         self.view.addSubview(appLogo)
     }
     
-    func largeButtonCLicked(_ button: UIButton) {
+    func largeEggButtonCLicked(_ button: UIButton) {
         if isFilled == false {
             largeButton.titleLabel?.textColor = .white
             largeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
@@ -153,12 +118,12 @@ class EggTypeController: UIViewController {
             jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
-        moveEggCotegoryButtons()
+        moveEggCotegoryButtonsUp()
         moveEggTypeButtons()
         startButtonFade()
     }
     
-    func extraLargeButtonClicked(_ button: UIButton) {
+    func extraLargeEggButtonClicked(_ button: UIButton) {
         if isFilled == false {
             extraLargeButton.titleLabel?.textColor = .white
             extraLargeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
@@ -169,12 +134,12 @@ class EggTypeController: UIViewController {
             jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
-        moveEggCotegoryButtons()
+        moveEggCotegoryButtonsUp()
         moveEggTypeButtons()
         startButtonFade()
     }
     
-    func jumboButtonClicked(_ button: UIButton) {
+    func jumboEggButtonClicked(_ button: UIButton) {
         if isFilled == false {
             jumboButton.titleLabel?.textColor = .white
             jumboButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
@@ -185,22 +150,19 @@ class EggTypeController: UIViewController {
             extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
-        moveEggCotegoryButtons()
+        moveEggCotegoryButtonsUp()
         moveEggTypeButtons()
         startButtonFade()
     }
     
     // MARK: animating buttons
     // moving three eggSize buttons up
-    func moveEggCotegoryButtons() {
+    func moveEggCotegoryButtonsUp() {
         if cotegoryButtonOn == true {
             UIView.animate(withDuration: 0.4) {
                 jumboButton.center.y -= 171
                 largeButton.center.y -= 171
                 extraLargeButton.center.y -= 171
-                
-                //print(jumboButton.frame)
-                
                 cotegoryButtonOn = false
             }
         }
@@ -210,57 +172,24 @@ class EggTypeController: UIViewController {
     func softEggType () {
         softButton.frame = CGRect(x: 17.00, y: 267.00, width: 341.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
-        
-        softButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
-        
-        softButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
-        softButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 36)
-        softButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
-        
-        let title = softButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 2.0])
-        softButton.setAttributedTitle(attributedTitle, for: .normal)
-        
+        buttonModel.eggTypeButton(softButton)
         softButton.addTarget(self, action: #selector(softButtonCLicked(_:)), for: .touchUpInside)
-        
         view.addSubview(softButton)
     }
     
     func mediumEggType() {
         mediumButton.frame = CGRect(x: 17.00, y: 329.00, width: 341.00, height: 55.00)
         mediumButton.setTitle("medium", for: .normal)
-        
-        mediumButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
-        
-        mediumButton.setTitleColor(.white, for: .normal)
-        mediumButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
-        mediumButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
-        
-        let title = mediumButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 2.0])
-        mediumButton.setAttributedTitle(attributedTitle, for: .normal)
-        
+        buttonModel.eggTypeButton(mediumButton)
         mediumButton.addTarget(self, action: #selector(mediumButtonCLicked(_:)), for: .touchUpInside)
-        
         view.addSubview(mediumButton)
     }
     
     func hardEggType() {
         hardButton.frame = CGRect(x: 17.00, y: 391.00, width: 341.00, height: 55.00)
         hardButton.setTitle("hard", for: .normal)
-        
-        hardButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
-        
-        hardButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
-        hardButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
-        hardButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
-        
-        let title = hardButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 2.0])
-        hardButton.setAttributedTitle(attributedTitle, for: .normal)
-        
+        buttonModel.eggTypeButton(hardButton)
         hardButton.addTarget(self, action: #selector(hardButtonCLicked(_:)), for: .touchUpInside)
-        
         view.addSubview(hardButton)
     }
     
@@ -386,7 +315,6 @@ class EggTypeController: UIViewController {
         if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
             seconds = 460
         }
-        
     }
     
     func buttonsFirstLoad() {
@@ -396,18 +324,6 @@ class EggTypeController: UIViewController {
         startButton.alpha = 0.0
     }
 }
-
-//open func show(_ viewController: UIViewController,
-//title: String,
-//text: String?=nil,
-//noButtons: Bool?=false,
-//buttonText: String?=nil,
-//cancelButtonText: String?=nil,
-//color: UIColor?=nil,
-//iconImage: UIImage?=nil,
-//delay: Double?=nil) -> JSSAlertViewResponder
-
-
 
 
 

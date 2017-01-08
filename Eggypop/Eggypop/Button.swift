@@ -8,24 +8,31 @@
 
 import UIKit
 
-//struct Button {
-//    
-//    func newButton() {
-//        let appColor = Colors()
-//        let eggShapeButton = UIImage(named: "emptyEggShape")
-//        
-//        let eggButton = UIButton(type: .custom)
-//        eggButton.setBackgroundImage(eggShapeButton, for: .normal)
-//        eggButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
-//        eggButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
-//        eggButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-//
-//        
-//        // adding spacing between characters
-////        let title = eggButton.title(for: .normal)
-////        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-////        eggButton.setAttributedTitle(attributedTitle, for: .normal)
-//  
-//    }
-//  
-//}
+class Button {
+    
+    func eggCategoryButton(_ myButton: UIButton) {
+        myButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        myButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        myButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
+        myButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+
+        // adding spacing between characters
+        let title = myButton.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
+        myButton.setAttributedTitle(attributedTitle, for: .normal)
+    }
+    
+    func eggTypeButton(_ myButton: UIButton) {
+        myButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
+        myButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        myButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 0)
+        myButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+        
+        // adding spacing between characters
+        let title = myButton.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 2.0])
+        myButton.setAttributedTitle(attributedTitle, for: .normal)
+    }
+
+  
+}
