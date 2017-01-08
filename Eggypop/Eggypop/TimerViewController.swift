@@ -56,9 +56,7 @@ class TimerViewController: UIViewController {
     }
     
     func logo() {
-        let appLogo = UIImageView()
-        appLogo.image = appImage.logoImage
-        appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+        myLogo.logo(appLogo)
         self.view.addSubview(appLogo)
     }
     

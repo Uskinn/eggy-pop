@@ -34,5 +34,21 @@ class Button {
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
 
+    func startButton(_ myButton: UIButton) {
+        myButton.frame = CGRect(x: 138.00, y: 481.00, width: 100.00, height: 100.00)
+        myButton.setTitle("start", for: .normal)
+        
+        myButton.setBackgroundImage(appImage.startButtonImage, for: .normal)
+        
+        myButton.setTitleColor(.white, for: .normal)
+        myButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
+        myButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        
+        // adding spacing between characters
+        let title = myButton.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
+        myButton.setAttributedTitle(attributedTitle, for: .normal)
+
+    }
   
 }
