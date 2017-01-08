@@ -8,13 +8,12 @@
 
 import UIKit
 import QuartzCore
-import JSSAlertView
 
-// egg category button
+// buttons
 let largeButton = UIButton(type: .system)
 let extraLargeButton = UIButton(type: .system)
 let jumboButton = UIButton(type: .system)
-// egg type button
+
 let softButton = UIButton(type: .system)
 let mediumButton = UIButton(type: .system)
 let hardButton = UIButton(type: .system)
@@ -22,12 +21,8 @@ let hardButton = UIButton(type: .system)
 let startButton = UIButton(type: .system)
 
 let appColor = Color()
+let appImage = Image()
 
-let eggShapeButton = UIImage(named: "emptyEggShape")
-let filledEggButton = UIImage(named: "filledEggShape")
-let emptyEggTypeButtonImage = UIImage(named: "emptyTypeButton")
-let filledEggTypeButtonImage = UIImage(named: "filledTypeButton")
-let startButtonImage = UIImage(named: "startButton")
 // booleans
 var isFilled: Bool = false
 var cotegoryButtonOn: Bool = true
@@ -52,10 +47,7 @@ class EggTypeController: UIViewController {
         
         startButtonFunc()
         
-        softButton.center.x -= self.view.bounds.width
-        mediumButton.center.x += self.view.bounds.width
-        hardButton.center.x -= self.view.bounds.width
-        startButton.alpha = 0.0
+        buttonsFirstLoad()
         
             }
     
@@ -63,7 +55,7 @@ class EggTypeController: UIViewController {
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
         largeButton.setTitle("large", for: .normal)
         
-        largeButton.setBackgroundImage(eggShapeButton, for: .normal)
+        largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
         
         largeButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         largeButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
@@ -85,7 +77,7 @@ class EggTypeController: UIViewController {
     
     func extraLargeButtonFunc() {
         extraLargeButton.frame = CGRect(x: 138.00, y: 265.00, width: 100.00, height: 138.00)
-        extraLargeButton.setBackgroundImage(eggShapeButton, for: .normal)
+        extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
         
         // adding two lines of text
         extraLargeButton.titleLabel!.lineBreakMode = .byWordWrapping
@@ -108,7 +100,7 @@ class EggTypeController: UIViewController {
     
     func jumboButtonFunc() {
         jumboButton.frame = CGRect(x: 258.00, y: 265.00, width: 100.00, height: 138.00)
-        jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
+        jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
         jumboButton.setTitle("jumbo", for: .normal)
         jumboButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         jumboButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
@@ -144,43 +136,37 @@ class EggTypeController: UIViewController {
     }
     
     func logo() {
-        let logoImage = UIImage(named: "logoIggy")
         let appLogo = UIImageView()
-        
-        appLogo.image = logoImage
+        appLogo.image = appImage.logoImage
         appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
-        
         self.view.addSubview(appLogo)
     }
     
     func largeButtonCLicked(_ button: UIButton) {
         if isFilled == false {
             largeButton.titleLabel?.textColor = .white
-            largeButton.setBackgroundImage(filledEggButton, for: .normal)
+            largeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
             
-            extraLargeButton.setBackgroundImage(eggShapeButton, for: .normal)
+            extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-            jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
+            jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
         moveEggCotegoryButtons()
         moveEggTypeButtons()
         startButtonFade()
-        
-        myAlert()
-
     }
     
     func extraLargeButtonClicked(_ button: UIButton) {
         if isFilled == false {
             extraLargeButton.titleLabel?.textColor = .white
-            extraLargeButton.setBackgroundImage(filledEggButton, for: .normal)
+            extraLargeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
             
-            largeButton.setBackgroundImage(eggShapeButton, for: .normal)
+            largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             largeButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-            jumboButton.setBackgroundImage(eggShapeButton, for: .normal)
+            jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
         moveEggCotegoryButtons()
@@ -191,12 +177,12 @@ class EggTypeController: UIViewController {
     func jumboButtonClicked(_ button: UIButton) {
         if isFilled == false {
             jumboButton.titleLabel?.textColor = .white
-            jumboButton.setBackgroundImage(filledEggButton, for: .normal)
+            jumboButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
             
-            largeButton.setBackgroundImage(eggShapeButton, for: .normal)
+            largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             largeButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-            extraLargeButton.setBackgroundImage(eggShapeButton, for: .normal)
+            extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
             extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
         moveEggCotegoryButtons()
@@ -225,7 +211,7 @@ class EggTypeController: UIViewController {
         softButton.frame = CGRect(x: 17.00, y: 267.00, width: 341.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
         
-        softButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+        softButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
         
         softButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         softButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 36)
@@ -244,7 +230,7 @@ class EggTypeController: UIViewController {
         mediumButton.frame = CGRect(x: 17.00, y: 329.00, width: 341.00, height: 55.00)
         mediumButton.setTitle("medium", for: .normal)
         
-        mediumButton.setBackgroundImage(filledEggTypeButtonImage, for: .normal)
+        mediumButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
         
         mediumButton.setTitleColor(.white, for: .normal)
         mediumButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
@@ -263,7 +249,7 @@ class EggTypeController: UIViewController {
         hardButton.frame = CGRect(x: 17.00, y: 391.00, width: 341.00, height: 55.00)
         hardButton.setTitle("hard", for: .normal)
         
-        hardButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+        hardButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
         
         hardButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         hardButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
@@ -281,12 +267,12 @@ class EggTypeController: UIViewController {
     func softButtonCLicked(_ button: UIButton) {
         if isFilled == false {
             softButton.titleLabel?.textColor = .white
-            softButton.setBackgroundImage(filledEggTypeButtonImage, for: .normal)
+            softButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
             
-            mediumButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+            mediumButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             mediumButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-            hardButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+            hardButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             hardButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
     }
@@ -294,12 +280,12 @@ class EggTypeController: UIViewController {
     func mediumButtonCLicked(_ button: UIButton) {
         if isFilled == false {
             mediumButton.titleLabel?.textColor = .white
-            mediumButton.setBackgroundImage(filledEggTypeButtonImage, for: .normal)
+            mediumButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
             
-            softButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+            softButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             softButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-            hardButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+            hardButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             hardButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
     }
@@ -307,12 +293,12 @@ class EggTypeController: UIViewController {
     func hardButtonCLicked(_ button: UIButton) {
         if isFilled == false {
             hardButton.titleLabel?.textColor = .white
-            hardButton.setBackgroundImage(filledEggTypeButtonImage, for: .normal)
+            hardButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
             
-            mediumButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+            mediumButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             mediumButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-            softButton.setBackgroundImage(emptyEggTypeButtonImage, for: .normal)
+            softButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             softButton.titleLabel?.textColor = appColor.mainOrangeColor
         }
     }
@@ -335,7 +321,7 @@ class EggTypeController: UIViewController {
         startButton.frame = CGRect(x: 138.00, y: 481.00, width: 100.00, height: 100.00)
         startButton.setTitle("start", for: .normal)
         
-        startButton.setBackgroundImage(startButtonImage, for: .normal)
+        startButton.setBackgroundImage(appImage.startButtonImage, for: .normal)
         
         startButton.setTitleColor(.white, for: .normal)
         startButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
@@ -366,17 +352,17 @@ class EggTypeController: UIViewController {
         present(controller, animated: true, completion: nil)
         
         if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-            seconds = 180
+            seconds = 4
         }
         
         if largeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
             seconds = 240
         }
-
+        
         if largeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
             seconds = 300
         }
-
+        
         if extraLargeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
             seconds = 240
         }
@@ -400,16 +386,14 @@ class EggTypeController: UIViewController {
         if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
             seconds = 460
         }
+        
     }
     
-    func myAlert() {
-        let alertview = JSSAlertView().show(self,
-                                            title: "Custom color",
-                                            text: "All of the cool kids have purple alerts these days",
-                                            buttonText: "Whoa",
-                                            color: UIColorFromHex(0x9b59b6, alpha: 1))
-        alertview.setTextTheme(.light)
-
+    func buttonsFirstLoad() {
+        softButton.center.x -= self.view.bounds.width
+        mediumButton.center.x += self.view.bounds.width
+        hardButton.center.x -= self.view.bounds.width
+        startButton.alpha = 0.0
     }
 }
 

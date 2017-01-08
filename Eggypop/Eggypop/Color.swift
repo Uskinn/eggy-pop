@@ -12,7 +12,7 @@ struct Color {
     
     let mainOrangeColor = UIColor(red:1.00, green:0.66, blue:0.07, alpha:1.0)
     let headerColor = UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)
-    
+    let hexMainOrangeColor: UInt32 = 0xFEA911
     
     
     

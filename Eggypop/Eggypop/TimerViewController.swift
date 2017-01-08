@@ -17,10 +17,6 @@ let stopButton = UIButton(type: .system)
 let headerLabel = UILabel()
 var timerLabel = UILabel()
 
-// image
-let stopButtonImage = UIImage(named: "stopButton")
-let timerLabelImage = UIImage(named: "timerLabel")
-
 // object
 var timer = Timer()
 var seconds: Int = 0
@@ -36,10 +32,6 @@ class TimerViewController: UIViewController {
         logo()
         
         stopButtonFunc()
-        
-        updateTimer()
-        
-        timerLabel.text = String(EggTimer.timeFormatted(totalSeconds: seconds))
         
         if timer.isValid == false {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
@@ -64,12 +56,9 @@ class TimerViewController: UIViewController {
     }
     
     func logo() {
-        let logoImage = UIImage(named: "logoIggy")
         let appLogo = UIImageView()
-        
-        appLogo.image = logoImage
+        appLogo.image = appImage.logoImage
         appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
-        
         self.view.addSubview(appLogo)
     }
     
@@ -77,7 +66,7 @@ class TimerViewController: UIViewController {
         stopButton.frame = CGRect(x: 138.00, y: 481.00, width: 100.00, height: 100.00)
         stopButton.setTitle("stop", for: .normal)
         
-        stopButton.setBackgroundImage(stopButtonImage, for: .normal)
+        stopButton.setBackgroundImage(appImage.stopButtonImage, for: .normal)
         
         stopButton.setTitleColor(.white, for: .normal)
         stopButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
@@ -95,7 +84,7 @@ class TimerViewController: UIViewController {
     
     func stopButtonCkicked(_ button: UIButton) {
         self.dismiss(animated: true, completion: nil)
-      //  timer.invalidate()
+        timer.invalidate()
         timerLabel.text = "00:00"
     }
     
@@ -147,5 +136,21 @@ class TimerViewController: UIViewController {
             seconds -= 1
             timerLabel.text = String(EggTimer.timeFormatted(totalSeconds: seconds))
         }
+        
+        if seconds == 0 {
+            
+            let alertview = JSSAlertView().show(self,
+                                                title: "Hey",
+                                                text: "Eggs are ready",
+                                                buttonText: "Bon appetit!",
+                                                color: UIColorFromHex(appColor.hexMainOrangeColor, alpha: 1))
+            alertview.setTextTheme(.light)
+            alertview.addAction {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        
+        
+        
     }
 }
