@@ -10,8 +10,6 @@ import UIKit
 import QuartzCore
 
 // buttons
-let buttonModel = Button()
-
 let largeButton = UIButton(type: .system)
 let extraLargeButton = UIButton(type: .system)
 let jumboButton = UIButton(type: .system)
@@ -23,8 +21,8 @@ let hardButton = UIButton(type: .system)
 let startButton = UIButton(type: .system)
 
 let appLogo = UIImageView()
+let headerLabel = UILabel()
 
-let myLogo = Logo()
 let appColor = Color()
 let appImage = Image()
 
@@ -51,15 +49,13 @@ class EggTypeController: UIViewController {
         logo()
         
         startButtonFunc()
-        
         buttonsFirstLoad()
-        
     }
     
     func largeEggButton() {
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
         largeButton.setTitle("large", for: .normal)
-        buttonModel.eggCategoryButton(largeButton)
+        Button.eggCategoryButton(largeButton)
         largeButton.addTarget(self, action: #selector(largeEggButtonCLicked(_:)), for: .touchUpInside)
         view.addSubview(largeButton)
     }
@@ -72,7 +68,7 @@ class EggTypeController: UIViewController {
         extraLargeButton.titleLabel!.textAlignment = .center
         extraLargeButton.setTitle("extra\nlarge", for: .normal)
         
-        buttonModel.eggCategoryButton(extraLargeButton)
+        Button.eggCategoryButton(extraLargeButton)
         extraLargeButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
         view.addSubview(extraLargeButton)
     }
@@ -80,31 +76,18 @@ class EggTypeController: UIViewController {
     func jumboEggButton() {
         jumboButton.frame = CGRect(x: 258.00, y: 265.00, width: 100.00, height: 138.00)
         jumboButton.setTitle("jumbo", for: .normal)
-        buttonModel.eggCategoryButton(jumboButton)
+        Button.eggCategoryButton(jumboButton)
         jumboButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         view.addSubview(jumboButton)
     }
     
     func header() {
-        // label programmatically
-        let headerLabel = UILabel()
-        headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
-        headerLabel.text = "eggypop"
-        headerLabel.textColor = appColor.headerColor
-        headerLabel.font = UIFont(name: "LucidaGrande", size: 0)
-        headerLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        headerLabel.textAlignment = NSTextAlignment.center
-        
-        // adding spacing between characters
-        let attributedString = NSMutableAttributedString(string: headerLabel.text!)
-        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(2.5), range: NSRange(location: 0, length: attributedString.length))
-        headerLabel.attributedText = attributedString
-        
+        Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
     func logo() {
-        myLogo.logo(appLogo)
+        Logo.logo(appLogo)
         self.view.addSubview(appLogo)
     }
     
@@ -170,7 +153,7 @@ class EggTypeController: UIViewController {
     func softEggType () {
         softButton.frame = CGRect(x: 17.00, y: 267.00, width: 341.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
-        buttonModel.eggTypeButton(softButton)
+        Button.eggTypeButton(softButton)
         softButton.addTarget(self, action: #selector(softButtonCLicked(_:)), for: .touchUpInside)
         view.addSubview(softButton)
     }
@@ -178,7 +161,7 @@ class EggTypeController: UIViewController {
     func mediumEggType() {
         mediumButton.frame = CGRect(x: 17.00, y: 329.00, width: 341.00, height: 55.00)
         mediumButton.setTitle("medium", for: .normal)
-        buttonModel.eggTypeButton(mediumButton)
+        Button.eggTypeButton(mediumButton)
         mediumButton.addTarget(self, action: #selector(mediumButtonCLicked(_:)), for: .touchUpInside)
         view.addSubview(mediumButton)
     }
@@ -186,7 +169,7 @@ class EggTypeController: UIViewController {
     func hardEggType() {
         hardButton.frame = CGRect(x: 17.00, y: 391.00, width: 341.00, height: 55.00)
         hardButton.setTitle("hard", for: .normal)
-        buttonModel.eggTypeButton(hardButton)
+        Button.eggTypeButton(hardButton)
         hardButton.addTarget(self, action: #selector(hardButtonCLicked(_:)), for: .touchUpInside)
         view.addSubview(hardButton)
     }
@@ -248,7 +231,7 @@ class EggTypeController: UIViewController {
     }
     
     func startButtonFunc() {
-        buttonModel.startButton(startButton)
+        Button.startButton(startButton)
         startButton.addTarget(self, action: #selector(startButtonCLicked(_:)), for: .touchUpInside)
         view.addSubview(startButton)
     }

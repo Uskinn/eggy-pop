@@ -10,7 +10,7 @@ import UIKit
 
 class Button {
     
-    func eggCategoryButton(_ myButton: UIButton) {
+   class func eggCategoryButton(_ myButton: UIButton) {
         myButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
         myButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         myButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
@@ -22,7 +22,7 @@ class Button {
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
     
-    func eggTypeButton(_ myButton: UIButton) {
+   class func eggTypeButton(_ myButton: UIButton) {
         myButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
         myButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         myButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 0)
@@ -34,7 +34,7 @@ class Button {
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
 
-    func startButton(_ myButton: UIButton) {
+   class func startButton(_ myButton: UIButton) {
         myButton.frame = CGRect(x: 138.00, y: 481.00, width: 100.00, height: 100.00)
         myButton.setTitle("start", for: .normal)
         
@@ -51,4 +51,19 @@ class Button {
 
     }
   
+    class func stopButton(_ myButton: UIButton) {
+        myButton.frame = CGRect(x: 138.00, y: 481.00, width: 100.00, height: 100.00)
+        myButton.setTitle("stop", for: .normal)
+        
+        myButton.setBackgroundImage(appImage.stopButtonImage, for: .normal)
+        
+        myButton.setTitleColor(.white, for: .normal)
+        myButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
+        myButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        
+        // adding spacing between characters
+        let title = myButton.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
+        myButton.setAttributedTitle(attributedTitle, for: .normal)
+    }
 }

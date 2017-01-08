@@ -14,7 +14,6 @@ import JSSAlertView
 let stopButton = UIButton(type: .system)
 
 // label
-let headerLabel = UILabel()
 var timerLabel = UILabel()
 
 // object
@@ -39,44 +38,18 @@ class TimerViewController: UIViewController {
     }
     
     func header() {
-        // label programmatically
-        headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
-        headerLabel.text = "eggypop"
-        headerLabel.textColor = appColor.headerColor
-        headerLabel.font = UIFont(name: "LucidaGrande", size: 0)
-        headerLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        headerLabel.textAlignment = NSTextAlignment.center
-        
-        // adding spacing between characters
-        let attributedString = NSMutableAttributedString(string: headerLabel.text!)
-        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(2.5), range: NSRange(location: 0, length: attributedString.length))
-        headerLabel.attributedText = attributedString
-        
+        Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
     func logo() {
-        myLogo.logo(appLogo)
+        Logo.logo(appLogo)
         self.view.addSubview(appLogo)
     }
     
     func stopButtonFunc() {
-        stopButton.frame = CGRect(x: 138.00, y: 481.00, width: 100.00, height: 100.00)
-        stopButton.setTitle("stop", for: .normal)
-        
-        stopButton.setBackgroundImage(appImage.stopButtonImage, for: .normal)
-        
-        stopButton.setTitleColor(.white, for: .normal)
-        stopButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
-        stopButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
-        
-        // adding spacing between characters
-        let title = stopButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
-        stopButton.setAttributedTitle(attributedTitle, for: .normal)
-        
+        Button.stopButton(stopButton)
         stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
-        
         view.addSubview(stopButton)
     }
     
@@ -87,24 +60,7 @@ class TimerViewController: UIViewController {
     }
     
     func timerLabelFunc() {
-        // label programmatically
-        timerLabel.frame = CGRect(x: 13.00, y: 99.00, width: 348.00, height: 168.00)
-        timerLabel.backgroundColor = appColor.mainOrangeColor
-        
-        timerLabel.layer.masksToBounds = true
-        timerLabel.layer.cornerRadius = 8
-        
-        timerLabel.text = "00:00"
-        timerLabel.textColor = .white
-        timerLabel.font = UIFont(name: "LucidaGrande", size: 0)
-        timerLabel.font = UIFont.systemFont(ofSize: 112)
-        timerLabel.textAlignment = NSTextAlignment.center
-        
-        // adding spacing between characters
-        let attributedString = NSMutableAttributedString(string: timerLabel.text!)
-        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
-        timerLabel.attributedText = attributedString
-        
+        Label.timerLabel(timerLabel)
         self.view.addSubview(timerLabel)
     }
     
