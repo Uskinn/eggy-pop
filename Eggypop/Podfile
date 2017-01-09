@@ -6,6 +6,6 @@ target 'Eggypop' do
   use_frameworks!
 
   # Pods for Eggypop
-pod 'JSSAlertView'
+  pod 'JSSAlertView'
 
 end

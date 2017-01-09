@@ -9,7 +9,6 @@
 import UIKit
 import QuartzCore
 
-// buttons
 let largeButton = UIButton(type: .system)
 let extraLargeButton = UIButton(type: .system)
 let jumboButton = UIButton(type: .system)

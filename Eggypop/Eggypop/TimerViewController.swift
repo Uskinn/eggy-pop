@@ -10,13 +10,8 @@ import UIKit
 import QuartzCore
 import JSSAlertView
 
-// button
 let stopButton = UIButton(type: .system)
-
-// label
 var timerLabel = UILabel()
-
-// object
 var timer = Timer()
 var seconds: Int = 0
 
@@ -32,10 +27,7 @@ class TimerViewController: UIViewController {
         
         stopButtonFunc()
         
-        if timer.isValid == false {
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
-        }
-    }
+            }
     
     func header() {
         Label.headerLabel(headerLabel)
@@ -64,6 +56,29 @@ class TimerViewController: UIViewController {
         self.view.addSubview(timerLabel)
     }
     
+    func updateTimer() {
+        if seconds > 0 {
+            print(seconds)
+            seconds -= 1
+        
+            timerLabel.text = String(EggTimer.timeFormatted(seconds))
+            print("We are counting")
+            
+        } else {
+            print("we are DONE")
+            //dump(self)
+            let alertview = JSSAlertView().show(self,
+                                                title: "Hey",
+                                                text: "Eggs are ready",
+                                                buttonText: "Bon appetit!",
+                                                color: UIColorFromHex(appColor.hexMainOrangeColor, alpha: 1))
+            alertview.setTextTheme(.light)
+            alertview.addAction {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         timerLabel.center.y += self.view.bounds.height
@@ -72,6 +87,11 @@ class TimerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if timer.isValid == false {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
+        }
+
         UIView.animate(withDuration: 0.3, delay: 0, options: [], animations: {
             timerLabel.center.y -= 650
         },
@@ -85,26 +105,5 @@ class TimerViewController: UIViewController {
         )
     }
     
-    func updateTimer() {
-        if seconds > 0 {
-            seconds -= 1
-            timerLabel.text = String(EggTimer.timeFormatted(totalSeconds: seconds))
-        }
-        
-        if seconds == 0 {
-            
-            let alertview = JSSAlertView().show(self,
-                                                title: "Hey",
-                                                text: "Eggs are ready",
-                                                buttonText: "Bon appetit!",
-                                                color: UIColorFromHex(appColor.hexMainOrangeColor, alpha: 1))
-            alertview.setTextTheme(.light)
-            alertview.addAction {
-                self.dismiss(animated: true, completion: nil)
-            }
-        }
-        
-        
-        
     }
-}
+
