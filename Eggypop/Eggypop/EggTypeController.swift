@@ -9,6 +9,8 @@
 import UIKit
 import QuartzCore
 
+
+
 let largeButton = UIButton(type: .system)
 let extraLargeButton = UIButton(type: .system)
 let jumboButton = UIButton(type: .system)
@@ -44,11 +46,14 @@ class EggTypeController: UIViewController {
         mediumEggType()
         hardEggType()
         
-        header()
-        logo()
-        
         startButtonFunc()
         buttonsFirstLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        header()
+        logo()
     }
     
     func largeEggButton() {
@@ -139,12 +144,15 @@ class EggTypeController: UIViewController {
     // moving three eggSize buttons up
     func moveEggCotegoryButtonsUp() {
         if cotegoryButtonOn == true {
-            UIView.animate(withDuration: 0.4) {
+            UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut,
+                           animations: {
                 jumboButton.center.y -= 171
                 largeButton.center.y -= 171
                 extraLargeButton.center.y -= 171
                 cotegoryButtonOn = false
-            }
+            },
+                           completion: nil
+            )
         }
     }
     
@@ -217,7 +225,7 @@ class EggTypeController: UIViewController {
     
     func moveEggTypeButtons() {
         if typeButtonOn == true {
-            UIView.animate(withDuration: 0.5, delay: 0.3, options: [],
+            UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseInOut,
                            animations: {
                             softButton.center.x += self.view.bounds.width
                             mediumButton.center.x -= self.view.bounds.width
@@ -245,45 +253,47 @@ class EggTypeController: UIViewController {
     }
     
     func startButtonCLicked(_ button: UIButton) {
-        // segue programmaticaly
         let controller = TimerViewController()
-        present(controller, animated: true, completion: nil)
-        
-        if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-            seconds = 4
+        present(controller, animated: true) {
+            
+            if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+                seconds = 4
+            }
+            
+            if largeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+                seconds = 240
+            }
+            
+            if largeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+                seconds = 300
+            }
+            
+            if extraLargeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+                seconds = 240
+            }
+            
+            if extraLargeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+                seconds = 300
+            }
+            
+            if extraLargeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+                seconds = 360
+            }
+            
+            if jumboButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+                seconds = 300
+            }
+            
+            if jumboButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+                seconds = 360
+            }
+            
+            if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+                seconds = 460
+
         }
         
-        if largeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
-            seconds = 240
-        }
-        
-        if largeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
-            seconds = 300
-        }
-        
-        if extraLargeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-            seconds = 240
-        }
-        
-        if extraLargeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
-            seconds = 300
-        }
-        
-        if extraLargeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
-            seconds = 360
-        }
-        
-        if jumboButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-            seconds = 300
-        }
-        
-        if jumboButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
-            seconds = 360
-        }
-        
-        if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
-            seconds = 460
-        }
+                }
     }
     
     func buttonsFirstLoad() {

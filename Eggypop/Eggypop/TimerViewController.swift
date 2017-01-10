@@ -10,10 +10,12 @@ import UIKit
 import QuartzCore
 import JSSAlertView
 
+
 let stopButton = UIButton(type: .system)
 var timerLabel = UILabel()
 var timer = Timer()
 var seconds: Int = 0
+var secondsLeft: Bool = true
 
 class TimerViewController: UIViewController {
     
@@ -26,8 +28,13 @@ class TimerViewController: UIViewController {
         logo()
         
         stopButtonFunc()
-        
-            }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        timerLabel.frame = CGRect(x: 14.00, y: 100.00, width: 348.00, height: 168.00)
+        stopButton.frame = CGRect(x: 137.04, y: 486.00, width: 100.00, height: 100.00)
+    }
     
     func header() {
         Label.headerLabel(headerLabel)
@@ -60,50 +67,24 @@ class TimerViewController: UIViewController {
         if seconds > 0 {
             print(seconds)
             seconds -= 1
-        
-            timerLabel.text = String(EggTimer.timeFormatted(seconds))
-            print("We are counting")
             
-        } else {
-            print("we are DONE")
-            //dump(self)
-            let alertview = JSSAlertView().show(self,
-                                                title: "Hey",
-                                                text: "Eggs are ready",
-                                                buttonText: "Bon appetit!",
-                                                color: UIColorFromHex(appColor.hexMainOrangeColor, alpha: 1))
-            alertview.setTextTheme(.light)
-            alertview.addAction {
+            timerLabel.text = String(EggTimer.timeFormatted(seconds))
+        } else if seconds == 0 && secondsLeft {
+            
+            Alert.alertWithTitle(self, callback: { 
                 self.dismiss(animated: true, completion: nil)
-            }
+            })
+            secondsLeft = false
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        timerLabel.center.y += self.view.bounds.height
-        stopButton.center.y += self.view.bounds.height
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        secondsLeft = true
         
         if timer.isValid == false {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
         }
-
-        UIView.animate(withDuration: 0.3, delay: 0, options: [], animations: {
-            timerLabel.center.y -= 650
-        },
-                       completion: nil
-        )
-        
-        UIView.animate(withDuration: 0.3, delay: 0, options: [], animations: {
-            stopButton.center.y -= 700
-        },
-                       completion: nil
-        )
     }
-    
-    }
+}
 
