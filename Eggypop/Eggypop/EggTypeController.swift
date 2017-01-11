@@ -47,12 +47,12 @@ class EggTypeController: UIViewController {
         mediumEggType()
         hardEggType()
         
-        startButtonFunc()
         buttonsFirstLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        startButtonFunc()
         header()
         logo()
         
@@ -199,7 +199,7 @@ class EggTypeController: UIViewController {
     
     // MARK: creating the eggType buttons
     func softEggType () {
-        softButton.frame = CGRect(x: 17.00, y: 267.00, width: 341.00, height: 55.00)
+        softButton.frame = CGRect(x: 17.00, y: 260.00, width: 341.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
         Button.eggTypeButton(softButton)
         softButton.addTarget(self, action: #selector(softButtonCLicked(_:)), for: .touchUpInside)
@@ -207,7 +207,7 @@ class EggTypeController: UIViewController {
     }
     
     func mediumEggType() {
-        mediumButton.frame = CGRect(x: 17.00, y: 329.00, width: 341.00, height: 55.00)
+        mediumButton.frame = CGRect(x: 17.00, y: 322.00, width: 341.00, height: 55.00)
         mediumButton.setTitle("medium", for: .normal)
         Button.eggTypeButton(mediumButton)
         mediumButton.addTarget(self, action: #selector(mediumButtonCLicked(_:)), for: .touchUpInside)
@@ -215,7 +215,7 @@ class EggTypeController: UIViewController {
     }
     
     func hardEggType() {
-        hardButton.frame = CGRect(x: 17.00, y: 391.00, width: 341.00, height: 55.00)
+        hardButton.frame = CGRect(x: 17.00, y: 384.00, width: 341.00, height: 55.00)
         hardButton.setTitle("hard", for: .normal)
         Button.eggTypeButton(hardButton)
         hardButton.addTarget(self, action: #selector(hardButtonCLicked(_:)), for: .touchUpInside)
@@ -313,13 +313,7 @@ class EggTypeController: UIViewController {
     }
     
     func startButtonFade() {
-        //        UIView.animate(withDuration: 0.3, delay: 0.5, options: [],
-        //                       animations: {
-        //                        startButton.alpha = 1.0
-        //        },
-        //                       completion: nil
-        //        )
-        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 1.0, options: [], animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 1.0, options: [], animations: {
             startButton.alpha = 1.0
         }, completion: nil)
         
@@ -365,7 +359,6 @@ class EggTypeController: UIViewController {
                 seconds = 460
                 
             }
-            
         }
     }
     

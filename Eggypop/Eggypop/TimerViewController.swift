@@ -21,16 +21,21 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
-        header()
-        timerLabelFunc()
-        logo()
-        
         stopButtonFunc()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        secondsLeft = false
+        
+        if timer.isValid == false {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
+        }
+        
+        header()
+        timerLabelFunc()
+        logo()
+        
         timerLabel.frame = CGRect(x: 14.00, y: 100.00, width: 348.00, height: 168.00)
         stopButton.frame = CGRect(x: 137.04, y: 486.00, width: 100.00, height: 100.00)
     }
@@ -66,22 +71,13 @@ class TimerViewController: UIViewController {
         if seconds > 0 {
             print(seconds)
             seconds -= 1
-            
             timerLabel.text = String(EggTimer.timeFormatted(seconds))
+            
         } else if seconds == 0 && !secondsLeft {
-            Alert.alertWithTitle(self, callback: { 
+            Alert.alertWithTitle(self, callback: {
                 self.dismiss(animated: true, completion: nil)
             })
             secondsLeft = true
-        }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        secondsLeft = false
-        
-        if timer.isValid == false {
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
         }
     }
 }
