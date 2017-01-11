@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103CD1E247E8B008B5BB8 /* Alert.swift */; };
+		8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */; };
 		8A13E9DD1E1AD46C00A30ABA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9DC1E1AD46C00A30ABA /* Color.swift */; };
 		8A13E9E31E1B010900A30ABA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9E21E1B010900A30ABA /* Button.swift */; };
 		8A13E9E51E1B160400A30ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A13E9E41E1B160400A30ABA /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 		2F097247A0EB514EBB0E1F66 /* Pods-Eggypop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggypop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eggypop/Pods-Eggypop.release.xcconfig"; sourceTree = "<group>"; };
 		7AD21EB1F1277AC74FBEE1C6 /* Pods-Eggypop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggypop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eggypop/Pods-Eggypop.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0103CD1E247E8B008B5BB8 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateButton.swift; sourceTree = "<group>"; };
 		8A13E9DC1E1AD46C00A30ABA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8A13E9E21E1B010900A30ABA /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8A13E9E41E1B160400A30ABA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				8A13E9E21E1B010900A30ABA /* Button.swift */,
+				8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */,
 				8A0103CD1E247E8B008B5BB8 /* Alert.swift */,
 				8A3D6B071E21E7CF00637642 /* Logo.swift */,
 				8A13E9E61E1C30A700A30ABA /* Timer.swift */,
@@ -272,6 +275,7 @@
 				8A13E9DD1E1AD46C00A30ABA /* Color.swift in Sources */,
 				8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */,
 				8A68F3D71E1DEB8600B62CA6 /* TimerViewController.swift in Sources */,
+				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
 				8A3D6B081E21E7CF00637642 /* Logo.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,
