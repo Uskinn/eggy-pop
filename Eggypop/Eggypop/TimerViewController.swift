@@ -10,12 +10,11 @@ import UIKit
 import QuartzCore
 import JSSAlertView
 
-
 let stopButton = UIButton(type: .system)
 var timerLabel = UILabel()
 var timer = Timer()
 var seconds: Int = 0
-var secondsLeft: Bool = true
+var secondsLeft: Bool = false
 
 class TimerViewController: UIViewController {
     
@@ -69,18 +68,17 @@ class TimerViewController: UIViewController {
             seconds -= 1
             
             timerLabel.text = String(EggTimer.timeFormatted(seconds))
-        } else if seconds == 0 && secondsLeft {
-            
+        } else if seconds == 0 && !secondsLeft {
             Alert.alertWithTitle(self, callback: { 
                 self.dismiss(animated: true, completion: nil)
             })
-            secondsLeft = false
+            secondsLeft = true
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        secondsLeft = true
+        secondsLeft = false
         
         if timer.isValid == false {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)

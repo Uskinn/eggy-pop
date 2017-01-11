@@ -108,6 +108,7 @@ class EggTypeController: UIViewController {
         }
         moveEggCotegoryButtonsUp()
         moveEggTypeButtons()
+        startButtonFade()
     }
     
     func extraLargeEggButtonClicked(_ button: UIButton) {
@@ -123,6 +124,7 @@ class EggTypeController: UIViewController {
         }
         moveEggCotegoryButtonsUp()
         moveEggTypeButtons()
+        startButtonFade()
     }
     
     func jumboEggButtonClicked(_ button: UIButton) {
@@ -138,6 +140,7 @@ class EggTypeController: UIViewController {
         }
         moveEggCotegoryButtonsUp()
         moveEggTypeButtons()
+        startButtonFade()
     }
     
     // MARK: animating buttons
@@ -146,9 +149,9 @@ class EggTypeController: UIViewController {
         if cotegoryButtonOn == true {
             UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut,
                            animations: {
-                jumboButton.center.y -= 171
-                largeButton.center.y -= 171
-                extraLargeButton.center.y -= 171
+                jumboButton.center.y -= 162
+                largeButton.center.y -= 162
+                extraLargeButton.center.y -= 162
                 cotegoryButtonOn = false
             },
                            completion: nil
@@ -191,7 +194,6 @@ class EggTypeController: UIViewController {
             
             hardButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             hardButton.titleLabel?.textColor = appColor.mainOrangeColor
-            startButtonFade()
         }
     }
     
@@ -205,7 +207,7 @@ class EggTypeController: UIViewController {
             
             hardButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             hardButton.titleLabel?.textColor = appColor.mainOrangeColor
-            startButtonFade()
+            
         }
     }
     
@@ -219,7 +221,6 @@ class EggTypeController: UIViewController {
             
             softButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
             softButton.titleLabel?.textColor = appColor.mainOrangeColor
-            startButtonFade()
         }
     }
     
@@ -244,7 +245,7 @@ class EggTypeController: UIViewController {
     }
     
     func startButtonFade() {
-        UIView.animate(withDuration: 0.2, delay: 0.2, options: [],
+        UIView.animate(withDuration: 0.3, delay: 0.5, options: [],
                        animations: {
                         startButton.alpha = 1.0
         },

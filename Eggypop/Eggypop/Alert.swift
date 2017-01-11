@@ -21,17 +21,5 @@ class Alert: JSSAlertView {
 
         alertview.setTextTheme(.light)
         alertview.addAction(callback)
-        
     }
 }
-
-//let alertController = UIAlertController(title: "title", message: "message", preferredStyle: .Alert)
-////...
-//var rootViewController = UIApplication.shared.keyWindow?.rootViewController
-//if let navigationController = rootViewController as? UINavigationController {
-//    rootViewController = navigationController.viewControllers.first
-//}
-//if let tabBarController = rootViewController as? UITabBarController {
-//    rootViewController = tabBarController.selectedViewController
-//}
-//rootViewController?.present(alertController, animated: true, completion: nil)
