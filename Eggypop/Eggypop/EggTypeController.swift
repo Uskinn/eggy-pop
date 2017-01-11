@@ -9,8 +9,6 @@
 import UIKit
 import QuartzCore
 
-
-
 let largeButton = UIButton(type: .system)
 let extraLargeButton = UIButton(type: .system)
 let jumboButton = UIButton(type: .system)
@@ -27,7 +25,7 @@ let headerLabel = UILabel()
 let appColor = Color()
 let appImage = Image()
 
-// booleans
+// Booleans
 var isFilled: Bool = false
 var cotegoryButtonOn: Bool = true
 var typeButtonOn: Bool = true
@@ -46,18 +44,36 @@ class EggTypeController: UIViewController {
         softEggType()
         mediumEggType()
         hardEggType()
-        
-        buttonsFirstLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        buttonsFirstLoad()
         startButtonFunc()
         header()
         logo()
-        
     }
     
+    func buttonsFirstLoad() {
+        softButton.center.x -= self.view.bounds.width
+        mediumButton.center.x += self.view.bounds.width
+        hardButton.center.x -= self.view.bounds.width
+        startButton.alpha = 0.0
+    }
+    
+    // #MARK: Header
+    func header() {
+        Label.headerLabel(headerLabel)
+        self.view.addSubview(headerLabel)
+    }
+    
+    // #MARK: Logo
+    func logo() {
+        Logo.logo(appLogo)
+        self.view.addSubview(appLogo)
+    }
+    
+    // #MARK: Egg category buttons view
     func largeEggButton() {
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
         largeButton.setTitle("large", for: .normal)
@@ -87,19 +103,9 @@ class EggTypeController: UIViewController {
         view.addSubview(jumboButton)
     }
     
-    func header() {
-        Label.headerLabel(headerLabel)
-        self.view.addSubview(headerLabel)
-    }
-    
-    func logo() {
-        Logo.logo(appLogo)
-        self.view.addSubview(appLogo)
-    }
-    
+    // #MARK: Egg category buttons aaction
     func largeEggButtonCLicked(_ button: UIButton) {
         isAnimated = true
-        
         AnimateButton.animateButtonInside(myButton: largeButton)
         
         if isFilled == false {
@@ -116,7 +122,6 @@ class EggTypeController: UIViewController {
                 
                 largeButton.titleLabel?.textColor = .white
                 largeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
-                
             }, completion: nil)
         }
         isAnimated = false
@@ -144,7 +149,6 @@ class EggTypeController: UIViewController {
                 
                 extraLargeButton.titleLabel?.textColor = .white
                 extraLargeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
-                
             }, completion: nil)
         }
         isAnimated = false
@@ -172,7 +176,6 @@ class EggTypeController: UIViewController {
                 
                 jumboButton.titleLabel?.textColor = .white
                 jumboButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
-                
             }, completion: nil)
         }
         isAnimated = false
@@ -182,8 +185,7 @@ class EggTypeController: UIViewController {
         startButtonFade()
     }
     
-    // MARK: animating buttons
-    // moving three eggSize buttons up
+    // MARK: Moving egg category buttons up
     func moveEggCotegoryButtonsUp() {
         if cotegoryButtonOn == true {
             UIView.animate(withDuration: 0.33, delay: 0.0, options: [.curveEaseInOut], animations: {
@@ -194,10 +196,9 @@ class EggTypeController: UIViewController {
             }, completion: nil
             )
         }
-        
     }
     
-    // MARK: creating the eggType buttons
+    // MARK: Egg type buttons view
     func softEggType () {
         softButton.frame = CGRect(x: 17.00, y: 260.00, width: 341.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
@@ -222,8 +223,9 @@ class EggTypeController: UIViewController {
         view.addSubview(hardButton)
     }
     
+    // MARK: Egg type buttons action
     func softButtonCLicked(_ button: UIButton) {
-            if isFilled == false {
+        if isFilled == false {
             softButton.titleLabel?.textColor = .white
             softButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
             
@@ -261,6 +263,7 @@ class EggTypeController: UIViewController {
         }
     }
     
+    // MARK: Egg type buttons animation
     func moveEggTypeButtons() {
         if typeButtonOn == true {
             UIView.animate(withDuration: 1.2, delay: 0.4, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: [], animations: {
@@ -270,22 +273,11 @@ class EggTypeController: UIViewController {
             },
                            completion: nil
             )
-            
-//            UIView.animate(withDuration: 1.2, delay: 0.5, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: [], animations: {
-//                mediumButton.center.x += self.view.bounds.width
-//            },
-//                           completion: nil
-//            )
-//            
-//            UIView.animate(withDuration: 1.2, delay: 0.6, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: [], animations: {
-//                hardButton.center.x += self.view.bounds.width
-//            },
-//                           completion: nil
-//            )
         }
         typeButtonOn = false
     }
     
+    // MARK: Start button
     func startButtonFunc() {
         Button.startButton(startButton)
         startButton.addTarget(self, action: #selector(startButtonCLicked(_:)), for: .touchUpInside)
@@ -296,7 +288,6 @@ class EggTypeController: UIViewController {
         UIView.animate(withDuration: 0.3, delay: 0.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 1.0, options: [], animations: {
             startButton.alpha = 1.0
         }, completion: nil)
-        
     }
     
     func startButtonCLicked(_ button: UIButton) {
@@ -340,13 +331,6 @@ class EggTypeController: UIViewController {
                 
             }
         }
-    }
-    
-    func buttonsFirstLoad() {
-        softButton.center.x -= self.view.bounds.width
-        mediumButton.center.x += self.view.bounds.width
-        hardButton.center.x -= self.view.bounds.width
-        startButton.alpha = 0.0
     }
 }
 

@@ -48,7 +48,6 @@ class Button {
         let title = myButton.title(for: .normal)
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
         myButton.setAttributedTitle(attributedTitle, for: .normal)
-
     }
   
     class func stopButton(_ myButton: UIButton) {

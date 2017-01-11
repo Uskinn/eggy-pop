@@ -40,16 +40,19 @@ class TimerViewController: UIViewController {
         stopButton.frame = CGRect(x: 137.04, y: 486.00, width: 100.00, height: 100.00)
     }
     
+    // #MARK: Header
     func header() {
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
+    // #MARK: Header
     func logo() {
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
     }
     
+    // #MARK: Stop button
     func stopButtonFunc() {
         Button.stopButton(stopButton)
         stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
@@ -62,11 +65,13 @@ class TimerViewController: UIViewController {
         timerLabel.text = "00:00"
     }
     
+    // #MARK: Timer label view
     func timerLabelFunc() {
         Label.timerLabel(timerLabel)
         self.view.addSubview(timerLabel)
     }
     
+    // #MARK: Updating timer
     func updateTimer() {
         if seconds > 0 {
             print(seconds)
