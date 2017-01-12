@@ -79,7 +79,10 @@ class TimerViewController: UIViewController {
             timerLabel.text = String(EggTimer.timeFormatted(seconds))
             
         } else if seconds == 0 && !secondsLeft {
+            print(secondsLeft)
+            Sound.iggySong()
             Alert.alertWithTitle(self, callback: {
+                audioPlayer.stop()
                 self.dismiss(animated: true, completion: nil)
             })
             secondsLeft = true

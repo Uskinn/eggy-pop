@@ -44,12 +44,14 @@ class EggTypeController: UIViewController {
         softEggType()
         mediumEggType()
         hardEggType()
+        
+        startButtonFunc()
+        buttonsFirstLoad()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        buttonsFirstLoad()
-        startButtonFunc()
         header()
         logo()
     }
@@ -75,6 +77,7 @@ class EggTypeController: UIViewController {
     
     // #MARK: Egg category buttons view
     func largeEggButton() {
+        
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
         largeButton.setTitle("large", for: .normal)
         Button.eggCategoryButton(largeButton)
@@ -291,11 +294,13 @@ class EggTypeController: UIViewController {
     }
     
     func startButtonCLicked(_ button: UIButton) {
+        
         let controller = TimerViewController()
         present(controller, animated: true) {
+        
             
             if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-                seconds = 180
+                seconds = 180  // works
             }
             
             if largeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
@@ -328,7 +333,6 @@ class EggTypeController: UIViewController {
             
             if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
                 seconds = 460
-                
             }
         }
     }
