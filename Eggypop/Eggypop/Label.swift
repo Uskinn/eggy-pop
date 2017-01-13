@@ -27,7 +27,7 @@ class Label {
     
     class func timerLabel(_ myLabel: UILabel) {
         // label programmatically
-        myLabel.frame = CGRect(x: 13.00, y: 99.00, width: 348.00, height: 168.00)
+        myLabel.frame = CGRect(x: 13.05, y: 94.00, width: 348.00, height: 168.00)
         myLabel.backgroundColor = appColor.mainOrangeColor
         
         myLabel.layer.masksToBounds = true
@@ -43,5 +43,14 @@ class Label {
         let attributedString = NSMutableAttributedString(string: myLabel.text!)
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
         myLabel.attributedText = attributedString
+    }
+    
+    class func warningLabel(_ myLabel: UILabel) {
+        myLabel.frame = CGRect(x: 280.0, y: 0.0, width: 64.00, height: 19.00)
+        myLabel.text = "required"
+        myLabel.textColor = .red
+        
+        myLabel.font = UIFont(name: "LucidaGrande", size: 0)
+        myLabel.font = UIFont.systemFont(ofSize: 14)
     }
 }

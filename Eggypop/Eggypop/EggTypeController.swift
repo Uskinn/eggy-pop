@@ -21,6 +21,10 @@ let startButton = UIButton(type: .system)
 
 let appLogo = UIImageView()
 let headerLabel = UILabel()
+let warningSoftLabel = UILabel()
+let warningMediumLabel = UILabel()
+let warningHardLabel = UILabel()
+
 
 let appColor = Color()
 let appImage = Image()
@@ -47,13 +51,16 @@ class EggTypeController: UIViewController {
         
         startButtonFunc()
         buttonsFirstLoad()
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         header()
         logo()
+        warningSignSoft()
+        warningSignMedium()
+        warningSignHard()
     }
     
     func buttonsFirstLoad() {
@@ -203,7 +210,7 @@ class EggTypeController: UIViewController {
     
     // MARK: Egg type buttons view
     func softEggType () {
-        softButton.frame = CGRect(x: 17.00, y: 260.00, width: 341.00, height: 55.00)
+        softButton.frame = CGRect(x: 17.00, y: 261.00, width: 341.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
         Button.eggTypeButton(softButton)
         softButton.addTarget(self, action: #selector(softButtonCLicked(_:)), for: .touchUpInside)
@@ -211,7 +218,7 @@ class EggTypeController: UIViewController {
     }
     
     func mediumEggType() {
-        mediumButton.frame = CGRect(x: 17.00, y: 322.00, width: 341.00, height: 55.00)
+        mediumButton.frame = CGRect(x: 17.00, y: 325.00, width: 341.00, height: 55.00)
         mediumButton.setTitle("medium", for: .normal)
         Button.eggTypeButton(mediumButton)
         mediumButton.addTarget(self, action: #selector(mediumButtonCLicked(_:)), for: .touchUpInside)
@@ -219,7 +226,7 @@ class EggTypeController: UIViewController {
     }
     
     func hardEggType() {
-        hardButton.frame = CGRect(x: 17.00, y: 384.00, width: 341.00, height: 55.00)
+        hardButton.frame = CGRect(x: 17.00, y: 389.00, width: 341.00, height: 55.00)
         hardButton.setTitle("hard", for: .normal)
         Button.eggTypeButton(hardButton)
         hardButton.addTarget(self, action: #selector(hardButtonCLicked(_:)), for: .touchUpInside)
@@ -269,7 +276,7 @@ class EggTypeController: UIViewController {
     // MARK: Egg type buttons animation
     func moveEggTypeButtons() {
         if typeButtonOn == true {
-            UIView.animate(withDuration: 1.2, delay: 0.4, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: [], animations: {
+            UIView.animate(withDuration: 0.5, delay: 0.4, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
                 softButton.center.x += self.view.bounds.width
                 mediumButton.center.x -= self.view.bounds.width
                 hardButton.center.x += self.view.bounds.width
@@ -279,6 +286,22 @@ class EggTypeController: UIViewController {
         }
         typeButtonOn = false
     }
+    
+    func warningSignSoft() {
+        Label.warningLabel(warningSoftLabel)
+        softButton.addSubview(warningSoftLabel)
+    }
+    
+    func warningSignMedium() {
+        Label.warningLabel(warningMediumLabel)
+        mediumButton.addSubview(warningMediumLabel)
+    }
+    
+    func warningSignHard() {
+        Label.warningLabel(warningHardLabel)
+        hardButton.addSubview(warningHardLabel)
+    }
+
     
     // MARK: Start button
     func startButtonFunc() {
@@ -290,14 +313,15 @@ class EggTypeController: UIViewController {
     func startButtonFade() {
         UIView.animate(withDuration: 0.3, delay: 0.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 1.0, options: [], animations: {
             startButton.alpha = 1.0
-        }, completion: nil)
+        },
+                       completion: nil)
     }
     
     func startButtonCLicked(_ button: UIButton) {
         
         let controller = TimerViewController()
-        present(controller, animated: true) {
-        
+        self.present(controller, animated: true) {
+            
             
             if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
                 seconds = 180  // works

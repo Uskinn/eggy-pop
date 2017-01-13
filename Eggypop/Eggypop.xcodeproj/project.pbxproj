@@ -72,6 +72,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		8A0685AA1E280A37007A44BE /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				8AA5B1D51DEC988200D159C3 /* Assets.xcassets */,
+				8A0685841E2706A2007A44BE /* iggyPopSong.m4a */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
 		8A13E9D31E1ABDBA00A30ABA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				8A13E9E41E1B160400A30ABA /* LaunchScreen.storyboard */,
-				8AA5B1D51DEC988200D159C3 /* Assets.xcassets */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -94,12 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				8A0685861E2713B6007A44BE /* Sound.swift */,
-				8A13E9E21E1B010900A30ABA /* Button.swift */,
 				8A0685821E26E325007A44BE /* Egg.swift */,
 				8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */,
 				8A0103CD1E247E8B008B5BB8 /* Alert.swift */,
 				8A3D6B071E21E7CF00637642 /* Logo.swift */,
 				8A13E9E61E1C30A700A30ABA /* Timer.swift */,
+				8A13E9E21E1B010900A30ABA /* Button.swift */,
 				8A3D6B091E21EA7800637642 /* Label.swift */,
 			);
 			name = Model;
@@ -108,7 +116,6 @@
 		8A13E9DB1E1AD44C00A30ABA /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				8A0685841E2706A2007A44BE /* iggyPopSong.m4a */,
 				8A13E9DC1E1AD46C00A30ABA /* Color.swift */,
 				8A3D6B051E2153C200637642 /* Image.swift */,
 			);
@@ -136,10 +143,11 @@
 		8AA5B1CD1DEC988200D159C3 /* Eggypop */ = {
 			isa = PBXGroup;
 			children = (
-				8A0103D41E2678BE008B5BB8 /* View */,
-				8A13E9DB1E1AD44C00A30ABA /* Constant */,
 				8A13E9D31E1ABDBA00A30ABA /* Controller */,
+				8A0103D41E2678BE008B5BB8 /* View */,
 				8A13E9D61E1ABE4B00A30ABA /* Model */,
+				8A13E9DB1E1AD44C00A30ABA /* Constant */,
+				8A0685AA1E280A37007A44BE /* Supporting */,
 				8A13E9D41E1ABDD400A30ABA /* Storyboard */,
 				8AA5B1DA1DEC988200D159C3 /* Info.plist */,
 				8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */,

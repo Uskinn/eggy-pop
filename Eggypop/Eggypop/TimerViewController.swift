@@ -21,11 +21,11 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        stopButtonFunc()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         secondsLeft = false
         
         if timer.isValid == false {
@@ -35,9 +35,7 @@ class TimerViewController: UIViewController {
         header()
         timerLabelFunc()
         logo()
-        
-        timerLabel.frame = CGRect(x: 14.00, y: 100.00, width: 348.00, height: 168.00)
-        stopButton.frame = CGRect(x: 137.04, y: 486.00, width: 100.00, height: 100.00)
+        stopButtonFunc()
     }
     
     // #MARK: Header
