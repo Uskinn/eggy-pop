@@ -19,12 +19,14 @@ let hardButton = UIButton(type: .system)
 
 let startButton = UIButton(type: .system)
 
-let appLogo = UIImageView()
-let headerLabel = UILabel()
-let warningSoftLabel = UILabel()
-let warningMediumLabel = UILabel()
-let warningHardLabel = UILabel()
+let eggySaisImage = UIImageView()
+let warningSoftImage = UIImageView()
+let warningMediumImage = UIImageView()
+let warningHardImage = UIImageView()
 
+let appLogo = UIImageView()
+
+let headerLabel = UILabel()
 
 let appColor = Color()
 let appImage = Image()
@@ -59,7 +61,7 @@ class EggTypeController: UIViewController {
         super.viewWillAppear(animated)
         header()
         logo()
-        warningSign()
+        // warningSign()
     }
     
     func buttonsFirstLoad() {
@@ -68,25 +70,36 @@ class EggTypeController: UIViewController {
         hardButton.center.x -= self.view.bounds.width
         
         startButton.alpha = 0.0
-        
-        warningSoftLabel.alpha = 0.0
-        warningMediumLabel.alpha = 0.0
-        warningHardLabel.alpha = 0.0
     }
     
-    // #MARK: Header
+    // MARK: Header
     func header() {
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
-    // #MARK: Logo
+    // MARK: Logo
     func logo() {
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
     }
     
-    // #MARK: Egg category buttons view
+    // MARK:
+    func eggTypeButtonsWarning() {
+        Label.eggySaisWarning(eggySaisImage)
+        view.addSubview(eggySaisImage)
+        
+        Label.softSaisWarning(warningSoftImage)
+        view.addSubview(warningSoftImage)
+        
+        Label.mediumSaisWarning(warningMediumImage)
+        view.addSubview(warningMediumImage)
+        
+        Label.hardSaisWarning(warningHardImage)
+        view.addSubview(warningHardImage)
+    }
+    
+    // MARK: Egg category buttons view
     func largeEggButton() {
         
         largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
@@ -245,6 +258,7 @@ class EggTypeController: UIViewController {
         startButton.isEnabled = true
         warningSignFadeOn()
         
+        
         if isFilled == false {
             softButton.titleLabel?.textColor = .white
             softButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
@@ -261,6 +275,7 @@ class EggTypeController: UIViewController {
         isEggTypeChosen = true
         startButton.isEnabled = true
         warningSignFadeOn()
+        
         
         if isFilled == false {
             mediumButton.titleLabel?.textColor = .white
@@ -305,36 +320,20 @@ class EggTypeController: UIViewController {
         typeButtonOn = false
     }
     
-    // MARK: Warning sign func
-    func warningSign() {
-        warningSoftLabel.frame = CGRect(x: 233.0, y: 11.0, width: 110.00, height: 0.00)
-        warningSoftLabel.text = "Choose me, please."
-        Label.warningLabel(warningSoftLabel)
-        softButton.addSubview(warningSoftLabel)
-
-        warningMediumLabel.frame = CGRect(x: 246.0, y: 11.0, width: 90.00, height: 0.00)
-        warningMediumLabel.text = "No, choose me!"
-        Label.warningLabel(warningMediumLabel)
-        mediumButton.addSubview(warningMediumLabel)
-
-        warningHardLabel.frame = CGRect(x: 223.0, y: 2.0, width: 110.00, height: 0.00)
-        warningHardLabel.text = "Hey, don’t listen them, choose me. I’m the best!"
-        Label.warningLabel(warningHardLabel)
-        hardButton.addSubview(warningHardLabel)
-    }
-    
     func warningSignFadeOn() {
-        warningSoftLabel.alpha = 0.0
-        warningMediumLabel.alpha = 0.0
-        warningHardLabel.alpha = 0.0
+        warningSoftImage.alpha = 0.0
+        warningMediumImage.alpha = 0.0
+        warningHardImage.alpha = 0.0
+        
+        eggySaisImage.alpha = 0.0
     }
     
     func animateWarningSign() {
-        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
-            warningSoftLabel.bounds.size.width += 8
-            warningMediumLabel.bounds.size.width += 8
-            warningHardLabel.bounds.size.width += 8
-
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+            warningSoftImage.bounds.size.width += 20
+            warningMediumImage.bounds.size.width += 20
+            warningHardImage.bounds.size.width += 20
+            
         }, completion: nil)
     }
     
@@ -354,17 +353,12 @@ class EggTypeController: UIViewController {
     
     func startButtonCLicked(_ button: UIButton) {
         if isEggTypeChosen == false {
-            warningSoftLabel.bounds.size.width += 8
-            warningMediumLabel.bounds.size.width += 8
-            warningHardLabel.bounds.size.width += 8
-
-
-            warningSoftLabel.alpha = 1.0
-            warningMediumLabel.alpha = 1.0
-            warningHardLabel.alpha = 1.0
             
-            startButton.isEnabled = false
+            //            warningSoftImage.alpha = 1.0
+            //            warningMediumImage.alpha = 1.0
+            //            warningHardImage.alpha = 1.0
             
+            eggTypeButtonsWarning()
             animateWarningSign()
         } else {
             let controller = TimerViewController()

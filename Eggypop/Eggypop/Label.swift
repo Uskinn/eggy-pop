@@ -44,14 +44,47 @@ class Label {
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
         myLabel.attributedText = attributedString
     }
+        
+    class func eggySaisWarning(_ myLogo: UIImageView) {
+        myLogo.image = appImage.eggySaisImage
+        myLogo.frame = CGRect(x: 57.00, y: 516.00, width: 108.00, height: 99.00)
+    }
     
-    class func warningLabel(_ myLabel: UILabel) {
-        myLabel.font = UIFont(name: "LucidaGrande", size: 0)
-        myLabel.textColor = .red
-        myLabel.font = UIFont.systemFont(ofSize: 14)
-        myLabel.numberOfLines = 0
-        myLabel.lineBreakMode = .byWordWrapping
-        myLabel.textAlignment = .center
-        myLabel.sizeToFit()
+    class func softSaisWarning(_ myLogo: UIImageView) {
+        myLogo.image = appImage.softSaisImage
+        myLogo.frame = CGRect(x: 230.00, y: 255.00, width: 130.00, height: 52.00)
+    }
+    
+    class func mediumSaisWarning(_ myLogo: UIImageView) {
+        myLogo.image = appImage.mediumSaisImage
+        myLogo.frame = CGRect(x: 15.00, y: 281.00, width: 99.00, height: 73.00)
+    }
+    
+    class func hardSaisWarning(_ myLogo: UIImageView) {
+        myLogo.image = appImage.hardSaisImage
+        myLogo.frame = CGRect(x: 218.00, y: 432.00, width: 142.00, height: 77.00)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,5 +18,10 @@ struct Image {
     let startButtonImage = UIImage(named: "startButton")
     let stopButtonImage = UIImage(named: "stopButton")
 
-    let logoImage = UIImage(named: "logoIggy")
+    let logoImage = UIImage(named: "logoEggy")
+    
+    let eggySaisImage = UIImage(named: "eggySais")
+    let softSaisImage = UIImage(named: "softSais")
+    let mediumSaisImage = UIImage(named: "mediumSais")
+    let hardSaisImage = UIImage(named: "hardSais")
 }
