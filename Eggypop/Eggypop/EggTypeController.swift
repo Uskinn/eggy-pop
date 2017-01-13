@@ -35,6 +35,7 @@ var cotegoryButtonOn: Bool = true
 var typeButtonOn: Bool = true
 var startButtonON: Bool = true
 var isAnimated: Bool = true
+var isEggTypeChosen: Bool = true
 
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
@@ -58,16 +59,19 @@ class EggTypeController: UIViewController {
         super.viewWillAppear(animated)
         header()
         logo()
-        warningSignSoft()
-        warningSignMedium()
-        warningSignHard()
+        warningSign()
     }
     
     func buttonsFirstLoad() {
         softButton.center.x -= self.view.bounds.width
         mediumButton.center.x += self.view.bounds.width
         hardButton.center.x -= self.view.bounds.width
+        
         startButton.alpha = 0.0
+        
+        warningSoftLabel.alpha = 0.0
+        warningMediumLabel.alpha = 0.0
+        warningHardLabel.alpha = 0.0
     }
     
     // #MARK: Header
@@ -210,6 +214,8 @@ class EggTypeController: UIViewController {
     
     // MARK: Egg type buttons view
     func softEggType () {
+        isEggTypeChosen = false
+        print(isEggTypeChosen)
         softButton.frame = CGRect(x: 17.00, y: 261.00, width: 341.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
         Button.eggTypeButton(softButton)
@@ -235,6 +241,10 @@ class EggTypeController: UIViewController {
     
     // MARK: Egg type buttons action
     func softButtonCLicked(_ button: UIButton) {
+        isEggTypeChosen = true
+        startButton.isEnabled = true
+        warningSignFadeOn()
+        
         if isFilled == false {
             softButton.titleLabel?.textColor = .white
             softButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
@@ -248,6 +258,10 @@ class EggTypeController: UIViewController {
     }
     
     func mediumButtonCLicked(_ button: UIButton) {
+        isEggTypeChosen = true
+        startButton.isEnabled = true
+        warningSignFadeOn()
+        
         if isFilled == false {
             mediumButton.titleLabel?.textColor = .white
             mediumButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
@@ -261,6 +275,10 @@ class EggTypeController: UIViewController {
     }
     
     func hardButtonCLicked(_ button: UIButton) {
+        isEggTypeChosen = true
+        startButton.isEnabled = true
+        warningSignFadeOn()
+        
         if isFilled == false {
             hardButton.titleLabel?.textColor = .white
             hardButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
@@ -287,21 +305,23 @@ class EggTypeController: UIViewController {
         typeButtonOn = false
     }
     
-    func warningSignSoft() {
+    // MARK: Warning sign func
+    func warningSign() {
         Label.warningLabel(warningSoftLabel)
         softButton.addSubview(warningSoftLabel)
-    }
-    
-    func warningSignMedium() {
+        
         Label.warningLabel(warningMediumLabel)
         mediumButton.addSubview(warningMediumLabel)
-    }
-    
-    func warningSignHard() {
+        
         Label.warningLabel(warningHardLabel)
         hardButton.addSubview(warningHardLabel)
     }
-
+    
+    func warningSignFadeOn() {
+        warningSoftLabel.alpha = 0.0
+        warningMediumLabel.alpha = 0.0
+        warningHardLabel.alpha = 0.0
+    }
     
     // MARK: Start button
     func startButtonFunc() {
@@ -318,45 +338,52 @@ class EggTypeController: UIViewController {
     }
     
     func startButtonCLicked(_ button: UIButton) {
-        
-        let controller = TimerViewController()
-        self.present(controller, animated: true) {
+        if isEggTypeChosen == false {
+            warningSoftLabel.alpha = 1.0
+            warningMediumLabel.alpha = 1.0
+            warningHardLabel.alpha = 1.0
             
-            
-            if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-                seconds = 180  // works
-            }
-            
-            if largeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
-                seconds = 4
-            }
-            
-            if largeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
-                seconds = 300
-            }
-            
-            if extraLargeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-                seconds = 240
-            }
-            
-            if extraLargeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
-                seconds = 300
-            }
-            
-            if extraLargeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
-                seconds = 360
-            }
-            
-            if jumboButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-                seconds = 300
-            }
-            
-            if jumboButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
-                seconds = 360
-            }
-            
-            if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
-                seconds = 460
+            startButton.isEnabled = false
+        } else {
+            let controller = TimerViewController()
+            self.present(controller, animated: true) {
+                
+                
+                if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+                    seconds = 180  // works
+                }
+                
+                if largeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+                    seconds = 4
+                }
+                
+                if largeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+                    seconds = 300
+                }
+                
+                if extraLargeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+                    seconds = 240
+                }
+                
+                if extraLargeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+                    seconds = 300
+                }
+                
+                if extraLargeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+                    seconds = 360
+                }
+                
+                if jumboButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
+                    seconds = 300
+                }
+                
+                if jumboButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
+                    seconds = 360
+                }
+                
+                if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
+                    seconds = 460
+                }
             }
         }
     }
