@@ -10,7 +10,7 @@ import UIKit
 
 class Label {
     
-   class func headerLabel(_ myLabel: UILabel) {
+    class func headerLabel(_ myLabel: UILabel) {
         // label programmatically
         myLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
         myLabel.text = "eggypop"
@@ -46,11 +46,12 @@ class Label {
     }
     
     class func warningLabel(_ myLabel: UILabel) {
-        myLabel.frame = CGRect(x: 280.0, y: 0.0, width: 64.00, height: 19.00)
-        myLabel.text = "required"
-        myLabel.textColor = .red
-        
         myLabel.font = UIFont(name: "LucidaGrande", size: 0)
+        myLabel.textColor = .red
         myLabel.font = UIFont.systemFont(ofSize: 14)
+        myLabel.numberOfLines = 0
+        myLabel.lineBreakMode = .byWordWrapping
+        myLabel.textAlignment = .center
+        myLabel.sizeToFit()
     }
 }

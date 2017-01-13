@@ -307,12 +307,18 @@ class EggTypeController: UIViewController {
     
     // MARK: Warning sign func
     func warningSign() {
+        warningSoftLabel.frame = CGRect(x: 233.0, y: 11.0, width: 110.00, height: 0.00)
+        warningSoftLabel.text = "Choose me, please."
         Label.warningLabel(warningSoftLabel)
         softButton.addSubview(warningSoftLabel)
-        
+
+        warningMediumLabel.frame = CGRect(x: 246.0, y: 11.0, width: 90.00, height: 0.00)
+        warningMediumLabel.text = "No, choose me!"
         Label.warningLabel(warningMediumLabel)
         mediumButton.addSubview(warningMediumLabel)
-        
+
+        warningHardLabel.frame = CGRect(x: 223.0, y: 2.0, width: 110.00, height: 0.00)
+        warningHardLabel.text = "Hey, don’t listen them, choose me. I’m the best!"
         Label.warningLabel(warningHardLabel)
         hardButton.addSubview(warningHardLabel)
     }
@@ -321,6 +327,15 @@ class EggTypeController: UIViewController {
         warningSoftLabel.alpha = 0.0
         warningMediumLabel.alpha = 0.0
         warningHardLabel.alpha = 0.0
+    }
+    
+    func animateWarningSign() {
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+            warningSoftLabel.bounds.size.width += 8
+            warningMediumLabel.bounds.size.width += 8
+            warningHardLabel.bounds.size.width += 8
+
+        }, completion: nil)
     }
     
     // MARK: Start button
@@ -339,11 +354,18 @@ class EggTypeController: UIViewController {
     
     func startButtonCLicked(_ button: UIButton) {
         if isEggTypeChosen == false {
+            warningSoftLabel.bounds.size.width += 8
+            warningMediumLabel.bounds.size.width += 8
+            warningHardLabel.bounds.size.width += 8
+
+
             warningSoftLabel.alpha = 1.0
             warningMediumLabel.alpha = 1.0
             warningHardLabel.alpha = 1.0
             
             startButton.isEnabled = false
+            
+            animateWarningSign()
         } else {
             let controller = TimerViewController()
             self.present(controller, animated: true) {
