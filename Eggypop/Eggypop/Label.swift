@@ -48,21 +48,26 @@ class Label {
     class func eggySaisWarning(_ myLogo: UIImageView) {
         myLogo.image = appImage.eggySaisImage
         myLogo.frame = CGRect(x: 57.00, y: 516.00, width: 108.00, height: 99.00)
+        myLogo.sizeToFit()
+
     }
     
     class func softSaisWarning(_ myLogo: UIImageView) {
         myLogo.image = appImage.softSaisImage
         myLogo.frame = CGRect(x: 230.00, y: 255.00, width: 130.00, height: 52.00)
+
     }
     
     class func mediumSaisWarning(_ myLogo: UIImageView) {
         myLogo.image = appImage.mediumSaisImage
-        myLogo.frame = CGRect(x: 15.00, y: 281.00, width: 99.00, height: 73.00)
+        myLogo.frame = CGRect(x: 15.00, y: 281.00, width: 0.00, height: 0.00)
+        myLogo.sizeToFit()
     }
     
     class func hardSaisWarning(_ myLogo: UIImageView) {
         myLogo.image = appImage.hardSaisImage
         myLogo.frame = CGRect(x: 218.00, y: 432.00, width: 142.00, height: 77.00)
+
     }
 }
 
