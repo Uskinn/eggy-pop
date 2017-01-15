@@ -89,14 +89,14 @@ class EggTypeController: UIViewController {
         Label.eggySaisWarning(eggySaisImage)
         view.addSubview(eggySaisImage)
         
-        Label.softSaisWarning(warningSoftImage)
-        view.addSubview(warningSoftImage)
-        
-        Label.mediumSaisWarning(warningMediumImage)
-        view.addSubview(warningMediumImage)
-        
-        Label.hardSaisWarning(warningHardImage)
-        view.addSubview(warningHardImage)
+//        Label.softSaisWarning(warningSoftImage)
+//        view.addSubview(warningSoftImage)
+//        
+//        Label.mediumSaisWarning(warningMediumImage)
+//        view.addSubview(warningMediumImage)
+//        
+//        Label.hardSaisWarning(warningHardImage)
+//        view.addSubview(warningHardImage)
     }
     
     // MARK: Egg category buttons view
@@ -321,18 +321,18 @@ class EggTypeController: UIViewController {
     }
     
     func warningSignFadeOn() {
-        warningSoftImage.alpha = 0.0
-        warningMediumImage.alpha = 0.0
-        warningHardImage.alpha = 0.0
+//        warningSoftImage.alpha = 0.0
+//        warningMediumImage.alpha = 0.0
+//        warningHardImage.alpha = 0.0
         
         eggySaisImage.alpha = 0.0
     }
     
     func animateWarningSign() {
         UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
-            warningSoftImage.bounds.size.width += 20
-            warningMediumImage.bounds.size.width += 20
-            warningHardImage.bounds.size.width += 20
+           // warningSoftImage.bounds.size.width += 20
+           // warningMediumImage.bounds.size.width += 20
+            eggySaisImage.bounds.size.width += 20
             
         }, completion: nil)
     }
