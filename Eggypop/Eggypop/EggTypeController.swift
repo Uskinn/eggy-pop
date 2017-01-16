@@ -20,9 +20,6 @@ let hardButton = UIButton(type: .system)
 let startButton = UIButton(type: .system)
 
 let eggySaisImage = UIImageView()
-let warningSoftImage = UIImageView()
-let warningMediumImage = UIImageView()
-let warningHardImage = UIImageView()
 
 let appLogo = UIImageView()
 
@@ -89,20 +86,14 @@ class EggTypeController: UIViewController {
         Label.eggySaisWarning(eggySaisImage)
         view.addSubview(eggySaisImage)
         
-//        Label.softSaisWarning(warningSoftImage)
-//        view.addSubview(warningSoftImage)
-//        
-//        Label.mediumSaisWarning(warningMediumImage)
-//        view.addSubview(warningMediumImage)
-//        
-//        Label.hardSaisWarning(warningHardImage)
-//        view.addSubview(warningHardImage)
+        softButton.titleLabel?.textColor = appColor.headerColor
+        
     }
     
     // MARK: Egg category buttons view
     func largeEggButton() {
         
-        largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
+        largeButton.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
         largeButton.setTitle("large", for: .normal)
         Button.eggCategoryButton(largeButton)
         largeButton.addTarget(self, action: #selector(largeEggButtonCLicked(_:)), for: .touchUpInside)
@@ -110,7 +101,7 @@ class EggTypeController: UIViewController {
     }
     
     func extraLargeEggButton() {
-        extraLargeButton.frame = CGRect(x: 138.00, y: 265.00, width: 100.00, height: 138.00)
+        extraLargeButton.frame = CGRect(x: 137.5, y: 265.00, width: 100.00, height: 138.00)
         extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
         // adding two lines of text
         extraLargeButton.titleLabel!.lineBreakMode = .byWordWrapping
@@ -123,7 +114,7 @@ class EggTypeController: UIViewController {
     }
     
     func jumboEggButton() {
-        jumboButton.frame = CGRect(x: 258.00, y: 265.00, width: 100.00, height: 138.00)
+        jumboButton.frame = CGRect(x: 248.00, y: 265.00, width: 100.00, height: 138.00)
         jumboButton.setTitle("jumbo", for: .normal)
         Button.eggCategoryButton(jumboButton)
         jumboButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
@@ -229,7 +220,7 @@ class EggTypeController: UIViewController {
     func softEggType () {
         isEggTypeChosen = false
         print(isEggTypeChosen)
-        softButton.frame = CGRect(x: 17.00, y: 261.00, width: 341.00, height: 55.00)
+        softButton.frame = CGRect(x: 57.00, y: 261.00, width: 261.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
         Button.eggTypeButton(softButton)
         softButton.addTarget(self, action: #selector(softButtonCLicked(_:)), for: .touchUpInside)
@@ -237,7 +228,7 @@ class EggTypeController: UIViewController {
     }
     
     func mediumEggType() {
-        mediumButton.frame = CGRect(x: 17.00, y: 325.00, width: 341.00, height: 55.00)
+        mediumButton.frame = CGRect(x: 57.00, y: 325.00, width: 261.00, height: 55.00)
         mediumButton.setTitle("medium", for: .normal)
         Button.eggTypeButton(mediumButton)
         mediumButton.addTarget(self, action: #selector(mediumButtonCLicked(_:)), for: .touchUpInside)
@@ -245,7 +236,7 @@ class EggTypeController: UIViewController {
     }
     
     func hardEggType() {
-        hardButton.frame = CGRect(x: 17.00, y: 389.00, width: 341.00, height: 55.00)
+        hardButton.frame = CGRect(x: 57.00, y: 389.00, width: 261.00, height: 55.00)
         hardButton.setTitle("hard", for: .normal)
         Button.eggTypeButton(hardButton)
         hardButton.addTarget(self, action: #selector(hardButtonCLicked(_:)), for: .touchUpInside)
@@ -321,17 +312,11 @@ class EggTypeController: UIViewController {
     }
     
     func warningSignFadeOn() {
-//        warningSoftImage.alpha = 0.0
-//        warningMediumImage.alpha = 0.0
-//        warningHardImage.alpha = 0.0
-        
         eggySaisImage.alpha = 0.0
     }
     
     func animateWarningSign() {
         UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
-           // warningSoftImage.bounds.size.width += 20
-           // warningMediumImage.bounds.size.width += 20
             eggySaisImage.bounds.size.width += 20
             
         }, completion: nil)
@@ -353,10 +338,6 @@ class EggTypeController: UIViewController {
     
     func startButtonCLicked(_ button: UIButton) {
         if isEggTypeChosen == false {
-            
-            //            warningSoftImage.alpha = 1.0
-            //            warningMediumImage.alpha = 1.0
-            //            warningHardImage.alpha = 1.0
             
             eggTypeButtonsWarning()
             animateWarningSign()
