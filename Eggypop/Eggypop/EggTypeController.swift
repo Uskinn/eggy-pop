@@ -71,12 +71,16 @@ class EggTypeController: UIViewController {
     
     // MARK: Header
     func header() {
+        headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
+
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
     // MARK: Logo
     func logo() {
+        appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
     }

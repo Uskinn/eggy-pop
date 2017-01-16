@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = UINavigationController(rootViewController: EggTypeController())
+        window?.rootViewController = UINavigationController(rootViewController: SplashScreenViewController())
         
         // removing nav bar
         UINavigationBar.appearance().shadowImage = UIImage()
