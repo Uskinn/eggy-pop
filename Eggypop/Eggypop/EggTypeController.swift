@@ -56,9 +56,11 @@ class EggTypeController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
         header()
         logo()
-        // warningSign()
+print("eggtype")
     }
     
     func buttonsFirstLoad() {
@@ -67,6 +69,7 @@ class EggTypeController: UIViewController {
         hardButton.center.x -= self.view.bounds.width
         
         startButton.alpha = 0.0
+        
     }
     
     // MARK: Header
