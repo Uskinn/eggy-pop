@@ -52,22 +52,28 @@ class EggTypeController: UIViewController {
         startButtonFunc()
         buttonsFirstLoad()
         
-         header()
-         logo()
-
-
+        header()
+        logo()
+        categoryButtonsFirstLoad()
+        animateHeaderAndLogo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        animateHeaderAndLogo()
-
-       print("eggtype")
+       
+    }
+    
+    func categoryButtonsFirstLoad() {
+        UIView.animate(withDuration: 1.7, delay: 0.7, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.9, options: [], animations: {
+            largeButton.alpha = 1.0
+            extraLargeButton.alpha = 1.0
+            jumboButton.alpha = 1.0
+        },
+                       completion: nil)
     }
     
     func animateHeaderAndLogo() {
-        
-        UIView.animate(withDuration: 0.3, delay: 0.3, options: [.curveEaseInOut], animations: {
+        UIView.animate(withDuration: 0.6, delay: 0.3, options: [.curveEaseInOut], animations: {
             headerLabel.center.y -= 251
             appLogo.center.y += 262
             
@@ -82,22 +88,27 @@ class EggTypeController: UIViewController {
         
         startButton.alpha = 0.0
         
+        largeButton.alpha = 0.0
+        extraLargeButton.alpha = 0.0
+        jumboButton.alpha = 0.0
+        
+        
     }
     
     // MARK: Header
     func header() {
-       // headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
+        // headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
         headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 23.00)
-
+        
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
     // MARK: Logo
     func logo() {
-       // appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+        // appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
         appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 36.00, height: 44.00)
-
+        
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
     }
@@ -107,7 +118,7 @@ class EggTypeController: UIViewController {
         Label.eggySaisWarning(eggySaisImage)
         view.addSubview(eggySaisImage)
         
-       // softButton.titleLabel?.textColor =
+        // softButton.titleLabel?.textColor =
         
     }
     
@@ -340,7 +351,7 @@ class EggTypeController: UIViewController {
         UIView.animate(withDuration: 0.33, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.3, options: [], animations: {
             eggySaisImage.bounds.size.width += 5
             eggySaisImage.bounds.size.height += 5
-
+            
             
         }, completion: nil)
     }
