@@ -25,9 +25,7 @@ class TimerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         secondsLeft = false
-        
         if timer.isValid == false {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
         }
@@ -75,7 +73,6 @@ class TimerViewController: UIViewController {
             print(seconds)
             seconds -= 1
             timerLabel.text = String(EggTimer.timeFormatted(seconds))
-            
         } else if seconds == 0 && !secondsLeft {
             print(secondsLeft)
             Sound.iggySong()

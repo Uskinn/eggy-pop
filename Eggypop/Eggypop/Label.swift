@@ -12,7 +12,6 @@ class Label {
     
     class func headerLabel(_ myLabel: UILabel) {
         // label programmatically
-        //myLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
         myLabel.text = "eggypop"
         myLabel.textColor = appColor.headerColor
         myLabel.font = UIFont(name: "LucidaGrande", size: 0)

@@ -71,7 +71,7 @@ class EggTypeController: UIViewController {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
             header()
             logo()
-            UIView.animate(withDuration: 1.7, delay: 0.7, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.9, options: [], animations: {
+            UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.0, initialSpringVelocity: 0.0, options: [], animations: {
                 largeButton.alpha = 1.0
                 extraLargeButton.alpha = 1.0
                 jumboButton.alpha = 1.0
@@ -103,8 +103,6 @@ class EggTypeController: UIViewController {
         largeButton.alpha = 0.0
         extraLargeButton.alpha = 0.0
         jumboButton.alpha = 0.0
-        
-        
     }
     
     // MARK: Header
@@ -122,9 +120,9 @@ class EggTypeController: UIViewController {
     // MARK: Logo
     func logo() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
-         appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+            appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
         } else {
-        appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 36.00, height: 44.00)
+            appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 36.00, height: 44.00)
         }
         
         Logo.logo(appLogo)
@@ -137,12 +135,10 @@ class EggTypeController: UIViewController {
         view.addSubview(eggySaisImage)
         
         // softButton.titleLabel?.textColor =
-        
     }
     
     // MARK: Egg category buttons view
     func largeEggButton() {
-        
         largeButton.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
         largeButton.setTitle("large", for: .normal)
         Button.eggCategoryButton(largeButton)
@@ -192,6 +188,7 @@ class EggTypeController: UIViewController {
                 largeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
             }, completion: nil)
         }
+        
         isAnimated = false
         
         moveEggCotegoryButtonsUp()
@@ -219,6 +216,7 @@ class EggTypeController: UIViewController {
                 extraLargeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
             }, completion: nil)
         }
+        
         isAnimated = false
         
         moveEggCotegoryButtonsUp()
@@ -246,6 +244,7 @@ class EggTypeController: UIViewController {
                 jumboButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
             }, completion: nil)
         }
+        
         isAnimated = false
         
         moveEggCotegoryButtonsUp()
@@ -298,7 +297,6 @@ class EggTypeController: UIViewController {
         isEggTypeChosen = true
         startButton.isEnabled = true
         warningSignFadeOn()
-        
         
         if isFilled == false {
             softButton.titleLabel?.textColor = .white
@@ -390,7 +388,6 @@ class EggTypeController: UIViewController {
     
     func startButtonCLicked(_ button: UIButton) {
         if isEggTypeChosen == false {
-            
             eggTypeButtonsWarning()
             animateWarningSign()
         } else {
@@ -398,8 +395,6 @@ class EggTypeController: UIViewController {
             
             let controller = TimerViewController()
             self.present(controller, animated: true) {
-                
-                
                 if largeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
                     seconds = 180  // works
                 }
