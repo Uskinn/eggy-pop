@@ -35,6 +35,8 @@ var typeButtonOn: Bool = true
 var startButtonON: Bool = true
 var isAnimated: Bool = true
 var isEggTypeChosen: Bool = true
+var logoAndHeaderAppear: Bool = true
+var logoAndHeaderDidAnimate: Bool = false
 
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
@@ -52,24 +54,34 @@ class EggTypeController: UIViewController {
         startButtonFunc()
         buttonsFirstLoad()
         
-        header()
-        logo()
         categoryButtonsFirstLoad()
         animateHeaderAndLogo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
+        if logoAndHeaderAppear == true {
+            header()
+            logo()
+            print("will ap")
+        }
     }
     
     func categoryButtonsFirstLoad() {
-        UIView.animate(withDuration: 1.7, delay: 0.7, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.9, options: [], animations: {
-            largeButton.alpha = 1.0
-            extraLargeButton.alpha = 1.0
-            jumboButton.alpha = 1.0
-        },
-                       completion: nil)
+        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
+            header()
+            logo()
+            UIView.animate(withDuration: 1.7, delay: 0.7, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.9, options: [], animations: {
+                largeButton.alpha = 1.0
+                extraLargeButton.alpha = 1.0
+                jumboButton.alpha = 1.0
+            },
+                           completion: nil)
+            
+            print("did load")
+        }
+        logoAndHeaderAppear = false
+        logoAndHeaderDidAnimate = true
     }
     
     func animateHeaderAndLogo() {
@@ -97,8 +109,11 @@ class EggTypeController: UIViewController {
     
     // MARK: Header
     func header() {
-        // headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
-        headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 23.00)
+        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
+            headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
+        } else {
+            headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 23.00)
+        }
         
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
@@ -106,8 +121,11 @@ class EggTypeController: UIViewController {
     
     // MARK: Logo
     func logo() {
-        // appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
+         appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+        } else {
         appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 36.00, height: 44.00)
+        }
         
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
@@ -251,7 +269,7 @@ class EggTypeController: UIViewController {
     // MARK: Egg type buttons view
     func softEggType () {
         isEggTypeChosen = false
-        print(isEggTypeChosen)
+        // print(isEggTypeChosen)
         softButton.frame = CGRect(x: 57.00, y: 261.00, width: 261.00, height: 55.00)
         softButton.setTitle("soft", for: .normal)
         Button.eggTypeButton(softButton)
@@ -376,6 +394,8 @@ class EggTypeController: UIViewController {
             eggTypeButtonsWarning()
             animateWarningSign()
         } else {
+            logoAndHeaderAppear = true
+            
             let controller = TimerViewController()
             self.present(controller, animated: true) {
                 
