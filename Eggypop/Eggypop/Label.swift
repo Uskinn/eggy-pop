@@ -48,7 +48,6 @@ class Label {
     class func eggySaisWarning(_ myLogo: UIImageView) {
         myLogo.image = appImage.eggySaisImage
         myLogo.frame = CGRect(x: 51.00, y: 513.00, width: 121.00, height: 102.00)
-        myLogo.sizeToFit()
     }
 }
 

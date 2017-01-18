@@ -52,15 +52,27 @@ class EggTypeController: UIViewController {
         startButtonFunc()
         buttonsFirstLoad()
         
+         header()
+         logo()
+
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        animateHeaderAndLogo()
+
+       print("eggtype")
+    }
+    
+    func animateHeaderAndLogo() {
         
-        
-        header()
-        logo()
-print("eggtype")
+        UIView.animate(withDuration: 0.3, delay: 0.3, options: [.curveEaseInOut], animations: {
+            headerLabel.center.y -= 251
+            appLogo.center.y += 262
+            
+        }, completion: nil
+        )
     }
     
     func buttonsFirstLoad() {
@@ -74,7 +86,8 @@ print("eggtype")
     
     // MARK: Header
     func header() {
-        headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
+       // headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
+        headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 23.00)
 
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
@@ -82,7 +95,8 @@ print("eggtype")
     
     // MARK: Logo
     func logo() {
-        appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+       // appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+        appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 36.00, height: 44.00)
 
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
@@ -93,7 +107,7 @@ print("eggtype")
         Label.eggySaisWarning(eggySaisImage)
         view.addSubview(eggySaisImage)
         
-        softButton.titleLabel?.textColor = appColor.headerColor
+       // softButton.titleLabel?.textColor =
         
     }
     
@@ -323,8 +337,10 @@ print("eggtype")
     }
     
     func animateWarningSign() {
-        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
-            eggySaisImage.bounds.size.width += 20
+        UIView.animate(withDuration: 0.33, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.3, options: [], animations: {
+            eggySaisImage.bounds.size.width += 5
+            eggySaisImage.bounds.size.height += 5
+
             
         }, completion: nil)
     }

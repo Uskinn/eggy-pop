@@ -4,7 +4,7 @@
 //
 //  Created by Sergey Nevzorov on 11/28/16.
 //  Copyright © 2016 Sergey Nevzorov. All rights reserved.
-//
+
 
 import UIKit
 
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = UINavigationController(rootViewController: SplashScreenViewController())
+        window?.rootViewController = UINavigationController(rootViewController: EggTypeController())
         
         // removing nav bar
         UINavigationBar.appearance().shadowImage = UIImage()
