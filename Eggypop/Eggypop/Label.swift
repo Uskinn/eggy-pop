@@ -15,7 +15,7 @@ class Label {
         myLabel.text = "eggypop"
         myLabel.textColor = appColor.headerColor
         myLabel.font = UIFont(name: "LucidaGrande", size: 0)
-        myLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        myLabel.font = UIFont.boldSystemFont(ofSize: 25)
         myLabel.textAlignment = NSTextAlignment.center
         
         // adding spacing between characters

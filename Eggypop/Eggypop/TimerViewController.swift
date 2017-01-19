@@ -21,6 +21,12 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        NotificationCenter.default.addObserver(self, selector: Selector(("pauseApp")), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: Selector(("startApp")), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +40,17 @@ class TimerViewController: UIViewController {
         timerLabelFunc()
         logo()
         stopButtonFunc()
+    }
+    
+    func pauseApp(){
+        timer.stop()  //invalidate timer
+        self.currentBackgroundDate = NSDate()
+    }
+    
+    func startApp(){
+        let difference = self.currentBackgroundDate.timeIntervalSinceDate(NSDate())
+        self.handler(difference) //update difference
+        self.start() //start timer
     }
     
     // #MARK: Header
@@ -69,7 +86,9 @@ class TimerViewController: UIViewController {
     
     // #MARK: Updating timer
     func updateTimer() {
+        
         if seconds > 0 {
+            UserNotificationManager.shared.addNotificationWithTime(seconds)
             print(seconds)
             seconds -= 1
             timerLabel.text = String(EggTimer.timeFormatted(seconds))

@@ -108,9 +108,9 @@ class EggTypeController: UIViewController {
     // MARK: Header
     func header() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
-            headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 23.00)
+            headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 28.00)
         } else {
-            headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 23.00)
+            headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 28.00)
         }
         
         Label.headerLabel(headerLabel)
