@@ -24,4 +24,7 @@ struct Image {
     let softSaisImage = UIImage(named: "softSais")
     let mediumSaisImage = UIImage(named: "mediumSais")
     let hardSaisImage = UIImage(named: "hardSais")
+    
+    let appBackground = UIImage(named: "bacground")
+
 }

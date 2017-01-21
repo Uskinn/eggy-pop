@@ -23,6 +23,7 @@ let eggySaisImage = UIImageView()
 
 let appLogo = UIImageView()
 
+
 let headerLabel = UILabel()
 
 let appColor = Color()
@@ -38,10 +39,17 @@ var isEggTypeChosen: Bool = true
 var logoAndHeaderAppear: Bool = true
 var logoAndHeaderDidAnimate: Bool = false
 
+let appView = UIView()
+
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        let imageView = UIImageView(frame: self.view.bounds)
+        imageView.image = UIImage(named: "bacground")//if its in images.xcassets
+        self.view.addSubview(imageView)
+        
         
         largeEggButton()
         extraLargeEggButton()
@@ -266,7 +274,7 @@ class EggTypeController: UIViewController {
     }
     
     // MARK: Egg type buttons view
-    func softEggType () {
+    func softEggType() {
         isEggTypeChosen = false
         // print(isEggTypeChosen)
         softButton.frame = CGRect(x: 57.00, y: 261.00, width: 261.00, height: 55.00)

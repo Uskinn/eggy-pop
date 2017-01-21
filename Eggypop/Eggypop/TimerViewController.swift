@@ -22,10 +22,10 @@ class TimerViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        NotificationCenter.default.addObserver(self, selector: Selector(("pauseApp")), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: Selector(("startApp")), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
-        
+//        NotificationCenter.default.addObserver(self, selector: Selector(("pauseApp")), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+//        
+//        NotificationCenter.default.addObserver(self, selector: Selector(("startApp")), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+//        
 
     }
     
@@ -42,16 +42,16 @@ class TimerViewController: UIViewController {
         stopButtonFunc()
     }
     
-    func pauseApp(){
-        timer.stop()  //invalidate timer
-        self.currentBackgroundDate = NSDate()
-    }
-    
-    func startApp(){
-        let difference = self.currentBackgroundDate.timeIntervalSinceDate(NSDate())
-        self.handler(difference) //update difference
-        self.start() //start timer
-    }
+//    func pauseApp(){
+//        timer.stop()  //invalidate timer
+//        self.currentBackgroundDate = NSDate()
+//    }
+//    
+//    func startApp(){
+//        let difference = self.currentBackgroundDate.timeIntervalSinceDate(NSDate())
+//        self.handler(difference) //update difference
+//        self.start() //start timer
+//    }
     
     // #MARK: Header
     func header() {
@@ -88,7 +88,7 @@ class TimerViewController: UIViewController {
     func updateTimer() {
         
         if seconds > 0 {
-            UserNotificationManager.shared.addNotificationWithTime(seconds)
+  //          UserNotificationManager.shared.addNotificationWithTime(seconds)
             print(seconds)
             seconds -= 1
             timerLabel.text = String(EggTimer.timeFormatted(seconds))

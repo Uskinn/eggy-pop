@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
-        UserNotificationManager.shared.registerNotification()
+       // UserNotificationManager.shared.registerNotification()
         
         return true
     }
