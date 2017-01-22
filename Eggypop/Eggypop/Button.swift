@@ -35,7 +35,7 @@ class Button {
     }
 
    class func startButton(_ myButton: UIButton) {
-        myButton.frame = CGRect(x: 138.00, y: 469.00, width: 100.00, height: 100.00)
+        myButton.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
         myButton.setTitle("start", for: .normal)
         
         myButton.setBackgroundImage(appImage.startButtonImage, for: .normal)

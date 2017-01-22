@@ -38,6 +38,7 @@ class Label {
         myLabel.font = UIFont.systemFont(ofSize: 112)
         myLabel.textAlignment = NSTextAlignment.center
         
+        
         // adding spacing between characters
         let attributedString = NSMutableAttributedString(string: myLabel.text!)
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))

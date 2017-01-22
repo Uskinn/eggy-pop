@@ -22,6 +22,10 @@ class TimerViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        let imageView = UIImageView(frame: self.view.bounds)
+        imageView.image = UIImage(named: "bacground")
+        self.view.addSubview(imageView)
+        
 //        NotificationCenter.default.addObserver(self, selector: Selector(("pauseApp")), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
 //        
 //        NotificationCenter.default.addObserver(self, selector: Selector(("startApp")), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
