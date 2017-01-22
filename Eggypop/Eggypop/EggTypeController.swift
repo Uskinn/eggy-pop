@@ -47,7 +47,7 @@ class EggTypeController: UIViewController {
         view.backgroundColor = .white
         
         let imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = UIImage(named: "bacground")//if its in images.xcassets
+        imageView.image = UIImage(named: "bacground")
         self.view.addSubview(imageView)
         
         
