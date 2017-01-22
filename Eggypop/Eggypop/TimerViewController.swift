@@ -9,6 +9,7 @@
 import UIKit
 import QuartzCore
 import JSSAlertView
+import AudioToolbox
 
 let stopButton = UIButton(type: .system)
 var timerLabel = UILabel()
@@ -97,6 +98,9 @@ class TimerViewController: UIViewController {
             seconds -= 1
             timerLabel.text = String(EggTimer.timeFormatted(seconds))
         } else if seconds == 0 && !secondsLeft {
+            
+            // adding vibrate
+            AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), nil)
             print(secondsLeft)
             Sound.iggySong()
             Alert.alertWithTitle(self, callback: {
