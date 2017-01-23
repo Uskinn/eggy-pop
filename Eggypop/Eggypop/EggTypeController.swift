@@ -167,6 +167,7 @@ class EggTypeController: UIViewController {
         
         Button.eggCategoryButton(extraLargeButton)
         extraLargeButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
+        
         view.addSubview(extraLargeButton)
     }
     
@@ -411,7 +412,7 @@ class EggTypeController: UIViewController {
                 }
                 
                 if largeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
-                    seconds = 4
+                    seconds = 240
                 }
                 
                 if largeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
@@ -419,7 +420,7 @@ class EggTypeController: UIViewController {
                 }
                 
                 if extraLargeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-                    seconds = 240
+                    seconds = 4
                 }
                 
                 if extraLargeButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
