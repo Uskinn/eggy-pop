@@ -44,6 +44,9 @@ let appView = UIView()
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+
         view.backgroundColor = .white
         
         let imageView = UIImageView(frame: self.view.bounds)
@@ -412,7 +415,7 @@ class EggTypeController: UIViewController {
                 }
                 
                 if largeButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
-                    seconds = 300
+                    seconds = 480
                 }
                 
                 if extraLargeButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {

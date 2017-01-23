@@ -27,13 +27,13 @@ class Label {
     class func timerLabel(_ myLabel: UILabel) {
         // label programmatically
         myLabel.frame = CGRect(x: 13.05, y: 94.00, width: 348.00, height: 168.00)
-        myLabel.backgroundColor = appColor.mainOrangeColor
-        
+        myLabel.backgroundColor = UIColor(red:0.99, green:0.91, blue:0.77, alpha:1.0)
         myLabel.layer.masksToBounds = true
         myLabel.layer.cornerRadius = 8
         
         myLabel.text = "00:00"
-        myLabel.textColor = .white
+        myLabel.textColor = appColor.mainOrangeColor
+
         myLabel.font = UIFont(name: "LucidaGrande", size: 0)
         myLabel.font = UIFont.systemFont(ofSize: 112)
         myLabel.textAlignment = NSTextAlignment.center
