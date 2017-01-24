@@ -186,7 +186,6 @@ class EggTypeController: UIViewController {
         
         if isFilled == false {
             
-            UIView.animate(withDuration: 0.33, animations: {
                 extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
                 extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
                 
@@ -196,7 +195,6 @@ class EggTypeController: UIViewController {
                 largeButton.titleLabel?.textColor = .white
                 largeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
                 
-            })
             
 
         }
@@ -221,7 +219,6 @@ class EggTypeController: UIViewController {
         
         if isFilled == false {
             
-            UIView.animate(withDuration: 0.33, animations: {
                 largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
                 largeButton.titleLabel?.textColor = appColor.mainOrangeColor
                 
@@ -232,7 +229,7 @@ class EggTypeController: UIViewController {
                 extraLargeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
 
                 
-            })
+            
                     }
         
         if isAnimated {
@@ -256,7 +253,6 @@ class EggTypeController: UIViewController {
         
         if isFilled == false {
             
-            UIView.animate(withDuration: 0.33, animations: {
                 largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
                 largeButton.titleLabel?.textColor = appColor.mainOrangeColor
                 
@@ -267,7 +263,7 @@ class EggTypeController: UIViewController {
                 jumboButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
 
                 
-            })
+            
             
             
         }
