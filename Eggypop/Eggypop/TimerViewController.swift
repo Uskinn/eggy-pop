@@ -59,33 +59,33 @@ class TimerViewController: UIViewController {
 //        self.start() //start timer
 //    }
     
-    // MARK: InfoButton
+    // MARK: - InfoButton
     
     func infoButtonView() {
         Button.informationButton(infoButton)
         self.view.addSubview(infoButton)
     }
     
-    // MARK: ThanksButton
+    // MARK: - ThanksButton
     
     func thankYouButtonView() {
         Button.thankYouButton(thanksButton)
         self.view.addSubview(thanksButton)
     }
     
-    // MARK: Header
+    // MARK: - Header
     func header() {
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
-    // MARK: Header
+    // MARK: - Header
     func logo() {
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
     }
     
-    // MARK: Stop button
+    // MARK: - Stop button
     func stopButtonFunc() {
         Button.stopButton(stopButton)
         stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
@@ -98,13 +98,13 @@ class TimerViewController: UIViewController {
         timerLabel.text = "00:00"
     }
     
-    // MARK: Timer label view
+    // MARK: - Timer label view
     func timerLabelFunc() {
         Label.timerLabel(timerLabel)
         self.view.addSubview(timerLabel)
     }
     
-    // MARK: Updating timer
+    // MARK: - Updating timer
     func updateTimer() {
         
         if seconds > 0 {

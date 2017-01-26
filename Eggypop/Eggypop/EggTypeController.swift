@@ -126,19 +126,19 @@ class EggTypeController: UIViewController {
         thanksButton.alpha = 0.0
     }
     
-    // MARK: InfoButton
+    // MARK: - InfoButton
     func infoButtonView() {
         Button.informationButton(infoButton)
         self.view.addSubview(infoButton)
     }
     
-    // MARK: ThankYouButton
+    // MARK: - ThankYouButton
     func thankYouButtonView() {
         Button.thankYouButton(thanksButton)
         self.view.addSubview(thanksButton)
     }
     
-    // MARK: Header
+    // MARK: - Header
     func header() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
             headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 28.00)
@@ -150,7 +150,7 @@ class EggTypeController: UIViewController {
         self.view.addSubview(headerLabel)
     }
     
-    // MARK: Logo
+    // MARK: - Logo
     func logo() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
             appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 33.00, height: 44.00)
@@ -162,7 +162,7 @@ class EggTypeController: UIViewController {
         self.view.addSubview(appLogo)
     }
     
-    // MARK: Egg category buttons view
+    // MARK: - Egg category buttons view
     func largeEggButton() {
         largeButton.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
         largeButton.setTitle("large", for: .normal)
@@ -193,7 +193,7 @@ class EggTypeController: UIViewController {
         view.addSubview(jumboButton)
     }
     
-    // #MARK: Egg category buttons action
+    // #MARK: - Egg category buttons action
     func largeEggButtonCLicked(_ button: UIButton) {
         isAnimated = true
         AnimateButton.animateButtonInside(myButton: largeButton)
@@ -279,7 +279,7 @@ class EggTypeController: UIViewController {
         startButtonFade()
     }
     
-    // MARK: Moving egg category buttons up
+    // MARK: - Moving egg category buttons up
     func moveEggCategoryButtonsUp() {
         if cotegoryButtonOn == true {
             UIView.animate(withDuration: 0.33, delay: 0.0, options: [.curveEaseInOut], animations: {
@@ -292,7 +292,7 @@ class EggTypeController: UIViewController {
         }
     }
     
-    // MARK: Egg type buttons view
+    // MARK: - Egg type buttons view
     func softEggType() {
         isEggTypeChosen = false
         // print(isEggTypeChosen)
@@ -323,7 +323,7 @@ class EggTypeController: UIViewController {
         view.addSubview(hardButton)
     }
     
-    // MARK: Egg type buttons action
+    // MARK: - Egg type buttons action
     func softButtonCLicked(_ button: UIButton) {
         isEggTypeChosen = true
         startButton.isEnabled = true
@@ -375,7 +375,7 @@ class EggTypeController: UIViewController {
         }
     }
     
-    // MARK: Egg type buttons animation
+    // MARK: - Egg type buttons animation
     func moveEggTypeButtons() {
         if typeButtonOn == true {
             UIView.animate(withDuration: 0.5, delay: 0.4, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
@@ -400,7 +400,7 @@ class EggTypeController: UIViewController {
         }, completion: nil)
     }
     
-    // MARK: Start button
+    // MARK: - Start button
     func startButtonFunc() {
         Button.startButton(startButton)
         startButton.addTarget(self, action: #selector(startButtonCLicked(_:)), for: .touchUpInside)
