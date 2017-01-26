@@ -27,7 +27,6 @@ let eggySaisImage = UIImageView()
 
 let appLogo = UIImageView()
 
-
 let headerLabel = UILabel()
 
 let appColor = Color()
@@ -82,7 +81,7 @@ class EggTypeController: UIViewController {
             logo()
             infoButtonView()
             thankYouButtonView()
-            print("will ap")
+            print("willAppear")
         }
     }
     
@@ -97,7 +96,7 @@ class EggTypeController: UIViewController {
             },
                            completion: nil)
             
-            print("did load")
+            print("didLoad")
         }
         logoAndHeaderAppear = false
         logoAndHeaderDidAnimate = true
@@ -311,7 +310,7 @@ class EggTypeController: UIViewController {
         
         mediumButton.titleLabel?.textColor = .white
         mediumButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
-
+        
         mediumButton.addTarget(self, action: #selector(mediumButtonCLicked(_:)), for: .touchUpInside)
         view.addSubview(mediumButton)
     }
@@ -346,7 +345,6 @@ class EggTypeController: UIViewController {
         isEggTypeChosen = true
         startButton.isEnabled = true
         warningSignFadeOn()
-        
         
         if isFilled == false {
             mediumButton.titleLabel?.textColor = .white
@@ -399,8 +397,6 @@ class EggTypeController: UIViewController {
         UIView.animate(withDuration: 0.33, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.3, options: [], animations: {
             eggySaisImage.bounds.size.width += 5
             eggySaisImage.bounds.size.height += 5
-            
-            
         }, completion: nil)
     }
     
