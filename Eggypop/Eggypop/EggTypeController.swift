@@ -131,7 +131,7 @@ class EggTypeController: UIViewController {
     // MARK: Logo
     func logo() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
-            appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 36.00, height: 44.00)
+            appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 33.00, height: 44.00)
         } else {
             appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 36.00, height: 44.00)
         }

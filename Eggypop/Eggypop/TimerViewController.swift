@@ -11,7 +11,7 @@ import QuartzCore
 import JSSAlertView
 import AudioToolbox
 
-let stopButton = UIButton(type: .system)
+let stopButton = UIButton(type: .custom)
 var timerLabel = UILabel()
 var timer = Timer()
 var seconds: Int = 0
