@@ -9,6 +9,10 @@
 import UIKit
 import QuartzCore
 
+let infoButton = UIButton(type: .custom)
+
+let thanksButton = UIButton(type: .custom)
+
 let largeButton = UIButton(type: .custom)
 let extraLargeButton = UIButton(type: .custom)
 let jumboButton = UIButton(type: .custom)
@@ -46,13 +50,15 @@ class EggTypeController: UIViewController {
         super.viewDidLoad()
         
         UIApplication.shared.statusBarStyle = .lightContent
-
+        
         view.backgroundColor = .white
         
         let imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = UIImage(named: "bacground")
+        imageView.image = UIImage(named: "background")
         self.view.addSubview(imageView)
         
+        infoButtonView()
+        thankYouButtonView()
         
         largeEggButton()
         extraLargeEggButton()
@@ -74,6 +80,8 @@ class EggTypeController: UIViewController {
         if logoAndHeaderAppear == true {
             header()
             logo()
+            infoButtonView()
+            thankYouButtonView()
             print("will ap")
         }
     }
@@ -114,6 +122,21 @@ class EggTypeController: UIViewController {
         largeButton.alpha = 0.0
         extraLargeButton.alpha = 0.0
         jumboButton.alpha = 0.0
+        
+        infoButton.alpha = 0.0
+        thanksButton.alpha = 0.0
+    }
+    
+    // MARK: InfoButton
+    func infoButtonView() {
+        Button.informationButton(infoButton)
+        self.view.addSubview(infoButton)
+    }
+    
+    // MARK: ThankYouButton
+    func thankYouButtonView() {
+        Button.thankYouButton(thanksButton)
+        self.view.addSubview(thanksButton)
     }
     
     // MARK: Header
@@ -138,14 +161,6 @@ class EggTypeController: UIViewController {
         
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
-    }
-    
-    // MARK:
-    func eggTypeButtonsWarning() {
-        Label.eggySaisWarning(eggySaisImage)
-        view.addSubview(eggySaisImage)
-        
-        // softButton.titleLabel?.textColor =
     }
     
     // MARK: Egg category buttons view
@@ -179,36 +194,32 @@ class EggTypeController: UIViewController {
         view.addSubview(jumboButton)
     }
     
-    // #MARK: Egg category buttons aaction
+    // #MARK: Egg category buttons action
     func largeEggButtonCLicked(_ button: UIButton) {
         isAnimated = true
         AnimateButton.animateButtonInside(myButton: largeButton)
         
         if isFilled == false {
+            extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+            extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-                extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-                extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
-                
-                jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-                jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
-                
-                largeButton.titleLabel?.textColor = .white
-                largeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
-                
+            jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+            jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-
+            largeButton.titleLabel?.textColor = .white
+            largeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
         }
         
         if isAnimated {
             UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
                 AnimateButton.animateButtonOutside(myButton: largeButton)
                 
-                            }, completion: nil)
+            }, completion: nil)
         }
         
         isAnimated = false
         
-        moveEggCotegoryButtonsUp()
+        moveEggCategoryButtonsUp()
         moveEggTypeButtons()
         startButtonFade()
     }
@@ -218,31 +229,25 @@ class EggTypeController: UIViewController {
         AnimateButton.animateButtonInside(myButton: extraLargeButton)
         
         if isFilled == false {
+            largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+            largeButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-                largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-                largeButton.titleLabel?.textColor = appColor.mainOrangeColor
-                
-                jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-                jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
-                
-                extraLargeButton.titleLabel?.textColor = .white
-                extraLargeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
-
-                
+            jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+            jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-                    }
+            extraLargeButton.titleLabel?.textColor = .white
+            extraLargeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
+        }
         
         if isAnimated {
             UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
                 AnimateButton.animateButtonOutside(myButton: extraLargeButton)
-                
-                
             }, completion: nil)
         }
         
         isAnimated = false
         
-        moveEggCotegoryButtonsUp()
+        moveEggCategoryButtonsUp()
         moveEggTypeButtons()
         startButtonFade()
     }
@@ -252,39 +257,31 @@ class EggTypeController: UIViewController {
         AnimateButton.animateButtonInside(myButton: jumboButton)
         
         if isFilled == false {
+            largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+            largeButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-                largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-                largeButton.titleLabel?.textColor = appColor.mainOrangeColor
-                
-                extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-                extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
-                
-                jumboButton.titleLabel?.textColor = .white
-                jumboButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
-
-                
+            extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+            extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
             
-            
-            
+            jumboButton.titleLabel?.textColor = .white
+            jumboButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
         }
         
         if isAnimated {
             UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
                 AnimateButton.animateButtonOutside(myButton: jumboButton)
-                
-                
             }, completion: nil)
         }
         
         isAnimated = false
         
-        moveEggCotegoryButtonsUp()
+        moveEggCategoryButtonsUp()
         moveEggTypeButtons()
         startButtonFade()
     }
     
     // MARK: Moving egg category buttons up
-    func moveEggCotegoryButtonsUp() {
+    func moveEggCategoryButtonsUp() {
         if cotegoryButtonOn == true {
             UIView.animate(withDuration: 0.33, delay: 0.0, options: [.curveEaseInOut], animations: {
                 jumboButton.center.y -= 162
@@ -311,6 +308,10 @@ class EggTypeController: UIViewController {
         mediumButton.frame = CGRect(x: 57.00, y: 325.00, width: 261.00, height: 55.00)
         mediumButton.setTitle("medium", for: .normal)
         Button.eggTypeButton(mediumButton)
+        
+        mediumButton.titleLabel?.textColor = .white
+        mediumButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
+
         mediumButton.addTarget(self, action: #selector(mediumButtonCLicked(_:)), for: .touchUpInside)
         view.addSubview(mediumButton)
     }
@@ -413,13 +414,14 @@ class EggTypeController: UIViewController {
     func startButtonFade() {
         UIView.animate(withDuration: 0.3, delay: 0.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 1.0, options: [], animations: {
             startButton.alpha = 1.0
+            infoButton.alpha = 1.0
+            thanksButton.alpha = 1.0
         },
                        completion: nil)
     }
     
     func startButtonCLicked(_ button: UIButton) {
         if isEggTypeChosen == false {
-            eggTypeButtonsWarning()
             animateWarningSign()
         } else {
             logoAndHeaderAppear = true

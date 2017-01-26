@@ -26,5 +26,7 @@ struct Image {
     let hardSaisImage = UIImage(named: "hardSais")
     
     let appBackground = UIImage(named: "bacground")
-
+    
+    let infoButtonImage = UIImage(named: "infoButton")
+    let thanksButtonImage = UIImage(named: "heartButton")
 }

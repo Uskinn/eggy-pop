@@ -10,19 +10,19 @@ import UIKit
 
 class Button {
     
-   class func eggCategoryButton(_ myButton: UIButton) {
+    class func eggCategoryButton(_ myButton: UIButton) {
         myButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
         myButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         myButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         myButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-
+        
         // adding spacing between characters
         let title = myButton.title(for: .normal)
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
     
-   class func eggTypeButton(_ myButton: UIButton) {
+    class func eggTypeButton(_ myButton: UIButton) {
         myButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
         myButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
         myButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 0)
@@ -33,8 +33,8 @@ class Button {
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 2.0])
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
-
-   class func startButton(_ myButton: UIButton) {
+    
+    class func startButton(_ myButton: UIButton) {
         myButton.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
         myButton.setTitle("start", for: .normal)
         
@@ -49,7 +49,7 @@ class Button {
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
-  
+    
     class func stopButton(_ myButton: UIButton) {
         myButton.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
         myButton.setTitle("stop", for: .normal)
@@ -65,4 +65,15 @@ class Button {
         let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
+    
+    class func informationButton(_ myButton: UIButton) {
+        myButton.frame = CGRect(x: 22.00, y: 40.00, width: 23.00, height: 23.00)
+        myButton.setBackgroundImage(appImage.infoButtonImage, for: .normal)
+    }
+    
+    class func thankYouButton(_ myButton: UIButton) {
+        myButton.frame = CGRect(x: 322.00, y: 40.00, width: 25.00, height: 25.00)
+        myButton.setBackgroundImage(appImage.thanksButtonImage, for: .normal)
+    }
+
 }

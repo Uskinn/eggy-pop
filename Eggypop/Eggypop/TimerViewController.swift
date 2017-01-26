@@ -21,10 +21,9 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         
         let imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = UIImage(named: "bacground")
+        imageView.image = UIImage(named: "background")
         self.view.addSubview(imageView)
         
 //        NotificationCenter.default.addObserver(self, selector: Selector(("pauseApp")), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
@@ -45,6 +44,8 @@ class TimerViewController: UIViewController {
         timerLabelFunc()
         logo()
         stopButtonFunc()
+        infoButtonView()
+        thankYouButtonView()
     }
     
 //    func pauseApp(){
@@ -58,19 +59,33 @@ class TimerViewController: UIViewController {
 //        self.start() //start timer
 //    }
     
-    // #MARK: Header
+    // MARK: InfoButton
+    
+    func infoButtonView() {
+        Button.informationButton(infoButton)
+        self.view.addSubview(infoButton)
+    }
+    
+    // MARK: ThanksButton
+    
+    func thankYouButtonView() {
+        Button.thankYouButton(thanksButton)
+        self.view.addSubview(thanksButton)
+    }
+    
+    // MARK: Header
     func header() {
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
-    // #MARK: Header
+    // MARK: Header
     func logo() {
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
     }
     
-    // #MARK: Stop button
+    // MARK: Stop button
     func stopButtonFunc() {
         Button.stopButton(stopButton)
         stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
@@ -83,13 +98,13 @@ class TimerViewController: UIViewController {
         timerLabel.text = "00:00"
     }
     
-    // #MARK: Timer label view
+    // MARK: Timer label view
     func timerLabelFunc() {
         Label.timerLabel(timerLabel)
         self.view.addSubview(timerLabel)
     }
     
-    // #MARK: Updating timer
+    // MARK: Updating timer
     func updateTimer() {
         
         if seconds > 0 {
