@@ -48,17 +48,6 @@ class TimerViewController: UIViewController {
         thankYouButtonView()
     }
     
-//    func pauseApp(){
-//        timer.stop()  //invalidate timer
-//        self.currentBackgroundDate = NSDate()
-//    }
-//    
-//    func startApp(){
-//        let difference = self.currentBackgroundDate.timeIntervalSinceDate(NSDate())
-//        self.handler(difference) //update difference
-//        self.start() //start timer
-//    }
-    
     // MARK: - InfoButton
     
     func infoButtonView() {
