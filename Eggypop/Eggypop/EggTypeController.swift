@@ -9,6 +9,8 @@
 import UIKit
 import QuartzCore
 
+// UIPageViewController
+
 let infoButton = UIButton(type: .custom)
 
 let thanksButton = UIButton(type: .custom)
