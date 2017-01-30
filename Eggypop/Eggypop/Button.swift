@@ -72,7 +72,7 @@ class Button {
     }
     
     class func thankYouButton(_ myButton: UIButton) {
-        myButton.frame = CGRect(x: 322.00, y: 40.00, width: 25.00, height: 25.00)
+        myButton.frame = CGRect(x: 322.00, y: 40.00, width: 23.00, height: 23.00)
         myButton.setBackgroundImage(appImage.thanksButtonImage, for: .normal)
     }
 

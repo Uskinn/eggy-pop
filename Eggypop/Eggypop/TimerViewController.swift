@@ -44,23 +44,21 @@ class TimerViewController: UIViewController {
         timerLabelFunc()
         logo()
         stopButtonFunc()
-        infoButtonView()
-        thankYouButtonView()
+       // infoButtonView()
+       // thankYouButtonView()
     }
     
     // MARK: - InfoButton
-    
-    func infoButtonView() {
-        Button.informationButton(infoButton)
-        self.view.addSubview(infoButton)
-    }
+    //func infoButtonView() {
+    //    Button.informationButton(infoButton)
+    //    self.view.addSubview(infoButton)
+  //  }
     
     // MARK: - ThanksButton
-    
-    func thankYouButtonView() {
-        Button.thankYouButton(thanksButton)
-        self.view.addSubview(thanksButton)
-    }
+    //func thankYouButtonView() {
+    //    Button.thankYouButton(thanksButton)
+    //    self.view.addSubview(thanksButton)
+  //  }
     
     // MARK: - Header
     func header() {
