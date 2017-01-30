@@ -155,9 +155,9 @@ class EggTypeController: UIViewController {
     // MARK: - Logo
     func logo() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
-            appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 32.00, height: 44.00)
+            appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 32.00, height: 43.5)
         } else {
-            appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 32.00, height: 44.00)
+            appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 32.00, height: 43.5)
         }
         
         Logo.logo(appLogo)
@@ -451,15 +451,15 @@ class EggTypeController: UIViewController {
                 }
                 
                 if jumboButton.titleLabel?.textColor == .white && softButton.titleLabel?.textColor == .white {
-                    seconds = 300
+                    seconds = 270
                 }
                 
                 if jumboButton.titleLabel?.textColor == .white && mediumButton.titleLabel?.textColor == .white {
-                    seconds = 360
+                    seconds = 330
                 }
                 
                 if jumboButton.titleLabel?.textColor == .white && hardButton.titleLabel?.textColor == .white {
-                    seconds = 460
+                    seconds = 540
                 }
             }
         }
