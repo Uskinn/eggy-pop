@@ -44,11 +44,6 @@ class Label {
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
         myLabel.attributedText = attributedString
     }
-        
-    class func eggySaisWarning(_ myLogo: UIImageView) {
-        myLogo.image = appImage.eggySaisImage
-        myLogo.frame = CGRect(x: 51.00, y: 513.00, width: 121.00, height: 102.00)
-    }
 }
 
 

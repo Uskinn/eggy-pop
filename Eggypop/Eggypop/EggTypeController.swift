@@ -12,7 +12,6 @@ import QuartzCore
 // UIPageViewController
 
 let infoButton = UIButton(type: .custom)
-
 let thanksButton = UIButton(type: .custom)
 
 let largeButton = UIButton(type: .custom)
@@ -25,11 +24,16 @@ let hardButton = UIButton(type: .custom)
 
 let startButton = UIButton(type: .custom)
 
-let eggySaisImage = UIImageView()
+// buttons view
+let buttonView = ButtonView()
 
+// logo
 let appLogo = UIImageView()
+let logo = LogoView()
 
+// header
 let headerLabel = UILabel()
+let header = HeaderView()
 
 let appColor = Color()
 let appImage = Image()
@@ -79,8 +83,8 @@ class EggTypeController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if logoAndHeaderAppear == true {
-            header()
-            logo()
+            header.showHeader(in: self.view)
+            logo.showLogo(in: self.view)
             infoButtonView()
             thankYouButtonView()
             print("willAppear")
@@ -89,8 +93,8 @@ class EggTypeController: UIViewController {
     
     func categoryButtonsFirstLoad() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
-            header()
-            logo()
+            header.showHeader(in: self.view)
+            logo.showLogo(in: self.view)
             UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.0, initialSpringVelocity: 0.0, options: [], animations: {
                 largeButton.alpha = 1.0
                 extraLargeButton.alpha = 1.0
@@ -139,31 +143,7 @@ class EggTypeController: UIViewController {
         Button.thankYouButton(thanksButton)
         self.view.addSubview(thanksButton)
     }
-    
-    // MARK: - Header
-    func header() {
-        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
-            headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 28.00)
-        } else {
-            headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 28.00)
-        }
-        
-        Label.headerLabel(headerLabel)
-        self.view.addSubview(headerLabel)
-    }
-    
-    // MARK: - Logo
-    func logo() {
-        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
-            appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 32.00, height: 43.5)
-        } else {
-            appLogo.frame = CGRect(x: 171.00, y: 320.00, width: 32.00, height: 43.5)
-        }
-        
-        Logo.logo(appLogo)
-        self.view.addSubview(appLogo)
-    }
-    
+  
     // MARK: - Egg category buttons view
     func largeEggButton() {
         largeButton.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
@@ -195,7 +175,7 @@ class EggTypeController: UIViewController {
         view.addSubview(jumboButton)
     }
     
-    // #MARK: - Egg category buttons action
+    // #MARK: - Egg size buttons action
     func largeEggButtonCLicked(_ button: UIButton) {
         isAnimated = true
         AnimateButton.animateButtonInside(myButton: largeButton)
@@ -329,7 +309,6 @@ class EggTypeController: UIViewController {
     func softButtonCLicked(_ button: UIButton) {
         isEggTypeChosen = true
         startButton.isEnabled = true
-        warningSignFadeOn()
         
         if isFilled == false {
             softButton.titleLabel?.textColor = .white
@@ -346,7 +325,6 @@ class EggTypeController: UIViewController {
     func mediumButtonCLicked(_ button: UIButton) {
         isEggTypeChosen = true
         startButton.isEnabled = true
-        warningSignFadeOn()
         
         if isFilled == false {
             mediumButton.titleLabel?.textColor = .white
@@ -363,7 +341,6 @@ class EggTypeController: UIViewController {
     func hardButtonCLicked(_ button: UIButton) {
         isEggTypeChosen = true
         startButton.isEnabled = true
-        warningSignFadeOn()
         
         if isFilled == false {
             hardButton.titleLabel?.textColor = .white
@@ -391,17 +368,6 @@ class EggTypeController: UIViewController {
         typeButtonOn = false
     }
     
-    func warningSignFadeOn() {
-        eggySaisImage.alpha = 0.0
-    }
-    
-    func animateWarningSign() {
-        UIView.animate(withDuration: 0.33, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.3, options: [], animations: {
-            eggySaisImage.bounds.size.width += 5
-            eggySaisImage.bounds.size.height += 5
-        }, completion: nil)
-    }
-    
     // MARK: - Start button
     func startButtonFunc() {
         Button.startButton(startButton)
@@ -420,7 +386,6 @@ class EggTypeController: UIViewController {
     
     func startButtonCLicked(_ button: UIButton) {
         if isEggTypeChosen == false {
-            animateWarningSign()
         } else {
             logoAndHeaderAppear = true
             
