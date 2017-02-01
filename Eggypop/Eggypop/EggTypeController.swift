@@ -33,21 +33,18 @@ let appLogo = UIImageView()
 // header
 let headerLabel = UILabel()
 
-
+// constants
 let appColor = Color()
 let appImage = Image()
 
 // Booleans
 var isFilled: Bool = false
-var cotegoryButtonOn: Bool = true
+var sizeButtonOn: Bool = true
 var typeButtonOn: Bool = true
-var startButtonON: Bool = true
 var isAnimated: Bool = true
 var isEggTypeChosen: Bool = true
 var logoAndHeaderAppear: Bool = true
 var logoAndHeaderDidAnimate: Bool = false
-
-let appView = UIView()
 
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
@@ -57,7 +54,7 @@ class EggTypeController: UIViewController {
         BackgroundView.showBackground(in: self.view)
         
         Button.informationButton(in: self.view, with: infoButton)
-        thankYouButtonView()
+        Button.thankYouButton(in: self.view, with: thanksButton)
         
         largeEggButton()
         extraLargeEggButton()
@@ -70,7 +67,7 @@ class EggTypeController: UIViewController {
         startButtonFunc()
         buttonsFirstLoad()
         
-        categoryButtonsFirstLoad()
+        sizeButtonsFirstLoad()
         animateHeaderAndLogo()
     }
     
@@ -80,12 +77,12 @@ class EggTypeController: UIViewController {
             HeaderView.showHeader(in: self.view)
             LogoView.showLogo(in: self.view)
             Button.informationButton(in: self.view, with: infoButton)
-            thankYouButtonView()
+            Button.thankYouButton(in: self.view, with: thanksButton)
             print("willAppear")
         }
     }
     
-    func categoryButtonsFirstLoad() {
+    func sizeButtonsFirstLoad() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
             HeaderView.showHeader(in: self.view)
             LogoView.showLogo(in: self.view)
@@ -95,7 +92,6 @@ class EggTypeController: UIViewController {
                 jumboButton.alpha = 1.0
             },
                            completion: nil)
-            
             print("didLoad")
         }
         logoAndHeaderAppear = false
@@ -126,12 +122,14 @@ class EggTypeController: UIViewController {
         thanksButton.alpha = 0.0
     }
     
-    // MARK: - ThankYouButton
-    func thankYouButtonView() {
-        Button.thankYouButton(thanksButton)
-        self.view.addSubview(thanksButton)
+    // MARK: - Thanks button 
+    func thanksButtonClicked(_ button: UIButton) {
+        
+        Label.thanks(label: )
+        self.view.addSubview(timerLabel)
+        
     }
-  
+    
     // MARK: - Egg category buttons view
     func largeEggButton() {
         largeButton.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
@@ -185,7 +183,6 @@ class EggTypeController: UIViewController {
                 
             }, completion: nil)
         }
-        
         isAnimated = false
         
         moveEggCategoryButtonsUp()
@@ -213,7 +210,6 @@ class EggTypeController: UIViewController {
                 AnimateButton.animateButtonOutside(myButton: extraLargeButton)
             }, completion: nil)
         }
-        
         isAnimated = false
         
         moveEggCategoryButtonsUp()
@@ -241,7 +237,6 @@ class EggTypeController: UIViewController {
                 AnimateButton.animateButtonOutside(myButton: jumboButton)
             }, completion: nil)
         }
-        
         isAnimated = false
         
         moveEggCategoryButtonsUp()
@@ -251,12 +246,12 @@ class EggTypeController: UIViewController {
     
     // MARK: - Moving egg category buttons up
     func moveEggCategoryButtonsUp() {
-        if cotegoryButtonOn == true {
+        if sizeButtonOn == true {
             UIView.animate(withDuration: 0.33, delay: 0.0, options: [.curveEaseInOut], animations: {
                 jumboButton.center.y -= 162
                 largeButton.center.y -= 162
                 extraLargeButton.center.y -= 162
-                cotegoryButtonOn = false
+                sizeButtonOn = false
             }, completion: nil
             )
         }

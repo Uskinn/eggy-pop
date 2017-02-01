@@ -22,12 +22,6 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         BackgroundView.showBackground(in: self.view)
-        
-//        NotificationCenter.default.addObserver(self, selector: Selector(("pauseApp")), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-//        
-//        NotificationCenter.default.addObserver(self, selector: Selector(("startApp")), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
-//        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,26 +30,11 @@ class TimerViewController: UIViewController {
         if timer.isValid == false {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
         }
-        
         header()
         timerLabelFunc()
         logo()
         stopButtonFunc()
-       // infoButtonView()
-       // thankYouButtonView()
     }
-    
-    // MARK: - InfoButton
-    //func infoButtonView() {
-    //    Button.informationButton(infoButton)
-    //    self.view.addSubview(infoButton)
-  //  }
-    
-    // MARK: - ThanksButton
-    //func thankYouButtonView() {
-    //    Button.thankYouButton(thanksButton)
-    //    self.view.addSubview(thanksButton)
-  //  }
     
     // MARK: - Header
     func header() {
@@ -90,14 +69,11 @@ class TimerViewController: UIViewController {
     
     // MARK: - Updating timer
     func updateTimer() {
-        
         if seconds > 0 {
-  //          UserNotificationManager.shared.addNotificationWithTime(seconds)
             print(seconds)
             seconds -= 1
             timerLabel.text = String(EggTimer.timeFormatted(seconds))
         } else if seconds == 0 && !secondsLeft {
-            
             // adding vibrate
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), nil)
             print(secondsLeft)
