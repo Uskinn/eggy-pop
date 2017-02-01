@@ -14,26 +14,25 @@ import QuartzCore
 let infoButton = UIButton(type: .custom)
 let thanksButton = UIButton(type: .custom)
 
+// egg size buttons
 let largeButton = UIButton(type: .custom)
 let extraLargeButton = UIButton(type: .custom)
 let jumboButton = UIButton(type: .custom)
 
+// egg type buttons
 let softButton = UIButton(type: .custom)
 let mediumButton = UIButton(type: .custom)
 let hardButton = UIButton(type: .custom)
 
+// start button
 let startButton = UIButton(type: .custom)
-
-// buttons view
-let buttonView = ButtonView()
 
 // logo
 let appLogo = UIImageView()
-let logo = LogoView()
 
 // header
 let headerLabel = UILabel()
-let header = HeaderView()
+
 
 let appColor = Color()
 let appImage = Image()
@@ -53,16 +52,11 @@ let appView = UIView()
 class EggTypeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         UIApplication.shared.statusBarStyle = .lightContent
         
-        view.backgroundColor = .white
+        BackgroundView.showBackground(in: self.view)
         
-        let imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = UIImage(named: "background")
-        self.view.addSubview(imageView)
-        
-        infoButtonView()
+        Button.informationButton(in: self.view, with: infoButton)
         thankYouButtonView()
         
         largeEggButton()
@@ -83,9 +77,9 @@ class EggTypeController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if logoAndHeaderAppear == true {
-            header.showHeader(in: self.view)
-            logo.showLogo(in: self.view)
-            infoButtonView()
+            HeaderView.showHeader(in: self.view)
+            LogoView.showLogo(in: self.view)
+            Button.informationButton(in: self.view, with: infoButton)
             thankYouButtonView()
             print("willAppear")
         }
@@ -93,8 +87,8 @@ class EggTypeController: UIViewController {
     
     func categoryButtonsFirstLoad() {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
-            header.showHeader(in: self.view)
-            logo.showLogo(in: self.view)
+            HeaderView.showHeader(in: self.view)
+            LogoView.showLogo(in: self.view)
             UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.0, initialSpringVelocity: 0.0, options: [], animations: {
                 largeButton.alpha = 1.0
                 extraLargeButton.alpha = 1.0
@@ -130,12 +124,6 @@ class EggTypeController: UIViewController {
         
         infoButton.alpha = 0.0
         thanksButton.alpha = 0.0
-    }
-    
-    // MARK: - InfoButton
-    func infoButtonView() {
-        Button.informationButton(infoButton)
-        self.view.addSubview(infoButton)
     }
     
     // MARK: - ThankYouButton

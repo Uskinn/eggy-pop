@@ -21,10 +21,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = UIImage(named: "background")
-        self.view.addSubview(imageView)
+        BackgroundView.showBackground(in: self.view)
         
 //        NotificationCenter.default.addObserver(self, selector: Selector(("pauseApp")), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
 //        

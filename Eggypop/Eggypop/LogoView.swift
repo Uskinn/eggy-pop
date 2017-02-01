@@ -10,7 +10,7 @@ import UIKit
 
 class LogoView {
     
-    func showLogo(in myView: UIView) {
+   class func showLogo(in myView: UIView) {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
             appLogo.frame = CGRect(x: 171.00, y: 596.00, width: 32.00, height: 43.5)
         } else {

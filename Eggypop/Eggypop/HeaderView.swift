@@ -10,7 +10,7 @@ import UIKit
 
 class HeaderView: UIView {
     
-    func showHeader(in myView: UIView) {
+   class func showHeader(in myView: UIView) {
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
             headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 28.00)
         } else {
