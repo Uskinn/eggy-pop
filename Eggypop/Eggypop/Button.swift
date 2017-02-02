@@ -69,14 +69,11 @@ class Button {
     class func informationButton(in myView: UIView, with myButton: UIButton) {
         myButton.frame = CGRect(x: 22.00, y: 40.00, width: 23.00, height: 23.00)
         myButton.setBackgroundImage(appImage.infoButtonImage, for: .normal)
-        myView.addSubview(infoButton)
-        
     }
     
-    class func thankYouButton(in myView: UIView, with myButton: UIButton) {
+    class func thankYouButton(_ myButton: UIButton) {
         myButton.frame = CGRect(x: 322.00, y: 40.00, width: 23.00, height: 23.00)
         myButton.setBackgroundImage(appImage.thanksButtonImage, for: .normal)
-        myView.addSubview(thanksButton)
     }
 }
 

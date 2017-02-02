@@ -9,10 +9,9 @@
 import UIKit
 import QuartzCore
 
-// UIPageViewController
-
 let infoButton = UIButton(type: .custom)
 let thanksButton = UIButton(type: .custom)
+let thanksLabel = UILabel()
 
 // egg size buttons
 let largeButton = UIButton(type: .custom)
@@ -54,7 +53,8 @@ class EggTypeController: UIViewController {
         BackgroundView.showBackground(in: self.view)
         
         Button.informationButton(in: self.view, with: infoButton)
-        Button.thankYouButton(in: self.view, with: thanksButton)
+
+        thankYouButton()
         
         largeEggButton()
         extraLargeEggButton()
@@ -77,7 +77,6 @@ class EggTypeController: UIViewController {
             HeaderView.showHeader(in: self.view)
             LogoView.showLogo(in: self.view)
             Button.informationButton(in: self.view, with: infoButton)
-            Button.thankYouButton(in: self.view, with: thanksButton)
             print("willAppear")
         }
     }
@@ -123,10 +122,16 @@ class EggTypeController: UIViewController {
     }
     
     // MARK: - Thanks button 
+    func thankYouButton() {
+        Button.thankYouButton(thanksButton)
+        thanksButton.addTarget(self, action: #selector(thanksButtonClicked(_:)), for: .touchUpInside)
+        view.addSubview(thanksButton)
+    }
+    
     func thanksButtonClicked(_ button: UIButton) {
+        print("clicked")
+        extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
         
-        Label.thanks(label: )
-        self.view.addSubview(timerLabel)
         
     }
     
