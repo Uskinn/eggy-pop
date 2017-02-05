@@ -66,7 +66,9 @@ class Button {
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
     
-    class func informationButton(in myView: UIView, with myButton: UIButton) {
+    
+    
+    class func informationButton(with myButton: UIButton) {
         myButton.frame = CGRect(x: 22.00, y: 40.00, width: 23.00, height: 23.00)
         myButton.setBackgroundImage(appImage.infoButtonImage, for: .normal)
     }
@@ -75,6 +77,58 @@ class Button {
         myButton.frame = CGRect(x: 322.00, y: 40.00, width: 23.00, height: 23.00)
         myButton.setBackgroundImage(appImage.thanksButtonImage, for: .normal)
     }
+}
+
+final class EggButton {
+    
+    static func createButton(with type: EggButtonType) -> UIButton {
+        
+        let button = UIButton(type: .custom)
+        
+        switch type {
+            
+        case .information:
+            button.frame = CGRect(x: 22.00, y: 40.00, width: 23.00, height: 23.00)
+            button.setBackgroundImage(appImage.infoButtonImage, for: .normal)
+        case .thankYou:
+            button.frame = CGRect(x: 322.00, y: 40.00, width: 23.00, height: 23.00)
+            button.setBackgroundImage(appImage.thanksButtonImage, for: .normal)
+        case .stop:
+            setupStopButton(button)
+        }
+        
+        return button
+        
+    }
+    
+    
+    
+    static func setupStopButton(_ button: UIButton) {
+        button.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
+        button.setTitle("stop", for: .normal)
+        
+        button.setBackgroundImage(appImage.stopButtonImage, for: .normal)
+        
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        
+        // adding spacing between characters
+        let title = button.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        
+    }
+    
+}
+
+
+enum EggButtonType {
+    
+    case information
+    case thankYou
+    case stop
+    
 }
 
 

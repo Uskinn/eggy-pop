@@ -46,19 +46,25 @@ var logoAndHeaderAppear: Bool = true
 var logoAndHeaderDidAnimate: Bool = false
 
 class EggTypeController: UIViewController {
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
         
         BackgroundView.showBackground(in: self.view)
         
-        Button.informationButton(in: self.view, with: infoButton)
-
+        // Jim code to test stuff, can remove
+      //  setupAllButtons()
+        
+        
+        
+        Button.informationButton(with: infoButton)
+        
         thankYouButton()
         
-        largeEggButton()
-        extraLargeEggButton()
-        jumboEggButton()
+        createAllButtons()
         
         softEggType()
         mediumEggType()
@@ -71,12 +77,28 @@ class EggTypeController: UIViewController {
         animateHeaderAndLogo()
     }
     
+//    func setupAllButtons() {
+//        
+//        let infoButtonT = EggButton.createButton(with: .information)
+//        view.addSubview(infoButtonT)
+//        
+//        let stopButtonT = EggButton.createButton(with: .stop)
+//        view.addSubview(stopButtonT)
+//
+//    }
+    
+    func createAllButtons() {
+        largeEggButton()
+        extraLargeEggButton()
+        jumboEggButton()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if logoAndHeaderAppear == true {
             HeaderView.showHeader(in: self.view)
             LogoView.showLogo(in: self.view)
-            Button.informationButton(in: self.view, with: infoButton)
+            Button.informationButton(with: infoButton)
             print("willAppear")
         }
     }
@@ -121,7 +143,7 @@ class EggTypeController: UIViewController {
         thanksButton.alpha = 0.0
     }
     
-    // MARK: - Thanks button 
+    // MARK: - Thanks button
     func thankYouButton() {
         Button.thankYouButton(thanksButton)
         thanksButton.addTarget(self, action: #selector(thanksButtonClicked(_:)), for: .touchUpInside)

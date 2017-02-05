@@ -53,6 +53,7 @@ class TimerViewController: UIViewController {
         Button.stopButton(stopButton)
         stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
         view.addSubview(stopButton)
+        
     }
     
     func stopButtonCkicked(_ button: UIButton) {
