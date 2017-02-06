@@ -55,10 +55,7 @@ class EggTypeController: UIViewController {
         
         BackgroundView.showBackground(in: self.view)
         
-        // Jim code to test stuff, can remove
       //  setupAllButtons()
-        
-        
         
         Button.informationButton(with: infoButton)
         
