@@ -10,16 +10,14 @@ import UIKit
 import QuartzCore
 
 // egg size buttons
-let largeButton = UIButton(type: .custom)
-let extraLargeButton = UIButton(type: .custom)
-let jumboButton = UIButton(type: .custom)
+var largeButton = UIButton(type: .custom)
+var extraLargeButton = UIButton(type: .custom)
+var jumboButton = UIButton(type: .custom)
 
 // egg type buttons
 let softButton = UIButton(type: .custom)
 let mediumButton = UIButton(type: .custom)
 let hardButton = UIButton(type: .custom)
-
-
 
 // logo
 let appLogo = UIImageView()
@@ -53,7 +51,7 @@ class EggTypeController: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
         
         BackgroundView.showBackground(in: self.view)
-        
+
         softEggType()
         mediumEggType()
         hardEggType()
@@ -61,10 +59,13 @@ class EggTypeController: UIViewController {
         setupStartButton()
         buttonsFirstLoad()
         
+        print("create all buttons view did load")
+        createAllButtons()
+
+        print("sizze button view did load")
         sizeButtonsFirstLoad()
         animateHeaderAndLogo()
         
-        createAllButtons()
     }
     
     func setupAllButtons() {
@@ -76,15 +77,16 @@ class EggTypeController: UIViewController {
         thanksButton = EggButton.createButton(with: .thankYou)
         thanksButton.alpha = 0.0
         view.addSubview(thanksButton)
-        print("thanks button created")
         thanksButton.addTarget(self, action: #selector(thanksButtonClicked(_:)), for: .touchUpInside)
         }
     
     func createAllButtons() {
+
         largeEggButton()
         extraLargeEggButton()
         jumboEggButton()
         
+
         setupAllButtons()
 
     }
@@ -99,6 +101,7 @@ class EggTypeController: UIViewController {
     }
     
     func sizeButtonsFirstLoad() {
+        print("size button before loading")
         if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
             HeaderView.showHeader(in: self.view)
             LogoView.showLogo(in: self.view)
@@ -108,7 +111,7 @@ class EggTypeController: UIViewController {
                 jumboButton.alpha = 1.0
             },
                            completion: nil)
-            print("didLoad")
+            print("size button after loading")
         }
         logoAndHeaderAppear = false
         logoAndHeaderDidAnimate = true
@@ -130,9 +133,9 @@ class EggTypeController: UIViewController {
         
         startButton.alpha = 0.0
         
-        largeButton.alpha = 0.0
-        extraLargeButton.alpha = 0.0
-        jumboButton.alpha = 0.0
+//        largeButton.alpha = 0.0
+//        extraLargeButton.alpha = 0.0
+//        jumboButton.alpha = 0.0
     }
     
     func thanksButtonClicked(_ button: UIButton) {
@@ -147,33 +150,49 @@ class EggTypeController: UIViewController {
     
     // MARK: - Egg category buttons view
     func largeEggButton() {
+        print("before large button created")
+        largeButton = EggButton.createButton(with: .eggSize)
+
+        print("after large button created")
         largeButton.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
         largeButton.setTitle("large", for: .normal)
-        Button.eggCategoryButton(largeButton)
+        print("after title seted up")
         largeButton.addTarget(self, action: #selector(largeEggButtonCLicked(_:)), for: .touchUpInside)
         view.addSubview(largeButton)
+        
+        largeButton.alpha = 0.0
+
+        print("large button after loading")
     }
     
     func extraLargeEggButton() {
-        extraLargeButton.frame = CGRect(x: 137.5, y: 265.00, width: 100.00, height: 138.00)
+        extraLargeButton = EggButton.createButton(with: .eggSize)
+
         extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        extraLargeButton.frame = CGRect(x: 137.5, y: 265.00, width: 100.00, height: 138.00)
+
         // adding two lines of text
         extraLargeButton.titleLabel!.lineBreakMode = .byWordWrapping
         extraLargeButton.titleLabel!.textAlignment = .center
         extraLargeButton.setTitle("extra\nlarge", for: .normal)
         
-        Button.eggCategoryButton(extraLargeButton)
         extraLargeButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
-        
+        extraLargeButton.alpha = 0.0
         view.addSubview(extraLargeButton)
     }
     
     func jumboEggButton() {
+        jumboButton = EggButton.createButton(with: .eggSize)
+
+
         jumboButton.frame = CGRect(x: 248.00, y: 265.00, width: 100.00, height: 138.00)
         jumboButton.setTitle("jumbo", for: .normal)
-        Button.eggCategoryButton(jumboButton)
+        
+        
         jumboButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         view.addSubview(jumboButton)
+        jumboButton.alpha = 0.0
+
     }
     
     // #MARK: - Egg size buttons action
@@ -264,6 +283,7 @@ class EggTypeController: UIViewController {
         if sizeButtonOn == true {
             UIView.animate(withDuration: 0.33, delay: 0.0, options: [.curveEaseInOut], animations: {
                 jumboButton.center.y -= 162
+             
                 largeButton.center.y -= 162
                 extraLargeButton.center.y -= 162
                 sizeButtonOn = false

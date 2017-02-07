@@ -10,17 +10,17 @@ import UIKit
 
 class Button {
     
-    class func eggCategoryButton(_ myButton: UIButton) {
-        myButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
-        myButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
-        myButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
-        myButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        
-        // adding spacing between characters
-        let title = myButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        myButton.setAttributedTitle(attributedTitle, for: .normal)
-    }
+//    class func eggCategoryButton(_ myButton: UIButton) {
+//        myButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+//        myButton.setTitleColor(appColor.mainOrangeColor, for: .normal)
+//        myButton.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
+//        myButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+//        
+//        // adding spacing between characters
+//        let title = myButton.title(for: .normal)
+//        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
+//        myButton.setAttributedTitle(attributedTitle, for: .normal)
+//    }
     
     class func eggTypeButton(_ myButton: UIButton) {
         myButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
@@ -38,6 +38,22 @@ class Button {
 
 final class EggButton {
     
+    static func eggSizeButton(_ button: UIButton) {
+        button.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        button.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        //button.setTitle("", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+    
+        print("adding spasing")
+       //  adding spacing between characters
+//        let title = button.title(for: .normal)
+//        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
+//        button.setAttributedTitle(attributedTitle, for: .normal)
+    
+    }
+
+    
     static func createButton(with type: EggButtonType) -> UIButton {
         let button = UIButton(type: .custom)
         
@@ -52,6 +68,8 @@ final class EggButton {
             setupStopButton(button)
         case .start:
             startButton(button)
+        case .eggSize:
+            eggSizeButton(button)
         }
         return button
     }
@@ -94,6 +112,7 @@ enum EggButtonType {
     case thankYou
     case stop
     case start
+    case eggSize
 }
 
 

@@ -11,12 +11,13 @@ import QuartzCore
 import JSSAlertView
 import AudioToolbox
 
-var timerLabel = UILabel()
-var timer = Timer()
 var seconds: Int = 0
-var secondsLeft: Bool = false
 
 class TimerViewController: UIViewController {
+    
+    var timerLabel = UILabel()
+    var timer = Timer()
+    var secondsLeft: Bool = false
     
     var stopButton = UIButton(type: .custom)
     
@@ -76,7 +77,7 @@ class TimerViewController: UIViewController {
             seconds -= 1
             timerLabel.text = String(EggTimer.timeFormatted(seconds))
         } else if seconds == 0 && !secondsLeft {
-            // adding vibrate
+            // adding vibration
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), nil)
             print(secondsLeft)
             Sound.iggySong()
