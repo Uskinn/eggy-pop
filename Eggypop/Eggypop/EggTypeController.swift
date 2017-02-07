@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-let infoButton = UIButton(type: .custom)
+var infoButton = UIButton(type: .custom)
 let thanksButton = UIButton(type: .custom)
 let thanksLabel = UILabel()
 
@@ -48,20 +48,20 @@ var logoAndHeaderDidAnimate: Bool = false
 class EggTypeController: UIViewController {
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
         
         BackgroundView.showBackground(in: self.view)
         
-      //  setupAllButtons()
+        // setupAllButtons()
         
-        Button.informationButton(with: infoButton)
+        //EggButton.createButton(with: .information)
+        //informationButton(with: infoButton)
         
         thankYouButton()
         
-        createAllButtons()
         
         softEggType()
         mediumEggType()
@@ -72,17 +72,22 @@ class EggTypeController: UIViewController {
         
         sizeButtonsFirstLoad()
         animateHeaderAndLogo()
+        
+        createAllButtons()
+        setupAllButtons()
+
     }
     
-//    func setupAllButtons() {
-//        
-//        let infoButtonT = EggButton.createButton(with: .information)
-//        view.addSubview(infoButtonT)
-//        
-//        let stopButtonT = EggButton.createButton(with: .stop)
-//        view.addSubview(stopButtonT)
-//
-//    }
+    func setupAllButtons() {
+        infoButton = EggButton.createButton(with: .information)
+        infoButton.alpha = 0.0
+        view.addSubview(infoButton)
+        
+        
+        //        let stopButtonT = EggButton.createButton(with: .stop)
+        //        view.addSubview(stopButtonT)
+        
+    }
     
     func createAllButtons() {
         largeEggButton()
@@ -95,7 +100,7 @@ class EggTypeController: UIViewController {
         if logoAndHeaderAppear == true {
             HeaderView.showHeader(in: self.view)
             LogoView.showLogo(in: self.view)
-            Button.informationButton(with: infoButton)
+            // Button.informationButton(with: infoButton)
             print("willAppear")
         }
     }
@@ -126,6 +131,8 @@ class EggTypeController: UIViewController {
     }
     
     func buttonsFirstLoad() {
+        
+        
         softButton.center.x -= self.view.bounds.width
         mediumButton.center.x += self.view.bounds.width
         hardButton.center.x -= self.view.bounds.width
@@ -136,8 +143,9 @@ class EggTypeController: UIViewController {
         extraLargeButton.alpha = 0.0
         jumboButton.alpha = 0.0
         
-        infoButton.alpha = 0.0
+       // infoButton.alpha = 0.0
         thanksButton.alpha = 0.0
+        
     }
     
     // MARK: - Thanks button
