@@ -10,8 +10,7 @@ import UIKit
 import QuartzCore
 
 var infoButton = UIButton(type: .custom)
-let thanksButton = UIButton(type: .custom)
-let thanksLabel = UILabel()
+var thanksButton = UIButton(type: .custom)
 
 // egg size buttons
 let largeButton = UIButton(type: .custom)
@@ -55,14 +54,6 @@ class EggTypeController: UIViewController {
         
         BackgroundView.showBackground(in: self.view)
         
-        // setupAllButtons()
-        
-        //EggButton.createButton(with: .information)
-        //informationButton(with: infoButton)
-        
-        thankYouButton()
-        
-        
         softEggType()
         mediumEggType()
         hardEggType()
@@ -74,8 +65,6 @@ class EggTypeController: UIViewController {
         animateHeaderAndLogo()
         
         createAllButtons()
-        setupAllButtons()
-
     }
     
     func setupAllButtons() {
@@ -83,6 +72,11 @@ class EggTypeController: UIViewController {
         infoButton.alpha = 0.0
         view.addSubview(infoButton)
         
+        thanksButton = EggButton.createButton(with: .thankYou)
+        thanksButton.alpha = 0.0
+        view.addSubview(thanksButton)
+        print("thanks button created")
+        thanksButton.addTarget(self, action: #selector(thanksButtonClicked(_:)), for: .touchUpInside)
         
         //        let stopButtonT = EggButton.createButton(with: .stop)
         //        view.addSubview(stopButtonT)
@@ -93,6 +87,9 @@ class EggTypeController: UIViewController {
         largeEggButton()
         extraLargeEggButton()
         jumboEggButton()
+        
+        setupAllButtons()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +97,6 @@ class EggTypeController: UIViewController {
         if logoAndHeaderAppear == true {
             HeaderView.showHeader(in: self.view)
             LogoView.showLogo(in: self.view)
-            // Button.informationButton(with: infoButton)
             print("willAppear")
         }
     }
@@ -131,8 +127,6 @@ class EggTypeController: UIViewController {
     }
     
     func buttonsFirstLoad() {
-        
-        
         softButton.center.x -= self.view.bounds.width
         mediumButton.center.x += self.view.bounds.width
         hardButton.center.x -= self.view.bounds.width
@@ -142,24 +136,11 @@ class EggTypeController: UIViewController {
         largeButton.alpha = 0.0
         extraLargeButton.alpha = 0.0
         jumboButton.alpha = 0.0
-        
-       // infoButton.alpha = 0.0
-        thanksButton.alpha = 0.0
-        
-    }
-    
-    // MARK: - Thanks button
-    func thankYouButton() {
-        Button.thankYouButton(thanksButton)
-        thanksButton.addTarget(self, action: #selector(thanksButtonClicked(_:)), for: .touchUpInside)
-        view.addSubview(thanksButton)
     }
     
     func thanksButtonClicked(_ button: UIButton) {
         print("clicked")
-        extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
-        
-        
+       // extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
     }
     
     // MARK: - Egg category buttons view
