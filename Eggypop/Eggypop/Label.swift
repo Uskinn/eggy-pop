@@ -10,16 +10,7 @@ import UIKit
 
 class Label {
     
-    class func thanks(label myLabel: UILabel) {
-        myLabel.frame = CGRect(x: 13.05, y: 194.00, width: 348.00, height: 168.00)
-        myLabel.backgroundColor = .orange
-        myLabel.layer.masksToBounds = true
-        myLabel.layer.cornerRadius = 8
-        myLabel.text = "qweqqqqeqeqeqeqqfadw\n qdqfdcqawe\n fqabvqtyqweaf"
-
-    }
-    
-    class func headerLabel(_ myLabel: UILabel) {
+        class func headerLabel(_ myLabel: UILabel) {
         // label programmatically
         myLabel.text = "eggypop"
         myLabel.textColor = appColor.headerColor

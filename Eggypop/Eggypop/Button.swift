@@ -34,43 +34,7 @@ class Button {
         myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
     
-    class func startButton(_ myButton: UIButton) {
-        myButton.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
-        myButton.setTitle("start", for: .normal)
-        
-        myButton.setBackgroundImage(appImage.startButtonImage, for: .normal)
-        
-        myButton.setTitleColor(.white, for: .normal)
-        myButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
-        myButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
-        
-        // adding spacing between characters
-        let title = myButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
-        myButton.setAttributedTitle(attributedTitle, for: .normal)
     }
-    
-    class func stopButton(_ myButton: UIButton) {
-        myButton.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
-        myButton.setTitle("stop", for: .normal)
-        
-        myButton.setBackgroundImage(appImage.stopButtonImage, for: .normal)
-        
-        myButton.setTitleColor(.white, for: .normal)
-        myButton.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
-        myButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
-        
-        // adding spacing between characters
-        let title = myButton.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
-        myButton.setAttributedTitle(attributedTitle, for: .normal)
-    }
-    
-//    class func thankYouButton(_ myButton: UIButton) {
-//        myButton.frame = CGRect(x: 322.00, y: 40.00, width: 23.00, height: 23.00)
-//       myButton.setBackgroundImage(appImage.thanksButtonImage, for: .normal)
-//   }
-}
 
 final class EggButton {
     
@@ -86,8 +50,26 @@ final class EggButton {
             button.setBackgroundImage(appImage.thanksButtonImage, for: .normal)
         case .stop:
             setupStopButton(button)
+        case .start:
+            startButton(button)
         }
         return button
+    }
+    
+    static func startButton(_ button: UIButton) {
+        button.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
+        button.setTitle("start", for: .normal)
+        
+        button.setBackgroundImage(appImage.startButtonImage, for: .normal)
+        
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
+        
+        // adding spacing between characters
+        let title = button.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
+        button.setAttributedTitle(attributedTitle, for: .normal)
     }
     
     static func setupStopButton(_ button: UIButton) {
@@ -111,6 +93,7 @@ enum EggButtonType {
     case information
     case thankYou
     case stop
+    case start
 }
 
 

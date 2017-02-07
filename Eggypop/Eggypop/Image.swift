@@ -9,24 +9,19 @@
 import UIKit
 
 struct Image {
-    let emptyEggCategoryButtonImage = UIImage(named: "emptyEggShape")
-    let filledEggCategoryButtonImage = UIImage(named: "filledEggShape")
+    let emptyEggCategoryButtonImage = UIImage(named: "emptyEggShapeImage")
+    let filledEggCategoryButtonImage = UIImage(named: "filledEggShapeImage")
     
-    let emptyEggTypeButtonImage = UIImage(named: "emptyTypeButton")
-    let filledEggTypeButtonImage = UIImage(named: "filledTypeButton")
+    let emptyEggTypeButtonImage = UIImage(named: "emptyTypeButtonImage")
+    let filledEggTypeButtonImage = UIImage(named: "filledTypeButtonImage")
     
-    let startButtonImage = UIImage(named: "startButton")
-    let stopButtonImage = UIImage(named: "stopButton")
+    let startButtonImage = UIImage(named: "startButtonImage")
+    let stopButtonImage = UIImage(named: "stopButtonImage")
 
-    let logoImage = UIImage(named: "logoEggy")
+    let logoImage = UIImage(named: "logoEggyImage")
     
-    let eggySaisImage = UIImage(named: "eggySais")
-    let softSaisImage = UIImage(named: "softSais")
-    let mediumSaisImage = UIImage(named: "mediumSais")
-    let hardSaisImage = UIImage(named: "hardSais")
+    let appBackground = UIImage(named: "backgroundImage")
     
-    let appBackground = UIImage(named: "bacground")
-    
-    let infoButtonImage = UIImage(named: "infoButton")
-    let thanksButtonImage = UIImage(named: "heartButton")
+    let infoButtonImage = UIImage(named: "infoButtonImage")
+    let thanksButtonImage = UIImage(named: "heartButtonImage")
 }

@@ -11,13 +11,14 @@ import QuartzCore
 import JSSAlertView
 import AudioToolbox
 
-let stopButton = UIButton(type: .custom)
 var timerLabel = UILabel()
 var timer = Timer()
 var seconds: Int = 0
 var secondsLeft: Bool = false
 
 class TimerViewController: UIViewController {
+    
+    var stopButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +31,11 @@ class TimerViewController: UIViewController {
         if timer.isValid == false {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerViewController.updateTimer) , userInfo: nil, repeats: true)
         }
+        
         header()
         timerLabelFunc()
         logo()
-        stopButtonFunc()
+        setupStopButton()
     }
     
     // MARK: - Header
@@ -49,11 +51,10 @@ class TimerViewController: UIViewController {
     }
     
     // MARK: - Stop button
-    func stopButtonFunc() {
-        Button.stopButton(stopButton)
+    func setupStopButton() {
+        stopButton = EggButton.createButton(with: .stop)
         stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
-        view.addSubview(stopButton)
-        
+        self.view.addSubview(stopButton)
     }
     
     func stopButtonCkicked(_ button: UIButton) {

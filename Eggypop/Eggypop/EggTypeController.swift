@@ -9,9 +9,6 @@
 import UIKit
 import QuartzCore
 
-var infoButton = UIButton(type: .custom)
-var thanksButton = UIButton(type: .custom)
-
 // egg size buttons
 let largeButton = UIButton(type: .custom)
 let extraLargeButton = UIButton(type: .custom)
@@ -22,8 +19,7 @@ let softButton = UIButton(type: .custom)
 let mediumButton = UIButton(type: .custom)
 let hardButton = UIButton(type: .custom)
 
-// start button
-let startButton = UIButton(type: .custom)
+
 
 // logo
 let appLogo = UIImageView()
@@ -46,7 +42,11 @@ var logoAndHeaderDidAnimate: Bool = false
 
 class EggTypeController: UIViewController {
     
+    var infoButton = UIButton(type: .custom)
+    var thanksButton = UIButton(type: .custom)
     
+    // start button
+    var startButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ class EggTypeController: UIViewController {
         mediumEggType()
         hardEggType()
         
-        startButtonFunc()
+        setupStartButton()
         buttonsFirstLoad()
         
         sizeButtonsFirstLoad()
@@ -71,17 +71,14 @@ class EggTypeController: UIViewController {
         infoButton = EggButton.createButton(with: .information)
         infoButton.alpha = 0.0
         view.addSubview(infoButton)
+        infoButton.addTarget(self, action: #selector(infoButtonClicked(_:)), for: .touchUpInside)
         
         thanksButton = EggButton.createButton(with: .thankYou)
         thanksButton.alpha = 0.0
         view.addSubview(thanksButton)
         print("thanks button created")
         thanksButton.addTarget(self, action: #selector(thanksButtonClicked(_:)), for: .touchUpInside)
-        
-        //        let stopButtonT = EggButton.createButton(with: .stop)
-        //        view.addSubview(stopButtonT)
-        
-    }
+        }
     
     func createAllButtons() {
         largeEggButton()
@@ -139,8 +136,13 @@ class EggTypeController: UIViewController {
     }
     
     func thanksButtonClicked(_ button: UIButton) {
+        
         print("clicked")
-       // extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
+        
+    }
+    
+    func infoButtonClicked(_ button: UIButton) {
+        print("i clicked")
     }
     
     // MARK: - Egg category buttons view
@@ -365,17 +367,18 @@ class EggTypeController: UIViewController {
     }
     
     // MARK: - Start button
-    func startButtonFunc() {
-        Button.startButton(startButton)
+    func setupStartButton() {
+        startButton = EggButton.createButton(with: .start)
         startButton.addTarget(self, action: #selector(startButtonCLicked(_:)), for: .touchUpInside)
-        view.addSubview(startButton)
+        self.view.addSubview(startButton)
+        
     }
     
     func startButtonFade() {
         UIView.animate(withDuration: 0.3, delay: 0.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 1.0, options: [], animations: {
-            startButton.alpha = 1.0
-            infoButton.alpha = 1.0
-            thanksButton.alpha = 1.0
+            self.startButton.alpha = 1.0
+            self.infoButton.alpha = 1.0
+            self.thanksButton.alpha = 1.0
         },
                        completion: nil)
     }

@@ -12,7 +12,7 @@ class BackgroundView {
     
    class func showBackground(in myView: UIView) {
         let imageView = UIImageView(frame: myView.bounds)
-        imageView.image = UIImage(named: "background")
+        imageView.image = UIImage(named: "backgroundImage")
         myView.addSubview(imageView)
     }
 }
