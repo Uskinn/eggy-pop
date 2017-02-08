@@ -10,23 +10,4 @@ import UIKit
 
 public class ButtonView {
     
-//    class func largeEggButton(callback: @escaping () -> Void) {
-//        largeButton.frame = CGRect(x: 17.00, y: 265.00, width: 100.00, height: 138.00)
-//        largeButton.setTitle("large", for: .normal)
-//        Button.eggCategoryButton(largeButton)
-//        
-//    }
-//    
-    
-//    func largeEggButton(in myView: UIView, with mySelector: Selector) {
-//
-//            largeButton.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
-//            largeButton.setTitle("large", for: .normal)
-//            Button.eggCategoryButton(largeButton)
-//            largeButton.addTarget(self, action: mySelector, for: .touchUpInside)
-//            myView.addSubview(largeButton)
-//        }
-    
-    
-    
 }
