@@ -9,15 +9,15 @@
 import UIKit
 import QuartzCore
 
+// constants
+let appColor = Color()
+let appImage = Image()
+
 // logo
 let appLogo = UIImageView()
 
 // header
 let headerLabel = UILabel()
-
-// constants
-let appColor = Color()
-let appImage = Image()
 
 // Booleans
 var sizeButtonOn: Bool = true
@@ -118,14 +118,6 @@ class EggTypeController: UIViewController {
         startButton.alpha = 0.0
     }
     
-    func animateHeaderAndLogo() {
-        UIView.animate(withDuration: 0.4, delay: 0.3, options: [.curveEaseInOut], animations: {
-            headerLabel.center.y -= 251
-            appLogo.center.y += 262
-        }, completion: nil
-        )
-    }
-    
     func thanksButtonClicked(_ button: UIButton) {
         print("clicked")
         
@@ -209,35 +201,6 @@ class EggTypeController: UIViewController {
         startButtonFadeOff()
     }
     
-    func sizeButtonsFirstLoad() {
-        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
-            HeaderView.showHeader(in: self.view)
-            LogoView.showLogo(in: self.view)
-            UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.0, initialSpringVelocity: 0.0, options: [], animations: {
-                self.largeButton.alpha = 1.0
-                self.extraLargeButton.alpha = 1.0
-                self.jumboButton.alpha = 1.0
-            },
-                           completion: nil)
-        }
-        logoAndHeaderAppear = false
-        logoAndHeaderDidAnimate = true
-    }
-    
-    // MARK: - Move egg size buttons up
-    func moveEggSizeButtonsUp() {
-        if sizeButtonOn == true {
-            UIView.animate(withDuration: 0.33, delay: 0.0, options: [.curveEaseInOut], animations: {
-                self.jumboButton.center.y -= 162
-                
-                self.largeButton.center.y -= 162
-                self.extraLargeButton.center.y -= 162
-                sizeButtonOn = false
-            }, completion: nil
-            )
-        }
-    }
-    
     // MARK: - Egg type buttons action
     func softButtonCLicked(_ button: UIButton) {
         isEggTypeChosen = true
@@ -279,30 +242,6 @@ class EggTypeController: UIViewController {
         
         softButton.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
         softButton.titleLabel?.textColor = appColor.mainOrangeColor
-    }
-    
-    
-    // MARK: - Egg type buttons animation
-    func moveEggTypeButtons() {
-        if typeButtonOn == true {
-            UIView.animate(withDuration: 0.5, delay: 0.4, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
-                self.softButton.center.x += self.view.bounds.width
-                self.mediumButton.center.x -= self.view.bounds.width
-                self.hardButton.center.x += self.view.bounds.width
-            },
-                           completion: nil
-            )
-        }
-        typeButtonOn = false
-    }
-    
-    func startButtonFadeOff() {
-        UIView.animate(withDuration: 0.3, delay: 0.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 1.0, options: [], animations: {
-            self.startButton.alpha = 1.0
-            self.infoButton.alpha = 1.0
-            self.thanksButton.alpha = 1.0
-        },
-                       completion: nil)
     }
     
     func startButtonCLicked(_ button: UIButton) {
@@ -353,6 +292,69 @@ class EggTypeController: UIViewController {
     }
 }
 
+extension EggTypeController {
+    
+    // MARK: - egg size button first appear
+    func sizeButtonsFirstLoad() {
+        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
+            HeaderView.showHeader(in: self.view)
+            LogoView.showLogo(in: self.view)
+            UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.0, initialSpringVelocity: 0.0, options: [], animations: {
+                self.largeButton.alpha = 1.0
+                self.extraLargeButton.alpha = 1.0
+                self.jumboButton.alpha = 1.0
+            },
+                           completion: nil)
+        }
+        logoAndHeaderAppear = false
+        logoAndHeaderDidAnimate = true
+    }
+    // MARK: - animate header and logo
+    func animateHeaderAndLogo() {
+        UIView.animate(withDuration: 0.4, delay: 0.3, options: [.curveEaseInOut], animations: {
+            headerLabel.center.y -= 251
+            appLogo.center.y += 262
+        }, completion: nil
+        )
+    }
+    
+    // MARK: - Move egg size buttons up
+    func moveEggSizeButtonsUp() {
+        if sizeButtonOn == true {
+            UIView.animate(withDuration: 0.33, delay: 0.0, options: [.curveEaseInOut], animations: {
+                self.jumboButton.center.y -= 162
+                
+                self.largeButton.center.y -= 162
+                self.extraLargeButton.center.y -= 162
+                sizeButtonOn = false
+            }, completion: nil
+            )
+        }
+    }
+    
+    // MARK: - Egg type buttons animation
+    func moveEggTypeButtons() {
+        if typeButtonOn == true {
+            UIView.animate(withDuration: 0.5, delay: 0.4, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
+                self.softButton.center.x += self.view.bounds.width
+                self.mediumButton.center.x -= self.view.bounds.width
+                self.hardButton.center.x += self.view.bounds.width
+            },
+                           completion: nil
+            )
+        }
+        typeButtonOn = false
+    }
+    //MARK: - start button fade off
+    func startButtonFadeOff() {
+        UIView.animate(withDuration: 0.3, delay: 0.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 1.0, options: [], animations: {
+            self.startButton.alpha = 1.0
+            self.infoButton.alpha = 1.0
+            self.thanksButton.alpha = 1.0
+        },
+                       completion: nil)
+    }
+}
 
 
 
