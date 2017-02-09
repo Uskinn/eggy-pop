@@ -25,6 +25,51 @@ class Button {
 
 final class EggButton {
     
+    static func eggSoftTypeButton(_ button: UIButton) {
+        button.frame = CGRect(x: 57.00, y: 261.00, width: 261.00, height: 55.00)
+        button.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
+        
+        button.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        button.setTitle("soft", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        
+        // adding spacing between characters
+        let title = button.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
+        button.setAttributedTitle(attributedTitle, for: .normal)
+    }
+    
+    static func eggMediumTypeButton(_ button: UIButton) {
+        button.frame = CGRect(x: 57.00, y: 325.00, width: 261.00, height: 55.00)
+        button.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
+        
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("medium", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        
+        // adding spacing between characters
+        let title = button.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
+        button.setAttributedTitle(attributedTitle, for: .normal)
+    }
+    
+    static func eggHardTypeButton(_ button: UIButton) {
+        button.frame = CGRect(x: 57.00, y: 389.00, width: 261.00, height: 55.00)
+        button.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
+        
+        button.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        button.setTitle("hard", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        
+        // adding spacing between characters
+        let title = button.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
+        button.setAttributedTitle(attributedTitle, for: .normal)
+    }
+
     static func largeEggSizeButton(_ button: UIButton) {
         button.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
         button.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
@@ -131,6 +176,12 @@ final class EggButton {
             extraLargeEggSizeButton(button)
         case .jumboSize:
             jumboEggSizeButton(button)
+        case .softType:
+            eggSoftTypeButton(button)
+        case .mediumType:
+            eggMediumTypeButton(button)
+        case .hardType:
+            eggHardTypeButton(button)
         }
         return button
     }
@@ -144,6 +195,9 @@ enum EggButtonType {
     case largeEggSize
     case extraLargeSize
     case jumboSize
+    case softType
+    case mediumType
+    case hardType
 }
 
 
