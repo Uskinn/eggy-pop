@@ -26,6 +26,7 @@ var isAnimated: Bool = true
 var isEggTypeChosen: Bool = true
 var logoAndHeaderAppear: Bool = true
 var logoAndHeaderDidAnimate: Bool = false
+var isTypeButtonChecked: Bool = true
 
 class EggTypeController: UIViewController {
     // egg size buttons
@@ -68,19 +69,19 @@ class EggTypeController: UIViewController {
     // MARK: - setup all buttons
     func setupAllButtons() {
         
-        // MARK: - info button
+        // setup info button
         infoButton = EggButton.createButton(with: .information)
         infoButton.alpha = 0.0
         view.addSubview(infoButton)
         infoButton.addTarget(self, action: #selector(infoButtonClicked(_:)), for: .touchUpInside)
         
-        // MARK: - thanks button
+        // setup thanks button
         thanksButton = EggButton.createButton(with: .thankYou)
         thanksButton.alpha = 0.0
         view.addSubview(thanksButton)
         thanksButton.addTarget(self, action: #selector(thanksButtonClicked(_:)), for: .touchUpInside)
         
-        // MARK: - egg size buttons
+        // setup egg size buttons
         largeButton = EggButton.createButton(with: .largeEggSize)
         view.addSubview(largeButton)
         largeButton.addTarget(self, action: #selector(largeEggButtonCLicked(_:)), for: .touchUpInside)
@@ -93,7 +94,7 @@ class EggTypeController: UIViewController {
         view.addSubview(jumboButton)
         jumboButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         
-        // MARK: - egg type buttons
+        // setup egg type buttons
         isEggTypeChosen = false
         softButton = EggButton.createButton(with: .softType)
         softButton.center.x -= self.view.bounds.width
@@ -110,7 +111,7 @@ class EggTypeController: UIViewController {
         view.addSubview(hardButton)
         hardButton.addTarget(self, action: #selector(hardButtonCLicked(_:)), for: .touchUpInside)
         
-        // MARK: - start button
+        // setup start button
         startButton = EggButton.createButton(with: .start)
         startButton.addTarget(self, action: #selector(startButtonCLicked(_:)), for: .touchUpInside)
         self.view.addSubview(startButton)
