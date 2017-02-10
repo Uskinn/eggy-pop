@@ -39,13 +39,13 @@ class TimerViewController: UIViewController {
         setupStopButton()
     }
     
-    // MARK: - Header
+    // MARK: - setup header
     func header() {
         Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
-    // MARK: - Header
+    // MARK: - setup logo
     func logo() {
         Logo.logo(appLogo)
         self.view.addSubview(appLogo)
@@ -54,8 +54,8 @@ class TimerViewController: UIViewController {
     // MARK: - Stop button
     func setupStopButton() {
         stopButton = EggButton.createButton(with: .stop)
-        stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
         self.view.addSubview(stopButton)
+        stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
     }
     
     func stopButtonCkicked(_ button: UIButton) {
@@ -69,15 +69,18 @@ class TimerViewController: UIViewController {
         Label.timerLabel(timerLabel)
         self.view.addSubview(timerLabel)
     }
+}
+
+extension TimerViewController {
     
-    // MARK: - Updating timer
+    // MARK: - update timer func
     func updateTimer() {
         if seconds > 0 {
             print(seconds)
             seconds -= 1
             timerLabel.text = String(EggTimer.timeFormatted(seconds))
         } else if seconds == 0 && !secondsLeft {
-            // adding vibration
+            // add vibrator
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), nil)
             print(secondsLeft)
             Sound.iggySong()
@@ -88,5 +91,13 @@ class TimerViewController: UIViewController {
             secondsLeft = true
         }
     }
+
+    
 }
+
+
+
+
+
+
 

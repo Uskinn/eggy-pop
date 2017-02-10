@@ -28,7 +28,7 @@ var logoAndHeaderAppear: Bool = true
 var logoAndHeaderDidAnimate: Bool = false
 
 class EggTypeController: UIViewController {
-       // egg size buttons
+    // egg size buttons
     var largeButton = UIButton(type: .custom)
     var extraLargeButton = UIButton(type: .custom)
     var jumboButton = UIButton(type: .custom)
@@ -58,7 +58,7 @@ class EggTypeController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if logoAndHeaderAppear == true {
+        if logoAndHeaderAppear {
             HeaderView.showHeader(in: self.view)
             LogoView.showLogo(in: self.view)
             print("willAppear")
@@ -149,9 +149,7 @@ class EggTypeController: UIViewController {
         
         isAnimated = false
         
-        moveEggSizeButtonsUp()
-        moveEggTypeButtons()
-        startButtonFadeOff()
+        animateAllButtons()
     }
     
     func extraLargeEggButtonClicked(_ button: UIButton) {
@@ -173,9 +171,7 @@ class EggTypeController: UIViewController {
         
         isAnimated = false
         
-        moveEggSizeButtonsUp()
-        moveEggTypeButtons()
-        startButtonFadeOff()
+        animateAllButtons()
     }
     
     func jumboEggButtonClicked(_ button: UIButton) {
@@ -197,15 +193,12 @@ class EggTypeController: UIViewController {
         
         isAnimated = false
         
-        moveEggSizeButtonsUp()
-        moveEggTypeButtons()
-        startButtonFadeOff()
+        animateAllButtons()
     }
     
     // MARK: - Egg type buttons action
     func softButtonCLicked(_ button: UIButton) {
         isEggTypeChosen = true
-        startButton.isEnabled = true
         
         softButton.titleLabel?.textColor = .white
         softButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
@@ -219,7 +212,6 @@ class EggTypeController: UIViewController {
     
     func mediumButtonCLicked(_ button: UIButton) {
         isEggTypeChosen = true
-        startButton.isEnabled = true
         
         mediumButton.titleLabel?.textColor = .white
         mediumButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
@@ -233,7 +225,6 @@ class EggTypeController: UIViewController {
     
     func hardButtonCLicked(_ button: UIButton) {
         isEggTypeChosen = true
-        startButton.isEnabled = true
         
         hardButton.titleLabel?.textColor = .white
         hardButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
@@ -294,6 +285,13 @@ class EggTypeController: UIViewController {
 }
 
 extension EggTypeController {
+    
+    // MARK: - animate all buttons
+    func animateAllButtons() {
+        moveEggSizeButtonsUp()
+        moveEggTypeButtons()
+        startButtonFadeOff()
+    }
     
     // MARK: - egg size button first appear
     func sizeButtonsFirstLoad() {
