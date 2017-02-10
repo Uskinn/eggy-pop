@@ -28,8 +28,7 @@ var logoAndHeaderAppear: Bool = true
 var logoAndHeaderDidAnimate: Bool = false
 
 class EggTypeController: UIViewController {
-    
-    // egg size buttons
+       // egg size buttons
     var largeButton = UIButton(type: .custom)
     var extraLargeButton = UIButton(type: .custom)
     var jumboButton = UIButton(type: .custom)
@@ -118,11 +117,13 @@ class EggTypeController: UIViewController {
         startButton.alpha = 0.0
     }
     
+    // MARK: - thank you button action
     func thanksButtonClicked(_ button: UIButton) {
         print("clicked")
         
     }
     
+    // MARK: - info button action
     func infoButtonClicked(_ button: UIButton) {
         // print("i clicked")
     }
@@ -323,7 +324,6 @@ extension EggTypeController {
         if sizeButtonOn == true {
             UIView.animate(withDuration: 0.33, delay: 0.0, options: [.curveEaseInOut], animations: {
                 self.jumboButton.center.y -= 162
-                
                 self.largeButton.center.y -= 162
                 self.extraLargeButton.center.y -= 162
                 sizeButtonOn = false

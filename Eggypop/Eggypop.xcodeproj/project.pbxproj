@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103CD1E247E8B008B5BB8 /* Alert.swift */; };
 		8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */; };
-		8A0103D81E26795E008B5BB8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103D71E26795E008B5BB8 /* ButtonView.swift */; };
 		8A0422841E31643D007A1D73 /* UserNotificationManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0422831E31643D007A1D73 /* UserNotificationManeger.swift */; };
 		8A0685831E26E325007A44BE /* Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0685821E26E325007A44BE /* Egg.swift */; };
 		8A0685851E2706A2007A44BE /* iggyPopSong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685841E2706A2007A44BE /* iggyPopSong.m4a */; };
@@ -36,7 +35,6 @@
 		7AD21EB1F1277AC74FBEE1C6 /* Pods-Eggypop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggypop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eggypop/Pods-Eggypop.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0103CD1E247E8B008B5BB8 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateButton.swift; sourceTree = "<group>"; };
-		8A0103D71E26795E008B5BB8 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		8A0422831E31643D007A1D73 /* UserNotificationManeger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationManeger.swift; sourceTree = "<group>"; };
 		8A0685821E26E325007A44BE /* Egg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Egg.swift; sourceTree = "<group>"; };
 		8A0685841E2706A2007A44BE /* iggyPopSong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = iggyPopSong.m4a; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 		8A0103D41E2678BE008B5BB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8A0103D71E26795E008B5BB8 /* ButtonView.swift */,
 				8AD1B4431E417C100021EDE2 /* HeaderView.swift */,
 				8AD1B4451E417F430021EDE2 /* LogoView.swift */,
 				8AD1B4471E4188880021EDE2 /* BackgroundView.swift */,
@@ -318,7 +315,6 @@
 				8AD1B4461E417F430021EDE2 /* LogoView.swift in Sources */,
 				8A3D6B061E2153C200637642 /* Image.swift in Sources */,
 				8A3D6B0A1E21EA7800637642 /* Label.swift in Sources */,
-				8A0103D81E26795E008B5BB8 /* ButtonView.swift in Sources */,
 				8AA5B1D11DEC988200D159C3 /* EggTypeController.swift in Sources */,
 				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
 				8A0422841E31643D007A1D73 /* UserNotificationManeger.swift in Sources */,

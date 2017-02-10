@@ -8,19 +8,19 @@
 
 import UIKit
 
-enum EggCategory: String {
-    case Large = "large"
-    case ExtraLarge = "extralarge"
-    case Jumbo = "jumbo"
-}
-
-enum EggType: String {
-    case Soft = "soft"
-    case Medium = "medium"
-    case Hard = "hard"
-}
-
-struct Eggs {
-    let eggCategory: EggCategory 
-    let eggType: EggType
-}
+//enum EggCategory: String {
+//    case Large = "large"
+//    case ExtraLarge = "extralarge"
+//    case Jumbo = "jumbo"
+//}
+//
+//enum EggType: String {
+//    case Soft = "soft"
+//    case Medium = "medium"
+//    case Hard = "hard"
+//}
+//
+//struct Eggs {
+//    let eggCategory: EggCategory 
+//    let eggType: EggType
+//}

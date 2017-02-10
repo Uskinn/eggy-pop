@@ -46,7 +46,36 @@ class Label {
     }
 }
 
-
+//final class EggLabel {
+//    
+//    static func setupHeaderLabel(_ label: UILabel) {
+//        label.text = "eggypop"
+//        label.textColor = appColor.headerColor
+//        label.font = UIFont(name: "LucidaGrande", size: 0)
+//        label.font = UIFont.boldSystemFont(ofSize: 25)
+//        label.textAlignment = NSTextAlignment.center
+//        
+//        // adding spacing between characters
+//        let attributedString = NSMutableAttributedString(string: label.text!)
+//        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(2.5), range: NSRange(location: 0, length: attributedString.length))
+//        label.attributedText = attributedString
+//    }
+//    
+//    static func createLabel(with type: EggLabelType) -> UILabel {
+//        let label = UILabel()
+//        
+//        switch type {
+//        case .headerLabel:
+//            setupHeaderLabel(label)
+//        }
+//        return label
+//    }
+//}
+//
+//enum EggLabelType {
+//    case timerLabel
+//    case headerLabel
+//}
 
 
 
