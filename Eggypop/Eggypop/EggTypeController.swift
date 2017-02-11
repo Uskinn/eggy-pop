@@ -19,16 +19,18 @@ let appLogo = UIImageView()
 // header
 let headerLabel = UILabel()
 
-// Booleans
-var sizeButtonOn: Bool = true
-var typeButtonOn: Bool = true
-var isAnimated: Bool = true
-var isEggTypeChosen: Bool = true
+// logo and header bools
 var logoAndHeaderAppear: Bool = true
 var logoAndHeaderDidAnimate: Bool = false
-var isTypeButtonChecked: Bool = true
 
 class EggTypeController: UIViewController {
+    
+    // Booleans
+    var sizeButtonOn: Bool = true
+    var typeButtonOn: Bool = true
+    var isAnimated: Bool = true
+    var isTypeButtonChecked: Bool = true
+    
     // egg size buttons
     var largeButton = UIButton(type: .custom)
     var extraLargeButton = UIButton(type: .custom)
@@ -68,7 +70,6 @@ class EggTypeController: UIViewController {
     
     // MARK: - setup all buttons
     func setupAllButtons() {
-        
         // setup info button
         infoButton = EggButton.createButton(with: .information)
         infoButton.alpha = 0.0
@@ -94,8 +95,6 @@ class EggTypeController: UIViewController {
         view.addSubview(jumboButton)
         jumboButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         
-        // setup egg type buttons
-        isEggTypeChosen = false
         softButton = EggButton.createButton(with: .softType)
         softButton.center.x -= self.view.bounds.width
         view.addSubview(softButton)
@@ -199,8 +198,6 @@ class EggTypeController: UIViewController {
     
     // MARK: - Egg type buttons action
     func softButtonCLicked(_ button: UIButton) {
-        isEggTypeChosen = true
-        
         softButton.titleLabel?.textColor = .white
         softButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
         
@@ -212,8 +209,6 @@ class EggTypeController: UIViewController {
     }
     
     func mediumButtonCLicked(_ button: UIButton) {
-        isEggTypeChosen = true
-        
         mediumButton.titleLabel?.textColor = .white
         mediumButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
         
@@ -225,8 +220,6 @@ class EggTypeController: UIViewController {
     }
     
     func hardButtonCLicked(_ button: UIButton) {
-        isEggTypeChosen = true
-        
         hardButton.titleLabel?.textColor = .white
         hardButton.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
         
@@ -238,23 +231,21 @@ class EggTypeController: UIViewController {
     }
     
     func startButtonCLicked(_ button: UIButton) {
-        if isEggTypeChosen == false {
-        } else {
             logoAndHeaderAppear = true
             
             let controller = TimerViewController()
             self.present(controller, animated: true) {
                 
                 if self.largeButton.titleLabel?.textColor == .white && self.softButton.titleLabel?.textColor == .white {
-                    seconds = 180  // works
+                    seconds = 390  // done
                 }
                 
                 if self.largeButton.titleLabel?.textColor == .white && self.mediumButton.titleLabel?.textColor == .white {
-                    seconds = 240
+                    seconds = 420 // done
                 }
                 
                 if self.largeButton.titleLabel?.textColor == .white && self.hardButton.titleLabel?.textColor == .white {
-                    seconds = 480
+                    seconds = 720 // done
                 }
                 
                 if self.extraLargeButton.titleLabel?.textColor == .white && self.softButton.titleLabel?.textColor == .white {
@@ -283,7 +274,7 @@ class EggTypeController: UIViewController {
             }
         }
     }
-}
+
 
 extension EggTypeController {
     
@@ -325,7 +316,7 @@ extension EggTypeController {
                 self.jumboButton.center.y -= 162
                 self.largeButton.center.y -= 162
                 self.extraLargeButton.center.y -= 162
-                sizeButtonOn = false
+                self.sizeButtonOn = false
             }, completion: nil
             )
         }

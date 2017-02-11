@@ -29,7 +29,7 @@ final class EggButton {
         button.frame = CGRect(x: 57.00, y: 325.00, width: 261.00, height: 55.00)
         button.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
         
-        isEggTypeChosen = true
+       // isEggTypeChosen = true
         button.setTitleColor(.white, for: .normal)
         button.setTitle("medium", for: .normal)
         button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
@@ -170,6 +170,10 @@ final class EggButton {
             eggHardTypeButton(button)
         }
         return button
+    }
+    
+    func addSpaceChar() {
+        
     }
 }
 
