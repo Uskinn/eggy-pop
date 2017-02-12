@@ -10,9 +10,14 @@ import UIKit
 
 extension UIImageView {
     
-    func setupLogoImage(logoImage: UIImage) {
-        self.image = logoImage
-        
+    func setupLogoImage() {
+        let logo = Image()
+        self.image = logo.logoImage
     }
     
+    func showBackground(in myView: UIView) {
+        let imageView = UIImageView(frame: myView.bounds)
+        imageView.image = UIImage(named: "backgroundImage")
+        myView.addSubview(imageView)
+    }
 }

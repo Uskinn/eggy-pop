@@ -14,8 +14,16 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(splashScreen)
-        self.splashScreen.layoutSubviews()
-        self.splashScreen.animateView()
+        view.addSubview(splashScreen)
+        
+        splashScreen.layoutSubviews()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.splashScreen.animateView()
+        }
+    }
+    
 }
