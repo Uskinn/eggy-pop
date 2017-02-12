@@ -19,7 +19,7 @@ struct Image {
     let stopButtonImage = UIImage(named: "stopButtonImage")
 
     let logoImage = UIImage(named: "logoEggyImage")
-    
+        
     let appBackground = UIImage(named: "backgroundImage")
     
     let infoButtonImage = UIImage(named: "infoButtonImage")

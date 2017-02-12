@@ -17,9 +17,12 @@
 		8A13E9DD1E1AD46C00A30ABA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9DC1E1AD46C00A30ABA /* Color.swift */; };
 		8A13E9E31E1B010900A30ABA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9E21E1B010900A30ABA /* Button.swift */; };
 		8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9E61E1C30A700A30ABA /* Timer.swift */; };
+		8A2E8A361E50D316002DF578 /* SpalshScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */; };
+		8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */; };
+		8A2E8A3D1E50EE94002DF578 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A3C1E50EE94002DF578 /* UIImageView+Extension.swift */; };
 		8A3D6B061E2153C200637642 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B051E2153C200637642 /* Image.swift */; };
 		8A3D6B081E21E7CF00637642 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B071E21E7CF00637642 /* Logo.swift */; };
-		8A3D6B0A1E21EA7800637642 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B091E21EA7800637642 /* Label.swift */; };
+		8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B091E21EA7800637642 /* Label+Extension.swift */; };
 		8A68F3D71E1DEB8600B62CA6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68F3D61E1DEB8600B62CA6 /* TimerViewController.swift */; };
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
 		8AA5B1D11DEC988200D159C3 /* EggTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */; };
@@ -43,9 +46,12 @@
 		8A13E9DC1E1AD46C00A30ABA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8A13E9E21E1B010900A30ABA /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8A13E9E61E1C30A700A30ABA /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpalshScreenView.swift; sourceTree = "<group>"; };
+		8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		8A2E8A3C1E50EE94002DF578 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		8A3D6B051E2153C200637642 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8A3D6B071E21E7CF00637642 /* Logo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
-		8A3D6B091E21EA7800637642 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		8A3D6B091E21EA7800637642 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
 		8A68F3D61E1DEB8600B62CA6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		8AA5B1CB1DEC988200D159C3 /* Eggypop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggypop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +125,6 @@
 				8A3D6B071E21E7CF00637642 /* Logo.swift */,
 				8A13E9E61E1C30A700A30ABA /* Timer.swift */,
 				8A13E9E21E1B010900A30ABA /* Button.swift */,
-				8A3D6B091E21EA7800637642 /* Label.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -131,6 +136,32 @@
 				8A3D6B051E2153C200637642 /* Image.swift */,
 			);
 			name = Constant;
+			sourceTree = "<group>";
+		};
+		8A2E8A331E50D270002DF578 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8A2E8A341E50D2EB002DF578 /* SpalshScreen */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		8A2E8A341E50D2EB002DF578 /* SpalshScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */,
+				8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */,
+			);
+			name = SpalshScreen;
+			sourceTree = "<group>";
+		};
+		8A2E8A371E50D781002DF578 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8A3D6B091E21EA7800637642 /* Label+Extension.swift */,
+				8A2E8A3C1E50EE94002DF578 /* UIImageView+Extension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		8AA5B1C21DEC988200D159C3 = {
@@ -154,7 +185,9 @@
 		8AA5B1CD1DEC988200D159C3 /* Eggypop */ = {
 			isa = PBXGroup;
 			children = (
+				8A2E8A331E50D270002DF578 /* UI */,
 				8A13E9D61E1ABE4B00A30ABA /* Model */,
+				8A2E8A371E50D781002DF578 /* Extension */,
 				8A0103D41E2678BE008B5BB8 /* View */,
 				8A13E9D31E1ABDBA00A30ABA /* Controller */,
 				8A13E9DB1E1AD44C00A30ABA /* Constant */,
@@ -211,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Sergey Nevzorov";
 				TargetAttributes = {
 					8AA5B1CA1DEC988200D159C3 = {
@@ -314,16 +347,19 @@
 				8AD1B4481E4188880021EDE2 /* BackgroundView.swift in Sources */,
 				8AD1B4461E417F430021EDE2 /* LogoView.swift in Sources */,
 				8A3D6B061E2153C200637642 /* Image.swift in Sources */,
-				8A3D6B0A1E21EA7800637642 /* Label.swift in Sources */,
+				8A2E8A361E50D316002DF578 /* SpalshScreenView.swift in Sources */,
+				8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */,
 				8AA5B1D11DEC988200D159C3 /* EggTypeController.swift in Sources */,
 				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
 				8A0422841E31643D007A1D73 /* UserNotificationManeger.swift in Sources */,
 				8A13E9DD1E1AD46C00A30ABA /* Color.swift in Sources */,
 				8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */,
+				8A2E8A3D1E50EE94002DF578 /* UIImageView+Extension.swift in Sources */,
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
 				8A0685831E26E325007A44BE /* Egg.swift in Sources */,
 				8A68F3D71E1DEB8600B62CA6 /* TimerViewController.swift in Sources */,
 				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
+				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
 				8A3D6B081E21E7CF00637642 /* Logo.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,
@@ -352,6 +388,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -402,6 +439,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -431,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AD21EB1F1277AC74FBEE1C6 /* Pods-Eggypop.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FMJWPCW6KK;
 				INFOPLIST_FILE = Eggypop/Info.plist;
@@ -446,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F097247A0EB514EBB0E1F66 /* Pods-Eggypop.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FMJWPCW6KK;
 				INFOPLIST_FILE = Eggypop/Info.plist;

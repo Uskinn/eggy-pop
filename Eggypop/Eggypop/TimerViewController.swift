@@ -15,6 +15,7 @@ var seconds: Int = 0
 
 class TimerViewController: UIViewController {
     
+    var headerLabel = UILabel()
     var timerLabel = UILabel()
     var timer = Timer()
     var secondsLeft: Bool = false
@@ -41,7 +42,8 @@ class TimerViewController: UIViewController {
     
     // MARK: - setup header
     func header() {
-        Label.headerLabel(headerLabel)
+        headerLabel.setupHeaderLabel()
+      //  Label.headerLabel(headerLabel)
         self.view.addSubview(headerLabel)
     }
     
@@ -66,7 +68,7 @@ class TimerViewController: UIViewController {
     
     // MARK: - Timer label view
     func timerLabelFunc() {
-        Label.timerLabel(timerLabel)
+        timerLabel.setupTimer()
         self.view.addSubview(timerLabel)
     }
 }

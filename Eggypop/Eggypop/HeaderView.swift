@@ -8,15 +8,20 @@
 
 import UIKit
 
-class HeaderView: UIView {
-    
-   class func showHeader(in myView: UIView) {
-        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
-            headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 28.00)
-        } else {
-            headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 28.00)
-        }
-        Label.headerLabel(headerLabel)
-        myView.addSubview(headerLabel)
-    }
-}
+//class HeaderView: UIView {
+//    
+//    var headerLabel = UILabel()
+//    
+////   class func showHeader(in myView: UIView) {
+////        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == true {
+////            headerLabel.frame = CGRect(x: 118.00, y: 36.00, width: 140.00, height: 28.00)
+////        } else {
+////            headerLabel.frame = CGRect(x: 118.00, y: 286.00, width: 140.00, height: 28.00)
+////        }
+////    headerLabel.set
+////       // Label.headerLabel(headerLabel)
+////        myView.addSubview(headerLabel)
+////    }
+//    
+//
+//}

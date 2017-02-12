@@ -16,14 +16,15 @@ let appImage = Image()
 // logo
 let appLogo = UIImageView()
 
-// header
-let headerLabel = UILabel()
+//// header
+//let headerLabel = UILabel()
 
-// logo and header bools
 var logoAndHeaderAppear: Bool = true
 var logoAndHeaderDidAnimate: Bool = false
 
 class EggTypeController: UIViewController {
+    // header
+    let headerLabel = UILabel()
     
     // Booleans
     var sizeButtonOn: Bool = true
@@ -61,11 +62,11 @@ class EggTypeController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if logoAndHeaderAppear {
-            HeaderView.showHeader(in: self.view)
-            LogoView.showLogo(in: self.view)
-            print("willAppear")
-        }
+//        if logoAndHeaderAppear {
+//            HeaderView.showHeader(in: self.view)
+//            LogoView.showLogo(in: self.view)
+//            print("willAppear")
+//        }
     }
     
     // MARK: - setup all buttons
@@ -287,23 +288,23 @@ extension EggTypeController {
     
     // MARK: - egg size button first appear
     func sizeButtonsFirstLoad() {
-        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
-            HeaderView.showHeader(in: self.view)
-            LogoView.showLogo(in: self.view)
-            UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.0, initialSpringVelocity: 0.0, options: [], animations: {
-                self.largeButton.alpha = 1.0
-                self.extraLargeButton.alpha = 1.0
-                self.jumboButton.alpha = 1.0
-            },
-                           completion: nil)
-        }
-        logoAndHeaderAppear = false
-        logoAndHeaderDidAnimate = true
+//        if logoAndHeaderAppear == true && logoAndHeaderDidAnimate == false {
+//            HeaderView.showHeader(in: self.view)
+//            LogoView.showLogo(in: self.view)
+//            UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.0, initialSpringVelocity: 0.0, options: [], animations: {
+//                self.largeButton.alpha = 1.0
+//                self.extraLargeButton.alpha = 1.0
+//                self.jumboButton.alpha = 1.0
+//            },
+//                           completion: nil)
+//        }
+//        logoAndHeaderAppear = false
+//        logoAndHeaderDidAnimate = true
     }
     // MARK: - animate header and logo
     func animateHeaderAndLogo() {
         UIView.animate(withDuration: 0.4, delay: 0.3, options: [.curveEaseInOut], animations: {
-            headerLabel.center.y -= 251
+            self.headerLabel.center.y -= 251
             appLogo.center.y += 262
         }, completion: nil
         )
