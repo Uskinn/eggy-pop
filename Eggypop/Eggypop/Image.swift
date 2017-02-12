@@ -9,17 +9,17 @@
 import UIKit
 
 struct Image {
-    let emptyEggCategoryButtonImage = UIImage(named: "emptyEggShapeImage")
-    let filledEggCategoryButtonImage = UIImage(named: "filledEggShapeImage")
+    static let emptyEggCategoryButtonImage = UIImage(named: "emptyEggShapeImage")
+    static let filledEggCategoryButtonImage = UIImage(named: "filledEggShapeImage")
     
     let emptyEggTypeButtonImage = UIImage(named: "emptyTypeButtonImage")
     let filledEggTypeButtonImage = UIImage(named: "filledTypeButtonImage")
     
     let startButtonImage = UIImage(named: "startButtonImage")
     let stopButtonImage = UIImage(named: "stopButtonImage")
-
-    let logoImage = UIImage(named: "logoEggyImage")
-        
+    
+    static let logoImage = UIImage(named: "logoEggyImage")
+    
     static let appBackground = UIImage(named: "backgroundImage")
     
     let infoButtonImage = UIImage(named: "infoButtonImage")

@@ -11,6 +11,6 @@ import UIKit
 class Logo {
     
    class func logo(_ myLogo: UIImageView) {
-        myLogo.image = appImage.logoImage
+        myLogo.image = Image.logoImage
     }
 }

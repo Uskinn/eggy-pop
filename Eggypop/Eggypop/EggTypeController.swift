@@ -134,13 +134,13 @@ class EggTypeController: UIViewController {
         isAnimated = true
         AnimateButton.animateButtonInside(myButton: largeButton)
         
-        largeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
+        largeButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         largeButton.titleLabel?.textColor = .white
         
-        extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        extraLargeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
         
-        jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        jumboButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
@@ -157,14 +157,14 @@ class EggTypeController: UIViewController {
         isAnimated = true
         AnimateButton.animateButtonInside(myButton: extraLargeButton)
         
-        largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        largeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         largeButton.titleLabel?.textColor = appColor.mainOrangeColor
         
-        jumboButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        jumboButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         jumboButton.titleLabel?.textColor = appColor.mainOrangeColor
         
         extraLargeButton.titleLabel?.textColor = .white
-        extraLargeButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
+        extraLargeButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.extraLargeButton)
@@ -179,14 +179,14 @@ class EggTypeController: UIViewController {
         isAnimated = true
         AnimateButton.animateButtonInside(myButton: jumboButton)
         
-        largeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        largeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         largeButton.titleLabel?.textColor = appColor.mainOrangeColor
         
-        extraLargeButton.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        extraLargeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         extraLargeButton.titleLabel?.textColor = appColor.mainOrangeColor
         
         jumboButton.titleLabel?.textColor = .white
-        jumboButton.setBackgroundImage(appImage.filledEggCategoryButtonImage, for: .normal)
+        jumboButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.jumboButton)

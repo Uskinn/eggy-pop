@@ -30,13 +30,20 @@ final class SpalshScreenView: UIView {
     }
     
     func animateView() {
-        print("INSIDE ANIMATE \(self.logoImageView.bounds)")
         UIView.animate(withDuration: 0.4, delay: 0.3, options: [.curveEaseInOut], animations: {
             self.headerLabel.transform = self.headerUp()
             self.logoImageView.transform = self.logoDown()
             self.layoutIfNeeded()
-        }, completion: nil
-        )}
+        }, completion: { finished in
+            DispatchQueue.main.async {
+                let homeScreenVC = UINavigationController(rootViewController: HomeScreenViewController())
+                weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
+                appDelegate?.window?.rootViewController = homeScreenVC
+            }
+        })
+    }
+    
+
     
     func configureView() {
         setupHeaderLabelConstraints()

@@ -11,8 +11,7 @@ import UIKit
 extension UIImageView {
     
     func setupLogoImage() {
-        let logo = Image()
-        self.image = logo.logoImage
+        self.image = Image.logoImage
     }
     
     func showBackground(in mainView: UIView) {
@@ -20,9 +19,8 @@ extension UIImageView {
         self.image = Image.appBackground
         mainView.addSubview(self)
     }
+    
+    func setupEmptyEggSizeImage() {
+        self.image = Image.emptyEggCategoryButtonImage
+    }
 }
-
-//let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-//backgroundImage.image = UIImage(named: "RubberMat")
-//backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
-//self.view.insertSubview(backgroundImage, at: 0)

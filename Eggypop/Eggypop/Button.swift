@@ -58,7 +58,7 @@ final class EggButton {
 
     static func largeEggSizeButton(_ button: UIButton) {
         button.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
-        button.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        button.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         
         button.setTitleColor(appColor.mainOrangeColor, for: .normal)
         button.setTitle("large", for: .normal)
@@ -75,7 +75,7 @@ final class EggButton {
     
     static func extraLargeEggSizeButton(_ button: UIButton) {
         button.frame = CGRect(x: 137.5, y: 265.00, width: 100.00, height: 138.00)
-        button.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        button.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         
         button.setTitleColor(appColor.mainOrangeColor, for: .normal)
         // adding two lines of text
@@ -96,7 +96,7 @@ final class EggButton {
     
     static func jumboEggSizeButton(_ button: UIButton) {
         button.frame = CGRect(x: 248.00, y: 265.00, width: 100.00, height: 138.00)
-        button.setBackgroundImage(appImage.emptyEggCategoryButtonImage, for: .normal)
+        button.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         
         button.setTitleColor(appColor.mainOrangeColor, for: .normal)
         button.setTitle("jumbo", for: .normal)

@@ -9,10 +9,13 @@
 import UIKit
 
 class HomeScreenViewController: UIViewController {
-
+    
+    let homeScreen = HomeScreenView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.addSubview(homeScreen)
+        
+        homeScreen.layoutSubviews()
     }
-
 }
