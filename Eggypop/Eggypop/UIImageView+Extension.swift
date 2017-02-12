@@ -15,9 +15,14 @@ extension UIImageView {
         self.image = logo.logoImage
     }
     
-    func showBackground(in myView: UIView) {
-        let imageView = UIImageView(frame: myView.bounds)
-        imageView.image = UIImage(named: "backgroundImage")
-        myView.addSubview(imageView)
+    func showBackground(in mainView: UIView) {
+        self.frame = mainView.bounds
+        self.image = Image.appBackground
+        mainView.addSubview(self)
     }
 }
+
+//let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+//backgroundImage.image = UIImage(named: "RubberMat")
+//backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+//self.view.insertSubview(backgroundImage, at: 0)

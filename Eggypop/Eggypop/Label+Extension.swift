@@ -8,13 +8,6 @@
 
 import UIKit
 
-//final class Label {
-//    
-////    static func headerLabel(_ myLabel: UILabel) {
-////        myLabel.setupHeaderLabel()
-////    }
-// }
-
 extension UILabel {
     
     func setupHeaderLabel() {
@@ -42,7 +35,6 @@ extension UILabel {
         self.font = UIFont(name: "LucidaGrande", size: 0)
         self.font = UIFont.systemFont(ofSize: 112)
         self.textAlignment = NSTextAlignment.center
-        
         
         // adding spacing between characters
         let attributedString = NSMutableAttributedString(string: self.text!)

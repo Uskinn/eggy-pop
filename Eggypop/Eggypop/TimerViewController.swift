@@ -24,7 +24,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BackgroundView.showBackground(in: self.view)
+       // BackgroundView.showBackground(in: self.view)
     }
     
     override func viewWillAppear(_ animated: Bool) {

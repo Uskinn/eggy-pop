@@ -52,7 +52,7 @@ class EggTypeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
-        BackgroundView.showBackground(in: self.view)
+       // BackgroundView.showBackground(in: self.view)
         
         setupAllButtons()
         

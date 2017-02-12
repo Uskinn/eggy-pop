@@ -10,9 +10,9 @@ import UIKit
 
 class BackgroundView {
     
-   class func showBackground(in myView: UIView) {
-        let imageView = UIImageView(frame: myView.bounds)
-        imageView.image = UIImage(named: "backgroundImage")
-        myView.addSubview(imageView)
-    }
+//   class func showBackground(in myView: UIView) {
+//        let imageView = UIImageView(frame: myView.bounds)
+//        imageView.image = Image.appBackground
+//        myView.addSubview(imageView)
+//    }
 }

@@ -22,24 +22,22 @@ final class SpalshScreenView: UIView {
         return logo
     }()
     
-    let backImage = Image()
-
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
-        BackgroundView.showBackground(in: self)
+        UIImageView().showBackground(in: self)
         configureView()
     }
     
     func animateView() {
         print("INSIDE ANIMATE \(self.logoImageView.bounds)")
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.4, delay: 0.3, options: [.curveEaseInOut], animations: {
             self.headerLabel.transform = self.headerUp()
             self.logoImageView.transform = self.logoDown()
             self.layoutIfNeeded()
-        }
-    }
+        }, completion: nil
+        )}
+    
     func configureView() {
         setupHeaderLabelConstraints()
         setupLogoImageConstraints()
@@ -50,7 +48,7 @@ final class SpalshScreenView: UIView {
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
         headerLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.5).isActive = true
         headerLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
-        headerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        headerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
         headerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
