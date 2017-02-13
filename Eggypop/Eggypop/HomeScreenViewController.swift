@@ -13,12 +13,14 @@ import UIKit
 class HomeScreenViewController: UIViewController {
     
     let homeScreen = HomeScreenView()
+    var isEggAnimated = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(homeScreen)
         
         homeScreen.layoutSubviews()
+
         buttonActions()
     }
     
@@ -26,6 +28,10 @@ class HomeScreenViewController: UIViewController {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             self.homeScreen.animateEggs()
+            
+            if self.isEggAnimated == true {
+            self.homeScreen.animateEggSizeButtons()
+            }
         }
     }
     
@@ -62,6 +68,7 @@ class HomeScreenViewController: UIViewController {
         
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
+        self.isEggAnimated = true
     }
     
     func extraLargeEggButtonClicked(_ button: UIButton) {
@@ -82,6 +89,7 @@ class HomeScreenViewController: UIViewController {
         
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
+        self.isEggAnimated = true
     }
     
     func jumboEggButtonClicked(_ button: UIButton) {
@@ -102,6 +110,7 @@ class HomeScreenViewController: UIViewController {
         
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
+        self.isEggAnimated = true
     }
     
     func softEggButtonClicked(_ button: UIButton) {

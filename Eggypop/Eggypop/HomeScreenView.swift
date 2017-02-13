@@ -11,7 +11,7 @@ import UIKit
 var seconds: Int = 0
 
 final class HomeScreenView: UIView {
-    
+        
     var headerLabel: UILabel = {
         let header = UILabel()
         header.setupHeaderLabel()
@@ -182,7 +182,7 @@ final class HomeScreenView: UIView {
         largeEggButton.translatesAutoresizingMaskIntoConstraints = false
         largeEggButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.27).isActive = true
         largeEggButton.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.21).isActive = true
-        largeEggButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * 0.0).isActive = true
+        largeEggButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         largeEggButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
@@ -191,7 +191,7 @@ final class HomeScreenView: UIView {
         extraLargeEggButton.translatesAutoresizingMaskIntoConstraints = false
         extraLargeEggButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.27).isActive = true
         extraLargeEggButton.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.21).isActive = true
-        extraLargeEggButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * 0.0).isActive = true
+        extraLargeEggButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         extraLargeEggButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
@@ -200,7 +200,7 @@ final class HomeScreenView: UIView {
         jumboEggButton.translatesAutoresizingMaskIntoConstraints = false
         jumboEggButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.27).isActive = true
         jumboEggButton.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.21).isActive = true
-        jumboEggButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * 0.0).isActive = true
+        jumboEggButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         jumboEggButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
@@ -266,12 +266,12 @@ final class HomeScreenView: UIView {
         let moveTransform: CGAffineTransform = CGAffineTransform(translationX: UIScreen.main.bounds.width * -1, y: 0)
         return moveTransform
     }
-
+    
     func moveHardEggButtonRight() -> CGAffineTransform {
         let moveTransform: CGAffineTransform = CGAffineTransform(translationX: UIScreen.main.bounds.width * 1, y: 0)
         return moveTransform
     }
-
+    
     // MARK: - animate egg type buttons
     func animateEggTypeButttons() {
         UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: [], animations: {

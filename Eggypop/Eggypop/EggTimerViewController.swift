@@ -7,17 +7,57 @@
 //
 
 import UIKit
+import JSSAlertView
+import AudioToolbox
 
 class EggTimerViewController: UIViewController {
     
     let eggTimerView = EggTimerVew()
-    
+    var secondsLeft: Bool = false
+    var timer = Timer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(eggTimerView)
         eggTimerView.layoutSubviews()
         
+        eggTimerView.stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.secondsLeft = false
+            if self.timer.isValid == false {
+                self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(EggTimerViewController.updateTimer) , userInfo: nil, repeats: true)
+            }
+        }
+    }
     
+    func stopButtonCkicked(_ button: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        timer.invalidate()
+        eggTimerView.timerLabel.text = "00:00"
+    }
+
+    // MARK: - update timer func
+    func updateTimer() {
+        if seconds > 0 {
+            print(seconds)
+            seconds -= 1
+            eggTimerView.timerLabel.text = String(EggTimer.timeFormatted(seconds))
+        } else if seconds == 0 && !secondsLeft {
+            // add vibrator
+            AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), nil)
+            print(secondsLeft)
+            Sound.iggySong()
+            Alert.alertWithTitle(self, callback: {
+                audioPlayer.stop()
+                self.dismiss(animated: true, completion: nil)
+            })
+            secondsLeft = true
+        }
+    }
+
 }

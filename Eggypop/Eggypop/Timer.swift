@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EggTimer {
+final class EggTimer {
     class func timeFormatted(_ totalSeconds: Int) -> String {
         let seconds: Int = totalSeconds % 60
         let minutes: Int = (totalSeconds / 60) % 60
