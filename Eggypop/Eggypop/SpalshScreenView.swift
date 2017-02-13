@@ -65,9 +65,7 @@ final class SpalshScreenView: UIView {
         logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.077).isActive = true
         logoImageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.06).isActive = true
         logoImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * 0.03).isActive = true
-        logoImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        print("Inside setup logoconstr \(logoImageView.bounds)")
-        
+        logoImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true        
     }
     
     func logoDown() -> CGAffineTransform {

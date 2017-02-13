@@ -10,7 +10,6 @@
 		8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103CD1E247E8B008B5BB8 /* Alert.swift */; };
 		8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */; };
 		8A0422841E31643D007A1D73 /* UserNotificationManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0422831E31643D007A1D73 /* UserNotificationManeger.swift */; };
-		8A0685831E26E325007A44BE /* Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0685821E26E325007A44BE /* Egg.swift */; };
 		8A0685851E2706A2007A44BE /* iggyPopSong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685841E2706A2007A44BE /* iggyPopSong.m4a */; };
 		8A0685871E2713B6007A44BE /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0685861E2713B6007A44BE /* Sound.swift */; };
 		8A0685AE1E2D831A007A44BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */; };
@@ -42,7 +41,6 @@
 		8A0103CD1E247E8B008B5BB8 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateButton.swift; sourceTree = "<group>"; };
 		8A0422831E31643D007A1D73 /* UserNotificationManeger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationManeger.swift; sourceTree = "<group>"; };
-		8A0685821E26E325007A44BE /* Egg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Egg.swift; sourceTree = "<group>"; };
 		8A0685841E2706A2007A44BE /* iggyPopSong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = iggyPopSong.m4a; sourceTree = "<group>"; };
 		8A0685861E2713B6007A44BE /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				8A0685861E2713B6007A44BE /* Sound.swift */,
-				8A0685821E26E325007A44BE /* Egg.swift */,
 				8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */,
 				8A0103CD1E247E8B008B5BB8 /* Alert.swift */,
 				8A3D6B071E21E7CF00637642 /* Logo.swift */,
@@ -376,7 +373,6 @@
 				8A2E8A3D1E50EE94002DF578 /* UIImageView+Extension.swift in Sources */,
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
 				8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */,
-				8A0685831E26E325007A44BE /* Egg.swift in Sources */,
 				8A68F3D71E1DEB8600B62CA6 /* TimerViewController.swift in Sources */,
 				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
 				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
