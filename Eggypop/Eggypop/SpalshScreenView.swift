@@ -43,8 +43,6 @@ final class SpalshScreenView: UIView {
         })
     }
     
-
-    
     func configureView() {
         setupHeaderLabelConstraints()
         setupLogoImageConstraints()
@@ -69,12 +67,12 @@ final class SpalshScreenView: UIView {
     }
     
     func logoDown() -> CGAffineTransform {
-        let moveTransform: CGAffineTransform = CGAffineTransform(translationX: 0, y: 251)
+        let moveTransform: CGAffineTransform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height * 0.4)
         return moveTransform
     }
     
     func headerUp() -> CGAffineTransform {
-        let moveTransform: CGAffineTransform = CGAffineTransform(translationX: 0, y: -251)
+        let moveTransform: CGAffineTransform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height * -0.4)
         return moveTransform
     }
 }

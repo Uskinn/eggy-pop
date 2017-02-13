@@ -12,9 +12,9 @@ final class EggButton {
     
     static func eggSoftTypeButton(_ button: UIButton) {
         button.frame = CGRect(x: 57.00, y: 261.00, width: 261.00, height: 55.00)
-        button.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
+        button.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
         
-        button.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        button.setTitleColor(Color.mainOrangeColor, for: .normal)
         button.setTitle("soft", for: .normal)
         button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
@@ -27,7 +27,7 @@ final class EggButton {
     
     static func eggMediumTypeButton(_ button: UIButton) {
         button.frame = CGRect(x: 57.00, y: 325.00, width: 261.00, height: 55.00)
-        button.setBackgroundImage(appImage.filledEggTypeButtonImage, for: .normal)
+        button.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
         
        // isEggTypeChosen = true
         button.setTitleColor(.white, for: .normal)
@@ -43,9 +43,9 @@ final class EggButton {
     
     static func eggHardTypeButton(_ button: UIButton) {
         button.frame = CGRect(x: 57.00, y: 389.00, width: 261.00, height: 55.00)
-        button.setBackgroundImage(appImage.emptyEggTypeButtonImage, for: .normal)
+        button.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
         
-        button.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        button.setTitleColor(Color.mainOrangeColor, for: .normal)
         button.setTitle("hard", for: .normal)
         button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
@@ -60,7 +60,7 @@ final class EggButton {
         button.frame = CGRect(x: 27.00, y: 265.00, width: 100.00, height: 138.00)
         button.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         
-        button.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        button.setTitleColor(Color.mainOrangeColor, for: .normal)
         button.setTitle("large", for: .normal)
         button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
@@ -77,7 +77,7 @@ final class EggButton {
         button.frame = CGRect(x: 137.5, y: 265.00, width: 100.00, height: 138.00)
         button.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         
-        button.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        button.setTitleColor(Color.mainOrangeColor, for: .normal)
         // adding two lines of text
         button.titleLabel!.lineBreakMode = .byWordWrapping
         button.titleLabel!.textAlignment = .center
@@ -98,7 +98,7 @@ final class EggButton {
         button.frame = CGRect(x: 248.00, y: 265.00, width: 100.00, height: 138.00)
         button.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         
-        button.setTitleColor(appColor.mainOrangeColor, for: .normal)
+        button.setTitleColor(Color.mainOrangeColor, for: .normal)
         button.setTitle("jumbo", for: .normal)
         button.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
@@ -114,7 +114,7 @@ final class EggButton {
     
     static func startButton(_ button: UIButton) {
         button.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
-        button.setBackgroundImage(appImage.startButtonImage, for: .normal)
+        button.setBackgroundImage(Image.startButtonImage, for: .normal)
         
         button.setTitle("start", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -129,7 +129,7 @@ final class EggButton {
     
     static func setupStopButton(_ button: UIButton) {
         button.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
-        button.setBackgroundImage(appImage.stopButtonImage, for: .normal)
+        button.setBackgroundImage(Image.stopButtonImage, for: .normal)
         
         button.setTitle("stop", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -148,10 +148,10 @@ final class EggButton {
         switch type {
         case .information:
             button.frame = CGRect(x: 22.00, y: 40.00, width: 23.00, height: 23.00)
-            button.setBackgroundImage(appImage.infoButtonImage, for: .normal)
+            button.setBackgroundImage(Image.infoButtonImage, for: .normal)
         case .thankYou:
             button.frame = CGRect(x: 322.00, y: 40.00, width: 23.00, height: 23.00)
-            button.setBackgroundImage(appImage.thanksButtonImage, for: .normal)
+            button.setBackgroundImage(Image.thanksButtonImage, for: .normal)
         case .stop:
             setupStopButton(button)
         case .start:

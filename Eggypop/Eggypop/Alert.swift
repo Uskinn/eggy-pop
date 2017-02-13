@@ -16,7 +16,7 @@ class Alert: JSSAlertView {
                                             title: "Hooray!",
                                             text: "Your eggs are ready.",
                                             buttonText: "Ok, thanks Eggypop.",
-                                            color: UIColorFromHex(appColor.hexMainOrangeColor, alpha: 1))
+                                            color: UIColorFromHex(Color.hexMainOrangeColor, alpha: 1))
         alertview.setTextTheme(.light)
         alertview.addAction(callback)
     }

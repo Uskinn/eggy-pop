@@ -29,9 +29,6 @@
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
 		8AA5B1D11DEC988200D159C3 /* EggTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
-		8AD1B4441E417C100021EDE2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4431E417C100021EDE2 /* HeaderView.swift */; };
-		8AD1B4461E417F430021EDE2 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4451E417F430021EDE2 /* LogoView.swift */; };
-		8AD1B4481E4188880021EDE2 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4471E4188880021EDE2 /* BackgroundView.swift */; };
 		99D98E76F53FB458361B0D43 /* Pods_Eggypop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,9 +59,6 @@
 		8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTypeController.swift; sourceTree = "<group>"; };
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA5B1DA1DEC988200D159C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AD1B4431E417C100021EDE2 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		8AD1B4451E417F430021EDE2 /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
-		8AD1B4471E4188880021EDE2 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eggypop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,16 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A0103D41E2678BE008B5BB8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8AD1B4431E417C100021EDE2 /* HeaderView.swift */,
-				8AD1B4451E417F430021EDE2 /* LogoView.swift */,
-				8AD1B4471E4188880021EDE2 /* BackgroundView.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		8A0685AA1E280A37007A44BE /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +186,6 @@
 				8A2E8A331E50D270002DF578 /* UI */,
 				8A13E9D61E1ABE4B00A30ABA /* Model */,
 				8A2E8A371E50D781002DF578 /* Extension */,
-				8A0103D41E2678BE008B5BB8 /* View */,
 				8A13E9D31E1ABDBA00A30ABA /* Controller */,
 				8A13E9DB1E1AD44C00A30ABA /* Constant */,
 				8A0685AA1E280A37007A44BE /* Supporting */,
@@ -358,8 +341,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD1B4481E4188880021EDE2 /* BackgroundView.swift in Sources */,
-				8AD1B4461E417F430021EDE2 /* LogoView.swift in Sources */,
 				8A3D6B061E2153C200637642 /* Image.swift in Sources */,
 				8A2E8A361E50D316002DF578 /* SpalshScreenView.swift in Sources */,
 				8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */,
@@ -379,7 +360,6 @@
 				8A3D6B081E21E7CF00637642 /* Logo.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,
-				8AD1B4441E417C100021EDE2 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

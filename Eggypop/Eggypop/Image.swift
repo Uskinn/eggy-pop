@@ -12,16 +12,16 @@ struct Image {
     static let emptyEggCategoryButtonImage = UIImage(named: "emptyEggShapeImage")
     static let filledEggCategoryButtonImage = UIImage(named: "filledEggShapeImage")
     
-    let emptyEggTypeButtonImage = UIImage(named: "emptyTypeButtonImage")
-    let filledEggTypeButtonImage = UIImage(named: "filledTypeButtonImage")
+    static let emptyEggTypeButtonImage = UIImage(named: "emptyTypeButtonImage")
+    static let filledEggTypeButtonImage = UIImage(named: "filledTypeButtonImage")
     
-    let startButtonImage = UIImage(named: "startButtonImage")
-    let stopButtonImage = UIImage(named: "stopButtonImage")
+    static let startButtonImage = UIImage(named: "startButtonImage")
+    static let stopButtonImage = UIImage(named: "stopButtonImage")
     
     static let logoImage = UIImage(named: "logoEggyImage")
     
     static let appBackground = UIImage(named: "backgroundImage")
     
-    let infoButtonImage = UIImage(named: "infoButtonImage")
-    let thanksButtonImage = UIImage(named: "heartButtonImage")
+    static let infoButtonImage = UIImage(named: "infoButtonImage")
+    static let thanksButtonImage = UIImage(named: "heartButtonImage")
 }
