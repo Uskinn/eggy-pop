@@ -79,15 +79,15 @@ class EggTypeController: UIViewController {
         // setup egg size buttons
         largeButton = EggButton.createButton(with: .largeEggSize)
         view.addSubview(largeButton)
-        largeButton.addTarget(self, action: #selector(largeEggButtonCLicked(_:)), for: .touchUpInside)
+       // largeButton.addTarget(self, action: #selector(largeEggButtonCLicked(_:)), for: .touchUpInside)
         
         extraLargeButton = EggButton.createButton(with: .extraLargeSize)
         view.addSubview(extraLargeButton)
-        extraLargeButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
+       // extraLargeButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
         
         jumboButton = EggButton.createButton(with: .jumboSize)
         view.addSubview(jumboButton)
-        jumboButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
+       // jumboButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         
         softButton = EggButton.createButton(with: .softType)
         softButton.center.x -= self.view.bounds.width
@@ -123,72 +123,72 @@ class EggTypeController: UIViewController {
 //    }
     
     // #MARK: - Egg size buttons action
-    func largeEggButtonCLicked(_ button: UIButton) {
-        isAnimated = true
-        AnimateButton.animateButtonInside(myButton: largeButton)
-        
-        largeButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
-        largeButton.titleLabel?.textColor = .white
-        
-        extraLargeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        extraLargeButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        jumboButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        jumboButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
-            AnimateButton.animateButtonOutside(myButton: self.largeButton)
-            
-        }, completion: nil)
-        
-        isAnimated = false
-        
-      //  animateAllButtons()
-    }
-    
-    func extraLargeEggButtonClicked(_ button: UIButton) {
-        isAnimated = true
-        AnimateButton.animateButtonInside(myButton: extraLargeButton)
-        
-        largeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        largeButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        jumboButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        jumboButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        extraLargeButton.titleLabel?.textColor = .white
-        extraLargeButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
-        
-        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
-            AnimateButton.animateButtonOutside(myButton: self.extraLargeButton)
-        }, completion: nil)
-        
-        isAnimated = false
-        
-       // animateAllButtons()
-    }
-    
-    func jumboEggButtonClicked(_ button: UIButton) {
-        isAnimated = true
-        AnimateButton.animateButtonInside(myButton: jumboButton)
-        
-        largeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        largeButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        extraLargeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        extraLargeButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        jumboButton.titleLabel?.textColor = .white
-        jumboButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
-        
-        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
-            AnimateButton.animateButtonOutside(myButton: self.jumboButton)
-        }, completion: nil)
-        
-        isAnimated = false
-        
-       // animateAllButtons()
-    }
+//    func largeEggButtonCLicked(_ button: UIButton) {
+//        isAnimated = true
+//        AnimateButton.animateButtonInside(myButton: largeButton)
+//        
+//        largeButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
+//        largeButton.titleLabel?.textColor = .white
+//        
+//        extraLargeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+//        extraLargeButton.titleLabel?.textColor = Color.mainOrangeColor
+//        
+//        jumboButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+//        jumboButton.titleLabel?.textColor = Color.mainOrangeColor
+//        
+//        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+//            AnimateButton.animateButtonOutside(myButton: self.largeButton)
+//            
+//        }, completion: nil)
+//        
+//        isAnimated = false
+//        
+//      //  animateAllButtons()
+//    }
+//    
+//    func extraLargeEggButtonClicked(_ button: UIButton) {
+//        isAnimated = true
+//        AnimateButton.animateButtonInside(myButton: extraLargeButton)
+//        
+//        largeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+//        largeButton.titleLabel?.textColor = Color.mainOrangeColor
+//        
+//        jumboButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+//        jumboButton.titleLabel?.textColor = Color.mainOrangeColor
+//        
+//        extraLargeButton.titleLabel?.textColor = .white
+//        extraLargeButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
+//        
+//        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+//            AnimateButton.animateButtonOutside(myButton: self.extraLargeButton)
+//        }, completion: nil)
+//        
+//        isAnimated = false
+//        
+//       // animateAllButtons()
+//    }
+//    
+//    func jumboEggButtonClicked(_ button: UIButton) {
+//        isAnimated = true
+//        AnimateButton.animateButtonInside(myButton: jumboButton)
+//        
+//        largeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+//        largeButton.titleLabel?.textColor = Color.mainOrangeColor
+//        
+//        extraLargeButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+//        extraLargeButton.titleLabel?.textColor = Color.mainOrangeColor
+//        
+//        jumboButton.titleLabel?.textColor = .white
+//        jumboButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
+//        
+//        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+//            AnimateButton.animateButtonOutside(myButton: self.jumboButton)
+//        }, completion: nil)
+//        
+//        isAnimated = false
+//        
+//       // animateAllButtons()
+//    }
     
     // MARK: - Egg type buttons action
 //    func softButtonCLicked(_ button: UIButton) {

@@ -122,6 +122,21 @@ extension UIButton {
         
         self.alpha = 0
     }
+    
+     func setupStopButton() {
+        self.setBackgroundImage(Image.stopButtonImage, for: .normal)
+        
+        self.setTitle("stop", for: .normal)
+        self.setTitleColor(.white, for: .normal)
+        self.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
+        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
+        
+        // adding spacing between characters
+        let title = self.title(for: .normal)
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
+        self.setAttributedTitle(attributedTitle, for: .normal)
+    }
+
 }
 
 

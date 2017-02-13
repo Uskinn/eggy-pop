@@ -22,6 +22,8 @@
 		8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A3F1E511F02002DF578 /* HomeScreenView.swift */; };
 		8A2E8A421E51207B002DF578 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A411E51207B002DF578 /* HomeScreenViewController.swift */; };
 		8A2E8A441E512165002DF578 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A431E512165002DF578 /* Button+Extension.swift */; };
+		8A2E8A461E522CBD002DF578 /* EggTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */; };
+		8A2E8A491E522CF7002DF578 /* EggTimerVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */; };
 		8A3D6B061E2153C200637642 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B051E2153C200637642 /* Image.swift */; };
 		8A3D6B081E21E7CF00637642 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B071E21E7CF00637642 /* Logo.swift */; };
 		8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B091E21EA7800637642 /* Label+Extension.swift */; };
@@ -50,6 +52,8 @@
 		8A2E8A3F1E511F02002DF578 /* HomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		8A2E8A411E51207B002DF578 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		8A2E8A431E512165002DF578 /* Button+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
+		8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EggTimerViewController.swift; sourceTree = "<group>"; };
+		8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EggTimerVew.swift; sourceTree = "<group>"; };
 		8A3D6B051E2153C200637642 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8A3D6B071E21E7CF00637642 /* Logo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		8A3D6B091E21EA7800637642 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			children = (
 				8A2E8A341E50D2EB002DF578 /* SpalshScreen */,
 				8A2E8A3E1E511ECD002DF578 /* HomeScreen */,
+				8A2E8A471E522CCC002DF578 /* TimerScreen */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -160,6 +165,15 @@
 				8A2E8A411E51207B002DF578 /* HomeScreenViewController.swift */,
 			);
 			name = HomeScreen;
+			sourceTree = "<group>";
+		};
+		8A2E8A471E522CCC002DF578 /* TimerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */,
+				8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */,
+			);
+			name = TimerScreen;
 			sourceTree = "<group>";
 		};
 		8AA5B1C21DEC988200D159C3 = {
@@ -350,7 +364,9 @@
 				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
 				8A0422841E31643D007A1D73 /* UserNotificationManeger.swift in Sources */,
 				8A13E9DD1E1AD46C00A30ABA /* Color.swift in Sources */,
+				8A2E8A491E522CF7002DF578 /* EggTimerVew.swift in Sources */,
 				8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */,
+				8A2E8A461E522CBD002DF578 /* EggTimerViewController.swift in Sources */,
 				8A2E8A3D1E50EE94002DF578 /* UIImageView+Extension.swift in Sources */,
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
 				8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */,

@@ -24,7 +24,6 @@ extension UILabel {
     }
     
     func setupTimer() {
-       // self.frame = CGRect(x: 13.05, y: 94.00, width: 348.00, height: 168.00)
         self.backgroundColor = UIColor(red:0.99, green:0.91, blue:0.77, alpha:1.0)
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 8

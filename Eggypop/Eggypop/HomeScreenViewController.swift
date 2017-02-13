@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class HomeScreenViewController: UIViewController {
     
     let homeScreen = HomeScreenView()
@@ -17,7 +19,7 @@ class HomeScreenViewController: UIViewController {
         view.addSubview(homeScreen)
         
         homeScreen.layoutSubviews()
-        eggButtonAction()
+        buttonActions()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,7 +29,7 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
-    func eggButtonAction() {
+    func buttonActions() {
         homeScreen.largeEggButton.addTarget(self, action: #selector(largeEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.extraLargeEggButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.jumboEggButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
@@ -38,6 +40,8 @@ class HomeScreenViewController: UIViewController {
         homeScreen.softEggButton.addTarget(self, action: #selector(softEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.mediumEggButton.addTarget(self, action: #selector(mediumEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.hardEggButton.addTarget(self, action: #selector(hardEggButtonClicked(_:)), for: .touchUpInside)
+        
+        homeScreen.startButton.addTarget(self, action: #selector(startButtonClicked(_:)), for: .touchUpInside)
     }
     
     func largeEggButtonClicked(_ button: UIButton) {
@@ -165,4 +169,48 @@ class HomeScreenViewController: UIViewController {
         
     }
     
+    func startButtonClicked(_ button: UIButton) {
+        
+        let controller = EggTimerViewController()
+        self.present(controller, animated: true) {
+            
+            if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
+                seconds = 390  // done
+            }
+            
+            if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
+                seconds = 420 // done
+            }
+            
+            if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
+                seconds = 720 // done
+            }
+            
+            if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
+                seconds = 4
+            }
+            
+            if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
+                seconds = 300
+            }
+            
+            if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
+                seconds = 360
+            }
+            
+            if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
+                seconds = 270
+            }
+            
+            if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
+                seconds = 330
+            }
+            
+            if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
+                seconds = 540
+            }
+        }
+    }
 }
+
+

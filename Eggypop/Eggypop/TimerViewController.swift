@@ -11,7 +11,7 @@ import QuartzCore
 import JSSAlertView
 import AudioToolbox
 
-var seconds: Int = 0
+//var seconds: Int = 0
 
 class TimerViewController: UIViewController {
     

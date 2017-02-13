@@ -8,6 +8,8 @@
 
 import UIKit
 
+var seconds: Int = 0
+
 final class HomeScreenView: UIView {
     
     var headerLabel: UILabel = {
@@ -105,14 +107,13 @@ final class HomeScreenView: UIView {
     func setupStartButtonConstraints() {
         addSubview(startButton)
         startButton.translatesAutoresizingMaskIntoConstraints = false
-        startButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.855).isActive = true
+        startButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.927).isActive = true
         startButton.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.108).isActive = true
         startButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * 0.3).isActive = true
         startButton.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * 0).isActive = true
         print("Inside setup start constr \(startButton.bounds)")
     }
     
-// button.frame = CGRect(x: 25.00, y: 469.00, width: 321.00, height: 72.00)
     func setupSoftButtonConstraint() {
         addSubview(softEggButton)
         softEggButton.translatesAutoresizingMaskIntoConstraints = false
@@ -156,7 +157,6 @@ final class HomeScreenView: UIView {
         thankYouButton.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.039).isActive = true
         thankYouButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * -0.43).isActive = true
         thankYouButton.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * 0.4).isActive = true
-        print("Inside setup info constr \(thankYouButton.bounds)")
     }
     
     func setupHeaderLabelConstraints() {
@@ -215,6 +215,7 @@ final class HomeScreenView: UIView {
         return moveTransform
     }
     
+    // MARK: - animate eggs
     func animateEggs() {
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [.curveEaseInOut], animations: {
             self.largeEggButton.transform = self.largeEggLeft()
@@ -245,6 +246,7 @@ final class HomeScreenView: UIView {
         return moveTransform
     }
     
+    // MARK: - animate egg size buttons
     func animateEggSizeButtons() {
         UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.1, options: [.curveEaseIn], animations: {
             self.largeEggButton.transform = self.moveLargeEggSizeButtonUp()
@@ -270,7 +272,7 @@ final class HomeScreenView: UIView {
         return moveTransform
     }
 
-    
+    // MARK: - animate egg type buttons
     func animateEggTypeButttons() {
         UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: [], animations: {
             self.softEggButton.transform = self.moveSoftEggButtonRight()
