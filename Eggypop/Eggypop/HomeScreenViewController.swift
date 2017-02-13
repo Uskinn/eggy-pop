@@ -30,7 +30,7 @@ class HomeScreenViewController: UIViewController {
     func eggButtonAction() {
         homeScreen.largeEggButton.addTarget(self, action: #selector(largeEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.extraLargeEggButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
-        homeScreen.jumboEggButton.addTarget(self, action: #selector(jumbEggButtonClicked(_:)), for: .touchUpInside)
+        homeScreen.jumboEggButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         
         homeScreen.informationButton.addTarget(self, action: #selector(infoButtonClicked(_:)), for: .touchUpInside)
         homeScreen.thankYouButton.addTarget(self, action: #selector(thankYouButtonClicked(_:)), for: .touchUpInside)
@@ -41,6 +41,8 @@ class HomeScreenViewController: UIViewController {
     }
     
     func largeEggButtonClicked(_ button: UIButton) {
+        AnimateButton.animateButtonInside(myButton: homeScreen.largeEggButton)
+
         homeScreen.largeEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         homeScreen.largeEggButton.titleLabel?.textColor = .white
         
@@ -50,11 +52,17 @@ class HomeScreenViewController: UIViewController {
         homeScreen.jumboEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         homeScreen.jumboEggButton.titleLabel?.textColor = Color.mainOrangeColor
         
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+            AnimateButton.animateButtonOutside(myButton: self.homeScreen.largeEggButton)
+        }, completion: nil)
+        
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
     }
     
     func extraLargeEggButtonClicked(_ button: UIButton) {
+        AnimateButton.animateButtonInside(myButton: homeScreen.extraLargeEggButton)
+
         homeScreen.extraLargeEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         homeScreen.extraLargeEggButton.titleLabel?.textColor = .white
         
@@ -64,11 +72,17 @@ class HomeScreenViewController: UIViewController {
         homeScreen.jumboEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         homeScreen.jumboEggButton.titleLabel?.textColor = Color.mainOrangeColor
         
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+            AnimateButton.animateButtonOutside(myButton: self.homeScreen.extraLargeEggButton)
+        }, completion: nil)
+        
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
     }
     
-    func jumbEggButtonClicked(_ button: UIButton) {
+    func jumboEggButtonClicked(_ button: UIButton) {
+        AnimateButton.animateButtonInside(myButton: homeScreen.jumboEggButton)
+
         homeScreen.jumboEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         homeScreen.jumboEggButton.titleLabel?.textColor = .white
         
@@ -78,11 +92,17 @@ class HomeScreenViewController: UIViewController {
         homeScreen.extraLargeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         homeScreen.extraLargeEggButton.titleLabel?.textColor = Color.mainOrangeColor
         
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+            AnimateButton.animateButtonOutside(myButton: self.homeScreen.jumboEggButton)
+        }, completion: nil)
+        
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
     }
     
     func softEggButtonClicked(_ button: UIButton) {
+        AnimateButton.animateButtonInside(myButton: homeScreen.softEggButton)
+
         homeScreen.softEggButton.titleLabel?.textColor = .white
         homeScreen.softEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
         
@@ -92,10 +112,16 @@ class HomeScreenViewController: UIViewController {
         homeScreen.hardEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
         homeScreen.hardEggButton.titleLabel?.textColor = Color.mainOrangeColor
         
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+            AnimateButton.animateButtonOutside(myButton: self.homeScreen.softEggButton)
+        }, completion: nil)
+        
         homeScreen.startButton.alpha = 1
     }
     
     func mediumEggButtonClicked(_ button: UIButton) {
+        AnimateButton.animateButtonInside(myButton: homeScreen.mediumEggButton)
+
         homeScreen.mediumEggButton.titleLabel?.textColor = .white
         homeScreen.mediumEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
         
@@ -105,10 +131,16 @@ class HomeScreenViewController: UIViewController {
         homeScreen.hardEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
         homeScreen.hardEggButton.titleLabel?.textColor = Color.mainOrangeColor
         
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+            AnimateButton.animateButtonOutside(myButton: self.homeScreen.mediumEggButton)
+        }, completion: nil)
+        
         homeScreen.startButton.alpha = 1
     }
 
     func hardEggButtonClicked(_ button: UIButton) {
+        AnimateButton.animateButtonInside(myButton: homeScreen.hardEggButton)
+        
         homeScreen.hardEggButton.titleLabel?.textColor = .white
         homeScreen.hardEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
         
@@ -118,6 +150,10 @@ class HomeScreenViewController: UIViewController {
         homeScreen.softEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
         homeScreen.softEggButton.titleLabel?.textColor = Color.mainOrangeColor
         
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
+            AnimateButton.animateButtonOutside(myButton: self.homeScreen.hardEggButton)
+        }, completion: nil)
+
         homeScreen.startButton.alpha = 1
     }
 
