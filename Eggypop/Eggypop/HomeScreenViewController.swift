@@ -22,14 +22,15 @@ class HomeScreenViewController: UIViewController {
         homeScreen.layoutSubviews()
 
         buttonActions()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             self.homeScreen.animateEggs()
-            
-            if self.isEggAnimated == true {
+
+            if self.isEggAnimated {
             self.homeScreen.animateEggSizeButtons()
             }
         }
@@ -184,39 +185,39 @@ class HomeScreenViewController: UIViewController {
         self.present(controller, animated: true) {
             
             if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
-                seconds = 390  // done
+                HomeScreenView.seconds = 390  // done
             }
             
             if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
-                seconds = 420 // done
+                HomeScreenView.seconds = 420 // done
             }
             
             if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
-                seconds = 720 // done
+                HomeScreenView.seconds = 720 // done
             }
             
             if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
-                seconds = 4
+                HomeScreenView.seconds = 4
             }
             
             if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
-                seconds = 300
+                HomeScreenView.seconds = 300
             }
             
             if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
-                seconds = 360
+                HomeScreenView.seconds = 360
             }
             
             if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
-                seconds = 270
+                HomeScreenView.seconds = 270
             }
             
             if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
-                seconds = 330
+                HomeScreenView.seconds = 330
             }
             
             if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
-                seconds = 540
+                HomeScreenView.seconds = 540
             }
         }
     }

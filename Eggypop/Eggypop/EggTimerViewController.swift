@@ -43,11 +43,11 @@ class EggTimerViewController: UIViewController {
 
     // MARK: - update timer func
     func updateTimer() {
-        if seconds > 0 {
-            print(seconds)
-            seconds -= 1
-            eggTimerView.timerLabel.text = String(EggTimer.timeFormatted(seconds))
-        } else if seconds == 0 && !secondsLeft {
+        if HomeScreenView.seconds > 0 {
+            print(HomeScreenView.seconds)
+            HomeScreenView.seconds -= 1
+            eggTimerView.timerLabel.text = String(EggTimer.timeFormatted(HomeScreenView.seconds))
+        } else if HomeScreenView.seconds == 0 && !secondsLeft {
             // add vibrator
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), nil)
             print(secondsLeft)

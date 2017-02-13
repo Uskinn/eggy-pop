@@ -5,29 +5,21 @@
 //  Created by Sergey Nevzorov on 11/28/16.
 //  Copyright © 2016 Sergey Nevzorov. All rights reserved.
 
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-                
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        
         window?.rootViewController = UINavigationController(rootViewController: SplashViewController())
-        
         // removing nav bar
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        
        // UserNotificationManager.shared.registerNotification()
-        
         return true
     }
 

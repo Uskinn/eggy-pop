@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103CD1E247E8B008B5BB8 /* Alert.swift */; };
 		8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */; };
-		8A0422841E31643D007A1D73 /* UserNotificationManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0422831E31643D007A1D73 /* UserNotificationManeger.swift */; };
 		8A0685851E2706A2007A44BE /* iggyPopSong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685841E2706A2007A44BE /* iggyPopSong.m4a */; };
 		8A0685871E2713B6007A44BE /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0685861E2713B6007A44BE /* Sound.swift */; };
 		8A0685AE1E2D831A007A44BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */; };
@@ -25,11 +24,8 @@
 		8A2E8A461E522CBD002DF578 /* EggTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */; };
 		8A2E8A491E522CF7002DF578 /* EggTimerVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */; };
 		8A3D6B061E2153C200637642 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B051E2153C200637642 /* Image.swift */; };
-		8A3D6B081E21E7CF00637642 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B071E21E7CF00637642 /* Logo.swift */; };
 		8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B091E21EA7800637642 /* Label+Extension.swift */; };
-		8A68F3D71E1DEB8600B62CA6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68F3D61E1DEB8600B62CA6 /* TimerViewController.swift */; };
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
-		8AA5B1D11DEC988200D159C3 /* EggTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
 		99D98E76F53FB458361B0D43 /* Pods_Eggypop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +35,6 @@
 		7AD21EB1F1277AC74FBEE1C6 /* Pods-Eggypop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggypop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eggypop/Pods-Eggypop.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0103CD1E247E8B008B5BB8 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateButton.swift; sourceTree = "<group>"; };
-		8A0422831E31643D007A1D73 /* UserNotificationManeger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationManeger.swift; sourceTree = "<group>"; };
 		8A0685841E2706A2007A44BE /* iggyPopSong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = iggyPopSong.m4a; sourceTree = "<group>"; };
 		8A0685861E2713B6007A44BE /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,12 +50,9 @@
 		8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EggTimerViewController.swift; sourceTree = "<group>"; };
 		8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EggTimerVew.swift; sourceTree = "<group>"; };
 		8A3D6B051E2153C200637642 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		8A3D6B071E21E7CF00637642 /* Logo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		8A3D6B091E21EA7800637642 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
-		8A68F3D61E1DEB8600B62CA6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		8AA5B1CB1DEC988200D159C3 /* Eggypop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggypop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTypeController.swift; sourceTree = "<group>"; };
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA5B1DA1DEC988200D159C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eggypop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,16 +81,6 @@
 			name = Supporting;
 			sourceTree = "<group>";
 		};
-		8A13E9D31E1ABDBA00A30ABA /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8AA5B1D01DEC988200D159C3 /* EggTypeController.swift */,
-				8A68F3D61E1DEB8600B62CA6 /* TimerViewController.swift */,
-				8A0422831E31643D007A1D73 /* UserNotificationManeger.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		8A13E9D41E1ABDD400A30ABA /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +95,6 @@
 				8A0685861E2713B6007A44BE /* Sound.swift */,
 				8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */,
 				8A0103CD1E247E8B008B5BB8 /* Alert.swift */,
-				8A3D6B071E21E7CF00637642 /* Logo.swift */,
 				8A13E9E61E1C30A700A30ABA /* Timer.swift */,
 				8A13E9E21E1B010900A30ABA /* Button.swift */,
 			);
@@ -129,25 +110,6 @@
 			name = Constant;
 			sourceTree = "<group>";
 		};
-		8A2E8A331E50D270002DF578 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				8A2E8A341E50D2EB002DF578 /* SpalshScreen */,
-				8A2E8A3E1E511ECD002DF578 /* HomeScreen */,
-				8A2E8A471E522CCC002DF578 /* TimerScreen */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		8A2E8A341E50D2EB002DF578 /* SpalshScreen */ = {
-			isa = PBXGroup;
-			children = (
-				8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */,
-				8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */,
-			);
-			name = SpalshScreen;
-			sourceTree = "<group>";
-		};
 		8A2E8A371E50D781002DF578 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,22 +120,24 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
-		8A2E8A3E1E511ECD002DF578 /* HomeScreen */ = {
+		8A2E8A4A1E524302002DF578 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */,
 				8A2E8A3F1E511F02002DF578 /* HomeScreenView.swift */,
-				8A2E8A411E51207B002DF578 /* HomeScreenViewController.swift */,
+				8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */,
 			);
-			name = HomeScreen;
+			name = View;
 			sourceTree = "<group>";
 		};
-		8A2E8A471E522CCC002DF578 /* TimerScreen */ = {
+		8A2E8A4B1E524330002DF578 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */,
+				8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */,
+				8A2E8A411E51207B002DF578 /* HomeScreenViewController.swift */,
 				8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */,
 			);
-			name = TimerScreen;
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		8AA5B1C21DEC988200D159C3 = {
@@ -197,10 +161,10 @@
 		8AA5B1CD1DEC988200D159C3 /* Eggypop */ = {
 			isa = PBXGroup;
 			children = (
-				8A2E8A331E50D270002DF578 /* UI */,
 				8A13E9D61E1ABE4B00A30ABA /* Model */,
+				8A2E8A4A1E524302002DF578 /* View */,
+				8A2E8A4B1E524330002DF578 /* Controller */,
 				8A2E8A371E50D781002DF578 /* Extension */,
-				8A13E9D31E1ABDBA00A30ABA /* Controller */,
 				8A13E9DB1E1AD44C00A30ABA /* Constant */,
 				8A0685AA1E280A37007A44BE /* Supporting */,
 				8A13E9D41E1ABDD400A30ABA /* Storyboard */,
@@ -359,10 +323,8 @@
 				8A2E8A361E50D316002DF578 /* SpalshScreenView.swift in Sources */,
 				8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */,
 				8A2E8A421E51207B002DF578 /* HomeScreenViewController.swift in Sources */,
-				8AA5B1D11DEC988200D159C3 /* EggTypeController.swift in Sources */,
 				8A2E8A441E512165002DF578 /* Button+Extension.swift in Sources */,
 				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
-				8A0422841E31643D007A1D73 /* UserNotificationManeger.swift in Sources */,
 				8A13E9DD1E1AD46C00A30ABA /* Color.swift in Sources */,
 				8A2E8A491E522CF7002DF578 /* EggTimerVew.swift in Sources */,
 				8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */,
@@ -370,10 +332,8 @@
 				8A2E8A3D1E50EE94002DF578 /* UIImageView+Extension.swift in Sources */,
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
 				8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */,
-				8A68F3D71E1DEB8600B62CA6 /* TimerViewController.swift in Sources */,
 				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
 				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
-				8A3D6B081E21E7CF00637642 /* Logo.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,
 			);

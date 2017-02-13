@@ -42,7 +42,6 @@ final class EggTimerVew: UIView {
         configureFile()
     }
     
-    
     func configureFile() {
         setupStopButtonConstraints()
         setupHeaderLabelConstraints()

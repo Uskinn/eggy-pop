@@ -8,9 +8,9 @@
 
 import UIKit
 
-var seconds: Int = 0
-
 final class HomeScreenView: UIView {
+    
+   static var seconds: Int = 0
         
     var headerLabel: UILabel = {
         let header = UILabel()
@@ -248,7 +248,7 @@ final class HomeScreenView: UIView {
     
     // MARK: - animate egg size buttons
     func animateEggSizeButtons() {
-        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.1, options: [.curveEaseIn], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0.01, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.1, options: [.curveEaseIn], animations: {
             self.largeEggButton.transform = self.moveLargeEggSizeButtonUp()
             self.extraLargeEggButton.transform = self.moveExtraLargeEggSizeButtonUp()
             self.jumboEggButton.transform = self.moveJumboEggSizeButtonUp()
