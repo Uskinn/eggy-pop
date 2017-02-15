@@ -23,7 +23,7 @@ extension UIButton {
     func setupExtraLargeButton() {
         self.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         self.setTitleColor(Color.mainOrangeColor, for: .normal)
-        // adding two lines of text
+        // add two lines of text
         self.titleLabel!.lineBreakMode = .byWordWrapping
         self.titleLabel!.textAlignment = .center
         self.setTitle("extra\nlarge", for: .normal)

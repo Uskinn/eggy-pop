@@ -17,7 +17,7 @@ extension UILabel {
         self.font = UIFont.boldSystemFont(ofSize: 25)
         self.textAlignment = NSTextAlignment.center
         
-        // adding spacing between characters
+        // add space between characters
         let attributedString = NSMutableAttributedString(string: self.text!)
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(2.5), range: NSRange(location: 0, length: attributedString.length))
         self.attributedText = attributedString
@@ -35,7 +35,7 @@ extension UILabel {
         self.font = UIFont.systemFont(ofSize: 112)
         self.textAlignment = NSTextAlignment.center
         
-        // adding spacing between characters
+        // add space between characters
         let attributedString = NSMutableAttributedString(string: self.text!)
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
         self.attributedText = attributedString
