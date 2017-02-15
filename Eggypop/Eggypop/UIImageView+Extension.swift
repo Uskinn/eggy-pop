@@ -14,7 +14,7 @@ extension UIImageView {
         self.image = Image.logoImage
     }
     
-    func showBackground(in mainView: UIView) {
+    func showBackgroundImage(in mainView: UIView) {
         self.frame = mainView.bounds
         self.image = Image.appBackground
         mainView.addSubview(self)

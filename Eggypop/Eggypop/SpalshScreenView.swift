@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SpalshScreenView: UIView {
+class SpalshScreenView: UIView {
     
     var headerLabel: UILabel = {
         let header = UILabel()
@@ -25,7 +25,7 @@ final class SpalshScreenView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
-        UIImageView().showBackground(in: self)
+        UIImageView().showBackgroundImage(in: self)
         configureView()
     }
     
@@ -48,22 +48,23 @@ final class SpalshScreenView: UIView {
         setupLogoImageConstraints()
     }
     
+    func setupConstraintsFor(subView: AnyObject, widthAncor: CGFloat, heightAncor: CGFloat, centerYAncor: CGFloat, centerXAncor: CGFloat) {
+        subView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: widthAncor).isActive = true
+        subView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: heightAncor).isActive = true
+        subView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * centerYAncor).isActive = true
+        subView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * centerXAncor).isActive = true
+    }
+    
     func setupHeaderLabelConstraints() {
         addSubview(headerLabel)
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        headerLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.5).isActive = true
-        headerLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
-        headerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
-        headerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.07, centerYAncor: -0.03, centerXAncor: 0)
     }
     
     func setupLogoImageConstraints() {
         addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.077).isActive = true
-        logoImageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.06).isActive = true
-        logoImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * 0.03).isActive = true
-        logoImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true        
+        self.setupConstraintsFor(subView: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.03, centerXAncor: 0)
     }
     
     func logoDown() -> CGAffineTransform {
@@ -76,6 +77,9 @@ final class SpalshScreenView: UIView {
         return moveTransform
     }
 }
+
+
+
 
 
 
