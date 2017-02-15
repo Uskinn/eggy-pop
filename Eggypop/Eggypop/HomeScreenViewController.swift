@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class HomeScreenViewController: UIViewController {
     
     let homeScreen = HomeScreenView()
@@ -18,11 +16,9 @@ class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(homeScreen)
-        
         homeScreen.layoutSubviews()
 
         buttonActions()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -197,7 +193,7 @@ class HomeScreenViewController: UIViewController {
             }
             
             if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 4
+                HomeScreenView.seconds = 390
             }
             
             if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
@@ -217,7 +213,7 @@ class HomeScreenViewController: UIViewController {
             }
             
             if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 540
+                HomeScreenView.seconds = 4
             }
         }
     }
