@@ -20,9 +20,7 @@ class EggTimerViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(eggTimerView)
         eggTimerView.layoutSubviews()
-        
         eggTimerView.stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

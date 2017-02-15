@@ -15,7 +15,6 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(splashScreen)
-        
         splashScreen.layoutSubviews()
     }
     
@@ -25,5 +24,4 @@ class SplashViewController: UIViewController {
             self.splashScreen.animateView()
         }
     }
-    
 }

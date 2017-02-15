@@ -89,7 +89,7 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		8A13E9D61E1ABE4B00A30ABA /* Model */ = {
+		8A13E9D61E1ABE4B00A30ABA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8A0685861E2713B6007A44BE /* Sound.swift */,
@@ -98,46 +98,46 @@
 				8A13E9E61E1C30A700A30ABA /* Timer.swift */,
 				8A13E9E21E1B010900A30ABA /* Button.swift */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		8A13E9DB1E1AD44C00A30ABA /* Constant */ = {
+		8A13E9DB1E1AD44C00A30ABA /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				8A13E9DC1E1AD46C00A30ABA /* Color.swift */,
 				8A3D6B051E2153C200637642 /* Image.swift */,
 			);
-			name = Constant;
+			name = Constants;
 			sourceTree = "<group>";
 		};
-		8A2E8A371E50D781002DF578 /* Extension */ = {
+		8A2E8A371E50D781002DF578 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				8A3D6B091E21EA7800637642 /* Label+Extension.swift */,
 				8A2E8A3C1E50EE94002DF578 /* UIImageView+Extension.swift */,
 				8A2E8A431E512165002DF578 /* Button+Extension.swift */,
 			);
-			name = Extension;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
-		8A2E8A4A1E524302002DF578 /* View */ = {
+		8A2E8A4A1E524302002DF578 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */,
 				8A2E8A3F1E511F02002DF578 /* HomeScreenView.swift */,
 				8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */,
 			);
-			name = View;
+			name = Views;
 			sourceTree = "<group>";
 		};
-		8A2E8A4B1E524330002DF578 /* Controller */ = {
+		8A2E8A4B1E524330002DF578 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */,
 				8A2E8A411E51207B002DF578 /* HomeScreenViewController.swift */,
 				8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */,
 			);
-			name = Controller;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		8AA5B1C21DEC988200D159C3 = {
@@ -161,11 +161,11 @@
 		8AA5B1CD1DEC988200D159C3 /* Eggypop */ = {
 			isa = PBXGroup;
 			children = (
-				8A13E9D61E1ABE4B00A30ABA /* Model */,
-				8A2E8A4A1E524302002DF578 /* View */,
-				8A2E8A4B1E524330002DF578 /* Controller */,
-				8A2E8A371E50D781002DF578 /* Extension */,
-				8A13E9DB1E1AD44C00A30ABA /* Constant */,
+				8A13E9D61E1ABE4B00A30ABA /* Models */,
+				8A2E8A4A1E524302002DF578 /* Views */,
+				8A2E8A4B1E524330002DF578 /* Controllers */,
+				8A2E8A371E50D781002DF578 /* Extensions */,
+				8A13E9DB1E1AD44C00A30ABA /* Constants */,
 				8A0685AA1E280A37007A44BE /* Supporting */,
 				8A13E9D41E1ABDD400A30ABA /* Storyboard */,
 			);

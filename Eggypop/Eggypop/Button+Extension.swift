@@ -17,11 +17,7 @@ extension UIButton {
         self.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         self.titleLabel?.alpha = 0
-        
-        //adding space between characters
-        let title = self.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        self.setAttributedTitle(attributedTitle, for: .normal)
+        self.addSpaceForChar(space: 1.7)
     }
     
     func setupExtraLargeButton() {
@@ -33,12 +29,8 @@ extension UIButton {
         self.setTitle("extra\nlarge", for: .normal)
         self.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        self.addSpaceForChar(space: 1.7)
         self.titleLabel?.alpha = 0
-        
-        //adding space between characters
-        let title = self.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        self.setAttributedTitle(attributedTitle, for: .normal)
     }
     
     func setupJumboButton() {
@@ -47,12 +39,8 @@ extension UIButton {
         self.setTitle("jumbo", for: .normal)
         self.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        self.addSpaceForChar(space: 1.7)
         self.titleLabel?.alpha = 0
-        
-        //adding space between characters
-        let title = self.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        self.setAttributedTitle(attributedTitle, for: .normal)
     }
     
     func setupInformationButton() {
@@ -67,76 +55,56 @@ extension UIButton {
     
     func setupSoftEggButton() {
         self.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        
         self.setTitleColor(Color.mainOrangeColor, for: .normal)
         self.setTitle("soft", for: .normal)
         self.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        
-        // adding space between characters
-        let title = self.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        self.setAttributedTitle(attributedTitle, for: .normal)
+        self.addSpaceForChar(space: 1.7)
     }
     
     func setupMediumEggButton() {
         self.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        
         self.setTitleColor(Color.mainOrangeColor, for: .normal)
         self.setTitle("medium", for: .normal)
         self.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        
-        // adding space between characters
-        let title = self.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        self.setAttributedTitle(attributedTitle, for: .normal)
+        self.addSpaceForChar(space: 1.7)
     }
 
     func setupHardEggButton() {
         self.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        
         self.setTitleColor(Color.mainOrangeColor, for: .normal)
         self.setTitle("hard", for: .normal)
         self.titleLabel?.font = UIFont(name: "Lucida Grande", size: 17)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        
-        // adding space between characters
-        let title = self.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.7])
-        self.setAttributedTitle(attributedTitle, for: .normal)
+        self.addSpaceForChar(space: 1.7)
     }
     
     func setupStartButton() {
         self.setBackgroundImage(Image.startButtonImage, for: .normal)
-        
         self.setTitle("start", for: .normal)
         self.setTitleColor(.white, for: .normal)
         self.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
-        
-        // adding spacing between characters
-        let title = self.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
-        self.setAttributedTitle(attributedTitle, for: .normal)
-        
+        self.addSpaceForChar(space: 1.0)
         self.alpha = 0
     }
     
      func setupStopButton() {
         self.setBackgroundImage(Image.stopButtonImage, for: .normal)
-        
         self.setTitle("stop", for: .normal)
         self.setTitleColor(.white, for: .normal)
         self.titleLabel?.font = UIFont(name: "LucidaGrande", size: 0)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
-        
-        // adding spacing between characters
+        self.addSpaceForChar(space: 1.0)
+    }
+    
+    // add space between characters
+    func addSpaceForChar(space: CGFloat) {
         let title = self.title(for: .normal)
-        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: 1.0])
+        let attributedTitle = NSAttributedString(string: title!, attributes: [NSKernAttributeName: space])
         self.setAttributedTitle(attributedTitle, for: .normal)
     }
-
 }
 
 

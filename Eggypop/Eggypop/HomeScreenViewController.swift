@@ -17,7 +17,6 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(homeScreen)
         homeScreen.layoutSubviews()
-
         buttonActions()
     }
     
@@ -176,10 +175,8 @@ class HomeScreenViewController: UIViewController {
     }
     
     func startButtonClicked(_ button: UIButton) {
-        
         let controller = EggTimerViewController()
         self.present(controller, animated: true) {
-            
             if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
                 HomeScreenView.seconds = 390  // done
             }
