@@ -182,7 +182,7 @@ class HomeScreenViewController: UIViewController {
             }
             
             if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 420 // done
+                HomeScreenView.seconds = 435 // done
             }
             
             if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
@@ -190,15 +190,15 @@ class HomeScreenViewController: UIViewController {
             }
             
             if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 390
+                HomeScreenView.seconds = 400 // done
             }
             
             if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 300
+                HomeScreenView.seconds = 465 // done
             }
             
             if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 360
+                HomeScreenView.seconds = 720 // done
             }
             
             if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
