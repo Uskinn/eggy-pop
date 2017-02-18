@@ -44,7 +44,6 @@ final class EggTimerVew: UIView {
     
     func configureFile() {
         setupStopButtonConstraints()
-       // setupHeaderLabelConstraints()
         setupLogoImageConstraints()
         setupTimerTimerConstraints()
     }
@@ -66,12 +65,6 @@ final class EggTimerVew: UIView {
         addSubview(stopButton)
         stopButton.translatesAutoresizingMaskIntoConstraints = false
         self.setupConstraintsFor(subView: stopButton, widthAncor: 0.927, heightAncor: 0.108, centerYAncor: 0.3, centerXAncor: 0)
-    }
-    
-    func setupHeaderLabelConstraints() {
-        addSubview(headerLabel)
-        headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.07, centerYAncor: -0.43, centerXAncor: 0)
     }
     
     func setupLogoImageConstraints() {

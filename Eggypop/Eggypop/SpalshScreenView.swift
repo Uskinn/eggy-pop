@@ -44,7 +44,6 @@ class SpalshScreenView: UIView {
     }
     
     func configureView() {
-       // setupHeaderLabelConstraints()
         setupLogoImageConstraints()
     }
     
@@ -53,13 +52,6 @@ class SpalshScreenView: UIView {
         subView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: heightAncor).isActive = true
         subView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * centerYAncor).isActive = true
         subView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * centerXAncor).isActive = true
-    }
-    
-    func setupHeaderLabelConstraints() {
-        addSubview(headerLabel)
-        headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.04, centerYAncor: -0.03, centerXAncor: 0)
-        print(headerLabel.frame)
     }
     
     func setupLogoImageConstraints() {
