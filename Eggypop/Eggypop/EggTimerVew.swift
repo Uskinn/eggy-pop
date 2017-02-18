@@ -44,7 +44,7 @@ final class EggTimerVew: UIView {
     
     func configureFile() {
         setupStopButtonConstraints()
-        setupHeaderLabelConstraints()
+       // setupHeaderLabelConstraints()
         setupLogoImageConstraints()
         setupTimerTimerConstraints()
     }

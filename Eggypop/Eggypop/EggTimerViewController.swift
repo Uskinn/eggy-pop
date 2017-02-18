@@ -19,6 +19,8 @@ class EggTimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(eggTimerView)
+        navigationItem.titleView = eggTimerView.headerLabel
+
         eggTimerView.layoutSubviews()
         eggTimerView.stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
     }
@@ -26,6 +28,7 @@ class EggTimerViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
+
             self.secondsLeft = false
             if self.timer.isValid == false {
                 self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(EggTimerViewController.updateTimer) , userInfo: nil, repeats: true)

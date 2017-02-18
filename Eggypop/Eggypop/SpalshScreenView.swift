@@ -44,7 +44,7 @@ class SpalshScreenView: UIView {
     }
     
     func configureView() {
-        setupHeaderLabelConstraints()
+       // setupHeaderLabelConstraints()
         setupLogoImageConstraints()
     }
     

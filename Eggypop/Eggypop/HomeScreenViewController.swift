@@ -15,45 +15,11 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.titleView = homeScreen.headerLabel
         view.addSubview(homeScreen)
         homeScreen.layoutSubviews()
         buttonActions()
-        
-      //  navigationItem.title = "eggypop"
-       // navigationItem.titleView = homeScreen.headerLabel
-        
-
-       // navigationItem.title = "eggypop"
-
-//        self.navigationController?.navigationBar.topItem?.title = "eggypop"
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Kailasa-Bold", size: 25)!, NSForegroundColorAttributeName: Color.headerColor]
-        
-        
-//  let attributedString = NSMutableAttributedString(string: (self.navigationController?.navigationBar.topItem?.title)!)
-//  attributedString.addAttribute(NSKernAttributeName, value: CGFloat(2.5), range: NSRange(location: 0, length: attributedString.length))
-        
-        let titleLabel = homeScreen.headerLabel
-        let colour = Color.headerColor
-        let attributes: [String : AnyObject] = [NSFontAttributeName: UIFont.systemFont(ofSize: 25), NSForegroundColorAttributeName: colour, NSKernAttributeName : 2.5 as AnyObject]
-        titleLabel.attributedText = NSAttributedString(string: "eggypop", attributes: attributes)
-        titleLabel.sizeToFit()
-        self.navigationItem.titleView = titleLabel
-        
-        
-//        func setupHeaderLabel() {
-//            self.text = "eggypop"
-//            self.textColor = Color.headerColor
-//            self.font = UIFont(name: "LucidaGrande", size: 0)
-//            self.font = UIFont.boldSystemFont(ofSize: 25)
-//            self.textAlignment = NSTextAlignment.center
-        
-        
-        
-        
-        
-        
-        
-               
+    
         let infoButtonImage = UIImage(named: "infoButtonImage")!.withRenderingMode(.alwaysOriginal)
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: infoButtonImage, style: .plain, target: self, action: #selector(infoButtonClicked(_:)))
         
@@ -210,7 +176,7 @@ class HomeScreenViewController: UIViewController {
 
     func infoButtonClicked(_ button: UIButton) {
         let controller  = InformationViewController()
-       // self.present(controller, animated: true, completion: nil)
+        self.present(controller, animated: true, completion: nil)
         print("clicked")
     }
     
@@ -220,8 +186,9 @@ class HomeScreenViewController: UIViewController {
     }
     
     func startButtonClicked(_ button: UIButton) {
-        let controller = EggTimerViewController()
-        self.present(controller, animated: true) {
+        let timerVC = UINavigationController(rootViewController: EggTimerViewController())
+        self.present(timerVC, animated: true) {
+            
             if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
                 HomeScreenView.seconds = 390  // done
             }
@@ -259,6 +226,6 @@ class HomeScreenViewController: UIViewController {
             }
         }
     }
-}
 
+}
 

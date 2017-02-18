@@ -146,11 +146,11 @@ final class HomeScreenView: UIView {
 //        self.setupConstraintsFor(subView: thankYouButton, widthAncor: 0.07, heightAncor: 0.039, centerYAncor: -0.425, centerXAncor: 0.4)
 //    }
     
-    func setupHeaderLabelConstraints() {
-        addSubview(headerLabel)
-        headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.07, centerYAncor: -0.44, centerXAncor: 0)
-    }
+//    func setupHeaderLabelConstraints() {
+//        addSubview(headerLabel)
+//        headerLabel.translatesAutoresizingMaskIntoConstraints = false
+//        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.07, centerYAncor: -0.44, centerXAncor: 0)
+//    }
     
     func setupLogoImageConstraints() {
         addSubview(logoImageView)

@@ -14,6 +14,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.titleView = splashScreen.headerLabel
         view.addSubview(splashScreen)
         splashScreen.layoutSubviews()
     }

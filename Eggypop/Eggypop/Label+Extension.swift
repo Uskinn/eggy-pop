@@ -11,16 +11,21 @@ import UIKit
 extension UILabel {
     
     func setupHeaderLabel() {
-        self.text = "eggypop"
-        self.textColor = Color.headerColor
-        self.font = UIFont(name: "LucidaGrande", size: 0)
-        self.font = UIFont.boldSystemFont(ofSize: 25)
-        self.textAlignment = NSTextAlignment.center
-        
-        // add space between characters
-        let attributedString = NSMutableAttributedString(string: self.text!)
-        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(2.5), range: NSRange(location: 0, length: attributedString.length))
-        self.attributedText = attributedString
+//        self.text = "eggypop"
+//        self.textColor = Color.headerColor
+//        self.font = UIFont(name: "LucidaGrande", size: 0)
+//        self.font = UIFont.boldSystemFont(ofSize: 25)
+//        self.textAlignment = NSTextAlignment.center
+//        
+//        // add space between characters
+//        let attributedString = NSMutableAttributedString(string: self.text!)
+//        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(2.5), range: NSRange(location: 0, length: attributedString.length))
+//        self.attributedText = attributedString
+       // let color = Color.headerColor
+        let attributes = [NSFontAttributeName: UIFont(name: "TeluguSangamMN-Bold", size: 25)!, NSForegroundColorAttributeName: Color.headerColor, NSKernAttributeName : 2.5] as [String : Any]
+        self.attributedText = NSAttributedString(string: "eggypop", attributes: attributes)
+        self.sizeToFit()
+
     }
     
     func setupTimer() {
