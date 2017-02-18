@@ -24,4 +24,6 @@ struct Image {
     
     static let infoButtonImage = UIImage(named: "infoButtonImage")
     static let thanksButtonImage = UIImage(named: "heartButtonImage")
+    
+    static let headerImage = UIImage(named: "headerImage")
 }

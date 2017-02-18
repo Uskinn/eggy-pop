@@ -48,8 +48,8 @@ final class HomeScreenView: UIView {
         return hard
     }()
     
-    var informationButton: UIButton = {
-        let infoButton = UIButton()
+    var informationButton: UIBarButtonItem = {
+        let infoButton = UIBarButtonItem()
         infoButton.setupInformationButton()
         return infoButton
     }()
@@ -82,7 +82,6 @@ final class HomeScreenView: UIView {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
         UIImageView().showBackgroundImage(in: self)
-        
         configureFile()
     }
     
@@ -91,10 +90,10 @@ final class HomeScreenView: UIView {
         setupExtraLargeEggButtonConstraints()
         setupJumboEggButtonConstraints()
         
-        setupInfoButtonConstraints()
-        setupThankYouButtonConstraints()
+        //setupInfoButtonConstraints()
+       // setupThankYouButtonConstraints()
         
-        setupHeaderLabelConstraints()
+       // setupHeaderLabelConstraints()
         setupLogoImageConstraints()
         
         setupSoftButtonConstraint()
@@ -135,22 +134,22 @@ final class HomeScreenView: UIView {
         self.setupConstraintsFor(subView: hardEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: 0.14, centerXAncor: -1.0)
     }
     
-    func setupInfoButtonConstraints() {
-        addSubview(informationButton)
-        informationButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: informationButton, widthAncor: 0.07, heightAncor: 0.039, centerYAncor: -0.43, centerXAncor: -0.4)
-    }
+//    func setupInfoButtonConstraints() {
+//        addSubview(informationButton)
+//        informationButton.translatesAutoresizingMaskIntoConstraints = false
+//        self.setupConstraintsFor(subView: informationButton, widthAncor: 0.07, heightAncor: 0.039, centerYAncor: -0.425, centerXAncor: -0.4)
+//    }
     
-    func setupThankYouButtonConstraints() {
-        addSubview(thankYouButton)
-        thankYouButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: thankYouButton, widthAncor: 0.07, heightAncor: 0.039, centerYAncor: -0.43, centerXAncor: 0.4)
-    }
+//    func setupThankYouButtonConstraints() {
+//        addSubview(thankYouButton)
+//        thankYouButton.translatesAutoresizingMaskIntoConstraints = false
+//        self.setupConstraintsFor(subView: thankYouButton, widthAncor: 0.07, heightAncor: 0.039, centerYAncor: -0.425, centerXAncor: 0.4)
+//    }
     
     func setupHeaderLabelConstraints() {
         addSubview(headerLabel)
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.07, centerYAncor: -0.43, centerXAncor: 0)
+        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.07, centerYAncor: -0.44, centerXAncor: 0)
     }
     
     func setupLogoImageConstraints() {
@@ -198,7 +197,7 @@ final class HomeScreenView: UIView {
             self.largeEggButton.titleLabel?.alpha = 1
             self.extraLargeEggButton.titleLabel?.alpha = 1
             self.jumboEggButton.titleLabel?.alpha = 1
-            self.informationButton.alpha = 1
+           // self.informationButton.alpha = 1
             self.thankYouButton.alpha = 1
         })
     }

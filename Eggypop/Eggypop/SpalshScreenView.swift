@@ -58,7 +58,8 @@ class SpalshScreenView: UIView {
     func setupHeaderLabelConstraints() {
         addSubview(headerLabel)
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.07, centerYAncor: -0.03, centerXAncor: 0)
+        self.setupConstraintsFor(subView: headerLabel, widthAncor: 0.5, heightAncor: 0.04, centerYAncor: -0.03, centerXAncor: 0)
+        print(headerLabel.frame)
     }
     
     func setupLogoImageConstraints() {

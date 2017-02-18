@@ -25,6 +25,8 @@
 		8A2E8A491E522CF7002DF578 /* EggTimerVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */; };
 		8A3D6B061E2153C200637642 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B051E2153C200637642 /* Image.swift */; };
 		8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B091E21EA7800637642 /* Label+Extension.swift */; };
+		8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */; };
+		8A3E44681E57F8500055FA1B /* UIBarButtonItem+Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44671E57F8500055FA1B /* UIBarButtonItem+Extencion.swift */; };
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
 		99D98E76F53FB458361B0D43 /* Pods_Eggypop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */; };
@@ -51,6 +53,8 @@
 		8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EggTimerVew.swift; sourceTree = "<group>"; };
 		8A3D6B051E2153C200637642 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8A3D6B091E21EA7800637642 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
+		8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		8A3E44671E57F8500055FA1B /* UIBarButtonItem+Extencion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extencion.swift"; sourceTree = "<group>"; };
 		8AA5B1CB1DEC988200D159C3 /* Eggypop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggypop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				8A3D6B091E21EA7800637642 /* Label+Extension.swift */,
 				8A2E8A3C1E50EE94002DF578 /* UIImageView+Extension.swift */,
 				8A2E8A431E512165002DF578 /* Button+Extension.swift */,
+				8A3E44671E57F8500055FA1B /* UIBarButtonItem+Extencion.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */,
 				8A2E8A411E51207B002DF578 /* HomeScreenViewController.swift */,
 				8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */,
+				8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				8A3D6B061E2153C200637642 /* Image.swift in Sources */,
 				8A2E8A361E50D316002DF578 /* SpalshScreenView.swift in Sources */,
 				8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */,
+				8A3E44681E57F8500055FA1B /* UIBarButtonItem+Extencion.swift in Sources */,
 				8A2E8A421E51207B002DF578 /* HomeScreenViewController.swift in Sources */,
 				8A2E8A441E512165002DF578 /* Button+Extension.swift in Sources */,
 				8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */,
@@ -336,6 +343,7 @@
 				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,
+				8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

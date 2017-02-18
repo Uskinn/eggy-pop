@@ -32,7 +32,7 @@ extension UILabel {
         self.textColor = Color.mainOrangeColor
         
         self.font = UIFont(name: "LucidaGrande", size: 0)
-        self.font = UIFont.systemFont(ofSize: 112)
+        self.font = UIFont.systemFont(ofSize: 110)
         self.textAlignment = NSTextAlignment.center
         
         // add space between characters
