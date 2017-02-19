@@ -1,19 +1,19 @@
 //
-//  InformationScreenView.swift
+//  ThanksScreenView.swift
 //  Eggypop
 //
-//  Created by Sergey Nevzorov on 2/18/17.
+//  Created by Sergey Nevzorov on 2/19/17.
 //  Copyright © 2017 Sergey Nevzorov. All rights reserved.
 //
 
 import UIKit
 
-final class InformationScreenView: UIView {
-    
-    var infoScrollView: UIScrollView = {
-        let info = UIScrollView()
-        info.setupScrollView()
-        return info
+class ThanksScreenView: UIView {
+
+    var thanksScrollView: UIScrollView = {
+        let thanks = UIScrollView()
+        thanks.setupScrollView()
+        return thanks
     }()
     
     var dismissScrollViewButton: UIButton = {
@@ -27,7 +27,7 @@ final class InformationScreenView: UIView {
         self.frame = UIScreen.main.bounds
         setupInfoScrollViewConstraints()
         setupDismissButtonConstraints()
-        self.insertSubview(dismissScrollViewButton, belowSubview: infoScrollView)
+        self.insertSubview(dismissScrollViewButton, belowSubview: thanksScrollView)
     }
     
     func setupConstraintsFor(subView: AnyObject, widthAncor: CGFloat, heightAncor: CGFloat, centerYAncor: CGFloat, centerXAncor: CGFloat) {
@@ -38,9 +38,9 @@ final class InformationScreenView: UIView {
     }
     
     func setupInfoScrollViewConstraints() {
-        addSubview(infoScrollView)
-        infoScrollView.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: infoScrollView, widthAncor: 0.7, heightAncor: 0.7, centerYAncor: 0.0, centerXAncor: 0.0)
+        addSubview(thanksScrollView)
+        thanksScrollView.translatesAutoresizingMaskIntoConstraints = false
+        self.setupConstraintsFor(subView: thanksScrollView, widthAncor: 0.7, heightAncor: 0.7, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     func setupDismissButtonConstraints() {
@@ -52,6 +52,3 @@ final class InformationScreenView: UIView {
         dismissScrollViewButton.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
 }
-
-
-

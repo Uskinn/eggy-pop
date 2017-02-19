@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103CD1E247E8B008B5BB8 /* Alert.swift */; };
 		8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */; };
+		8A0286C71E59FB000026E927 /* UIScrollView+Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286C61E59FB000026E927 /* UIScrollView+Extencion.swift */; };
+		8A0286C91E5A06980026E927 /* ThanksScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286C81E5A06970026E927 /* ThanksScreenView.swift */; };
+		8A0286CB1E5A06CD0026E927 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */; };
 		8A0685851E2706A2007A44BE /* iggyPopSong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685841E2706A2007A44BE /* iggyPopSong.m4a */; };
 		8A0685871E2713B6007A44BE /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0685861E2713B6007A44BE /* Sound.swift */; };
 		8A0685AE1E2D831A007A44BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */; };
@@ -38,6 +41,9 @@
 		7AD21EB1F1277AC74FBEE1C6 /* Pods-Eggypop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggypop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eggypop/Pods-Eggypop.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0103CD1E247E8B008B5BB8 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateButton.swift; sourceTree = "<group>"; };
+		8A0286C61E59FB000026E927 /* UIScrollView+Extencion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extencion.swift"; sourceTree = "<group>"; };
+		8A0286C81E5A06970026E927 /* ThanksScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksScreenView.swift; sourceTree = "<group>"; };
+		8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
 		8A0685841E2706A2007A44BE /* iggyPopSong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = iggyPopSong.m4a; sourceTree = "<group>"; };
 		8A0685861E2713B6007A44BE /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 				8A2E8A3C1E50EE94002DF578 /* UIImageView+Extension.swift */,
 				8A2E8A431E512165002DF578 /* Button+Extension.swift */,
 				8A3E44671E57F8500055FA1B /* UIBarButtonItem+Extencion.swift */,
+				8A0286C61E59FB000026E927 /* UIScrollView+Extencion.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -134,6 +141,7 @@
 				8A2E8A3F1E511F02002DF578 /* HomeScreenView.swift */,
 				8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */,
 				8A3E44691E593C960055FA1B /* InformationScreenView.swift */,
+				8A0286C81E5A06970026E927 /* ThanksScreenView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 				8A2E8A411E51207B002DF578 /* HomeScreenViewController.swift */,
 				8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */,
 				8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */,
+				8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -339,15 +348,18 @@
 				8A2E8A491E522CF7002DF578 /* EggTimerVew.swift in Sources */,
 				8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */,
 				8A2E8A461E522CBD002DF578 /* EggTimerViewController.swift in Sources */,
+				8A0286C91E5A06980026E927 /* ThanksScreenView.swift in Sources */,
 				8A2E8A3D1E50EE94002DF578 /* UIImageView+Extension.swift in Sources */,
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
 				8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */,
 				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
 				8A3E446A1E593C960055FA1B /* InformationScreenView.swift in Sources */,
+				8A0286C71E59FB000026E927 /* UIScrollView+Extencion.swift in Sources */,
 				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,
 				8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */,
+				8A0286CB1E5A06CD0026E927 /* ThanksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

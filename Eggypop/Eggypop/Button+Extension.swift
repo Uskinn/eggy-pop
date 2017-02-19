@@ -10,6 +10,10 @@ import UIKit
 
 extension UIButton {
     
+    func setupDismissButton() {
+        self.backgroundColor = .clear
+    }
+    
     func setupLargeButton() {
         self.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
         self.setTitleColor(Color.mainOrangeColor, for: .normal)

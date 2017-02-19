@@ -19,7 +19,7 @@ class HomeScreenViewController: UIViewController {
         view.addSubview(homeScreen)
         homeScreen.layoutSubviews()
         buttonActions()
-    
+        
         let infoButtonImage = UIImage(named: "infoButtonImage")!.withRenderingMode(.alwaysOriginal)
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: infoButtonImage, style: .plain, target: self, action: #selector(infoButtonClicked(_:)))
         
@@ -31,9 +31,9 @@ class HomeScreenViewController: UIViewController {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             self.homeScreen.animateEggs()
-
+            
             if self.isEggAnimated {
-            self.homeScreen.animateEggSizeButtons()
+                self.homeScreen.animateEggSizeButtons()
             }
         }
     }
@@ -43,9 +43,9 @@ class HomeScreenViewController: UIViewController {
         homeScreen.extraLargeEggButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.jumboEggButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         
-       // homeScreen.informationButton.addTarget(self, action: #selector(infoButtonClicked(_:)), for: .touchUpInside)
+        // homeScreen.informationButton.addTarget(self, action: #selector(infoButtonClicked(_:)), for: .touchUpInside)
         
-      //  homeScreen.thankYouButton.addTarget(self, action: #selector(thankYouButtonClicked(_:)), for: .touchUpInside)
+        //  homeScreen.thankYouButton.addTarget(self, action: #selector(thankYouButtonClicked(_:)), for: .touchUpInside)
         
         homeScreen.softEggButton.addTarget(self, action: #selector(softEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.mediumEggButton.addTarget(self, action: #selector(mediumEggButtonClicked(_:)), for: .touchUpInside)
@@ -56,7 +56,7 @@ class HomeScreenViewController: UIViewController {
     
     func largeEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.largeEggButton)
-
+        
         homeScreen.largeEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         homeScreen.largeEggButton.titleLabel?.textColor = .white
         
@@ -77,7 +77,7 @@ class HomeScreenViewController: UIViewController {
     
     func extraLargeEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.extraLargeEggButton)
-
+        
         homeScreen.extraLargeEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         homeScreen.extraLargeEggButton.titleLabel?.textColor = .white
         
@@ -98,7 +98,7 @@ class HomeScreenViewController: UIViewController {
     
     func jumboEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.jumboEggButton)
-
+        
         homeScreen.jumboEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
         homeScreen.jumboEggButton.titleLabel?.textColor = .white
         
@@ -119,7 +119,7 @@ class HomeScreenViewController: UIViewController {
     
     func softEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.softEggButton)
-
+        
         homeScreen.softEggButton.titleLabel?.textColor = .white
         homeScreen.softEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
         
@@ -138,7 +138,7 @@ class HomeScreenViewController: UIViewController {
     
     func mediumEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.mediumEggButton)
-
+        
         homeScreen.mediumEggButton.titleLabel?.textColor = .white
         homeScreen.mediumEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
         
@@ -154,7 +154,7 @@ class HomeScreenViewController: UIViewController {
         
         homeScreen.startButton.alpha = 1
     }
-
+    
     func hardEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.hardEggButton)
         
@@ -170,21 +170,22 @@ class HomeScreenViewController: UIViewController {
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.hardEggButton)
         }, completion: nil)
-
+        
         homeScreen.startButton.alpha = 1
     }
-
+    
     func infoButtonClicked(_ button: UIButton) {
         let controller  = InformationViewController()
         controller.modalPresentationStyle = .overFullScreen
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true, completion: nil)
-        
-            }
+    }
     
     func thankYouButtonClicked(_ button: UIButton) {
-        print("clicked")
-
+        let controller  = ThanksViewController()
+        controller.modalPresentationStyle = .overFullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true, completion: nil)
     }
     
     func startButtonClicked(_ button: UIButton) {
@@ -228,6 +229,6 @@ class HomeScreenViewController: UIViewController {
             }
         }
     }
-
+    
 }
 
