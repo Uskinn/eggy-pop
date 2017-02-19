@@ -27,6 +27,7 @@
 		8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B091E21EA7800637642 /* Label+Extension.swift */; };
 		8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */; };
 		8A3E44681E57F8500055FA1B /* UIBarButtonItem+Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44671E57F8500055FA1B /* UIBarButtonItem+Extencion.swift */; };
+		8A3E446A1E593C960055FA1B /* InformationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44691E593C960055FA1B /* InformationScreenView.swift */; };
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
 		99D98E76F53FB458361B0D43 /* Pods_Eggypop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */; };
@@ -55,6 +56,7 @@
 		8A3D6B091E21EA7800637642 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
 		8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		8A3E44671E57F8500055FA1B /* UIBarButtonItem+Extencion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extencion.swift"; sourceTree = "<group>"; };
+		8A3E44691E593C960055FA1B /* InformationScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationScreenView.swift; sourceTree = "<group>"; };
 		8AA5B1CB1DEC988200D159C3 /* Eggypop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggypop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */,
 				8A2E8A3F1E511F02002DF578 /* HomeScreenView.swift */,
 				8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */,
+				8A3E44691E593C960055FA1B /* InformationScreenView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
 				8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */,
 				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
+				8A3E446A1E593C960055FA1B /* InformationScreenView.swift in Sources */,
 				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,

@@ -90,9 +90,6 @@ final class HomeScreenView: UIView {
         setupExtraLargeEggButtonConstraints()
         setupJumboEggButtonConstraints()
         
-        //setupInfoButtonConstraints()
-       // setupThankYouButtonConstraints()
-        
         setupLogoImageConstraints()
         
         setupSoftButtonConstraint()
@@ -132,19 +129,7 @@ final class HomeScreenView: UIView {
         hardEggButton.translatesAutoresizingMaskIntoConstraints = false
         self.setupConstraintsFor(subView: hardEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: 0.14, centerXAncor: -1.0)
     }
-    
-//    func setupInfoButtonConstraints() {
-//        addSubview(informationButton)
-//        informationButton.translatesAutoresizingMaskIntoConstraints = false
-//        self.setupConstraintsFor(subView: informationButton, widthAncor: 0.07, heightAncor: 0.039, centerYAncor: -0.425, centerXAncor: -0.4)
-//    }
-    
-//    func setupThankYouButtonConstraints() {
-//        addSubview(thankYouButton)
-//        thankYouButton.translatesAutoresizingMaskIntoConstraints = false
-//        self.setupConstraintsFor(subView: thankYouButton, widthAncor: 0.07, heightAncor: 0.039, centerYAncor: -0.425, centerXAncor: 0.4)
-//    }
-    
+
     func setupLogoImageConstraints() {
         addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false

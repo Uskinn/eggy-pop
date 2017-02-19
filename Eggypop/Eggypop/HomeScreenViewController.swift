@@ -176,9 +176,11 @@ class HomeScreenViewController: UIViewController {
 
     func infoButtonClicked(_ button: UIButton) {
         let controller  = InformationViewController()
+        controller.modalPresentationStyle = .overFullScreen
+        controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true, completion: nil)
-        print("clicked")
-    }
+        
+            }
     
     func thankYouButtonClicked(_ button: UIButton) {
         print("clicked")
