@@ -40,8 +40,8 @@ final class InformationScreenView: UIView {
         self.insertSubview(dismissScrollViewButton, belowSubview: infoScrollView)
 
         
-        let imageWigth: CGFloat = 260
-        let imageHeight: CGFloat = 847
+        let imageWigth: CGFloat = 324
+        let imageHeight: CGFloat = 945
         
         scrollViewImageView.frame.size.width = imageWigth
         scrollViewImageView.frame.size.height = imageHeight
@@ -67,7 +67,7 @@ final class InformationScreenView: UIView {
     func setupInfoScrollViewConstraints() {
         addSubview(infoScrollView)
         infoScrollView.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: infoScrollView, widthAncor: 0.7, heightAncor: 0.7, centerYAncor: 0.0, centerXAncor: 0.0)
+        self.setupConstraintsFor(subView: infoScrollView, widthAncor: 0.9, heightAncor: 0.7, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     func setupDismissButtonConstraints() {

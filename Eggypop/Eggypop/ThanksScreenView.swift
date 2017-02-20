@@ -40,7 +40,7 @@ class ThanksScreenView: UIView {
     func setupInfoScrollViewConstraints() {
         addSubview(thanksScrollView)
         thanksScrollView.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: thanksScrollView, widthAncor: 0.7, heightAncor: 0.7, centerYAncor: 0.0, centerXAncor: 0.0)
+        self.setupConstraintsFor(subView: thanksScrollView, widthAncor: 0.9, heightAncor: 0.7, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     func setupDismissButtonConstraints() {
