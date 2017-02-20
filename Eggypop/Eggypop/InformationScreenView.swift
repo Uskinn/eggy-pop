@@ -32,13 +32,12 @@ final class InformationScreenView: UIView {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
         
-        
-        
+       // setupScrollViewImageConstraints()
         setupInfoScrollViewConstraints()
         setupDismissButtonConstraints()
         
         self.insertSubview(dismissScrollViewButton, belowSubview: infoScrollView)
-
+        
         
         let imageWigth: CGFloat = 324
         let imageHeight: CGFloat = 945
@@ -50,10 +49,7 @@ final class InformationScreenView: UIView {
         
         infoScrollView.addSubview(scrollViewImageView)
         
-        infoScrollView.contentSize = CGSize(width: imageWigth, height: imageHeight)
-        
-        
-        
+       infoScrollView.contentSize = CGSize(width: imageWigth, height: imageHeight)
         
     }
     
@@ -64,10 +60,21 @@ final class InformationScreenView: UIView {
         subView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * centerXAncor).isActive = true
     }
     
+//        func setupScrollViewImageConstraints() {
+//            infoScrollView.addSubview(scrollViewImageView)
+//
+//            scrollViewImageView.translatesAutoresizingMaskIntoConstraints = false
+//            scrollViewImageView.leftAnchor.constraint(equalTo: infoScrollView.leftAnchor).isActive = true
+//            scrollViewImageView.rightAnchor.constraint(equalTo: infoScrollView.rightAnchor).isActive = true
+//            scrollViewImageView.topAnchor.constraint(equalTo: infoScrollView.topAnchor).isActive = true
+//            scrollViewImageView.bottomAnchor.constraint(equalTo: infoScrollView.bottomAnchor).isActive = true
+//    
+//        }
+    
     func setupInfoScrollViewConstraints() {
         addSubview(infoScrollView)
         infoScrollView.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: infoScrollView, widthAncor: 0.9, heightAncor: 0.7, centerYAncor: 0.0, centerXAncor: 0.0)
+        self.setupConstraintsFor(subView: infoScrollView, widthAncor: 0.9, heightAncor: 0.75, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     func setupDismissButtonConstraints() {
