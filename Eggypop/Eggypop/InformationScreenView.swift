@@ -40,7 +40,7 @@ final class InformationScreenView: UIView {
         
         
         let imageWigth: CGFloat = 324
-        let imageHeight: CGFloat = 945
+        let imageHeight: CGFloat = 1151
         
         scrollViewImageView.frame.size.width = imageWigth
         scrollViewImageView.frame.size.height = imageHeight
