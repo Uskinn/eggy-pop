@@ -10,6 +10,12 @@ import UIKit
 
 final class InformationScreenView: UIView {
     
+    var scrollViewImageView: UIImageView = {
+        let scroll = UIImageView()
+        scroll.setupScrollViewImage()
+        return scroll
+    }()
+    
     var infoScrollView: UIScrollView = {
         let info = UIScrollView()
         info.setupScrollView()
@@ -25,9 +31,30 @@ final class InformationScreenView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
+        
+        
+        
         setupInfoScrollViewConstraints()
         setupDismissButtonConstraints()
+        
         self.insertSubview(dismissScrollViewButton, belowSubview: infoScrollView)
+
+        
+        let imageWigth: CGFloat = 260
+        let imageHeight: CGFloat = 847
+        
+        scrollViewImageView.frame.size.width = imageWigth
+        scrollViewImageView.frame.size.height = imageHeight
+        scrollViewImageView.frame.origin.x = 1
+        scrollViewImageView.frame.origin.y = 5
+        
+        infoScrollView.addSubview(scrollViewImageView)
+        
+        infoScrollView.contentSize = CGSize(width: imageWigth, height: imageHeight)
+        
+        
+        
+        
     }
     
     func setupConstraintsFor(subView: AnyObject, widthAncor: CGFloat, heightAncor: CGFloat, centerYAncor: CGFloat, centerXAncor: CGFloat) {

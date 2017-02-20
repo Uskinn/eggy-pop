@@ -23,4 +23,8 @@ extension UIImageView {
     func setupEmptyEggSizeImage() {
         self.image = Image.emptyEggCategoryButtonImage
     }
+    
+    func setupScrollViewImage() {
+        self.image = Image.scrollViewImage
+    }
 }

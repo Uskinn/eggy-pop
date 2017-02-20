@@ -9,7 +9,7 @@
 import UIKit
 
 class ThanksScreenView: UIView {
-
+    
     var thanksScrollView: UIScrollView = {
         let thanks = UIScrollView()
         thanks.setupScrollView()
