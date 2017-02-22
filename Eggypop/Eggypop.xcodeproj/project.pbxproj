@@ -13,6 +13,7 @@
 		8A0286C91E5A06980026E927 /* ThanksScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286C81E5A06970026E927 /* ThanksScreenView.swift */; };
 		8A0286CB1E5A06CD0026E927 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */; };
 		8A0286CD1E5D108A0026E927 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286CC1E5D108A0026E927 /* Constraints.swift */; };
+		8A0286CF1E5D40790026E927 /* Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286CE1E5D40790026E927 /* Egg.swift */; };
 		8A0685851E2706A2007A44BE /* iggyPopSong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685841E2706A2007A44BE /* iggyPopSong.m4a */; };
 		8A0685871E2713B6007A44BE /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0685861E2713B6007A44BE /* Sound.swift */; };
 		8A0685AE1E2D831A007A44BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */; };
@@ -46,6 +47,7 @@
 		8A0286C81E5A06970026E927 /* ThanksScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksScreenView.swift; sourceTree = "<group>"; };
 		8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
 		8A0286CC1E5D108A0026E927 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		8A0286CE1E5D40790026E927 /* Egg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Egg.swift; sourceTree = "<group>"; };
 		8A0685841E2706A2007A44BE /* iggyPopSong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = iggyPopSong.m4a; sourceTree = "<group>"; };
 		8A0685861E2713B6007A44BE /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				8A13E9E61E1C30A700A30ABA /* Timer.swift */,
 				8A13E9E21E1B010900A30ABA /* Button.swift */,
 				8A0286CC1E5D108A0026E927 /* Constraints.swift */,
+				8A0286CE1E5D40790026E927 /* Egg.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				8A3E446A1E593C960055FA1B /* InformationScreenView.swift in Sources */,
 				8A0286C71E59FB000026E927 /* UIScrollView+Extencion.swift in Sources */,
 				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
+				8A0286CF1E5D40790026E927 /* Egg.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,
 				8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */,

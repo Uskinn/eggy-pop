@@ -82,6 +82,7 @@ final class HomeScreenView: UIView {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
         UIImageView().showBackgroundImage(in: self)
+        
         configureFile()
     }
     
@@ -122,7 +123,7 @@ final class HomeScreenView: UIView {
         hardEggButton.translatesAutoresizingMaskIntoConstraints = false
         Constraints.setupConstraintsIn(myView: self, for: hardEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: 0.14, centerXAncor: -1.0)
     }
-
+    
     func setupLogoImageConstraints() {
         addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -222,6 +223,112 @@ final class HomeScreenView: UIView {
             self.hardEggButton.transform = self.moveHardEggButtonRight()
             self.layoutIfNeeded()
         }, completion: nil)
+    }
+    
+    func setSeconds() {
+        if largeEggButton.titleLabel?.textColor == .white && self.softEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 390  // done
+        }
+        
+        if self.largeEggButton.titleLabel?.textColor == .white && self.mediumEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 435 // done
+        }
+        
+        if self.largeEggButton.titleLabel?.textColor == .white && self.hardEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 720 // done
+        }
+        
+        if self.extraLargeEggButton.titleLabel?.textColor == .white && self.softEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 400 // done
+        }
+        
+        if self.extraLargeEggButton.titleLabel?.textColor == .white && self.mediumEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 465 // done
+        }
+        
+        if self.extraLargeEggButton.titleLabel?.textColor == .white && self.hardEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 720 // done
+        }
+        
+        if self.jumboEggButton.titleLabel?.textColor == .white && self.softEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 270
+        }
+        
+        if self.jumboEggButton.titleLabel?.textColor == .white && self.mediumEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 330
+        }
+        
+        if self.jumboEggButton.titleLabel?.textColor == .white && self.hardEggButton.titleLabel?.textColor == .white {
+            HomeScreenView.seconds = 4
+        }
+    }
+    
+    // MARK: - size button view when clicked
+    func largeEggButtonViewWnenClicked() {
+        largeEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
+        largeEggButton.titleLabel?.textColor = .white
+        
+        extraLargeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+        extraLargeEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        
+        jumboEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+        jumboEggButton.titleLabel?.textColor = Color.mainOrangeColor
+    }
+    
+    func extraLargeEggButtonViewWnenClicked() {
+        extraLargeEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
+        extraLargeEggButton.titleLabel?.textColor = .white
+        
+        largeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+        largeEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        
+        jumboEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+        jumboEggButton.titleLabel?.textColor = Color.mainOrangeColor
+    }
+    
+    func jumboEggButtonViewWhenClicked() {
+        jumboEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
+        jumboEggButton.titleLabel?.textColor = .white
+        
+        largeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+        largeEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        
+        extraLargeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
+        extraLargeEggButton.titleLabel?.textColor = Color.mainOrangeColor
+    }
+    
+    // MARK: - type button view when clicked
+    func softButtonViewWhenClicked() {
+        softEggButton.titleLabel?.textColor = .white
+        softEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
+        
+        mediumEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
+        mediumEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        
+        hardEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
+        hardEggButton.titleLabel?.textColor = Color.mainOrangeColor
+    }
+    
+    func mediumButtonViewWhenClicked() {
+        mediumEggButton.titleLabel?.textColor = .white
+        mediumEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
+        
+        softEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
+        softEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        
+        hardEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
+        hardEggButton.titleLabel?.textColor = Color.mainOrangeColor
+    }
+    
+    func hardButtonViewWhenClicked() {
+        hardEggButton.titleLabel?.textColor = .white
+        hardEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
+        
+        mediumEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
+        mediumEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        
+        softEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
+        softEggButton.titleLabel?.textColor = Color.mainOrangeColor
     }
 }
 

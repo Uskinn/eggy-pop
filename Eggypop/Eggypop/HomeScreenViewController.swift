@@ -53,14 +53,7 @@ class HomeScreenViewController: UIViewController {
     func largeEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.largeEggButton)
         
-        homeScreen.largeEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
-        homeScreen.largeEggButton.titleLabel?.textColor = .white
-        
-        homeScreen.extraLargeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        homeScreen.extraLargeEggButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        homeScreen.jumboEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        homeScreen.jumboEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        homeScreen.largeEggButtonViewWnenClicked()
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.largeEggButton)
@@ -74,14 +67,7 @@ class HomeScreenViewController: UIViewController {
     func extraLargeEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.extraLargeEggButton)
         
-        homeScreen.extraLargeEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
-        homeScreen.extraLargeEggButton.titleLabel?.textColor = .white
-        
-        homeScreen.largeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        homeScreen.largeEggButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        homeScreen.jumboEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        homeScreen.jumboEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        homeScreen.extraLargeEggButtonViewWnenClicked()
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.extraLargeEggButton)
@@ -95,14 +81,7 @@ class HomeScreenViewController: UIViewController {
     func jumboEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.jumboEggButton)
         
-        homeScreen.jumboEggButton.setBackgroundImage(Image.filledEggCategoryButtonImage, for: .normal)
-        homeScreen.jumboEggButton.titleLabel?.textColor = .white
-        
-        homeScreen.largeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        homeScreen.largeEggButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        homeScreen.extraLargeEggButton.setBackgroundImage(Image.emptyEggCategoryButtonImage, for: .normal)
-        homeScreen.extraLargeEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        homeScreen.jumboEggButtonViewWhenClicked()
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.jumboEggButton)
@@ -116,14 +95,7 @@ class HomeScreenViewController: UIViewController {
     func softEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.softEggButton)
         
-        homeScreen.softEggButton.titleLabel?.textColor = .white
-        homeScreen.softEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
-        
-        homeScreen.mediumEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        homeScreen.mediumEggButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        homeScreen.hardEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        homeScreen.hardEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        homeScreen.softButtonViewWhenClicked()
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.softEggButton)
@@ -135,14 +107,7 @@ class HomeScreenViewController: UIViewController {
     func mediumEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.mediumEggButton)
         
-        homeScreen.mediumEggButton.titleLabel?.textColor = .white
-        homeScreen.mediumEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
-        
-        homeScreen.softEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        homeScreen.softEggButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        homeScreen.hardEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        homeScreen.hardEggButton.titleLabel?.textColor = Color.mainOrangeColor
+        homeScreen.mediumButtonViewWhenClicked()
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.mediumEggButton)
@@ -154,14 +119,7 @@ class HomeScreenViewController: UIViewController {
     func hardEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.hardEggButton)
         
-        homeScreen.hardEggButton.titleLabel?.textColor = .white
-        homeScreen.hardEggButton.setBackgroundImage(Image.filledEggTypeButtonImage, for: .normal)
-        
-        homeScreen.mediumEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        homeScreen.mediumEggButton.titleLabel?.textColor = Color.mainOrangeColor
-        
-        homeScreen.softEggButton.setBackgroundImage(Image.emptyEggTypeButtonImage, for: .normal)
-        homeScreen.softEggButton.titleLabel?.textColor = Color.mainOrangeColor
+       homeScreen.hardButtonViewWhenClicked()
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.hardEggButton)
@@ -187,44 +145,8 @@ class HomeScreenViewController: UIViewController {
     func startButtonClicked(_ button: UIButton) {
         let timerVC = UINavigationController(rootViewController: EggTimerViewController())
         self.present(timerVC, animated: true) {
-            
-            if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 390  // done
-            }
-            
-            if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 435 // done
-            }
-            
-            if self.homeScreen.largeEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 720 // done
-            }
-            
-            if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 400 // done
-            }
-            
-            if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 465 // done
-            }
-            
-            if self.homeScreen.extraLargeEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 720 // done
-            }
-            
-            if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.softEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 270
-            }
-            
-            if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.mediumEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 330
-            }
-            
-            if self.homeScreen.jumboEggButton.titleLabel?.textColor == .white && self.homeScreen.hardEggButton.titleLabel?.textColor == .white {
-                HomeScreenView.seconds = 4
-            }
+            self.homeScreen.setSeconds()
         }
     }
-    
 }
 
