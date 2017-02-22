@@ -47,19 +47,7 @@ final class HomeScreenView: UIView {
         hard.setupHardEggButton()
         return hard
     }()
-    
-    var informationButton: UIBarButtonItem = {
-        let infoButton = UIBarButtonItem()
-        infoButton.setupInformationButton()
-        return infoButton
-    }()
-    
-    var thankYouButton: UIButton = {
-        let thanks = UIButton()
-        thanks.setupThankYouButton()
-        return thanks
-    }()
-    
+        
     var largeEggButton: UIButton = {
         let largeEgg = UIButton()
         largeEgg.setupLargeButton()
@@ -99,6 +87,11 @@ final class HomeScreenView: UIView {
         
         setupStartButtonConstraints()
     }
+    
+//    func setupInfoButton {
+//        let infoButtonImage = UIImage(named: "infoButtonImage")!.withRenderingMode(.alwaysOriginal)
+//        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: infoButtonImage, style: .plain, target: self, action: #selector(infoButtonClicked(_:)))
+//    }
     
     func setupStartButtonConstraints() {
         addSubview(startButton)
@@ -169,7 +162,6 @@ final class HomeScreenView: UIView {
             self.largeEggButton.titleLabel?.alpha = 1
             self.extraLargeEggButton.titleLabel?.alpha = 1
             self.jumboEggButton.titleLabel?.alpha = 1
-            self.thankYouButton.alpha = 1
         })
     }
     

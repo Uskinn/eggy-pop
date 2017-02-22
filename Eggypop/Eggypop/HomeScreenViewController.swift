@@ -12,6 +12,7 @@ class HomeScreenViewController: UIViewController {
     
     let homeScreen = HomeScreenView()
     var isEggAnimated = false
+    let navBarItem = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +21,10 @@ class HomeScreenViewController: UIViewController {
         homeScreen.layoutSubviews()
         buttonActions()
         
-        let infoButtonImage = UIImage(named: "infoButtonImage")!.withRenderingMode(.alwaysOriginal)
+        let infoButtonImage = Image.infoButtonImage?.withRenderingMode(.alwaysOriginal)
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: infoButtonImage, style: .plain, target: self, action: #selector(infoButtonClicked(_:)))
         
-        let thanksButtonImage = UIImage(named: "heartButtonImage")!.withRenderingMode(.alwaysOriginal)
+        let thanksButtonImage = Image.thanksButtonImage?.withRenderingMode(.alwaysOriginal)
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: thanksButtonImage, style: .plain, target: self, action: #selector(thankYouButtonClicked(_:)))
     }
     
@@ -119,7 +120,7 @@ class HomeScreenViewController: UIViewController {
     func hardEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.hardEggButton)
         
-       homeScreen.hardButtonViewWhenClicked()
+        homeScreen.hardButtonViewWhenClicked()
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.hardEggButton)
