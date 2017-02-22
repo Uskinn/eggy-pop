@@ -43,10 +43,6 @@ class HomeScreenViewController: UIViewController {
         homeScreen.extraLargeEggButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.jumboEggButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
         
-        // homeScreen.informationButton.addTarget(self, action: #selector(infoButtonClicked(_:)), for: .touchUpInside)
-        
-        //  homeScreen.thankYouButton.addTarget(self, action: #selector(thankYouButtonClicked(_:)), for: .touchUpInside)
-        
         homeScreen.softEggButton.addTarget(self, action: #selector(softEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.mediumEggButton.addTarget(self, action: #selector(mediumEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.hardEggButton.addTarget(self, action: #selector(hardEggButtonClicked(_:)), for: .touchUpInside)

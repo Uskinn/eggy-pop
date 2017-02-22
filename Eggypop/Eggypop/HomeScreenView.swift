@@ -99,59 +99,52 @@ final class HomeScreenView: UIView {
         setupStartButtonConstraints()
     }
     
-    func setupConstraintsFor(subView: AnyObject, widthAncor: CGFloat, heightAncor: CGFloat, centerYAncor: CGFloat, centerXAncor: CGFloat) {
-        subView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: widthAncor).isActive = true
-        subView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: heightAncor).isActive = true
-        subView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * centerYAncor).isActive = true
-        subView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * centerXAncor).isActive = true
-    }
-    
     func setupStartButtonConstraints() {
         addSubview(startButton)
         startButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: startButton, widthAncor: 0.927, heightAncor: 0.108, centerYAncor: 0.3, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: startButton, widthAncor: 0.927, heightAncor: 0.108, centerYAncor: 0.3, centerXAncor: 0.0)
     }
     
     func setupSoftButtonConstraint() {
         addSubview(softEggButton)
         softEggButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: softEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: -0.06, centerXAncor: -1.0)
+        Constraints.setupConstraintsIn(myView: self, for: softEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: -0.06, centerXAncor: -1.0)
     }
     
     func setupMediumButtonConstraint() {
         addSubview(mediumEggButton)
         mediumEggButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: mediumEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: 0.04, centerXAncor: 1.0)
+        Constraints.setupConstraintsIn(myView: self, for: mediumEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: 0.04, centerXAncor: 1.0)
     }
     
     func setupHardButtonConstraint() {
         addSubview(hardEggButton)
         hardEggButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: hardEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: 0.14, centerXAncor: -1.0)
+        Constraints.setupConstraintsIn(myView: self, for: hardEggButton, widthAncor: 0.695, heightAncor: 0.082, centerYAncor: 0.14, centerXAncor: -1.0)
     }
 
     func setupLogoImageConstraints() {
         addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: logoImageView, widthAncor: 0.077, heightAncor: 0.06,centerYAncor: 0.43, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.43, centerXAncor: 0.0)
     }
     
     func setupLargeEggButtonConstraints() {
         addSubview(largeEggButton)
         largeEggButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: largeEggButton, widthAncor: 0.27, heightAncor: 0.21, centerYAncor: 0, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: largeEggButton, widthAncor: 0.27, heightAncor: 0.21, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     func setupExtraLargeEggButtonConstraints() {
         addSubview(extraLargeEggButton)
         extraLargeEggButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: extraLargeEggButton, widthAncor: 0.27, heightAncor: 0.21, centerYAncor: 0, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: extraLargeEggButton, widthAncor: 0.27, heightAncor: 0.21, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     func setupJumboEggButtonConstraints() {
         addSubview(jumboEggButton)
         jumboEggButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: jumboEggButton, widthAncor: 0.27, heightAncor: 0.21, centerYAncor: 0, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: jumboEggButton, widthAncor: 0.27, heightAncor: 0.21, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     // MARK: - Move egg size buttons to the sides
@@ -175,7 +168,6 @@ final class HomeScreenView: UIView {
             self.largeEggButton.titleLabel?.alpha = 1
             self.extraLargeEggButton.titleLabel?.alpha = 1
             self.jumboEggButton.titleLabel?.alpha = 1
-           // self.informationButton.alpha = 1
             self.thankYouButton.alpha = 1
         })
     }

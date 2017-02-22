@@ -47,17 +47,10 @@ class SpalshScreenView: UIView {
         setupLogoImageConstraints()
     }
     
-    func setupConstraintsFor(subView: AnyObject, widthAncor: CGFloat, heightAncor: CGFloat, centerYAncor: CGFloat, centerXAncor: CGFloat) {
-        subView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: widthAncor).isActive = true
-        subView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: heightAncor).isActive = true
-        subView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * centerYAncor).isActive = true
-        subView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * centerXAncor).isActive = true
-    }
-    
     func setupLogoImageConstraints() {
         addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.03, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.03, centerXAncor: 0.0)
     }
     
     func logoDown() -> CGAffineTransform {

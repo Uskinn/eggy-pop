@@ -20,7 +20,6 @@ class EggTimerViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(eggTimerView)
         navigationItem.titleView = eggTimerView.headerLabel
-
         eggTimerView.layoutSubviews()
         eggTimerView.stopButton.addTarget(self, action: #selector(stopButtonCkicked(_:)), for: .touchUpInside)
     }

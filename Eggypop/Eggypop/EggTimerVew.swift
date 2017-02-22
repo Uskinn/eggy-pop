@@ -38,7 +38,6 @@ final class EggTimerVew: UIView {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
         UIImageView().showBackgroundImage(in: self)
-        
         configureFile()
     }
     
@@ -48,28 +47,21 @@ final class EggTimerVew: UIView {
         setupTimerConstraints()
     }
     
-    func setupConstraintsFor(subView: AnyObject, widthAncor: CGFloat, heightAncor: CGFloat, centerYAncor: CGFloat, centerXAncor: CGFloat) {
-        subView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: widthAncor).isActive = true
-        subView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: heightAncor).isActive = true
-        subView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * centerYAncor).isActive = true
-        subView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * centerXAncor).isActive = true
-    }
-    
     func setupTimerConstraints() {
         addSubview(timerLabel)
         timerLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: timerLabel, widthAncor: 0.927, heightAncor: 0.252, centerYAncor: -0.22, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: timerLabel, widthAncor: 0.927, heightAncor: 0.252, centerYAncor: -0.22, centerXAncor: 0.0)
     }
     
     func setupStopButtonConstraints() {
         addSubview(stopButton)
         stopButton.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: stopButton, widthAncor: 0.927, heightAncor: 0.108, centerYAncor: 0.3, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: stopButton, widthAncor: 0.927, heightAncor: 0.108, centerYAncor: 0.3, centerXAncor: 0.0)
     }
     
     func setupLogoImageConstraints() {
         addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.43, centerXAncor: 0)
+        Constraints.setupConstraintsIn(myView: self, for: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.43, centerXAncor: 0.0)
     }
 }

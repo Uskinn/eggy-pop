@@ -30,17 +30,10 @@ class ThanksScreenView: UIView {
         self.insertSubview(dismissScrollViewButton, belowSubview: thanksScrollView)
     }
     
-    func setupConstraintsFor(subView: AnyObject, widthAncor: CGFloat, heightAncor: CGFloat, centerYAncor: CGFloat, centerXAncor: CGFloat) {
-        subView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: widthAncor).isActive = true
-        subView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: heightAncor).isActive = true
-        subView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: UIScreen.main.bounds.height * centerYAncor).isActive = true
-        subView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: UIScreen.main.bounds.width * centerXAncor).isActive = true
-    }
-    
     func setupInfoScrollViewConstraints() {
         addSubview(thanksScrollView)
         thanksScrollView.translatesAutoresizingMaskIntoConstraints = false
-        self.setupConstraintsFor(subView: thanksScrollView, widthAncor: 0.9, heightAncor: 0.75, centerYAncor: 0.0, centerXAncor: 0.0)
+        Constraints.setupConstraintsIn(myView: self, for: thanksScrollView, widthAncor: 0.9, heightAncor: 0.75, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     func setupDismissButtonConstraints() {
