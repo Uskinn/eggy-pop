@@ -20,12 +20,6 @@ class HomeScreenViewController: UIViewController {
         view.addSubview(homeScreen)
         homeScreen.layoutSubviews()
         buttonActions()
-        
-        let infoButtonImage = Image.infoButtonImage?.withRenderingMode(.alwaysOriginal)
-        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: infoButtonImage, style: .plain, target: self, action: #selector(infoButtonClicked(_:)))
-        
-        let thanksButtonImage = Image.thanksButtonImage?.withRenderingMode(.alwaysOriginal)
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: thanksButtonImage, style: .plain, target: self, action: #selector(thankYouButtonClicked(_:)))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +33,10 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
+    
     func buttonActions() {
+        barButtonItemsAction()
+        
         homeScreen.largeEggButton.addTarget(self, action: #selector(largeEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.extraLargeEggButton.addTarget(self, action: #selector(extraLargeEggButtonClicked(_:)), for: .touchUpInside)
         homeScreen.jumboEggButton.addTarget(self, action: #selector(jumboEggButtonClicked(_:)), for: .touchUpInside)
@@ -49,6 +46,14 @@ class HomeScreenViewController: UIViewController {
         homeScreen.hardEggButton.addTarget(self, action: #selector(hardEggButtonClicked(_:)), for: .touchUpInside)
         
         homeScreen.startButton.addTarget(self, action: #selector(startButtonClicked(_:)), for: .touchUpInside)
+    }
+    
+    func barButtonItemsAction() {
+        let infoButtonImage = Image.infoButtonImage?.withRenderingMode(.alwaysOriginal)
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: infoButtonImage, style: .plain, target: self, action: #selector(infoButtonClicked(_:)))
+        
+        let thanksButtonImage = Image.thanksButtonImage?.withRenderingMode(.alwaysOriginal)
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: thanksButtonImage, style: .plain, target: self, action: #selector(thankYouButtonClicked(_:)))
     }
     
     func largeEggButtonClicked(_ button: UIButton) {

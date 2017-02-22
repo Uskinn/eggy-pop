@@ -47,11 +47,6 @@ extension UIButton {
         self.titleLabel?.alpha = 0
     }
     
-//    func setupInformationButton() {
-//        self.setBackgroundImage(Image.infoButtonImage, for: .normal)
-//        self.alpha = 0
-//    }
-    
     func setupThankYouButton() {
         self.setBackgroundImage(Image.thanksButtonImage, for: .normal)
         self.alpha = 0
