@@ -87,12 +87,7 @@ final class HomeScreenView: UIView {
         
         setupStartButtonConstraints()
     }
-    
-//    func setupInfoButton {
-//        let infoButtonImage = UIImage(named: "infoButtonImage")!.withRenderingMode(.alwaysOriginal)
-//        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: infoButtonImage, style: .plain, target: self, action: #selector(infoButtonClicked(_:)))
-//    }
-    
+        
     func setupStartButtonConstraints() {
         addSubview(startButton)
         startButton.translatesAutoresizingMaskIntoConstraints = false

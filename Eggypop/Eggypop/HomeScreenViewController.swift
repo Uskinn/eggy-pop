@@ -19,7 +19,7 @@ class HomeScreenViewController: UIViewController {
         navigationItem.titleView = homeScreen.headerLabel
         view.addSubview(homeScreen)
         homeScreen.layoutSubviews()
-        buttonActions()
+        buttonsAction()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,8 +33,7 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
-    
-    func buttonActions() {
+    func buttonsAction() {
         barButtonItemsAction()
         
         homeScreen.largeEggButton.addTarget(self, action: #selector(largeEggButtonClicked(_:)), for: .touchUpInside)
