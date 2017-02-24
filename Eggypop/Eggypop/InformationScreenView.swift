@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 final class InformationScreenView: UIView {
     
     var scrollViewImageView: UIImageView = {
         let scroll = UIImageView()
+        
+        
+        let rect = AVMakeRect(aspectRatio: image.size, insideRect: imageView.bounds)
+        
+        
+        
+        // scroll.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
+        // scroll.contentMode = .scaleAspectFit
+        // scroll.clipsToBounds = true
+        
         scroll.setupScrollViewImage()
         return scroll
     }()
@@ -37,38 +48,19 @@ final class InformationScreenView: UIView {
         setupDismissButtonConstraints()
         
         self.insertSubview(dismissScrollViewButton, belowSubview: infoScrollView)
-        
-        
-//        let imageWigth: CGFloat = 324
-//        let imageHeight: CGFloat = 1151
-//        
-//        scrollViewImageView.frame.size.width = imageWigth
-//        scrollViewImageView.frame.size.height = imageHeight
-//        scrollViewImageView.frame.origin.x = 1
-//        scrollViewImageView.frame.origin.y = 5
-//        
-//        infoScrollView.addSubview(scrollViewImageView)
-//        
-//       infoScrollView.contentSize = CGSize(width: imageWigth, height: imageHeight)
-        
     }
     
-        func setupScrollViewImageConstraints() {
-            infoScrollView.addSubview(scrollViewImageView)
-            
-            scrollViewImageView.translatesAutoresizingMaskIntoConstraints = false
-
-            //Constraints.setupConstraintsIn(myView: infoScrollView, for: scrollViewImageView, widthAncor: 1, heightAncor: 2, centerYAncor: 0, centerXAncor: 0)
-
-            scrollViewImageView.translatesAutoresizingMaskIntoConstraints = false
-            scrollViewImageView.leftAnchor.constraint(equalTo: infoScrollView.leftAnchor).isActive = true
-            scrollViewImageView.rightAnchor.constraint(equalTo: infoScrollView.rightAnchor).isActive = true
-            scrollViewImageView.topAnchor.constraint(equalTo: infoScrollView.topAnchor).isActive = true
-            scrollViewImageView.bottomAnchor.constraint(equalTo: infoScrollView.bottomAnchor).isActive = true
-    
-        }
-    
-    
+    func setupScrollViewImageConstraints() {
+        infoScrollView.addSubview(scrollViewImageView)
+        scrollViewImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        scrollViewImageView.translatesAutoresizingMaskIntoConstraints = false
+        scrollViewImageView.leftAnchor.constraint(equalTo: infoScrollView.leftAnchor).isActive = true
+        scrollViewImageView.rightAnchor.constraint(equalTo: infoScrollView.rightAnchor).isActive = true
+        scrollViewImageView.topAnchor.constraint(equalTo: infoScrollView.topAnchor).isActive = true
+        scrollViewImageView.bottomAnchor.constraint(equalTo: infoScrollView.bottomAnchor).isActive = true
+        scrollViewImageView.widthAnchor.constraint(equalTo: infoScrollView.widthAnchor).isActive = true
+    }
     
     func setupInfoScrollViewConstraints() {
         addSubview(infoScrollView)
