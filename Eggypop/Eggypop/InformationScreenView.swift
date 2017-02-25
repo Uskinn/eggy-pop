@@ -15,13 +15,13 @@ final class InformationScreenView: UIView {
         let scroll = UIImageView()
         
         
-        let rect = AVMakeRect(aspectRatio: image.size, insideRect: imageView.bounds)
+       // let rect = AVMakeRect(aspectRatio: (Image.scrollViewImage?.size)!, insideRect: scroll.bounds)
+
         
         
-        
-        // scroll.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
-        // scroll.contentMode = .scaleAspectFit
-        // scroll.clipsToBounds = true
+         scroll.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        scroll.contentMode = .scaleAspectFit
+        scroll.clipsToBounds = true
         
         scroll.setupScrollViewImage()
         return scroll
@@ -52,14 +52,18 @@ final class InformationScreenView: UIView {
     
     func setupScrollViewImageConstraints() {
         infoScrollView.addSubview(scrollViewImageView)
+        
+
         scrollViewImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        scrollViewImageView.translatesAutoresizingMaskIntoConstraints = false
         scrollViewImageView.leftAnchor.constraint(equalTo: infoScrollView.leftAnchor).isActive = true
         scrollViewImageView.rightAnchor.constraint(equalTo: infoScrollView.rightAnchor).isActive = true
         scrollViewImageView.topAnchor.constraint(equalTo: infoScrollView.topAnchor).isActive = true
         scrollViewImageView.bottomAnchor.constraint(equalTo: infoScrollView.bottomAnchor).isActive = true
         scrollViewImageView.widthAnchor.constraint(equalTo: infoScrollView.widthAnchor).isActive = true
+        
+        infoScrollView.contentSize = scrollViewImageView.bounds.size
+
     }
     
     func setupInfoScrollViewConstraints() {
