@@ -33,9 +33,17 @@ extension UILabel {
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(-3.5), range: NSRange(location: 0, length: attributedString.length))
         self.attributedText = attributedString
     }
+    
+    func setupThanksLabel() {
+        self.backgroundColor = .white
+        self.layer.cornerRadius = 8
+        self.text = "Sorry for the late reply, but this may help someone. According to Apple's Text Programming Guide for iOS, UILabel defines a label, which displays a static text string. UITextField defines a text field, which displays a single line of editable text. UITextView defines a text view, which displays multiple lines of editable text. Although these classes actually can support the display of arbitrary amounts of text, labels and text fields are intended to be used for relatively small amounts of text, typically a single line. Text views, on the other hand, are meant to display large amounts of text. For more information please check: Text Programminde for iOS"
+        self.textAlignment = .justified
+        self.lineBreakMode = .byClipping
+        self.numberOfLines = 0
+        
+    }
 }
-
-
 
 
 

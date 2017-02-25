@@ -10,6 +10,12 @@ import UIKit
 
 final class ThanksScreenView: UIView {
     
+    var thanksLabel: UILabel = {
+        let text = UILabel()
+        text.setupThanksLabel()
+        return text
+    }()
+    
     var thanksScrollView: UIScrollView = {
         let thanks = UIScrollView()
         thanks.setupScrollView()
@@ -26,8 +32,16 @@ final class ThanksScreenView: UIView {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
         setupInfoScrollViewConstraints()
+        setupThanksLabelConstraints()
         setupDismissButtonConstraints()
         self.insertSubview(dismissScrollViewButton, belowSubview: thanksScrollView)
+    }
+    
+    func setupThanksLabelConstraints() {
+        thanksScrollView.addSubview(thanksLabel)
+
+        thanksLabel.translatesAutoresizingMaskIntoConstraints = false
+        Constraints.setupConstraintsIn(myView: self, for: thanksLabel, widthAncor: 0.9, heightAncor: 0.75, centerYAncor: 0.0, centerXAncor: 0.0)
     }
     
     func setupInfoScrollViewConstraints() {
