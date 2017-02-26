@@ -41,6 +41,10 @@ extension UILabel {
         self.textAlignment = .justified
         self.lineBreakMode = .byClipping
         self.numberOfLines = 0
+        self.font = UIFont.init(name: "TeluguSangamMN-Bold", size: 16)
+        
+        
+        self.contentMode = .scaleAspectFit
         
     }
 }

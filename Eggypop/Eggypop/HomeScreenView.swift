@@ -242,7 +242,7 @@ final class HomeScreenView: UIView {
         }
         
         if self.jumboEggButton.titleLabel?.textColor == .white && self.mediumEggButton.titleLabel?.textColor == .white {
-            HomeScreenView.seconds = 330
+            HomeScreenView.seconds = 510 // done
         }
         
         if self.jumboEggButton.titleLabel?.textColor == .white && self.hardEggButton.titleLabel?.textColor == .white {

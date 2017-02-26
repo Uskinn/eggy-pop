@@ -41,7 +41,14 @@ final class ThanksScreenView: UIView {
         thanksScrollView.addSubview(thanksLabel)
 
         thanksLabel.translatesAutoresizingMaskIntoConstraints = false
-        Constraints.setupConstraintsIn(myView: self, for: thanksLabel, widthAncor: 0.9, heightAncor: 0.75, centerYAncor: 0.0, centerXAncor: 0.0)
+        
+        thanksLabel.leadingAnchor.constraint(equalTo: thanksScrollView.leadingAnchor).isActive = true
+        thanksLabel.trailingAnchor.constraint(equalTo: thanksScrollView.trailingAnchor).isActive = true
+        thanksLabel.topAnchor.constraint(equalTo: thanksScrollView.topAnchor, constant: 20).isActive = true
+        thanksLabel.bottomAnchor.constraint(equalTo: thanksScrollView.bottomAnchor, constant: -20).isActive = true
+        thanksLabel.widthAnchor.constraint(equalTo: thanksScrollView.widthAnchor, multiplier: 1.0 ).isActive = true
+        thanksLabel.heightAnchor.constraint(equalTo: thanksScrollView.heightAnchor, multiplier: 1.0).isActive = true
+
     }
     
     func setupInfoScrollViewConstraints() {
