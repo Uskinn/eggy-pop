@@ -18,10 +18,10 @@ class InformationViewController: UIViewController {
         view.isOpaque = false
         view.addSubview(informationView)
         informationView.layoutSubviews()
-        informationView.dismissScrollViewButton.addTarget(self, action: #selector(dismisView), for: .touchUpInside)
+        informationView.dismissScrollViewButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
     }
     
-    func dismisView() {
+    func dismissView() {
         dismiss(animated: true, completion: nil)
     }
 }

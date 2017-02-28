@@ -18,10 +18,10 @@ class ThanksViewController: UIViewController {
         view.isOpaque = false
         view.addSubview(thanksView)
         thanksView.layoutSubviews()
-        thanksView.dismissScrollViewButton.addTarget(self, action: #selector(dismisView), for: .touchUpInside)
+        thanksView.dismissScrollViewButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
     }
     
-    func dismisView() {
+    func dismissView() {
         dismiss(animated: true, completion: nil)
     }
 }
