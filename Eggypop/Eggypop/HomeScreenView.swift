@@ -218,7 +218,7 @@ final class HomeScreenView: UIView {
         }
         
         if self.largeEggButton.titleLabel?.textColor == .white && self.mediumEggButton.titleLabel?.textColor == .white {
-            HomeScreenView.seconds = 435 // done
+            HomeScreenView.seconds = 450 // done
         }
         
         if self.largeEggButton.titleLabel?.textColor == .white && self.hardEggButton.titleLabel?.textColor == .white {
