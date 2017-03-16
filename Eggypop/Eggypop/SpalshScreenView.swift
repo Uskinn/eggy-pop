@@ -10,13 +10,13 @@ import UIKit
 
 class SpalshScreenView: UIView {
     
-    var headerLabel: UILabel = {
+   lazy var headerLabel: UILabel = {
         let header = UILabel()
         header.setupHeaderLabel()
         return header
     }()
     
-    var logoImageView: UIImageView = {
+   lazy var logoImageView: UIImageView = {
         var logo = UIImageView()
         logo.setupLogoImage()
         return logo
@@ -26,7 +26,7 @@ class SpalshScreenView: UIView {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
         UIImageView().showBackgroundImage(in: self)
-        configureView()
+        setupLogoImageConstraints()
     }
     
     func animateView() {
@@ -37,14 +37,10 @@ class SpalshScreenView: UIView {
         }, completion: { finished in
             DispatchQueue.main.async {
                 let homeScreenVC = UINavigationController(rootViewController: HomeScreenViewController())
-                weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
+                let appDelegate = UIApplication.shared.delegate as? AppDelegate
                 appDelegate?.window?.rootViewController = homeScreenVC
             }
         })
-    }
-    
-    func configureView() {
-        setupLogoImageConstraints()
     }
     
     func setupLogoImageConstraints() {

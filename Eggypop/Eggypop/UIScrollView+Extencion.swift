@@ -11,7 +11,7 @@ import UIKit
 extension UIScrollView {
     
     func setupScrollView() {
-        self.backgroundColor = .white //Color.mainOrangeColor
+        self.backgroundColor = .white 
         self.layer.cornerRadius = 8
     }
 }

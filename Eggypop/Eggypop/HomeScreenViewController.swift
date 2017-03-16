@@ -105,7 +105,6 @@ class HomeScreenViewController: UIViewController {
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.softEggButton)
         }, completion: nil)
-        
         homeScreen.startButton.alpha = 1
     }
     
@@ -117,7 +116,6 @@ class HomeScreenViewController: UIViewController {
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.mediumEggButton)
         }, completion: nil)
-        
         homeScreen.startButton.alpha = 1
     }
     
@@ -129,7 +127,6 @@ class HomeScreenViewController: UIViewController {
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.hardEggButton)
         }, completion: nil)
-        
         homeScreen.startButton.alpha = 1
     }
     
