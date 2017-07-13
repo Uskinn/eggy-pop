@@ -14,8 +14,8 @@ class Alert: JSSAlertView {
     class func alertWithTitle(_ controller: UIViewController, callback: @escaping () -> Void) {
         let alertview = JSSAlertView().show(controller,
                                             title: "Hooray!",
-                                            text: "Your eggs are ready.",
-                                            buttonText: "Ok, thanks Eggypop.",
+                                            text: "Eggs are ready.",
+                                            buttonText: "Eat",
                                             color: UIColorFromHex(Color.hexMainOrangeColor, alpha: 1))
         alertview.setTextTheme(.light)
         alertview.addAction(callback)

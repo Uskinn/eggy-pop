@@ -30,6 +30,8 @@ class SpalshScreenView: UIView {
     }
     
     func animateView() {
+        
+        
         UIView.animate(withDuration: 0.4, delay: 0.3, options: [.curveEaseInOut], animations: {
             self.headerLabel.transform = self.headerUp()
             self.logoImageView.transform = self.logoDown()
@@ -58,6 +60,8 @@ class SpalshScreenView: UIView {
         let moveTransform: CGAffineTransform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height * -0.4)
         return moveTransform
     }
+    
+    
 }
 
 

@@ -16,6 +16,14 @@ final class EggTimerVew: UIView {
         return timer
     }()
     
+    let timerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor(red:0.99, green:0.91, blue:0.77, alpha:1.0)
+        view.layer.cornerRadius = 8
+        return view
+    }()
+    
     var headerLabel: UILabel = {
         let header = UILabel()
         header.setupHeaderLabel()
@@ -39,6 +47,12 @@ final class EggTimerVew: UIView {
         self.frame = UIScreen.main.bounds
         UIImageView().showBackgroundImage(in: self)
         configureFile()
+        
+        timerView.addSubview(timerLabel)
+        
+        timerView.addConstraint(NSLayoutConstraint(item: timerLabel, attribute: .centerX, relatedBy: .equal, toItem: timerView, attribute: .centerX, multiplier: 1, constant: 0))
+        timerView.addConstraint(NSLayoutConstraint(item: timerLabel, attribute: .centerY, relatedBy: .equal, toItem: timerView, attribute: .centerY, multiplier: 1, constant: 0))
+        
     }
     
     func configureFile() {
@@ -48,9 +62,9 @@ final class EggTimerVew: UIView {
     }
     
     func setupTimerConstraints() {
-        addSubview(timerLabel)
+        addSubview(timerView)
         timerLabel.translatesAutoresizingMaskIntoConstraints = false
-        Constraints.setupConstraintsIn(myView: self, for: timerLabel, widthAncor: 0.927, heightAncor: 0.252, centerYAncor: -0.22, centerXAncor: 0.0)
+        Constraints.setupConstraintsIn(myView: self, for: timerView, widthAncor: 0.927, heightAncor: 0.252, centerYAncor: -0.22, centerXAncor: 0.0)
     }
     
     func setupStopButtonConstraints() {

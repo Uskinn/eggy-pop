@@ -10,7 +10,7 @@
 		8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103CD1E247E8B008B5BB8 /* Alert.swift */; };
 		8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */; };
 		8A0286C71E59FB000026E927 /* UIScrollView+Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286C61E59FB000026E927 /* UIScrollView+Extencion.swift */; };
-		8A0286C91E5A06980026E927 /* ThanksScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286C81E5A06970026E927 /* ThanksScreenView.swift */; };
+		8A0286C91E5A06980026E927 /* ThanksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286C81E5A06970026E927 /* ThanksCell.swift */; };
 		8A0286CB1E5A06CD0026E927 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */; };
 		8A0286CD1E5D108A0026E927 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286CC1E5D108A0026E927 /* Constraints.swift */; };
 		8A0286CF1E5D40790026E927 /* Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0286CE1E5D40790026E927 /* Egg.swift */; };
@@ -19,7 +19,6 @@
 		8A0685AE1E2D831A007A44BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */; };
 		8A0A03E71E621475008746BD /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A03E61E621475008746BD /* UITextView+Extension.swift */; };
 		8A13E9DD1E1AD46C00A30ABA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9DC1E1AD46C00A30ABA /* Color.swift */; };
-		8A13E9E31E1B010900A30ABA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9E21E1B010900A30ABA /* Button.swift */; };
 		8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9E61E1C30A700A30ABA /* Timer.swift */; };
 		8A2E8A361E50D316002DF578 /* SpalshScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */; };
 		8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */; };
@@ -32,7 +31,7 @@
 		8A3D6B061E2153C200637642 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B051E2153C200637642 /* Image.swift */; };
 		8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B091E21EA7800637642 /* Label+Extension.swift */; };
 		8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */; };
-		8A3E446A1E593C960055FA1B /* InformationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44691E593C960055FA1B /* InformationScreenView.swift */; };
+		8A3E446A1E593C960055FA1B /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44691E593C960055FA1B /* InformationCell.swift */; };
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
 		99D98E76F53FB458361B0D43 /* Pods_Eggypop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */; };
@@ -44,7 +43,7 @@
 		8A0103CD1E247E8B008B5BB8 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateButton.swift; sourceTree = "<group>"; };
 		8A0286C61E59FB000026E927 /* UIScrollView+Extencion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extencion.swift"; sourceTree = "<group>"; };
-		8A0286C81E5A06970026E927 /* ThanksScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksScreenView.swift; sourceTree = "<group>"; };
+		8A0286C81E5A06970026E927 /* ThanksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksCell.swift; sourceTree = "<group>"; };
 		8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
 		8A0286CC1E5D108A0026E927 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		8A0286CE1E5D40790026E927 /* Egg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Egg.swift; sourceTree = "<group>"; };
@@ -53,7 +52,6 @@
 		8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A0A03E61E621475008746BD /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		8A13E9DC1E1AD46C00A30ABA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		8A13E9E21E1B010900A30ABA /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8A13E9E61E1C30A700A30ABA /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpalshScreenView.swift; sourceTree = "<group>"; };
 		8A2E8A381E50E2B0002DF578 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +64,7 @@
 		8A3D6B051E2153C200637642 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8A3D6B091E21EA7800637642 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
 		8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
-		8A3E44691E593C960055FA1B /* InformationScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationScreenView.swift; sourceTree = "<group>"; };
+		8A3E44691E593C960055FA1B /* InformationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 		8AA5B1CB1DEC988200D159C3 /* Eggypop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggypop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,11 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8A0685861E2713B6007A44BE /* Sound.swift */,
-				8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */,
 				8A0103CD1E247E8B008B5BB8 /* Alert.swift */,
-				8A13E9E61E1C30A700A30ABA /* Timer.swift */,
-				8A13E9E21E1B010900A30ABA /* Button.swift */,
-				8A0286CC1E5D108A0026E927 /* Constraints.swift */,
 				8A0286CE1E5D40790026E927 /* Egg.swift */,
 			);
 			name = Models;
@@ -146,8 +140,8 @@
 				8A2E8A351E50D316002DF578 /* SpalshScreenView.swift */,
 				8A2E8A3F1E511F02002DF578 /* HomeScreenView.swift */,
 				8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */,
-				8A3E44691E593C960055FA1B /* InformationScreenView.swift */,
-				8A0286C81E5A06970026E927 /* ThanksScreenView.swift */,
+				8A3E44691E593C960055FA1B /* InformationCell.swift */,
+				8A0286C81E5A06970026E927 /* ThanksCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -162,6 +156,16 @@
 				8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8A6DE7971F0BEA6600E00050 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A0103D21E25E4ED008B5BB8 /* AnimateButton.swift */,
+				8A0286CC1E5D108A0026E927 /* Constraints.swift */,
+				8A13E9E61E1C30A700A30ABA /* Timer.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		8AA5B1C21DEC988200D159C3 = {
@@ -191,6 +195,7 @@
 				8A2E8A371E50D781002DF578 /* Extensions */,
 				8A13E9DB1E1AD44C00A30ABA /* Constants */,
 				8A0685AA1E280A37007A44BE /* Supporting */,
+				8A6DE7971F0BEA6600E00050 /* Helpers */,
 				8A13E9D41E1ABDD400A30ABA /* Storyboard */,
 			);
 			path = Eggypop;
@@ -248,7 +253,7 @@
 				TargetAttributes = {
 					8AA5B1CA1DEC988200D159C3 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = FMJWPCW6KK;
+						DevelopmentTeam = 42YF234Y78;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -355,17 +360,16 @@
 				8A2E8A491E522CF7002DF578 /* EggTimerVew.swift in Sources */,
 				8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */,
 				8A2E8A461E522CBD002DF578 /* EggTimerViewController.swift in Sources */,
-				8A0286C91E5A06980026E927 /* ThanksScreenView.swift in Sources */,
+				8A0286C91E5A06980026E927 /* ThanksCell.swift in Sources */,
 				8A2E8A3D1E50EE94002DF578 /* UIImageView+Extension.swift in Sources */,
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
 				8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */,
 				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
-				8A3E446A1E593C960055FA1B /* InformationScreenView.swift in Sources */,
+				8A3E446A1E593C960055FA1B /* InformationCell.swift in Sources */,
 				8A0286C71E59FB000026E927 /* UIScrollView+Extencion.swift in Sources */,
 				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
 				8A0286CF1E5D40790026E927 /* Egg.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
-				8A13E9E31E1B010900A30ABA /* Button.swift in Sources */,
 				8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */,
 				8A0286CB1E5A06CD0026E927 /* ThanksViewController.swift in Sources */,
 			);
@@ -475,11 +479,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FMJWPCW6KK;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 42YF234Y78;
 				INFOPLIST_FILE = Eggypop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SN.Eggypop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boileggs.Eggypop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -491,11 +499,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FMJWPCW6KK;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 42YF234Y78;
 				INFOPLIST_FILE = Eggypop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SN.Eggypop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boileggs.Eggypop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

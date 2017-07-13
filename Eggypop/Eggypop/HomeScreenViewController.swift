@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import UserNotifications
 
 class HomeScreenViewController: UIViewController {
     
     let homeScreen = HomeScreenView()
     var isEggAnimated = false
     let navBarItem = UIImage()
+    let notifId = "notifId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,7 +150,21 @@ class HomeScreenViewController: UIViewController {
         let timerVC = UINavigationController(rootViewController: EggTimerViewController())
         self.present(timerVC, animated: true) {
             self.homeScreen.setSeconds()
+            print("egg boiling time in seconds: \(HomeScreenView.seconds)")
+            NotificationCenter.default.post(name: NSNotification.Name.init("Raw"), object: nil)
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

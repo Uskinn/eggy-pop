@@ -11,6 +11,7 @@ import UIKit
 final class HomeScreenView: UIView {
     
     static var seconds: Int = 0
+    var isMoved = true
     
     var headerLabel: UILabel = {
         let header = UILabel()
@@ -47,7 +48,7 @@ final class HomeScreenView: UIView {
         hard.setupHardEggButton()
         return hard
     }()
-        
+    
     var largeEggButton: UIButton = {
         let largeEgg = UIButton()
         largeEgg.setupLargeButton()
@@ -87,7 +88,7 @@ final class HomeScreenView: UIView {
         
         setupStartButtonConstraints()
     }
-        
+    
     func setupStartButtonConstraints() {
         addSubview(startButton)
         startButton.translatesAutoresizingMaskIntoConstraints = false
@@ -150,9 +151,12 @@ final class HomeScreenView: UIView {
     // MARK: - animate eggs
     func animateEggs() {
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [.curveEaseInOut], animations: {
-            self.largeEggButton.transform = self.largeEggLeft()
-            self.jumboEggButton.transform = self.jumboEggRight()
-            self.layoutIfNeeded()
+            if self.isMoved {
+                self.largeEggButton.transform = self.largeEggLeft()
+                self.jumboEggButton.transform = self.jumboEggRight()
+                self.layoutIfNeeded()
+            }
+            self.isMoved = false
         }, completion: { finished in
             self.largeEggButton.titleLabel?.alpha = 1
             self.extraLargeEggButton.titleLabel?.alpha = 1
@@ -178,7 +182,7 @@ final class HomeScreenView: UIView {
     
     // MARK: - animate egg size buttons
     func animateEggSizeButtons() {
-        UIView.animate(withDuration: 0.2, delay: 0.01, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.1, options: [.curveEaseIn], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0.01, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.1, options: [.curveEaseInOut], animations: {
             self.largeEggButton.transform = self.moveLargeEggSizeButtonUp()
             self.extraLargeEggButton.transform = self.moveExtraLargeEggSizeButtonUp()
             self.jumboEggButton.transform = self.moveJumboEggSizeButtonUp()
@@ -246,7 +250,7 @@ final class HomeScreenView: UIView {
         }
         
         if self.jumboEggButton.titleLabel?.textColor == .white && self.hardEggButton.titleLabel?.textColor == .white {
-            HomeScreenView.seconds = 4
+            HomeScreenView.seconds = 7//760 // done
         }
     }
     
