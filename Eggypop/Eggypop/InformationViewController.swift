@@ -11,9 +11,9 @@ import AVFoundation
 
 var onSilent = Bool()
 
-class InformationViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+final class InformationViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let cellId = "cellId"
+   private let cellId = "cellId"
     let sound = Sound()
     let infoCell = InformationCell()
     let switchKey = "switchKey"

@@ -9,7 +9,6 @@
 import UIKit
 
 extension UILabel {
-    
     func setupHeaderLabel() {
         let attributes = [NSFontAttributeName: UIFont(name: "TeluguSangamMN-Bold", size: 25)!, NSForegroundColorAttributeName: Color.headerColor, NSKernAttributeName : 2.5] as [String : Any]
         self.attributedText = NSAttributedString(string: "eggypop", attributes: attributes)
@@ -19,8 +18,6 @@ extension UILabel {
     func setupTimer() {        
         self.text = "0:00"
         self.textColor = Color.mainOrangeColor
-        self.backgroundColor = .red
-        
         self.font = UIFont(name: "LucidaGrande", size: 0)
         self.font = UIFont.systemFont(ofSize: 120)
         self.textAlignment = .left

@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIButton {
-    
     func setupDismissButton() {
         self.backgroundColor = .clear
     }

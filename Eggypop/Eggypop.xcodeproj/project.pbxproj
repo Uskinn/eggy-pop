@@ -17,6 +17,7 @@
 		8A0685851E2706A2007A44BE /* iggyPopSong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685841E2706A2007A44BE /* iggyPopSong.m4a */; };
 		8A0685871E2713B6007A44BE /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0685861E2713B6007A44BE /* Sound.swift */; };
 		8A0685AE1E2D831A007A44BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */; };
+		8A0891EA1F17D84800B1C5AC /* ThePassenger21.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8A0891E91F17D84800B1C5AC /* ThePassenger21.m4a */; };
 		8A0A03E71E621475008746BD /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A03E61E621475008746BD /* UITextView+Extension.swift */; };
 		8A13E9DD1E1AD46C00A30ABA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9DC1E1AD46C00A30ABA /* Color.swift */; };
 		8A13E9E71E1C30A700A30ABA /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13E9E61E1C30A700A30ABA /* Timer.swift */; };
@@ -50,6 +51,7 @@
 		8A0685841E2706A2007A44BE /* iggyPopSong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = iggyPopSong.m4a; sourceTree = "<group>"; };
 		8A0685861E2713B6007A44BE /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		8A0685AD1E2D831A007A44BE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A0891E91F17D84800B1C5AC /* ThePassenger21.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThePassenger21.m4a; path = ../../../../Desktop/ThePassenger21.m4a; sourceTree = "<group>"; };
 		8A0A03E61E621475008746BD /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		8A13E9DC1E1AD46C00A30ABA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8A13E9E61E1C30A700A30ABA /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				8AA5B1D51DEC988200D159C3 /* Assets.xcassets */,
+				8A0891E91F17D84800B1C5AC /* ThePassenger21.m4a */,
 				8A0685841E2706A2007A44BE /* iggyPopSong.m4a */,
 				8AA5B1DA1DEC988200D159C3 /* Info.plist */,
 				8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */,
@@ -289,6 +292,7 @@
 			files = (
 				8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */,
 				8A0685851E2706A2007A44BE /* iggyPopSong.m4a in Resources */,
+				8A0891EA1F17D84800B1C5AC /* ThePassenger21.m4a in Resources */,
 				8A0685AE1E2D831A007A44BE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -464,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -482,7 +486,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 42YF234Y78;
 				INFOPLIST_FILE = Eggypop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boileggs.Eggypop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,7 +506,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 42YF234Y78;
 				INFOPLIST_FILE = Eggypop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boileggs.Eggypop;
 				PRODUCT_NAME = "$(TARGET_NAME)";

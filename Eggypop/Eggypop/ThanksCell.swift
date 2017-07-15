@@ -47,6 +47,11 @@ final class ThanksCell: UICollectionViewCell {
         return text
     }()
     
+    let shareContainerView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
     let acknowledgementsTextView: UITextView = {
         let text = UITextView()
         text.textColor = UIColor(red:0.42, green:0.40, blue:0.40, alpha:1.0)
@@ -62,6 +67,25 @@ final class ThanksCell: UICollectionViewCell {
         return text
     }()
     
+    let shareButton: UIButton = {
+        let image = #imageLiteral(resourceName: "shareButton").withRenderingMode(.alwaysTemplate)
+        let button = UIButton(type: .system)
+        button.setImage(image, for: .normal)
+        button.tintColor = UIColor(red:0.21, green:0.50, blue:0.19, alpha:1.0)
+        return button
+    }()
+    
+    let shareLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Share Eggypop with egg lovers"
+        label.font = UIFont(name: "LucidaGrande-Bold", size: 0)
+        label.textAlignment = .left
+        label.backgroundColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = UIColor(red:0.59, green:0.45, blue:0.45, alpha:1.0)
+        return label
+    }()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         setupViews()
@@ -72,26 +96,30 @@ final class ThanksCell: UICollectionViewCell {
         addSubview(dedicationTextView)
         addSubview(acknowledgementsLabel)
         addSubview(acknowledgementsTextView)
+        addSubview(shareContainerView)
+        
+        shareContainerView.addSubview(shareLabel)
+        shareContainerView.addSubview(shareButton)
         
         //horizontal constraints
         addConstraintsWithFormat(format: "H:|-16-[v0]-20-|", views: dedicationLabel)
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: dedicationTextView)
         addConstraintsWithFormat(format: "H:|-16-[v0]-20-|", views: acknowledgementsLabel)
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: acknowledgementsTextView)
+        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: shareContainerView)
+        
+        shareContainerView.addConstraintsWithFormat(format: "H:|[v0]-[v1(30)]", views: shareLabel, shareButton)
         
         //vertical constraints
-        addConstraintsWithFormat(format: "V:|-20-[v0(30)]-[v1(80)]-20-[v2(30)]-[v3]|", views: dedicationLabel, dedicationTextView, acknowledgementsLabel, acknowledgementsTextView)
+        addConstraintsWithFormat(format: "V:|-20-[v0(30)]-[v1(80)]-20-[v2(30)]-[v3]-20-[v4(40)]", views: dedicationLabel, dedicationTextView, acknowledgementsLabel, acknowledgementsTextView, shareContainerView)
+        
+        // centerY constraints
+        shareContainerView.addConstraint(NSLayoutConstraint(item: shareLabel, attribute: .centerY, relatedBy: .equal, toItem: shareContainerView, attribute: .centerY, multiplier: 1, constant: 0))
+        shareContainerView.addConstraint(NSLayoutConstraint(item: shareButton, attribute: .centerY, relatedBy: .equal, toItem: shareContainerView, attribute: .centerY, multiplier: 1, constant: 0))
+        
+        // height constraints
+        shareContainerView.addConstraint(NSLayoutConstraint(item: shareButton, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
     }
 }
 
-extension UIView {
-    func addConstraintsWithFormat(format: String, views: UIView...) {
-        var viewsDictionary = [String: UIView]()
-        for (index, view) in views.enumerated() {
-            let key = "v\(index)"
-            view.translatesAutoresizingMaskIntoConstraints = false
-            viewsDictionary[key] = view
-        }
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
-    }
-}
+

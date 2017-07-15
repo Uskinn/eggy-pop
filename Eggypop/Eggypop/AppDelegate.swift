@@ -18,14 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.rootViewController = UINavigationController(rootViewController: SplashViewController())
         
-        // removing nav bar
+        // remove nav bar
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-        
-        }
+//        let center = UNUserNotificationCenter.current()
+//        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+//        
+//        }
         
         return true
     }

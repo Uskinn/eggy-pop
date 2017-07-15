@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ThanksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+final class ThanksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let cellId = "cellId"
+   private let cellId = "cellId"
     
     lazy var thanksCollectionVIew: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -43,7 +43,9 @@ class ThanksViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ThanksCell
+        
+        cell.shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
         return cell
     }
     
@@ -65,4 +67,20 @@ class ThanksViewController: UIViewController, UICollectionViewDelegate, UICollec
     func dismissView() {
         dismiss(animated: true, completion: nil)
     }
+    
+    func shareButtonTapped() {
+        let activityVC = UIActivityViewController(activityItems: ["https://itunes.apple.com/ca/app/eggypot/id1231906500?mt=8"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+        print("tapped")
+    }
 }
+
+
+
+
+
+
+
+
+

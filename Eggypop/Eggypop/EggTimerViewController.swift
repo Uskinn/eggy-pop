@@ -11,12 +11,11 @@ import JSSAlertView
 import AudioToolbox
 import UserNotifications
 
-private let stopTimeKey = "stopTimeKey"
 
 class EggTimerViewController: UIViewController {
     
+    private let stopTimeKey = "stopTimeKey"
     let eggTimerView = EggTimerVew()
-//    var secondsLeft: Bool = false
     var secondsLeft: Bool = true
     
     var timer: Timer?
@@ -26,7 +25,6 @@ class EggTimerViewController: UIViewController {
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init("Raw"), object: nil)
-        print("observer removed")
     }
     
     override func viewDidLoad() {
@@ -35,7 +33,6 @@ class EggTimerViewController: UIViewController {
         navigationItem.titleView = eggTimerView.headerLabel
         eggTimerView.layoutSubviews()
         eggTimerView.stopButton.addTarget(self, action: #selector(stopButtonCkicked), for: .touchUpInside)
-        
         registerForLocalNotifications()
         
         stopTime = UserDefaults.standard.object(forKey: stopTimeKey) as? Date
@@ -50,7 +47,6 @@ class EggTimerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("observer added")
         self.secondsLeft = true
         DispatchQueue.main.async {
             NotificationCenter.default.addObserver(self, selector: #selector(self.startButtonClicked), name: NSNotification.Name(rawValue: "Raw"), object: nil)
@@ -74,9 +70,9 @@ class EggTimerViewController: UIViewController {
         // start local notification (so we're notified if timer expires while app is not running)
         if #available(iOS 10, *) {
             let content = UNMutableNotificationContent()
-            content.title = "Eggs ready!"
+            content.title = "Eggs are cooked!"
             content.body = "Whoo, hoo!"
-            content.sound = UNNotificationSound.init(named: "iggyPopSong")
+            content.sound = UNNotificationSound.init(named: "ThePassenger21.m4a")
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: stopTime.timeIntervalSinceNow, repeats: false)
             let notification = UNNotificationRequest(identifier: "timer", content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(notification)
@@ -87,36 +83,6 @@ class EggTimerViewController: UIViewController {
             UIApplication.shared.scheduleLocalNotification(notification)
         }
     }
-    
-    //extension HomeScreenViewController {
-    //
-    //    func scheduleNotification(inSeconds seconds: TimeInterval, complition: (Bool) -> ()) {
-    //        removeNotification(withId: [notifId])
-    //
-    //        let date = Date(timeIntervalSinceNow: seconds)
-    //
-    //        let content = UNMutableNotificationContent()
-    //        content.title = "Hooray!"
-    //        content.body = "Eggs are ready"
-    //        content.sound = UNNotificationSound.init(named: "iggyPopSong")
-    //
-    //        let calendar = Calendar(identifier: .gregorian)
-    //        let components = calendar.dateComponents([.minute, .second], from: date)
-    //
-    //        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-    //        let request = UNNotificationRequest(identifier: notifId, content: content, trigger: trigger)
-    //
-    //        let center = UNUserNotificationCenter.current()
-    //        center.add(request, withCompletionHandler: nil)
-    //    }
-    //
-    //    func removeNotification(withId ids: [String]) {
-    //        let center = UNUserNotificationCenter.current()
-    //        center.removePendingNotificationRequests(withIdentifiers: ids)
-    //    }
-    //}
-    //
-    
     
     private func registerForLocalNotifications() {
         if #available(iOS 10, *) {

@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIImageView {
-    
     func setupLogoImage() {
         self.image = Image.logoImage
     }

@@ -14,7 +14,7 @@ class HomeScreenViewController: UIViewController {
     let homeScreen = HomeScreenView()
     var isEggAnimated = false
     let navBarItem = UIImage()
-    let notifId = "notifId"
+    private let notifId = "notifId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,13 +59,10 @@ class HomeScreenViewController: UIViewController {
     
     func largeEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.largeEggButton)
-        
         homeScreen.largeEggButtonViewWnenClicked()
-        
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.largeEggButton)
         }, completion: nil)
-        
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
         self.isEggAnimated = true
@@ -73,13 +70,10 @@ class HomeScreenViewController: UIViewController {
     
     func extraLargeEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.extraLargeEggButton)
-        
         homeScreen.extraLargeEggButtonViewWnenClicked()
-        
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.extraLargeEggButton)
         }, completion: nil)
-        
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
         self.isEggAnimated = true
@@ -87,13 +81,10 @@ class HomeScreenViewController: UIViewController {
     
     func jumboEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.jumboEggButton)
-        
         homeScreen.jumboEggButtonViewWhenClicked()
-        
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.jumboEggButton)
         }, completion: nil)
-        
         homeScreen.animateEggSizeButtons()
         homeScreen.animateEggTypeButttons()
         self.isEggAnimated = true
@@ -101,9 +92,7 @@ class HomeScreenViewController: UIViewController {
     
     func softEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.softEggButton)
-        
         homeScreen.softButtonViewWhenClicked()
-        
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.softEggButton)
         }, completion: nil)
@@ -112,9 +101,7 @@ class HomeScreenViewController: UIViewController {
     
     func mediumEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.mediumEggButton)
-        
         homeScreen.mediumButtonViewWhenClicked()
-        
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.mediumEggButton)
         }, completion: nil)
@@ -123,9 +110,7 @@ class HomeScreenViewController: UIViewController {
     
     func hardEggButtonClicked(_ button: UIButton) {
         AnimateButton.animateButtonInside(myButton: homeScreen.hardEggButton)
-        
         homeScreen.hardButtonViewWhenClicked()
-        
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [], animations: {
             AnimateButton.animateButtonOutside(myButton: self.homeScreen.hardEggButton)
         }, completion: nil)
