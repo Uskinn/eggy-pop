@@ -10,7 +10,7 @@ import UIKit
 
 final class ThanksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-   private let cellId = "cellId"
+    private let cellId = "cellId"
     
     lazy var thanksCollectionVIew: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -44,8 +44,9 @@ final class ThanksViewController: UIViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ThanksCell
-        
-        cell.shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
+     //   cell.reviewButton.addTarget(self, action: #selector(reviewButtonTapped), for: .touchUpInside)
+     //   cell.shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
+     //   cell.emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
         return cell
     }
     
@@ -68,12 +69,23 @@ final class ThanksViewController: UIViewController, UICollectionViewDelegate, UI
         dismiss(animated: true, completion: nil)
     }
     
-    func shareButtonTapped() {
-        let activityVC = UIActivityViewController(activityItems: ["https://itunes.apple.com/ca/app/eggypot/id1231906500?mt=8"], applicationActivities: nil)
-        activityVC.popoverPresentationController?.sourceView = self.view
-        self.present(activityVC, animated: true, completion: nil)
-        print("tapped")
-    }
+//    func shareButtonTapped() {
+//        let activityVC = UIActivityViewController(activityItems: [Links.shareLink], applicationActivities: nil)
+//        activityVC.popoverPresentationController?.sourceView = self.view
+//        self.present(activityVC, animated: true, completion: nil)
+//    }
+//    
+//    func reviewButtonTapped() {
+//        if let url = URL(string: Links.reviewLink) {
+//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//        }
+//    }
+//    
+//    func emailButtonTapped() {
+//        if let url = URL(string: "mailto:\(Links.eggypopEmail)") {
+//            UIApplication.shared.open(url)
+//        }
+//    }
 }
 
 

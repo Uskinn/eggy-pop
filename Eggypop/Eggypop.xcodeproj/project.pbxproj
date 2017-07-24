@@ -35,6 +35,7 @@
 		8A3E446A1E593C960055FA1B /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44691E593C960055FA1B /* InformationCell.swift */; };
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
+		8AAEEF031F1A8C6E00416B21 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEEF021F1A8C6E00416B21 /* Links.swift */; };
 		99D98E76F53FB458361B0D43 /* Pods_Eggypop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA5B1DA1DEC988200D159C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AAEEF021F1A8C6E00416B21 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		D7418BFA8407A5E8BF08DE73 /* Pods_Eggypop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eggypop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8A13E9DC1E1AD46C00A30ABA /* Color.swift */,
+				8AAEEF021F1A8C6E00416B21 /* Links.swift */,
 				8A3D6B051E2153C200637642 /* Image.swift */,
 			);
 			name = Constants;
@@ -251,7 +254,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Sergey Nevzorov";
 				TargetAttributes = {
 					8AA5B1CA1DEC988200D159C3 = {
@@ -367,6 +370,7 @@
 				8A0286C91E5A06980026E927 /* ThanksCell.swift in Sources */,
 				8A2E8A3D1E50EE94002DF578 /* UIImageView+Extension.swift in Sources */,
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
+				8AAEEF031F1A8C6E00416B21 /* Links.swift in Sources */,
 				8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */,
 				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
 				8A3E446A1E593C960055FA1B /* InformationCell.swift in Sources */,

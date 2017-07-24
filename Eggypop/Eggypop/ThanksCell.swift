@@ -47,10 +47,20 @@ final class ThanksCell: UICollectionViewCell {
         return text
     }()
     
-    let shareContainerView: UIView = {
-        let view = UIView()
-        return view
-    }()
+//    let shareContainerView: UIView = {
+//        let view = UIView()
+//        return view
+//    }()
+//    
+//    let reviewContainerView: UIView = {
+//        let view = UIView()
+//        return view
+//    }()
+//    
+//    let emailContainerView: UIView = {
+//        let view = UIView()
+//        return view
+//    }()
     
     let acknowledgementsTextView: UITextView = {
         let text = UITextView()
@@ -67,24 +77,60 @@ final class ThanksCell: UICollectionViewCell {
         return text
     }()
     
-    let shareButton: UIButton = {
-        let image = #imageLiteral(resourceName: "shareButton").withRenderingMode(.alwaysTemplate)
-        let button = UIButton(type: .system)
-        button.setImage(image, for: .normal)
-        button.tintColor = UIColor(red:0.21, green:0.50, blue:0.19, alpha:1.0)
-        return button
-    }()
-    
-    let shareLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Share Eggypop with egg lovers"
-        label.font = UIFont(name: "LucidaGrande-Bold", size: 0)
-        label.textAlignment = .left
-        label.backgroundColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = UIColor(red:0.59, green:0.45, blue:0.45, alpha:1.0)
-        return label
-    }()
+//    let shareButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setImage(#imageLiteral(resourceName: "shareButton"), for: .normal)
+//     //   button.tintColor = UIColor(red:0.21, green:0.50, blue:0.19, alpha:1.0)
+//        return button
+//    }()
+//    
+//    let shareLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "Share Eggypop with egg lovers"
+//        label.font = UIFont(name: "LucidaGrande-Bold", size: 0)
+//        label.textAlignment = .left
+//        label.backgroundColor = .white
+//        label.font = UIFont.boldSystemFont(ofSize: 18)
+//        label.textColor = UIColor(red:0.59, green:0.45, blue:0.45, alpha:1.0)
+//        return label
+//    }()
+//    
+//    let reviewLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "Review me. Give me five"
+//        label.font = UIFont(name: "LucidaGrande-Bold", size: 0)
+//        label.textAlignment = .left
+//        label.backgroundColor = .white
+//        label.font = UIFont.boldSystemFont(ofSize: 18)
+//        label.textColor = UIColor(red:0.59, green:0.45, blue:0.45, alpha:1.0)
+//        return label
+//    }()
+//    
+//    let reviewButton: UIButton = {
+//        let image = #imageLiteral(resourceName: "shareButton").withRenderingMode(.alwaysTemplate)
+//        let button = UIButton(type: .system)
+//        button.setImage(image, for: .normal)
+//        button.tintColor = UIColor(red:0.21, green:0.50, blue:0.19, alpha:1.0)
+//        return button
+//    }()
+//    
+//    let emailLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "Email me"
+//        label.font = UIFont(name: "LucidaGrande-Bold", size: 0)
+//        label.textAlignment = .left
+//        label.backgroundColor = .white
+//        label.font = UIFont.boldSystemFont(ofSize: 18)
+//        label.textColor = UIColor(red:0.59, green:0.45, blue:0.45, alpha:1.0)
+//        return label
+//    }()
+//    
+//    let emailButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setImage(#imageLiteral(resourceName: "emailButton"), for: .normal)
+//       // button.tintColor = UIColor(red:0.21, green:0.50, blue:0.19, alpha:1.0)
+//        return button
+//    }()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -96,29 +142,49 @@ final class ThanksCell: UICollectionViewCell {
         addSubview(dedicationTextView)
         addSubview(acknowledgementsLabel)
         addSubview(acknowledgementsTextView)
-        addSubview(shareContainerView)
-        
-        shareContainerView.addSubview(shareLabel)
-        shareContainerView.addSubview(shareButton)
+      //  addSubview(shareContainerView)
+      //  addSubview(reviewContainerView)
+      //  shareContainerView.addSubview(shareLabel)
+      //  shareContainerView.addSubview(shareButton)
+      //  reviewContainerView.addSubview(reviewLabel)
+      //  reviewContainerView.addSubview(reviewButton)
+      //  addSubview(emailContainerView)
+      //  emailContainerView.addSubview(emailLabel)
+      //  emailContainerView.addSubview(emailButton)
         
         //horizontal constraints
         addConstraintsWithFormat(format: "H:|-16-[v0]-20-|", views: dedicationLabel)
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: dedicationTextView)
         addConstraintsWithFormat(format: "H:|-16-[v0]-20-|", views: acknowledgementsLabel)
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: acknowledgementsTextView)
-        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: shareContainerView)
-        
-        shareContainerView.addConstraintsWithFormat(format: "H:|[v0]-[v1(30)]", views: shareLabel, shareButton)
+      //  addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: shareContainerView)
+      //  addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: reviewContainerView)
+      //  shareContainerView.addConstraintsWithFormat(format: "H:|[v0]-[v1(30)]", views: shareLabel, shareButton)
+    //    reviewContainerView.addConstraintsWithFormat(format: "H:|[v0]-[v1(30)]", views: reviewLabel, reviewButton)
+      //  addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: emailContainerView)
+      //  emailContainerView.addConstraintsWithFormat(format: "H:|[v0]-[v1(30)]", views: emailLabel, emailButton)
         
         //vertical constraints
-        addConstraintsWithFormat(format: "V:|-20-[v0(30)]-[v1(80)]-20-[v2(30)]-[v3]-20-[v4(40)]", views: dedicationLabel, dedicationTextView, acknowledgementsLabel, acknowledgementsTextView, shareContainerView)
+        addConstraintsWithFormat(format: "V:|-20-[v0(30)]-[v1(80)]-20-[v2(30)]-[v3]", views: dedicationLabel, dedicationTextView, acknowledgementsLabel, acknowledgementsTextView)
+        
+        //-20-[v4(40)]-10-[v5(40)]-10-[v6(40)]
+            //, reviewContainerView, emailContainerView, shareContainerView)
         
         // centerY constraints
-        shareContainerView.addConstraint(NSLayoutConstraint(item: shareLabel, attribute: .centerY, relatedBy: .equal, toItem: shareContainerView, attribute: .centerY, multiplier: 1, constant: 0))
-        shareContainerView.addConstraint(NSLayoutConstraint(item: shareButton, attribute: .centerY, relatedBy: .equal, toItem: shareContainerView, attribute: .centerY, multiplier: 1, constant: 0))
-        
+//        shareContainerView.addConstraint(NSLayoutConstraint(item: shareLabel, attribute: .centerY, relatedBy: .equal, toItem: shareContainerView, attribute: .centerY, multiplier: 1, constant: 0))
+//        shareContainerView.addConstraint(NSLayoutConstraint(item: shareButton, attribute: .centerY, relatedBy: .equal, toItem: shareContainerView, attribute: .centerY, multiplier: 1, constant: 0))
+//        reviewContainerView.addConstraint(NSLayoutConstraint(item: reviewLabel, attribute: .centerY, relatedBy: .equal, toItem: reviewContainerView, attribute: .centerY, multiplier: 1, constant: 0))
+//        reviewContainerView.addConstraint(NSLayoutConstraint(item: reviewButton, attribute: .centerY, relatedBy: .equal, toItem: reviewContainerView, attribute: .centerY, multiplier: 1, constant: 0))
+//        
+//        emailContainerView.addConstraint(NSLayoutConstraint(item: emailLabel, attribute: .centerY, relatedBy: .equal, toItem: emailContainerView, attribute: .centerY, multiplier: 1, constant: 0))
+//        emailContainerView.addConstraint(NSLayoutConstraint(item: emailButton, attribute: .centerY, relatedBy: .equal, toItem: emailContainerView, attribute: .centerY, multiplier: 1, constant: 0))
+//        
         // height constraints
-        shareContainerView.addConstraint(NSLayoutConstraint(item: shareButton, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
+//        shareContainerView.addConstraint(NSLayoutConstraint(item: shareButton, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
+//        reviewContainerView.addConstraint(NSLayoutConstraint(item: reviewButton, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
+//        emailContainerView.addConstraint(NSLayoutConstraint(item: emailButton, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
+//        
+        
     }
 }
 

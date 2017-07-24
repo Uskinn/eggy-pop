@@ -13,9 +13,12 @@ var audioPlayer = AVAudioPlayer()
 
 class Sound {
     
+   private let songString = "iggyPopSong"
+   private let typeOfSong = "m4a"
+    
     func eggySongOnRegularMode() {
         do {
-            guard let audioFilePath = Bundle.main.path(forResource: "iggyPopSong", ofType: "m4a") else { return }
+            guard let audioFilePath = Bundle.main.path(forResource: songString, ofType: typeOfSong) else { return }
             let audioFileUrl = NSURL.fileURL(withPath: audioFilePath)
             let sound = try AVAudioPlayer(contentsOf: audioFileUrl)
             audioPlayer = sound
@@ -38,7 +41,7 @@ class Sound {
     
     func eggySongOnSilentMode() {
         do {
-            guard let audioFilePath = Bundle.main.path(forResource: "iggyPopSong", ofType: "m4a") else { return }
+            guard let audioFilePath = Bundle.main.path(forResource: songString, ofType: typeOfSong) else { return }
             let audioFileUrl = NSURL.fileURL(withPath: audioFilePath)
             let sound = try AVAudioPlayer(contentsOf: audioFileUrl)
             audioPlayer = sound

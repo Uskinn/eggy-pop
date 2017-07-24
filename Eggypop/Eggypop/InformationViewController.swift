@@ -13,10 +13,10 @@ var onSilent = Bool()
 
 final class InformationViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-   private let cellId = "cellId"
+    private let cellId = "cellId"
     let sound = Sound()
     let infoCell = InformationCell()
-    let switchKey = "switchKey"
+    private let switchKey = "switchKey"
     var isOnSilentmode = Bool()
     
     lazy var infoCollectionVIew: UICollectionView = {

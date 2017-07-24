@@ -32,7 +32,7 @@ class HomeScreenViewController: UIViewController {
             if self.isEggAnimated {
                 self.homeScreen.animateEggSizeButtons()
             }
-        }
+       }
     }
     
     func buttonsAction() {

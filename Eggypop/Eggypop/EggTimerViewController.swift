@@ -11,10 +11,11 @@ import JSSAlertView
 import AudioToolbox
 import UserNotifications
 
-
 class EggTimerViewController: UIViewController {
     
+    private let shortSongForNotif = "ThePassenger21.m4a"
     private let stopTimeKey = "stopTimeKey"
+    private let timerId = "timerId"
     let eggTimerView = EggTimerVew()
     var secondsLeft: Bool = true
     
@@ -33,7 +34,6 @@ class EggTimerViewController: UIViewController {
         navigationItem.titleView = eggTimerView.headerLabel
         eggTimerView.layoutSubviews()
         eggTimerView.stopButton.addTarget(self, action: #selector(stopButtonCkicked), for: .touchUpInside)
-        registerForLocalNotifications()
         
         stopTime = UserDefaults.standard.object(forKey: stopTimeKey) as? Date
         if let time = stopTime {
@@ -72,30 +72,15 @@ class EggTimerViewController: UIViewController {
             let content = UNMutableNotificationContent()
             content.title = "Eggs are cooked!"
             content.body = "Whoo, hoo!"
-            content.sound = UNNotificationSound.init(named: "ThePassenger21.m4a")
+            content.sound = UNNotificationSound.init(named: shortSongForNotif)
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: stopTime.timeIntervalSinceNow, repeats: false)
-            let notification = UNNotificationRequest(identifier: "timer", content: content, trigger: trigger)
+            let notification = UNNotificationRequest(identifier: timerId, content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(notification)
         } else {
             let notification = UILocalNotification()
             notification.fireDate = stopTime
             notification.alertBody = "Timer finished!"
             UIApplication.shared.scheduleLocalNotification(notification)
-        }
-    }
-    
-    private func registerForLocalNotifications() {
-        if #available(iOS 10, *) {
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
-                guard granted && error == nil else {
-                    print("\(error!)")
-                    return
-                }
-            }
-        } else {
-            let types: UIUserNotificationType = [.badge, .sound, .alert]
-            let settings = UIUserNotificationSettings(types: types, categories: nil)
-            UIApplication.shared.registerUserNotificationSettings(settings)
         }
     }
     
