@@ -28,7 +28,6 @@ class HomeScreenViewController: UIViewController {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             self.homeScreen.animateEggs()
-            
             if self.isEggAnimated {
                 self.homeScreen.animateEggSizeButtons()
             }

@@ -12,13 +12,11 @@ import AudioToolbox
 import UserNotifications
 
 class EggTimerViewController: UIViewController {
-    
     private let shortSongForNotif = "ThePassenger21.m4a"
     private let stopTimeKey = "stopTimeKey"
     private let timerId = "timerId"
     let eggTimerView = EggTimerVew()
-    var secondsLeft: Bool = true
-    
+    var secondsLeft: Bool = false
     var timer: Timer?
     var stopTime: Date?
     let sound = Sound()
@@ -34,15 +32,7 @@ class EggTimerViewController: UIViewController {
         navigationItem.titleView = eggTimerView.headerLabel
         eggTimerView.layoutSubviews()
         eggTimerView.stopButton.addTarget(self, action: #selector(stopButtonCkicked), for: .touchUpInside)
-        
         stopTime = UserDefaults.standard.object(forKey: stopTimeKey) as? Date
-        if let time = stopTime {
-            if time > Date() {
-                startTimer(time, includeNotification: false)
-            } else {
-                notifyTimerCompleted()
-            }
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,40 +52,38 @@ class EggTimerViewController: UIViewController {
         // save `stopTime` in case app is terminated
         UserDefaults.standard.set(stopTime, forKey: stopTimeKey)
         self.stopTime = stopTime
-        
         // start Timer
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(handleTimer(_:)), userInfo: nil, repeats: true)
-        guard includeNotification else { return }
-        
-        // start local notification (so we're notified if timer expires while app is not running)
-        if #available(iOS 10, *) {
-            let content = UNMutableNotificationContent()
-            content.title = "Eggs are cooked!"
-            content.body = "Whoo, hoo!"
-            content.sound = UNNotificationSound.init(named: shortSongForNotif)
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: stopTime.timeIntervalSinceNow, repeats: false)
-            let notification = UNNotificationRequest(identifier: timerId, content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(notification)
-        } else {
-            let notification = UILocalNotification()
-            notification.fireDate = stopTime
-            notification.alertBody = "Timer finished!"
-            UIApplication.shared.scheduleLocalNotification(notification)
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(handleTimer(_:)), userInfo: nil, repeats: true)
+            guard includeNotification else { return }
+            // start local notification (so we're notified if timer expires while app is not running)
+            if #available(iOS 10, *) {
+                let content = UNMutableNotificationContent()
+                content.title = "Eggs cooked!"
+                content.body = "Whoo, hoo!"
+                content.sound = UNNotificationSound.init(named: shortSongForNotif)
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: stopTime.timeIntervalSinceNow, repeats: false)
+                let notification = UNNotificationRequest(identifier: timerId, content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(notification)
+            }
         }
     }
     
     func handleTimer(_ timer: Timer) {
         let now = Date()
         
+        
         if stopTime! > now {
+            print("stoptiem ------\(stopTime)")
+            print("now ------\(now)")
             eggTimerView.timerLabel.text = dateComponentsFormatter.string(from: now, to: stopTime!)
-        } else if secondsLeft == true {
+            print("secondsLeft: -------\(secondsLeft)")
+        } else {
             print("secondLeft: \(secondsLeft)")
             stopTimer()
-            notifyTimerCompleted()
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), nil)
             
-           if onSilent == true {
+            if onSilent == true {
                 sound.eggySongOnSilentMode()
             } else {
                 sound.eggySongOnRegularMode()
@@ -110,9 +98,9 @@ class EggTimerViewController: UIViewController {
     }
     
     func stopButtonCkicked() {
-        stopTimer()
+         stopTimer()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         self.dismiss(animated: true, completion: nil)
-        eggTimerView.timerLabel.text = "0:00"
     }
     
     let dateComponentsFormatter: DateComponentsFormatter = {
@@ -124,12 +112,9 @@ class EggTimerViewController: UIViewController {
     }()
     
     private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
-    private func notifyTimerCompleted() {
-        eggTimerView.timerLabel.text = "0:00"
+            timer?.invalidate()
+            timer = nil
+            eggTimerView.timerLabel.text = "0:00"
     }
 }
 

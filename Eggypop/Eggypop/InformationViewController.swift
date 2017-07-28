@@ -43,16 +43,27 @@ final class InformationViewController: UIViewController, UICollectionViewDelegat
         setupCV()
         dismissScrollViewButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         infoCollectionVIew.register(InformationCell.self, forCellWithReuseIdentifier: cellId)
+        
+        let standartDefaults = UserDefaults.standard
+        if (standartDefaults.string(forKey: switchKey) == "On") {
+            onSilent = true
+        }
+        
+        if (standartDefaults.string(forKey: switchKey) == "Off") {
+            onSilent = false
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let standartDefaults = UserDefaults.standard
-        if (standartDefaults.string(forKey: switchKey) == "On") {
-            onSilent = true
-        } else if (standartDefaults.string(forKey: switchKey) == "Off") {
-            onSilent = false
-        }
+//        let standartDefaults = UserDefaults.standard
+//        if (standartDefaults.string(forKey: switchKey) == "On") {
+//            onSilent = true
+//        }
+//
+//        if (standartDefaults.string(forKey: switchKey) == "Off") {
+//            onSilent = false
+//        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
