@@ -33,6 +33,9 @@
 		8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6B091E21EA7800637642 /* Label+Extension.swift */; };
 		8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */; };
 		8A3E446A1E593C960055FA1B /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E44691E593C960055FA1B /* InformationCell.swift */; };
+		8A8176B91F3618620013E1BE /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8176B81F3618620013E1BE /* MoreView.swift */; };
+		8A8176BB1F3618900013E1BE /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8176BA1F3618900013E1BE /* MoreViewController.swift */; };
+		8A8176BD1F361B250013E1BE /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8176BC1F361B250013E1BE /* CircularTransition.swift */; };
 		8AA5B1CF1DEC988200D159C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */; };
 		8AA5B1D61DEC988200D159C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA5B1D51DEC988200D159C3 /* Assets.xcassets */; };
 		8AAEEF031F1A8C6E00416B21 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEEF021F1A8C6E00416B21 /* Links.swift */; };
@@ -68,6 +71,9 @@
 		8A3D6B091E21EA7800637642 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
 		8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		8A3E44691E593C960055FA1B /* InformationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
+		8A8176B81F3618620013E1BE /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		8A8176BA1F3618900013E1BE /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		8A8176BC1F361B250013E1BE /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		8AA5B1CB1DEC988200D159C3 /* Eggypop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggypop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA5B1CE1DEC988200D159C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA5B1D51DEC988200D159C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 				8A2E8A481E522CF7002DF578 /* EggTimerVew.swift */,
 				8A3E44691E593C960055FA1B /* InformationCell.swift */,
 				8A0286C81E5A06970026E927 /* ThanksCell.swift */,
+				8A8176B81F3618620013E1BE /* MoreView.swift */,
+				8A8176BC1F361B250013E1BE /* CircularTransition.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 				8A2E8A451E522CBD002DF578 /* EggTimerViewController.swift */,
 				8A3E44651E57EA0B0055FA1B /* InformationViewController.swift */,
 				8A0286CA1E5A06CD0026E927 /* ThanksViewController.swift */,
+				8A8176BA1F3618900013E1BE /* MoreViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 				8A3D6B061E2153C200637642 /* Image.swift in Sources */,
 				8A2E8A361E50D316002DF578 /* SpalshScreenView.swift in Sources */,
 				8A3D6B0A1E21EA7800637642 /* Label+Extension.swift in Sources */,
+				8A8176B91F3618620013E1BE /* MoreView.swift in Sources */,
 				8A0286CD1E5D108A0026E927 /* Constraints.swift in Sources */,
 				8A2E8A421E51207B002DF578 /* HomeScreenViewController.swift in Sources */,
 				8A2E8A441E512165002DF578 /* Button+Extension.swift in Sources */,
@@ -372,10 +382,12 @@
 				8A0685871E2713B6007A44BE /* Sound.swift in Sources */,
 				8AAEEF031F1A8C6E00416B21 /* Links.swift in Sources */,
 				8A2E8A401E511F02002DF578 /* HomeScreenView.swift in Sources */,
+				8A8176BB1F3618900013E1BE /* MoreViewController.swift in Sources */,
 				8A0103D31E25E4ED008B5BB8 /* AnimateButton.swift in Sources */,
 				8A3E446A1E593C960055FA1B /* InformationCell.swift in Sources */,
 				8A0286C71E59FB000026E927 /* UIScrollView+Extencion.swift in Sources */,
 				8A2E8A391E50E2B0002DF578 /* SplashViewController.swift in Sources */,
+				8A8176BD1F361B250013E1BE /* CircularTransition.swift in Sources */,
 				8A0286CF1E5D40790026E927 /* Egg.swift in Sources */,
 				8A0103CE1E247E8B008B5BB8 /* Alert.swift in Sources */,
 				8A3E44661E57EA0B0055FA1B /* InformationViewController.swift in Sources */,

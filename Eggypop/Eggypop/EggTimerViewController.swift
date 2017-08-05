@@ -21,6 +21,7 @@ class EggTimerViewController: UIViewController {
     var stopTime: Date?
     let sound = Sound()
     let homeScreenViewController = HomeScreenViewController()
+    let informationVC = InformationViewController()
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init("Raw"), object: nil)
@@ -37,9 +38,12 @@ class EggTimerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.secondsLeft = true
         DispatchQueue.main.async {
             NotificationCenter.default.addObserver(self, selector: #selector(self.startButtonClicked), name: NSNotification.Name(rawValue: "Raw"), object: nil)
+            print("on silent ----\(self.informationVC.onSilent)")
+            
         }
     }
     
@@ -74,16 +78,12 @@ class EggTimerViewController: UIViewController {
         
         
         if stopTime! > now {
-            print("stoptiem ------\(stopTime)")
-            print("now ------\(now)")
             eggTimerView.timerLabel.text = dateComponentsFormatter.string(from: now, to: stopTime!)
-            print("secondsLeft: -------\(secondsLeft)")
         } else {
-            print("secondLeft: \(secondsLeft)")
             stopTimer()
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), nil)
             
-            if onSilent == true {
+            if informationVC.onSilent == true {
                 sound.eggySongOnSilentMode()
             } else {
                 sound.eggySongOnRegularMode()

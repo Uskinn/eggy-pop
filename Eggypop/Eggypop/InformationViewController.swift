@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-var onSilent = Bool()
+
 
 final class InformationViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -18,6 +18,7 @@ final class InformationViewController: UIViewController, UICollectionViewDelegat
     let infoCell = InformationCell()
     private let switchKey = "switchKey"
     var isOnSilentmode = Bool()
+    var onSilent = Bool()
     
     lazy var infoCollectionVIew: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

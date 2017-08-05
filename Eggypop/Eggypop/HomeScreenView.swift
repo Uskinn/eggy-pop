@@ -19,10 +19,11 @@ final class HomeScreenView: UIView {
         return header
     }()
     
-    var logoImageView: UIImageView = {
-        var logo = UIImageView()
-        logo.setupLogoImage()
-        return logo
+    let logoImageButton: UIButton = {
+        let button = UIButton(type: .system)
+        let image = #imageLiteral(resourceName: "logoEggyImage").withRenderingMode(.alwaysOriginal)
+        button.setImage(image, for: .normal)
+        return button
     }()
     
     var startButton: UIButton = {
@@ -71,7 +72,6 @@ final class HomeScreenView: UIView {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
         UIImageView().showBackgroundImage(in: self)
-        
         configureFile()
     }
     
@@ -114,9 +114,9 @@ final class HomeScreenView: UIView {
     }
     
     func setupLogoImageConstraints() {
-        addSubview(logoImageView)
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        Constraints.setupConstraintsIn(myView: self, for: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.43, centerXAncor: 0.0)
+        addSubview(logoImageButton)
+        logoImageButton.translatesAutoresizingMaskIntoConstraints = false
+        Constraints.setupConstraintsIn(myView: self, for: logoImageButton, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.43, centerXAncor: 0.0)
     }
     
     func setupLargeEggButtonConstraints() {
@@ -250,7 +250,7 @@ final class HomeScreenView: UIView {
         }
         
         if self.jumboEggButton.titleLabel?.textColor == .white && self.hardEggButton.titleLabel?.textColor == .white {
-            HomeScreenView.seconds = 5//760 // done
+            HomeScreenView.seconds = 760 // done
         }
     }
     

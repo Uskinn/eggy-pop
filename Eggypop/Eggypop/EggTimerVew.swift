@@ -29,13 +29,7 @@ final class EggTimerVew: UIView {
         header.setupHeaderLabel()
         return header
     }()
-    
-    var logoImageView: UIImageView = {
-        var logo = UIImageView()
-        logo.setupLogoImage()
-        return logo
-    }()
-    
+
     var stopButton: UIButton = {
         let stop = UIButton()
         stop.setupStopButton()
@@ -52,12 +46,10 @@ final class EggTimerVew: UIView {
         
         timerView.addConstraint(NSLayoutConstraint(item: timerLabel, attribute: .centerX, relatedBy: .equal, toItem: timerView, attribute: .centerX, multiplier: 1, constant: 0))
         timerView.addConstraint(NSLayoutConstraint(item: timerLabel, attribute: .centerY, relatedBy: .equal, toItem: timerView, attribute: .centerY, multiplier: 1, constant: 0))
-        
     }
     
     func configureFile() {
         setupStopButtonConstraints()
-        setupLogoImageConstraints()
         setupTimerConstraints()
     }
     
@@ -71,11 +63,5 @@ final class EggTimerVew: UIView {
         addSubview(stopButton)
         stopButton.translatesAutoresizingMaskIntoConstraints = false
         Constraints.setupConstraintsIn(myView: self, for: stopButton, widthAncor: 0.927, heightAncor: 0.108, centerYAncor: 0.3, centerXAncor: 0.0)
-    }
-    
-    func setupLogoImageConstraints() {
-        addSubview(logoImageView)
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        Constraints.setupConstraintsIn(myView: self, for: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.43, centerXAncor: 0.0)
     }
 }

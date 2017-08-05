@@ -16,10 +16,11 @@ class SpalshScreenView: UIView {
         return header
     }()
     
-   lazy var logoImageView: UIImageView = {
-        var logo = UIImageView()
-        logo.setupLogoImage()
-        return logo
+    let logoImageButton: UIButton = {
+        let button = UIButton(type: .system)
+        let image = #imageLiteral(resourceName: "logoEggyImage").withRenderingMode(.alwaysOriginal)
+        button.setImage(image, for: .normal)
+        return button
     }()
     
     override func layoutSubviews() {
@@ -32,7 +33,7 @@ class SpalshScreenView: UIView {
     func animateView() {
         UIView.animate(withDuration: 0.4, delay: 0.3, options: [.curveEaseInOut], animations: {
             self.headerLabel.transform = self.headerUp()
-            self.logoImageView.transform = self.logoDown()
+            self.logoImageButton.transform = self.logoDown()
             self.layoutIfNeeded()
         }, completion: { finished in
             DispatchQueue.main.async {
@@ -44,9 +45,9 @@ class SpalshScreenView: UIView {
     }
     
     func setupLogoImageConstraints() {
-        addSubview(logoImageView)
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        Constraints.setupConstraintsIn(myView: self, for: logoImageView, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.03, centerXAncor: 0.0)
+        addSubview(logoImageButton)
+        logoImageButton.translatesAutoresizingMaskIntoConstraints = false
+        Constraints.setupConstraintsIn(myView: self, for: logoImageButton, widthAncor: 0.077, heightAncor: 0.06, centerYAncor: 0.03, centerXAncor: 0.0)
     }
     
     func logoDown() -> CGAffineTransform {

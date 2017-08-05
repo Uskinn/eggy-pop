@@ -15,6 +15,7 @@ class HomeScreenViewController: UIViewController {
     var isEggAnimated = false
     let navBarItem = UIImage()
     private let notifId = "notifId"
+    let transition = CircularTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,10 @@ class HomeScreenViewController: UIViewController {
         homeScreen.hardEggButton.addTarget(self, action: #selector(hardEggButtonClicked(_:)), for: .touchUpInside)
         
         homeScreen.startButton.addTarget(self, action: #selector(startButtonClicked(_:)), for: .touchUpInside)
+        homeScreen.logoImageButton.addTarget(self, action: #selector(logoButtonDidTap), for: .touchUpInside)
     }
+    
+    
     
     func barButtonItemsAction() {
         let infoButtonImage = Image.infoButtonImage?.withRenderingMode(.alwaysOriginal)
@@ -140,7 +144,34 @@ class HomeScreenViewController: UIViewController {
     }
 }
 
-
+extension HomeScreenViewController: UIViewControllerTransitioningDelegate {
+    
+    func logoButtonDidTap() {
+        let moreVC = MoreViewController()
+        moreVC.transitioningDelegate = self
+        moreVC.modalPresentationStyle = .custom
+        self.present(moreVC, animated: true, completion: nil)
+        
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = homeScreen.logoImageButton.center
+        transition.circleColor = .white
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = homeScreen.logoImageButton.center
+        transition.circleColor = .white
+        return transition
+    }
+    
+    
+    
+    
+}
 
 
 
